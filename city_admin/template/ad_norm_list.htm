@@ -1,0 +1,78 @@
+<!--
+<?php
+print <<<EOT
+-->
+<table width="794" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td height="100" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable">
+        <tr> 
+          <td class="head">
+            普通广告管理
+          </td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+
+ 
+            <table width="100%" border="0" cellspacing="5" cellpadding="5">
+                <tr> 
+                  <td height="25"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                      <tr align="center"> 
+                        <td style="background:#eee;" width="17%">广告位名称</td>
+                        <td style="background:#eee;" width="10%">所在城市</td>
+                        <td style="background:#eee;" width="12%">购买者</td>
+                        <td style="background:#eee;" width="15%">申请日期</td>
+                        <td style="background:#eee;" width="23%">投放日期</td>
+                        <td style="background:#eee;" width="10%">点击数</td>
+                        <td style="background:#eee;" width="13%">修改/删除</td>
+                      </tr>
+                      
+                      
+                    </table>
+                    <table width="100%" border="0" cellspacing="1" cellpadding="5">
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+                    	<tr align="center"> 
+                            <td width="17%">$rs[place_name]</td>
+                            <td width="10%">$rs[city]</td>
+                            <td width="12%">$rs[u_username]</td>
+                            <td width="15%">$rs[posttime]</td>
+                            <td width="23%">开始:$rs[begin]<br />结束:$rs[end]</td>
+                            <td width="10%">$rs[hits]</td>
+                            <td width="13%"><a href="$webdb[www_url]/city_admin/norm.php?action=edit&job=list&id=$rs[u_id]">修改</a>/<a href="$webdb[www_url]/city_admin/norm.php?action=del&job=list&id=$rs[u_id]" onClick="return confirm('你确认要删除吗?不可恢复');">删除</a></td>
+                      	</tr>
+<!--
+EOT;
+}print <<<EOT
+-->                        
+                    </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td align="center" class="page">$showpage</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+            </table>
+ 
+          </td>
+        </tr>
+        <tr>
+          <td class="foot">
+            <h3 class="L"></h3>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

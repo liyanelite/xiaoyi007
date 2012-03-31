@@ -1,0 +1,127 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/coupon_bencandy.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr class="headtr">
+  	<td>
+    	<div class="title"><span>{$fidDB[name]}</span></div>
+    </td>
+    <td>
+    	<div class="userinfo">商家档案</div>
+    </td>
+  </tr>
+  <tr> 
+    <td class="maintdl">        
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="baseinfo">
+          <tr>
+            <td class="left">
+            	<a href="$rsdb[picurl]" class="picurl" target="_blank"><img src='$rsdb[picurl]' onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="220" ></a></td>
+            <td class="center">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listinfo">
+                  <tr>
+                    <td>
+                  <div><span><b>$rsdb[title]</b></span></div>
+                    	<div><span>市场价格：</span><strike>￥{$rsdb[mart_price]}</strike></div>
+                		
+                  <div><span>优 惠 价：</span>￥{$rsdb[price]}</div>
+                  <div><span>截止日期：</span>$rsdb[end_time]</div>
+				  <!--{template}-->
+						<div><span>{title}：</span>{value}</div>
+<!--{/template}-->
+
+<div><span>发布日期：</span><a editurl='$Murl/job.php?job=bencandy&fid=$fid&id=$id&act=do'>$rsdb[posttime]</a></div>
+                    </td>
+                  </tr>
+                </table>            	
+				<div class="moreaction">
+                	<input type="button" value="收藏该信息" onClick="javascript:window.external.AddFavorite('$WEBURL','$rsdb[title]')" class="zb"/>
+                    <input type="button" value="推荐给朋友" onClick="window.location.href='mailto:';" class="tz"/>
+                    <input type="button" value="打&nbsp;&nbsp;印" onClick="window.open('print.php?job=report&fid=$fid&id=$id');" class="sc"/>
+                </div>
+            </td>
+          </tr>
+        </table> 
+    </td>
+    <td class="sidetdr">    	
+        
+      <div class="list">会员名:<span>$rsdb[username]</span></div>
+        
+      <div class="list">&nbsp;&nbsp;注册日期:$memberdb[regdate]</div>
+        
+      <div class="list">&nbsp;&nbsp;离线时间:$memberdb[lastvist]</div>
+        
+      <div class="list">&nbsp;&nbsp;级别:<span>{$ltitle[$memberdb[groupid]]}</span></div>
+        
+      <div class="join"> <a href="$webdb[www_url]/home/?uid=$rsdb[uid]" target="_blank"><img src="$webdb[www_url]/images/yellow/coupon_goto.gif" border="0"></a> 
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" class="contenttd">
+    	<div class="content">
+        	<div class="head">详情信息</div>
+            <div class="cont">{$rsdb[content]}</div>
+        </div>
+    </td>
+  </tr>
+</table>
+
+
+<!--table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr> 
+    <th class="toptitle">
+    	<div class="L"><span>{$rsdb[title]}</span></div>
+        <div class="R">商家档案</div>
+    </th>
+  </tr>
+  <tr> 
+    <td>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="baseinfo">
+          <tr>
+            <td class="left">
+            	<a href="$rsdb[picurl]" class="picurl" target="_blank"><img src='$rsdb[picurl]' onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="220" ></a>共1图
+            </td>
+            <td class="center">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listinfo">
+                  <tr>
+                    <td>
+                    	<div><span>市场价格：</span><strike>￥{$rsdb[mart_price]}</strike></div>
+                		<div><span>优 惠 价：</span>￥{$rsdb[price]}</div>
+                		<div><span>截止日期：</span>$rsdb[end_time]</div>
+                    </td>
+                  </tr>
+                </table>            	
+				<div class="moreaction">
+                	<input type="button" value="举报该信息" onClick="window.open('#');" class="zb"/>
+                    <input type="button" value="推荐给朋友" onClick="window.open('#');" class="tz"/>
+                    <input type="button" value="打&nbsp;&nbsp;印" onClick="window.open('print.php?job=report&fid=$fid&id=$id');" class="sc"/>
+                </div>
+            </td>
+            <td class="right">
+            	<div class="list">会员名:<span>admin</span></div>
+                <div class="list">&nbsp;&nbsp;注册:10-01-26 17:13</div>
+                <div class="list">&nbsp;&nbsp;离线:10-01-26 17:13</div>
+                <div class="list">&nbsp;&nbsp;级别:<span>超级管理员</span></div>
+                <div class="join">
+                    <a href="#" target="_blank"><img src="$webdb[www_url]/images/yellow/coupon_goto.gif"></a> 
+                </div>
+            </td>
+          </tr>
+        </table>        
+    </td>
+  </tr>
+  <tr> 
+    <td class="ContentTd">
+    	<div class="content">
+        	<div class="head">活动详情</div>
+            <div class="cont">{$rsdb[content]}</div>
+        </div>
+    </td>
+  </tr>
+</table-->
+<!--
+EOT;
+?>
+-->

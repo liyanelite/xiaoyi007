@@ -1,0 +1,119 @@
+<!--
+<?php
+$ordertype = $ordertype ? $ordertype : "id";
+$select[$ordertype] = "ch";
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/coupon/list.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>  	
+  	<td class="side">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortcontainer">
+          <tr>
+            <td class="head"><span>促销分类</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$i=0;
+foreach($Fid_db[0] AS $key=>$name){
+$i++;
+$url=get_info_url('',$key,$city_id);
+print <<<EOT
+-->
+                <div class="bigsort sort$i"><a href="$url">$name</a></div>
+                <div class="sort"> 
+<!--
+EOT;
+foreach($Fid_db[$key] AS $key2=>$name2){
+$url=get_info_url('',$key2,$city_id);
+print <<<EOT
+-->
+              	<a href="$url">$name2</a> | 
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>			
+<!--
+EOT;
+}
+print <<<EOT
+-->            
+            </td>
+          </tr>
+          <tr>
+            <td class="foot"></td>
+          </tr>
+        </table>
+        <div class="sidecontainer mt10">
+        	<div class="head"><span>优惠快讯</span></div>
+            <div class="cont">
+<!--
+EOT;
+$array = list_coupon(5,'new');
+foreach($array AS $rs){
+$rs[fulltime] = date("m-d",$rs[fulltime]);
+print <<<EOT
+-->
+              
+          <div class="list"><span>$rs[username]</span>于<em>$rs[fulltime]</em>发布了<a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </div>
+        </div>
+    </td>
+    <td class="main">
+    	<div class="dragcontainer">
+        	<div class="head">
+            	<div class="tag"><span>促销信息</span></div>
+                <div class="more">
+                	<a href="listall.php?ordertype=" class="$select[id]">最新信息</a>
+                    <a href="listall.php?ordertype=hits" class="$select[hits]">热门信息</a>
+                    <a href="listall.php?ordertype=levelstime" class="$select[levelstime]">推荐信息</a>
+                </div> 
+            </div>
+            <div class="cont">
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$target=$rs[target]?'_blank':'_self';
+$url=get_info_url('',$rs[fid],$rs[city_id]);
+print <<<EOT
+-->
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listtable">
+                  <tr>
+                    <td class="img">
+                    	<a href="$rs[url]" target="_blank"><img src="$rs[picurl]" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="120" height="90"/></a>
+                    </td>
+                    <td class="word">
+                    	<div class="t"><a href="$rs[url]" target="_blank" title='$rs[full_title]'>$rs[title]</a></div>
+                        <div class="sort"> 所属分类：<a href="$url" target="_blank">{$rs[fname]}</a></div>
+                          <div class="more"> 发布日期：{$rs[posttime]} </div>
+                          <div class="more"> 关注度：{$rs[hits]}人次   发布者:{$rs[username]}</div>
+                    </td>
+                    <td class="goto"><a href="$rs[url]" target="_blank"><img src="$webdb[www_url]/images/yellow/tuangou_see.gif"/></a></td>
+                  </tr>
+                </table>
+<!--
+EOT;
+}if($showpage){print <<<EOT
+-->
+               <div class="showpage">$showpage</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>            
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

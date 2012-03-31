@@ -1,0 +1,5 @@
+<?php
+unset($styledb);
+		$styledb['name']='³ÈÉ«·ç¸ñ';
+		$styledb['keywords']='default';
+?>

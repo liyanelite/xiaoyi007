@@ -1,0 +1,92 @@
+/*
+*初始化样式
+*/
+body, form, ul, li, p, dl, dd, dt ,h,td,th,h3{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size:12px;
+	background:#8AB7D8 url(bg.jpg) center -80px no-repeat;
+	text-align:center;
+}
+li,ul{
+	list-style: none;
+} 
+TD {
+	color: #333333;
+	VERTICAL-ALIGN: top;
+} 
+input,textarea{
+	border:1px solid #ccc;
+}
+a {
+	color:#333;
+}
+a:link {
+	color:#333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4E667B;
+}
+a:active {
+	text-decoration: none;
+}
+/*
+*登录框
+*/
+.LoginCont{
+	width:430px;
+	height:320px;
+	background:url(management.gif) center top no-repeat;
+	margin:205px auto 0 auto;
+}
+.LoginCont .left{
+	padding-top:130px;
+	width:300px;
+	vertical-align:middle;
+}
+.LoginCont .left .input,.LoginCont .left .yzm{
+	height:24px;
+	width:165px;
+	border:0;
+	background:url(input.gif) no-repeat;
+	margin-top:4px;
+	padding-left:3px;
+	line-height:24px;
+}
+.LoginCont .left .yzm{
+	width:80px;
+	background:url(yzm.gif) no-repeat;
+}
+.LoginCont .left img{
+	margin:6px 0 0 10px;
+}
+.LoginCont .left div{
+	height:35px;
+	overflow:hidden;
+}
+.LoginCont .left div span{
+	display:block;
+	float:left;
+	line-height:35px;
+}
+.LoginCont .left div span.word{
+	width:120px;
+	text-align:right;
+	padding-right:5px;
+	font-size:12px;
+	color:#FFF;
+}
+.LoginCont .right{
+	padding-top:135px;
+}
+.LoginCont .right .submit{
+	border:0;
+}

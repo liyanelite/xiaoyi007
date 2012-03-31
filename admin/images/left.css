@@ -1,0 +1,102 @@
+/*
+*初始化样式
+*/
+body, form, ul, li, p, dl, dd, dt ,h,td,th,h3{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size:12px;
+	background:#F6F9FD url(solidr.gif) right repeat-y;
+
+	SCROLLBAR-FACE-COLOR: #60B7DE;
+
+	SCROLLBAR-HIGHLIGHT-COLOR: #eee;
+	SCROLLBAR-SHADOW-COLOR: #eee;
+	SCROLLBAR-3DLIGHT-COLOR: #eee;
+	SCROLLBAR-ARROW-COLOR: #eee;
+	SCROLLBAR-TRACK-COLOR: #B9D5F2;
+
+	SCROLLBAR-DARKSHADOW-COLOR: #1A5DB0;
+	SCROLLBAR-HIGHLIGHT-COLOR: #1A5DB0;
+}
+li,ul{
+	list-style: none;
+} 
+TD {
+	color: #333333;
+	VERTICAL-ALIGN: top;
+} 
+input,textarea{
+	border:1px solid #ccc;
+}
+a {
+	color:#333;
+}
+a:link {
+	color:#333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4E667B;
+}
+a:active {
+	text-decoration: none;
+}
+/*
+*菜单样式
+*/
+#leftmenu{
+	padding:10px 0 10px 0;	
+}
+#leftmenu .info .head,#leftmenu dl dt{
+	height:29px;
+	overflow:hidden;
+	line-height:30px;
+	background:url(head1.gif) right top no-repeat;	
+}
+#leftmenu .info .head span,#leftmenu dl dt span{
+	display:block;
+	padding-left:35px;
+	background:url(icon.gif) 10px 9px no-repeat;
+	font-weight:bold;
+} 
+#leftmenu dl dt span{
+	cursor:pointer;
+	background:url(icon1.gif) 10px 9px no-repeat;
+}
+#leftmenu dl.show dt span{
+	background:url(icon.gif) 10px 9px no-repeat;
+}
+#leftmenu .info .cont,#leftmenu dl dd{
+	padding-top:8px;
+}
+#leftmenu dl dd{
+	display:none;
+}
+#leftmenu dl.show dd{
+	display:block;
+}
+#leftmenu .info .cont div{
+	height:20px;
+	line-height:20px;
+	padding-left:20px;
+	color:#005176;
+}
+#leftmenu .info .cont div a{
+	color:#005176;
+}
+#leftmenu dl dd td{
+	font-size:12px;
+	line-height:20px;
+	padding-left:20px;
+	color:#005176;
+} 
+#leftmenu dl dd td a{
+	color:#005176;
+}

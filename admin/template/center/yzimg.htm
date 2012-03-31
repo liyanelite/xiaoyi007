@@ -1,0 +1,66 @@
+<!--
+<?php
+$is_MathYZ[intval($webdb[is_MathYZ])]='checked';
+$is_chineseIMG[intval($webdb[is_chineseIMG])]='checked';
+print <<<EOT
+-->
+<table width='100%' cellspacing='1' cellpadding='3' class="tablewidth">
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=config">
+    <tr  class="head"> 
+      <td colspan='3'> 
+        <div align='center'><b><font color="#FFFFFF">验证码复杂度设置</font></b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>图片文字辨认复杂度:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input type="radio" name="webdbs[YzImg_difficult]" value="0" $YzImg_difficult[0]>
+        简单
+<input type="radio" name="webdbs[YzImg_difficult]" value="1" $YzImg_difficult[1]>
+        复杂</td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>是否区分字母大小写:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input type="radio" name="webdbs[YzImg_letter_differ]" value="0" $YzImg_letter_differ[0]>
+        不区分
+<input type="radio" name="webdbs[YzImg_letter_differ]" value="1" $YzImg_letter_differ[1]>
+        区分 </td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>是否为数学运算:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input type="radio" name="webdbs[is_MathYZ]" value="0" $is_MathYZ[0]>
+        不是数据运算 
+        <input type="radio" name="webdbs[is_MathYZ]" value="1" $is_MathYZ[1]>
+        是数学运算 (设置为数学运算的话,以下两项设置无效)</td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>验证码随机抽取的字符:<br>
+        如:0123456789qwert（仅当下面禁用汉字验证码时才可用）<br>
+        如:中华人民共青团（仅当下面启用汉字验证码时才可用）</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input type="text" name="webdbs[YzImg_string]" value="$webdb[YzImg_string]" size="60">
+      </td>
+    </tr><tr> 
+      <td width='28%' bgcolor='#FFFFFF'>是否使用汉字验证码:<br>
+        （注意：使用汉字验证码后，上面的第一与第二项设置无效，你可以更换验证码的背景图片，图片存放路径是images/default/chinese_yzimg.jpg,而验证码随机抽取的字符也只能是汉字，不允许包含有其它字符） 
+      </td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input type="radio" name="webdbs[is_chineseIMG]" value="0" $is_chineseIMG[0]>
+        不使用 
+        <input type="radio" name="webdbs[is_chineseIMG]" value="1" $is_chineseIMG[1]>
+        使用</td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>&nbsp;</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input  class=mmcinb  type='submit' name='w' value='保存设置'>
+      </td>
+    </tr>
+  </form>
+</table>
+<!--
+EOT;
+?>
+-->

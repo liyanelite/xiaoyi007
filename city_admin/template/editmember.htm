@@ -1,0 +1,187 @@
+<!--
+<?php 
+print <<<EOT
+--> 
+<style>
+.MainTable{
+	border:#C69D74 solid 1px;
+}
+.MainTable h2{
+	border:#FFF solid 1px;
+	height:25px;
+	line-height:25px;
+	font-size:14px;
+	padding-left:10px;
+	background:#F6D5B7;
+}
+.MainTable .bg td{
+	background:#fafafa;
+}
+.MainTable .tdL{
+	width:120px;
+	padding:0 5px 0 0;
+	text-align:right;
+	line-height:25px;
+	vertical-align:top;
+}
+.MainTable .tdR{
+	padding-left:5px;
+}
+</style>
+<script src="images/setday.js"></script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td> 
+     <h2>修改用户</h2>
+     <form name="FORM" method="post" action="?action=post&uid=$uid"/>
+     <table width="100%">
+     <tr>
+     	<td class="tdL">用户UID:</td>
+        <td class="tdR">$uid</td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">用户名:</td>
+        <td class="tdR"><input type="text" name="postdb[username]" value="$rs[username]" size="30"/>(不可修改,易出问题)</td>
+     </tr>
+     <tr>
+     	<td class="tdL">旧密码:</td>
+        <td class="tdR"><input type="text" name="postdb[password]" value="$rs[password]" size="40"/>(加密后的效果)</td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">更改新密码为:</td>
+        <td class="tdR"><input type="text" name="postdb[newpassword]" size="30"/>(如果不更换密码,请留空)</td>
+     </tr>
+     <tr>
+     	<td class="tdL">邮箱:</td>
+        <td class="tdR"><input type="text" name="postdb[email]" value="$rs[email]" size="30"/></td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">头像:</td>
+        <td class="tdR">
+        	<div><input type="text" name="postdb[icon]" value="$rs[icon]" size="30" id="picurl"/></div>
+            <div><iframe name='mainFrame2' frameborder=0 height=23 scrolling=no src='$webdb[www_url]/do/upfile.php?fn=uppic&dir=face' width=310></iframe></div>
+            <div>
+            	<a href="javascript:" class="style30"  onClick="javascript:cutimg();">[手工剪裁图片]</a>
+                宽 <input type="text" name="picWidth" value="150" size="3" maxlength="3"/>
+              	高 <input type="text" name="picHeight" value="150" size="3" maxlength="3"/>
+              	注意:只能是本地上传的图片才能剪裁
+            </div>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+function uppic(url,name,size,b){
+	get_obj('picurl').value=url;
+}
+function cutimg() 
+{
+	var img=get_obj("picurl").value;
+	var cw=document.FORM.picWidth.value;
+	var ch=document.FORM.picHeight.value;
+	if(cw==''){
+		document.FORM.picWidth.focus();
+		alert("请设置好图片宽度");return false;
+	}
+	if(ch==''){
+		document.FORM.picHeight.focus();
+		alert("请设置好图片高度");return false;
+	}
+if(img!=''){
+	if(img.indexOf("http://")==-1){
+		img="$webdb[www_url]/$webdb[updir]/"+img;
+	}
+	//document.FORM.automakesmall.checked=false;
+	window.open("$webdb[www_url]/do/cutimg.php?job=cutimg&width="+cw+"&height="+ch+"&srcimg="+img,'',"width=480,height=430")
+}else{
+	get_obj("picurl").focus();
+	alert('图片地址不存在');
+}
+}
+-->
+</script>
+        </td>
+     </tr>
+     <tr>
+     	<td class="tdL">{$webdb[MoneyName]}:</td>
+        <td class="tdR"><input type="text" name="postdb[money]" value="$rs[money]" size="10"/> {$webdb[MoneyDW]}</td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">用户空间:</td>
+        <td class="tdR"><input type="text" name="postdb[totalspace]" value="$rs[totalspace]" size="10"/> M (不能大于2046M,否则无效)</td>
+     </tr>
+     <tr>
+     	<td class="tdL">在线时间:</td>
+        <td class="tdR"><input type="text" name="postdb[oltime]" value="$rs[oltime]" size="10"/> 秒</td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">性别:</td>
+        <td class="tdR">
+        	<input type="radio" name="postdb[sex]" value="1" $sexdb[1]> 男
+            <input type="radio" name="postdb[sex]" value="2" $sexdb[2]> 女
+            <input type="radio" name="postdb[sex]" value="0" $sexdb[0]> 未知
+        </td>
+     </tr>
+     <tr>
+     	<td class="tdL">验证与否:</td>
+        <td class="tdR">
+        	<input type="radio" name="postdb[yz]" value="1" $yzdb[1]> 已验证
+            <input type="radio" name="postdb[yz]" value="0" $yzdb[0]> 未验证
+        </td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">自我介绍:</td>
+        <td class="tdR"><textarea name="postdb[introduce]" cols="60" rows="5">$rs[introduce]</textarea></td>
+     </tr>
+     <tr>
+     	<td class="tdL">oicq:</td>
+        <td class="tdR"><input type="text" name="postdb[oicq]" value="$rs[oicq]" size="30"></td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">msn</td>
+        <td class="tdR"><input type="text" name="postdb[msn]" value="$rs[msn]" size="30"></td>
+     </tr>
+     <tr>
+     	<td class="tdL">个人主页:</td>
+        <td class="tdR"><input type="text" name="postdb[homepage]" value="$rs[homepage]" size="30"></td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">联系地址:</td>
+        <td class="tdR"><input type="text" name="postdb[address]" style="width:250px;" value="$rs[address]"></td>
+     </tr>
+     <tr>
+     	<td class="tdL">邮政编码:</td>
+        <td class="tdR"><input type="text" name="postdb[postalcode]" style="width:130px;" value="$rs[postalcode]"></td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">联系电话:</td>
+        <td class="tdR"><input type="text" name="postdb[telephone]" style="width:130px;" value="$rs[telephone]"></td>
+     </tr>
+     <tr>
+     	<td class="tdL">联系手机:</td>
+        <td class="tdR"><input type="text" name="postdb[mobphone]" style="width:130px;" value="$rs[mobphone]" $ipunt_mob></td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL">身份证号码:</td>
+        <td class="tdR">
+        	<div><input type="text" name="postdb[idcard]" style="width:250px;" value="$rs[idcard]" $ipunt_idcard></div>
+            <div><a href="$webdb[www_url]/$webdb[updir]/idcard/$rsdb[uid].jpg" target="_blank"><img src="$webdb[www_url]/$webdb[updir]/idcard/$rsdb[uid].jpg" onerror="this.style.display='none'" width="180" height="80" border="0"></a></div>
+        </td>
+     </tr>
+     <tr>
+     	<td class="tdL">真实姓名:</td>
+        <td class="tdR"><input type="text" name="postdb[truename]" style="width:130px;" value="$rs[truename]" $ipunt_idcard></td>
+     </tr>
+     <tr class="bg">
+     	<td class="tdL"><br/></td>
+        <td class="tdR">
+        	<input type="submit" name="Submit" value="修 改">
+            <input type="hidden" name="hits2" value="$rs[hits]">
+        </td>
+     </tr>
+     </table>
+     </form>  
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

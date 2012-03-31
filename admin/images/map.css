@@ -1,0 +1,255 @@
+/*
+*初始化样式
+*/
+body, form, ul, li, p, dl, dd, dt ,h,td,th,h3{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size:12px;
+	padding:5px;	
+	
+	SCROLLBAR-FACE-COLOR: #60B7DE;
+
+	SCROLLBAR-HIGHLIGHT-COLOR: #eee;
+	SCROLLBAR-SHADOW-COLOR: #eee;
+	SCROLLBAR-3DLIGHT-COLOR: #eee;
+	SCROLLBAR-ARROW-COLOR: #eee;
+	SCROLLBAR-TRACK-COLOR: #B9D5F2;
+
+	SCROLLBAR-DARKSHADOW-COLOR: #1A5DB0;
+	SCROLLBAR-HIGHLIGHT-COLOR: #1A5DB0;
+
+
+}
+li,ul{
+	list-style: none;
+} 
+TD {
+	color: #333333;
+	VERTICAL-ALIGN: top;
+} 
+input,textarea{
+	border:1px solid #ccc;
+}
+img{
+	border:0;
+}
+a {
+	color:#005176;
+}
+a:link {
+	color:#005176;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #005176;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4E667B;
+}
+a:active {
+	text-decoration: none;
+}
+.mt5{
+	margin-top:5px;
+}
+.txc{
+	text-align:center;
+}
+/*
+*基本信息
+*/
+.baseinfocont{
+	height:205px;
+	background:url(infobg.gif) no-repeat;
+	text-align:center;
+}
+.baseinfocont table{
+	width:400px;
+	margin:100px auto 0 auto;
+	
+}
+.baseinfocont table td{
+	width:50%;
+}
+.baseinfocont table div{
+	height:20px;
+	overflow:hidden;
+	background:url(icon2.gif) left 8px no-repeat;
+	padding-left:20px;
+	font-size:12px;
+	line-height:20px;
+}	
+.baseinfocont table div span{
+	color:#FE0000;
+}
+/*
+*大表格全局样式
+*/
+.maintable{
+	border:#ACCCE3 solid 1px;
+	margin-bottom:5px;
+}
+.maintable td{
+	font-size:12px;
+}
+.maintable .head{
+	border:#FFF solid 1px;
+	height:26px;
+	line-height:26px;
+	background:url(head2.gif) repeat-x;
+	font-size:12px;
+	font-weight:bold;
+	color:#005176;
+	padding-left:10px;
+}
+.maintable .cont{
+	border:#EFEFEF solid 1px;
+	border-top:#ACCCE3 solid 1px;
+	padding:5px;
+}
+.maintable .cont .sidetable {
+	width:100%;
+}
+.maintable .sidetable .tdL{
+	width:50%;
+	padding-right:5px;
+}
+.sidetable .sidecont{
+	border:#DDD dotted 1px;
+}
+.sidetable .sidecont .sh{
+	border:#FFF solid 2px;
+	background:#EFF7FC;
+	height:20px;
+	line-height:20px;
+	padding-left:5px;
+	font-size:12px;
+}
+.sidetable .sidecont .sc{
+	padding:5px 5px 3px 10px;
+	font-size:12px;
+	line-height:20px;
+}
+.sidetable .sinfo{
+	border-right:#DDD solid 1px;
+	border-bottom:#DDD solid 1px;
+	width:50%;
+	padding:5px 5px 3px 10px;
+	line-height:20px;
+	font-size:12px;
+}
+.sidetable .sinfo img{
+	vertical-align:middle;
+}
+.maintable .cont .list{
+	border-bottom:#DDD solid 1px;
+	line-height:20px;
+	font-size:12px;
+	padding:3px 5px 0 5px;
+}
+.footl,.footc,.footr{
+	width:33%;
+	border:#FFF solid 1px;
+	border-right:0;
+	text-align:center;
+	background:url(head2.gif) repeat-x;
+	line-height:26px;
+	font-size:12px;
+}
+.footr{
+	border-right:#FFF solid 1px;
+}
+.configtable input,.configtable textarea{
+	font-size:12px;
+	color:#333;
+}
+.configtable .tdH{
+	height:20px;
+	line-height:20px;
+	padding-left:10px;
+	background:#DDD;
+	border-top:#FFF solid 1px;
+	font-weight:bold;
+}
+.configtable .tdL{
+	width:200px;
+	font-size:12px;
+	padding:3px 5px 2px 10px;
+	line-height:18px;
+	border-right:#DDD solid 1px;
+	border-bottom:#DDD solid 1px;
+}
+.configtable .tdR{
+	padding:3px 5px 2px 5px;
+	border-bottom:#DDD solid 1px;
+}
+.configtable .bdno{
+	border-bottom:0;
+}
+/*
+*列表表格样式
+*/
+.listtable td{
+	text-align:center;
+	padding:3px 5px 2px 5px;
+	border-bottom:#DDD dotted 1px;
+	vertical-align:middle;	
+}
+.listtable .trh td{
+	background:#449AE8;
+	border:#FFF solid 1px;
+	font-weight:bold;
+	color:#FFF;
+	line-height:18px;
+}
+.listtable .trh .grh{
+	background:url(head2.gif) left bottom repeat-x;
+	text-align:left;
+	color:#005176;
+	border:#ACCCE3 solid 1px;
+}
+.listtable .tl{
+	text-align:left;
+}
+.listtable .trB td{
+	background:#fafafa;
+}
+.submitdiv{
+	text-align:center;
+	padding:8px 0 3px 0;
+}
+/*
+*
+*/
+.maintable .mtop{
+	border-bottom:#99D3FB solid 2px;
+}
+.maintable .mtop a{
+	display:block;
+	width:80px;
+	text-align:center;
+	padding-top:2px;
+	line-height:20px;
+	float:left;
+	background:url(button_b.gif) center top no-repeat;
+}
+.maintable .mtop a.cht{
+	background:url(button_a.gif) center top no-repeat;
+	color:#FFF;
+	font-weight:bold;
+}
+
+.tablewidth{
+	border:1px solid #ACCCE3;
+}
+.tablewidth .head td{
+	line-height:23px;
+	background:url(head2.gif);
+}
+.tablewidth .head td a{
+	font-size:12px;
+}

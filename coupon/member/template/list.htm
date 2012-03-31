@@ -1,0 +1,68 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<style>
+.linetable td{
+	text-align:center;	
+	line-height:25px;
+}
+.linetable td.l{
+	text-align:left;	
+	padding-left:5px;
+	color:#999;
+}
+</style>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td height="100"  class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" >
+        <tr> 
+          <td class="head">我发布的促销信息</td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="3" class="linetable">
+              <tr class="head3"> 
+                <td width="40%">信息标题</td>
+                <td width="17%">发布日期</td>
+                <td width="10%">关注度</td>
+                <td width="15%">审核与否</td>
+                <td width="8%">详情</td>
+                <td width="10%">管理</td>
+              </tr>
+              <!--
+EOT;
+foreach($listdb AS $key=>$rs){print <<<EOT
+-->
+              <tr> 
+                <td class="l"><a href="../bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank">{$rs[title]}</a>({$city_DB[name][$rs[city_id]]})</td>
+                <td>$rs[posttime]</td>
+                <td>$rs[hits]</td>
+                <td>$rs[ifyz]</td>
+                <td><a href="../bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank">查看</a></td>
+                <td><a href="post.php?job=edit&id=$rs[id]&fid=$rs[fid]">修改</a> <a href="post.php?action=del&id=$rs[id]&fid=$rs[fid]">删除</a></td>
+              </tr>
+              <!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td align="center" height="23">$showpage</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="foot"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

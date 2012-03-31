@@ -1,0 +1,110 @@
+<!--
+<?php
+$_city_id=$rsdb[city_id]?$rsdb[city_id]:$city_id;
+print <<<EOT
+--> 
+<style type="text/css">
+<!--
+.dragTable{
+	border:#C69D74 solid 1px;	
+}
+.dragTable td{
+	border-bottom:#C69D74 solid 1px;	
+}
+.dragTable .head{
+	border:#FFF solid 1px;
+	border-bottom:#C69D74 solid 1px;
+	line-height:30px;
+	height:30px;
+	padding:0 10px 0 15px;
+	background:#F6D5B7;
+}
+.dragTable .head span{
+	float:left;
+}
+.dragTable .head a{
+	float:right;
+	color:green;
+}
+.dragTable .tdL{
+	height:30px;
+	width:200px;
+	vertical-align:middle;
+	padding-right:10px;
+	text-align:right;
+	border-right:#C69D74 solid 1px;
+}
+.dragTable .tdR{
+	vertical-align:middle;
+	padding-left:10px;
+}
+.dragTable .inputsubmit{
+	border-top:0;
+	padding:5px 0 5px 200px;
+	border-bottom:0;
+}
+-->
+</style>
+<script src="$webdb[www_url]/images/default/setday.js"></script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable">
+<form name="form1" method="post" action="?action=edit&job=list&id=$id&step=2">
+  <tr> 
+    <td colspan="2" class='head'><span>修改友情链接</span><a href="?job=list">友情链接列表</a></td>
+  </tr><tr> 
+    <td class="tdL"> 链接名称：</td>
+    <td class="tdR"><input class=mmcinb type='text' name='postdb[name]' value='$rsdb[name]'></td>
+  </tr>
+  <tr> 
+    <td class="tdL">网址：</td>
+    <td class="tdR"><input class=mmcinb type='text' name='postdb[url]' value='$rsdb[url]' size='50'></td>
+  </tr>
+  <tr> 
+    <td class="tdL">LOGO图片：(可为空)</td>
+    <td class="tdR">
+    	<input class=mmcinb type='text' name='postdb[logo]' value='$rsdb[logo]' id="pic" size="50">
+        <iframe frameborder=0 height=23 scrolling=no src='$webdb[www_url]/do/upfile.php?fn=uppic&dir=friendlink' width=310></iframe>
+    </td>
+  </tr>
+  <tr> 
+    <td class="tdL">描述介绍(可不填)：</td>
+    <td class="tdR"><input class=mmcinb type='text' name='postdb[descrip]' value='$rsdb[descrip]' size='60'></td>
+  </tr>
+  <tr> 
+    <td class="tdL">验证与否</td>
+    <td class="tdR">
+    	<input type="radio" name="postdb[yz]" value="1" $yz[1]> 已验证 
+        <input type="radio" name="postdb[yz]" value="0" $yz[0]> 未验证
+    </td>
+  </tr>
+  <tr> 
+    <td class="tdL">是否强制为文字链接:</td>
+    <td class="tdR">
+    	<input type="radio" name="postdb[iswordlink]" value="1" $iswordlink[1]> 强制 
+        <input type="radio" name="postdb[iswordlink]" value="0" $iswordlink[0]> 不强制
+    </td>
+  </tr>
+  <tr> 
+    <td class="tdL">截止显示日期:</td>
+    <td class="tdR">
+    	<input type="text" name="postdb[endtime]" value="$rsdb[endtime]" onClick="setday(this)">
+        (留空则长久有效)
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="inputsubmit"> 
+      <input type="submit" name="Submit2" value=" 修 改  ">
+    </td>
+  </tr>
+</form>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function uppic(url,name,size,b){
+	get_obj('pic').value=url;
+}
+//-->
+</SCRIPT>
+<!--
+EOT;
+?>
+-->

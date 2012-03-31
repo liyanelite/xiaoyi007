@@ -1,0 +1,115 @@
+<!--
+<?php
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/coupon/list.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>  	
+  	<td class="side">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortcontainer">
+          <tr>
+            <td class="head"><span>促销分类</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$i=0;
+foreach($Fid_db[0] AS $key=>$name){
+$i++;
+$url=get_info_url('',$key,$city_id);
+print <<<EOT
+-->
+                <div class="bigsort sort$i"><a href="$url">$name</a></div>
+                <div class="sort"> 
+<!--
+EOT;
+foreach($Fid_db[$key] AS $key2=>$name2){
+$url=get_info_url('',$key2,$city_id);
+print <<<EOT
+-->
+              	<a href="$url">$name2</a> | 
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>			
+<!--
+EOT;
+}
+print <<<EOT
+-->            
+            </td>
+          </tr>
+          <tr>
+            <td class="foot"></td>
+          </tr>
+        </table>
+        <div class="sidecontainer mt10">
+        	<div class="head"><span>优惠快讯</span></div>
+            <div class="cont">
+<!--
+EOT;
+$array = list_coupon(5,'new');
+foreach($array AS $rs){
+$rs[fulltime] = date("m-d",$rs[fulltime]);
+print <<<EOT
+-->
+              
+          <div class="list"><span>$rs[username]</span>于<em>$rs[fulltime]</em>发布了<a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </div>
+        </div>
+    </td>
+    <td class="main">
+    	<div class="dragcontainer">
+        	<div class="head">
+            	<div class="tag"><span>{$fidDB[name]}</span></div>
+                <div class="more"><a href="listall.php" class="ch">最新促销信息</a><a href="listall.php?ordertype=hits">热门促销信息</a><a href="listall.php?ordertype=levelstime">推荐促销信息</a></div> 
+            </div>
+            <div class="cont">
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$rs[title]=get_word($rs[title],50);
+print <<<EOT
+--> 
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listtable">
+                  <tr>
+                    <td class="img">
+                    	<a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank"><img src="$rs[picurl]" onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="120" height="90"/></a>
+                    </td>
+                    <td class="word">
+                    	<div class="t"><a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank" title='$rs[full_title]'>$rs[title]</a></div>
+                        促销价格：￥{$rs[price]}<br/>
+                        截止日期：{$rs[end_time]}<br/> 
+                    	<!--{template}-->
+                        {title}： {value} 
+                        <!--{/template}-->
+                    	浏览:{$rs[hits]}次 发布者:{$rs[username]}
+                    </td>
+                    <td class="goto"><a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank"><img src="$webdb[www_url]/images/yellow/tuangou_see.gif"/></a></td>
+                  </tr>
+                </table>
+<!--
+EOT;
+}if($showpage){print <<<EOT
+-->
+               <div class="showpage">$showpage</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>            
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

@@ -1,0 +1,86 @@
+<!--
+<?php
+$_city_id=$rsdb[city_id]?$rsdb[city_id]:$city_id;
+print <<<EOT
+--> 
+<style type="text/css">
+<!--
+.dragTable{
+	border:#C69D74 solid 1px;	
+}
+.dragTable td{
+	border-bottom:#C69D74 solid 1px;	
+}
+.dragTable .head{
+	border:#FFF solid 1px;
+	border-bottom:#C69D74 solid 1px;
+	line-height:30px;
+	height:30px;
+	padding:0 10px 0 15px;
+	background:#F6D5B7;
+}
+.dragTable .head span{
+	float:left;
+}
+.dragTable .head a{
+	float:right;
+	color:green;
+}
+.dragTable .tdL{
+	height:30px;
+	width:200px;
+	vertical-align:middle;
+	padding-right:10px;
+	text-align:right;
+	border-right:#C69D74 solid 1px;
+}
+.dragTable .tdR{
+	vertical-align:middle;
+	padding-left:10px;
+}
+.dragTable .inputsubmit{
+	border-top:0;
+	padding:5px 0 5px 200px;
+	border-bottom:0;
+}
+-->
+</style>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable">
+<form name="form1" method="post" action="?action=edit&job=list&id=$id&step=2">
+  <tr> 
+    <td colspan="2" class='head'><span>修改竞价广告</span><a href="?job=list">竞价广告列表</a></td>
+  </tr><tr> 
+    <td class="tdL"> 所在城市:</td>
+    <td class="tdR">{$city_DB[name][$rsdb[city_id]]}</td>
+  </tr>
+  <tr> 
+    <td class="tdL"> 广告位名称:</td>
+    <td class="tdR">{$rsdb[name]}</td>
+  </tr>
+  <tr> 
+    <td class="tdL">投放日期:</td>
+    <td class="tdR">开始:$rsdb[begintime] &nbsp;&nbsp; 结束:$rsdb[endtime] </td>
+  </tr>
+  <tr> 
+    <td class="tdL">出价:</td>
+    <td class="tdR">$rsdb[money] </td>
+  </tr>
+  <tr> 
+    <td class="tdL">广告文字内容:</td>
+    <td class="tdR"><input type="text" name="postdb[adword]" value="$rsdb[adword]"></td>
+  </tr>
+  <tr> 
+    <td class="tdL">广告链接地址:</td>
+    <td class="tdR"><input type="text" name="postdb[adlink]" size="50" value="$rsdb[adlink]"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="inputsubmit"> 
+      <input type="submit" name="Submit2" value=" 修 改  ">
+    </td>
+  </tr>
+</form>
+</table>
+<!--
+EOT;
+?>
+-->

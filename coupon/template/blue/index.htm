@@ -1,0 +1,141 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/coupon/index.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>
+  	<td class="SideL">
+    	<div class="SideContainer">
+            <div class="heada"><span class="L">热门促销信息</span><span class="R"><a href="#" target="_blank">更多</a></span></div>
+            <div class="cont">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hotcoupon">
+<!--
+EOT;
+$i=0;
+$array = array_chunk(list_coupon(4,'hot'),2);
+foreach($array AS $ar){
+print <<<EOT
+-->
+                  <tr>
+<!--
+EOT;
+foreach($ar AS $rs){
+$i++;
+$rs[title]=get_word($rs[title],16);
+$rs[yhnum] = $rs[mart_price] - $rs[price];
+print <<<EOT
+-->
+                    <td class="td$i">
+                    	<div class="title"><a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></div>
+                        <div class="price">￥{$rs[price]}</div>
+                        <div class="yh">优惠<span>￥{$rs[yhnum]}</span></div>
+                        <div class="mart">原价<strike>￥$rs[mart_price]</strike></div>
+                    </td>
+<!--
+EOT;
+}print <<<EOT
+-->
+                  </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+                </table> 
+				</div>
+        </div>
+    </td> 
+    <td class="MainR">
+    	<div class="SlideContainer">$label[coupon_rollpic]</div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+    	<div class="dragcontainer">
+        	<div class="head">
+            	<div class="L">优惠促销</div>
+                <div class="R">
+                	<span onclick="ShowTab(1,1,4)" id="Span1">最新促销信息</span>
+                    <span onclick="ShowTab(2,1,4)" id="Span2">热门促销信息</span>
+                    <span onclick="ShowTab(3,1,4)" id="Span3">推荐促销信息</span>
+                </div>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont" id="Tab1">
+              <tr>
+                <td>
+               $label[blue_coupon1]               
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont" id="Tab2">
+              <tr>
+                <td>
+               $label[blue_coupon2]               
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont" id="Tab3">
+              <tr>
+                <td>
+               $label[blue_coupon3]                
+                </td>
+              </tr>
+            </table>
+            <SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,4);</SCRIPT>
+        </div>
+    </td>
+  	<td class="SideR">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortcontainer">
+          <tr>
+            <td class="head"><span>促销分类</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$i=0;
+foreach($Fid_db[0] AS $key=>$name){
+$i++;
+$url=get_info_url('',$key,$city_id);
+print <<<EOT
+-->
+                <div class="bigsort sort$i"><a href="$url">$name</a></div>
+                <div class="sort"> 
+<!--
+EOT;
+foreach($Fid_db[$key] AS $key2=>$name2){
+$url=get_info_url('',$key2,$city_id);
+print <<<EOT
+-->
+              	<a href="$url">$name2</a> | 
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>			
+<!--
+EOT;
+}
+print <<<EOT
+-->            
+            </td>
+          </tr>
+          <tr>
+            <td class="foot"></td>
+          </tr>
+        </table>
+        <div class="sidecontainer mt10">
+        	<div class="head"><span>促销快讯</span></div>
+            <div class="cont">
+			$label[coupon_new23]</div>            
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

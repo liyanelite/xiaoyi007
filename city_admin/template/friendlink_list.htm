@@ -1,0 +1,92 @@
+<!--
+<?php
+print <<<EOT
+-->
+<style>
+.listtable {
+	margin:5px auto;
+}
+.listtable td{
+	text-align:center;
+	padding:5px 5px 3px 5px;
+}
+.listtable .h td{
+	background:#EEE;
+}
+</style>
+<table width="794" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td height="100" valign="top" class="Main"> 
+    <form name="form1" action="$webdb[www_url]/city_admin/friendlink.php?action=sort&job=list" method="post">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable">
+        <tr> 
+          <td class="head">
+            友情链接管理
+          </td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+
+            <table width="100%" border="0" cellspacing="5" cellpadding="5">
+                <tr> 
+                  <td height="25"> 
+                    <table width="100%" border="0" cellspacing="1" cellpadding="3" class="listtable">
+                      <tr class="h">  
+                        <td width="5%">ID</td>
+                        <td width="20%">名称</td>
+                        <td width="15%">是否审核</td>
+                        <td width="10%">排序</td>
+                        <td width="25%">LOGO</td>
+                        <td width="10%">状态</td>
+                        <td width="15%">修改/删除</td>
+                      </tr>
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+                    	<tr> 
+                            <td><input type="checkbox" name="iddb[{$rs[id]}]" value="$rs[id]">$rs[id]</td>
+                            <td><a href="$rs[url]" target="_blank">$rs[name]</a></td>
+                            <td>$rs[yz]</td>
+                            <td><input type="text" name="listdbsort[{$rs[id]}]" size="3" value="$rs[list]"></td>
+                            <td><a href="$rs[url]" target="_blank">$rs[logo]</a></td>
+                            <td>$rs[state]</td>
+                            <td><a href="$webdb[www_url]/city_admin/friendlink.php?action=edit&job=list&id=$rs[id]">修改</a>/<a href="$webdb[www_url]/city_admin/friendlink.php?action=del&job=list&id=$rs[id]" onClick="return confirm('你确认要删除吗?不可恢复');">删除</a></td>
+                      	</tr>
+                        
+<!--
+EOT;
+}print <<<EOT
+-->   
+                    </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td align="center" class="page">$showpage</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                
+            </table>
+ 
+          </td>
+        </tr>
+        <tr align="center">
+        <td><input type="submit" name="btn_submit" value="提交处理排序" /></td>
+        </tr>
+        <tr>
+          <td class="foot">
+            <h3 class="L"></h3>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+      </table>
+      </form>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

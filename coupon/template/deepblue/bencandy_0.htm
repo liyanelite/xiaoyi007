@@ -1,0 +1,56 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/coupon/bencandy.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>  	
+  	<td colspan="2" class="bhead"><div class="tag"><span>{$fidDB[name]}</span></div></td>
+    <td class="shead"><div class="tag"><span>商家档案</span></div></td>
+  </tr>
+  <tr>
+    <td class="bimg">
+    	<a href="$rsdb[picurl]" target="_blank"><img src='$rsdb[picurl]' onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="220" ></a>
+    </td>
+    <td class="binfo">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            	<div class="title">$rsdb[title]</div>
+                <div><span>市场价格：</span><strike>￥{$rsdb[mart_price]}</strike></div>
+                <div><span>优 惠 价：</span>￥{$rsdb[price]}</div>
+                <div><span>截止日期：</span>$rsdb[end_time]</div>
+                <!--{template}-->
+				<div><span>{title}：</span>{value}</div>
+				<!--{/template}-->
+                <div><span>发布日期：</span><a editurl='$Murl/job.php?job=bencandy&fid=$fid&id=$id&act=do'>$rsdb[posttime]</a></div>
+            </td>
+          </tr>
+        </table>
+    	<div class="moreaction">
+            <a href="#" onClick="javascript:window.external.AddFavorite('$WEBURL','$rsdb[title]')"><img src="$webdb[www_url]/images/$STYLE/coupon/butter1.gif"/></a>
+            <a href="#" onClick="window.location.href='mailto:';"><img src="$webdb[www_url]/images/$STYLE/coupon/butter2.gif"/></a>
+            <a href="print.php?job=report&fid=$fid&id=$id" target="_blank"><img src="$webdb[www_url]/images/$STYLE/coupon/butter3.gif"/></a>
+        </div>
+    </td>
+    <td class="uinfo">
+    	<div class="list">会员名:<span>$rsdb[username]</span></div>
+        <div class="list">&nbsp;&nbsp;注册日期:$memberdb[regdate]</div>
+        <div class="list">&nbsp;&nbsp;离线时间:$memberdb[lastvist]</div>
+        <div class="list">&nbsp;&nbsp;级别:<span>{$ltitle[$memberdb[groupid]]}</span></div>
+        <div class="join"><a href="$webdb[www_url]/home/?uid=$rsdb[uid]" target="_blank"><img src="$webdb[www_url]/images/$STYLE/coupon/butter4.gif"/></a></div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" class="contenttd">
+    	<div class="content">
+        	<div class="head">详情信息</div>
+            <div class="cont">{$rsdb[content]}</div>
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

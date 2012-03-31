@@ -1,0 +1,76 @@
+<!--
+<?php
+$Mpath=substr(ROOT_PATH,0,-1);
+print <<<EOT
+-->
+<table border="0" cellspacing="1" cellpadding="3" width="100%" class="tablewidth">
+     <tr align="center"> 
+      <td class="head">批量操作</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      
+    <td align="center"> 
+    
+        
+		<!--
+EOT;
+if(count($city_DB[name])>1){print <<<EOT
+-->泛域名 
+        <input type="text" name="domain2" id="domain2">
+        (如:abc.com)
+	<input type="button" name="Submit22" value="批量生成城市二级域名"
+	 onClick="window.location.href='$admin_path&action=batch&type=city_dir&citydir='+'&domain2='+get_obj('domain2').value">
+
+        <br>
+        <br>
+        <br>
+<!--
+EOT;
+}print <<<EOT
+-->
+		
+      </td>
+    </tr>
+ </table><table border="0" cellspacing="1" cellpadding="3" width="100%" class="tablewidth">
+     <tr > 
+      
+    <td class="head">重要说明!!</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      
+    <td> 
+      <p>1.如果网站使用的是购买的虚拟空间,没权修改服务器apache配置文件,就无法使用城市二级域名,此时就不要做任何操作.<br>
+        2.如果要使用城市二级域名,请先在域名控制台那里A记录把域名泛解释到本网站服务器所在IP.比如如 *.qibosoft.com A记录到 111.111.111.111 
+        泛域名是*号开头的. <br>
+        设置域名泛解释后,需要等待一段时间才能生效,如何测试是否生效?请ping一下即可,如 ping 任意字母.qibosoft.com 能看到服务器的IP就代表生效了.<br>
+        3.使用城市二级域名,泛域名生效后,就在上面表单输入泛域名,此时必须把*.去掉,如 qibosoft.com 这里是不需要*.号的．只是域名控制台那里需要．<br>
+        4.执行以上操作,会强制修改原来的城市二级域名<br>
+        5.要想取消城市二级域名,请在泛域名这一项输入null<br>
+        <br>
+        对于多个城市,要使用二级域名的话,需要把你的域名泛解释到当前服务器所在IP <font color="#FF0000">{$_SERVER[SERVER_ADDR]}</font>.如：“*.qibosoft.com”，泛解释域名必须是*号开头的.<br>
+        然后还要修改服务器设置<br>
+        一切设置好之后,需要重启一下apache服务才会生效. <br>
+        “二级域名”如填abc.com,产生的二级域名是guangzhou.abc.com,而填life.abc.com产生的二级域名是guangzhou.life.abc.com,对于第一种情况,需要把域名*.abc.com泛解释到本服务器,而第二种情况需要把域名*.life.abc.com泛解释到此服务器<br>
+        域名泛解释后,对于IIS服务器,需要新添加一个站点,域名为空,绑定到目录$Mpath<br>
+        而对于apache需要新添加如下代码到httpd.conf配置文件最后一行<br>
+        &lt;VirtualHost *:80&gt;<br>
+        DocumentRoot $Mpath<br>
+        ServerName test.abc.com<br>
+        ServerAlias *.abc.com #把abc.com换成上面填写的域名 
+        <!--
+EOT;
+?>
+-->
+        <br>
+        &lt;IfModule mod_rewrite.c&gt;<br>
+        RewriteEngine On<br>
+        RewriteRule ^(.*)-htm-(.*)$ $1\.php\?Rurl=$2<br>
+        &lt;/IfModule&gt; <br>
+        &lt;/VirtualHost&gt; <br>
+        <br>
+        对于IIS而言，如果使用了城市二级域名，还想使用商铺三级域名的话，则二级域名要一个一个的添加。而商铺三级域名就建一个站点，域名为空.<br>
+        另外：如果城市用了二级域名，那么商铺就不能用二级域名，否则容易出现重复的域名，建议商铺就用三级域名。否则就在商铺那里禁止一些名称 </p>
+      </td>
+    </tr>
+ </table>
+

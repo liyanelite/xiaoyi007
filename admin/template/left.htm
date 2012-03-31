@@ -1,0 +1,100 @@
+<html>
+<!--
+<?php
+$groupidword = $admin_name==$userdb[username] ? "创始人" : $ltitle[$userdb[groupid]] ;
+print <<<EOT
+-->
+<head>
+<title>后台管理 powerby www.qibosoft.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" href="images/left.css" type="text/css">
+</head>
+<body>
+<div id="leftmenu">
+<div class="info">
+	<div class="head"><span>当前状态</span></div>
+    <div class="cont">
+    	<div>帐号：<span>$userdb[username]</span></div>
+        <div>级别：$groupidword</div>
+        <div><a href="index.php?lfj=center&job=map" target="main">管理首页</a> <a href=?action=quite target=main>安全退出</a></div>
+        <div><a href='$webdb[www_url]/{$ModuleDB[$Smenu][dirname]}' target="_blank">查看首页</a> <a href="?lfj=center&job=phpinfo" target="main">服务器信息</a></div>
+        <div><a href="javascript:;" onclick="ShowAll();">+全部展开</a> <a href="javascript:;" onclick="HiddenAll();">-全部收缩</a></div>
+    </div>
+</div>
+$mainlink 
+<!--
+EOT;
+foreach($menu_GpartDB AS $key=>$array){
+print <<<EOT
+-->
+<dl id="TheDl{$key}" class="show">
+	<dt onclick='showson("TheDl{$key}")'><span>$array[name]</span></dt>
+    <dd>
+    	<table width='100%' cellspacing='0' cellpadding='0'>
+<!--
+EOT;
+$ck=0;
+$endtr='';
+foreach($array[son] AS $key2=>$rs){
+$ck++;
+$endtr='</td></tr>';
+if($ck==1){
+	$a1="<tr><td onmouseover=\"this.className='leftA'\" onmouseout=\"this.className='leftB'\">";	 
+}elseif(!$rs[iftier]){
+	$a1="</td></tr><tr><td onmouseover=\"this.className='leftA'\" onmouseout=\"this.className='leftB'\">";
+}elseif($rs[iftier]){
+	$a1=" | ";
+}
+print <<<EOT
+-->
+          $a1 <A HREF='$rs[linkurl]' target='main' style="color:$rs[color];">$rs[name]</A> 
+<!--
+EOT;
+}print <<<EOT
+-->$endtr
+        </table>
+    </dd> 
+</dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+<div class="info">
+	<div class="head"><span>版权所有</span></div>
+    <div class="cont">
+    	<div>系统版本:$qibosoft_Edition</div>
+        <div>系统设计:龙城</div>
+        <div>支持团队:齐博技术团队</div>
+        <div>技术支持:<A HREF="http://bbs.qibosoft.com/" style="color:#666;" target="_blank">齐博官方论坛</A></div>
+    </div>
+</div>
+</div>
+<div style='display:none;'><iframe src='../do/crontab.php' width=0 height=0></iframe></div></div>
+<div style='display:none;'><iframe src="index.php?lfj=center&job=GetOfficialNotice" width=0 height=0></iframe></div>
+<SCRIPT language=javascript>
+function showson(ss){
+	if (document.getElementById(ss).className==''){
+		document.getElementById(ss).className = 'Show';
+	}else{
+		document.getElementById(ss).className = '';
+	}
+}
+
+var objDl=document.getElementById("leftmenu").getElementsByTagName("dl");
+function ShowAll(){	
+	for(var i=0;i< objDl.length;i++ ){
+		objDl[i].className='Show';
+	}
+}
+function HiddenAll(){	
+	for(var i=0;i< objDl.length;i++ ){
+		objDl[i].className='';
+	}
+}
+</script>
+</body>
+</html>
+<!--
+EOT;
+?>
+-->

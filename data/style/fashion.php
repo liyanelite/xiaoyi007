@@ -1,0 +1,5 @@
+<?php
+unset($styledb);
+		$styledb['name']='Ê±ÉÐ·ç¸ñ';
+		$styledb['keywords']='fashion_win';
+?>

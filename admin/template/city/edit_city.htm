@@ -1,0 +1,143 @@
+<!--
+<?php
+$Mpath=substr(ROOT_PATH,0,-1);
+print <<<EOT
+-->
+<table border="0" cellspacing="1" cellpadding="3" width="100%" class="tablewidth">
+  <form name="form1" method="post" action="$admin_path&action=$job">
+    <tr align="center"> 
+      <td colspan="2" class="head">修改</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td width="33%">名称:</td>
+      <td width="67%"> 
+        <input type="text" name="postdb[name]" value="$rsdb[name]">
+      </td>
+    </tr><tr bgcolor="#FFFFFF"> 
+      <td width="33%">上级地区:</td>
+      <td width="67%"> $sort_fup</td>
+    </tr>
+    <!--
+EOT;
+if(count($city_DB[name])>1){
+print <<<EOT
+-->
+ <tr bgcolor="#FFFFFF">
+      <td width="33%">城市管理员</td>
+      <td width="67%">
+        <input type="text" name="postdb[admin]" value="$rsdb[admin]" size="50">
+        多个用,逗号隔开,如 admin,小生</td>
+    </tr>
+
+	
+    <tr bgcolor="#FFFFFF"> 
+      <td width="33%">二级域名:(如无权修改服务器配置文件,就留空)</td>
+      <td width="67%"> 
+        <input type="text" name="postdb[domain]" value="$rsdb[domain]" size="50">
+        如: http://gz.qibosoft.com 结尾不要加/</td>
+    </tr>
+    <!--
+EOT;
+}
+print <<<EOT
+-->
+    
+	
+     
+ 
+    <tr bgcolor="#FFFFFF"> 
+      <td width="33%">城市模板</td>
+      <td width="67%"> 头部模板: 
+        <input type="text" name="postdb[head]" value="$head" size="40">
+        <br>
+        尾部模板: 
+        <input type="text" name="postdb[foot]" value="$foot" size="40">
+        <br>
+        主页模板: 
+        <input type="text" name="postdb[index]" value="$index" size="40">
+      </td>
+    </tr>
+
+	
+    <tr bgcolor="#FFFFFF"> 
+      <td width="33%">城市首页SEO优化设置</td>
+      <td width="67%"> 标题(title): 
+        <input type="text" name="postdb[descrip]" value="$rsdb[descrip]" size="50">
+        <br>
+        关键字(keywords): 
+        <input type="text" name="postdb[metakeywords]" value="$rsdb[metakeywords]" size="50">
+        <br>
+        描述(description): 
+        <input type="text" name="postdb[metadescription]" value="$rsdb[metadescription]" size="50">
+        <br>
+        <br>
+        变量名使用说明:{city_name}代表城市名,{sort_name}代表栏目名,以下2项只有分类的列表与内容才用得到<br>
+        {zoon_name}代表区域名,{street_name}代表街道名</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td width="33%">是否为热门城市:</td>
+      <td width="67%">
+        <input type="checkbox" name="postdb[hits]" value="1" $hits[1]>(选中的话,将在城市选择页以红色字体显示,而单城市版,设置无效)
+      </td>
+    </tr>
+	
+    <tr align="center"> 
+      <td colspan="2" bgcolor="#FFFFFF"> 
+        <input type="submit" name="Submit" value="提交">
+        <input type="hidden" name="postdb[fid]" value="$fid">
+      </td>
+    </tr>
+  </form>
+</table>
+<br>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function show_more(va){
+	var s=document.getElementsByTagName("tr");
+	for(var i=0;i<s.length;i++){
+		if( document.form1.showmore.checked==true ||va==1 ){
+			if(s[i].className=='hidetr'){
+				s[i].style.display="";
+			}	
+		}else{
+			if(s[i].className=='hidetr'){
+				s[i].style.display="none";
+			}	
+		}
+	}
+}
+//show_more(1);
+//-->
+</SCRIPT>
+<table border="0" cellspacing="1" cellpadding="3" width="100%" class="tablewidth">
+     <tr > 
+      
+    <td class="head">重要说明!</td>
+    </tr>
+  <tr>
+    <td>对于多个城市,要使用二级域名的话,需要把你的域名泛解释到当前服务器所在IP <font color="#FF0000">{$_SERVER[SERVER_ADDR]}</font>.如：“*.qibosoft.com”，泛解释域名必须是*号开头的.<br>
+      然后还要修改服务器设置<br>
+      一切设置好之后,需要重启一下apache服务才会生效. <br>
+      “二级域名”如填abc.com,产生的二级域名是guangzhou.abc.com,而填life.abc.com产生的二级域名是guangzhou.life.abc.com,对于第一种情况,需要把域名*.abc.com泛解释到本服务器,而第二种情况需要把域名*.life.abc.com泛解释到此服务器<br>
+      域名泛解释后,对于IIS服务器,需要新添加一个站点,域名为空,绑定到目录$Mpath<br>
+      而对于apache需要新添加如下代码到httpd.conf配置文件最后一行<br>
+      &lt;VirtualHost *:80&gt;<br>
+      DocumentRoot $Mpath<br>
+      ServerName test.abc.com<br>
+      ServerAlias *.abc.com #把abc.com换成上面填写的域名
+      <!--
+EOT;
+?>
+-->
+      <br>
+      &lt;IfModule mod_rewrite.c&gt;<br>
+      RewriteEngine On<br>
+      RewriteRule ^(.*)-htm-(.*)$ $1\.php\?Rurl=$2<br>
+      &lt;/IfModule&gt; <br>
+      &lt;/VirtualHost&gt; <br>
+      <br>
+      对于IIS而言，如果使用了城市二级域名，还想使用商铺三级域名的话，则二级域名要一个一个的添加。而商铺三级域名就建一个站点，域名为空.<br>
+      另外：如果城市用了二级域名，那么商铺就不能用二级域名，否则容易出现重复的域名，建议商铺就用三级域名。否则就在商铺那里禁止一些名称</td>
+  </tr>
+</table>
+
