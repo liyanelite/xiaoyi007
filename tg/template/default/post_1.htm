@@ -1,0 +1,174 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<script type="text/javascript" src="$webdb[www_url]/ewebeditor/ckeditor/ckeditor.js"></script>
+<script src="$webdb[www_url]/images/default/setday.js"></script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td width="100%" height="393" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" id="postshop">
+        <tr> 
+          <td class="head"> 
+            <h3 class="L"></h3>
+            <span class="TAG">$fidDB[name]</span> 
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+        <tr> 
+          <td class="middle"> <form name="FORM" id="FORM" method="post" action="post.php?action=$atc"  enctype="multipart/form-data">
+            <script>
+function upfile(url,name,size,ty){
+	document.getElementById("atc_pic").value=url;
+}
+</script>
+              <table width="99%" border="0" cellspacing="8" cellpadding="3" id="bigtable">
+                <tr align="left"> 
+                  <td colspan="2"> 
+                    <div class="ct">基本资料</div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="18%" align="right"><font color="red">*</font> 活动名称:</td>
+                  <td width="82%"> 
+                    <input type="text" name="postdb[title]" id="atc_title" size="40" value="$rsdb[title]">
+                     
+                  </td>
+                </tr>
+                 <!--
+EOT;
+if($job!="edit"&&!$web_admin){
+print <<<EOT
+-->
+                <tr> 
+                  <td width="18%" align="right">验证码:<font color=red>(必填)</font></td>
+                  <td width="82%"> 
+                    <input id="yzImgNum" type="text" name="yzimg" size="8">
+                    <SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<img border="0" name="imageField" onclick="this.src=this.src+Math.random();" src="$webdb[www_url]/do/yzimg.php?'+Math.random()+'">');
+//-->
+</SCRIPT>
+                  </td>
+                </tr>
+                <!--
+EOT;
+}
+print <<<EOT
+--><!--
+EOT;
+if(count($city_DB[name])>1){
+print <<<EOT
+-->
+                <tr> 
+                  <td align="right">所在城市</td>
+                  <td> 
+                    <select name="city_id">
+<!--
+EOT;
+foreach($city_DB[name] AS $key=>$value){
+if($job=='edit'){
+	$city_id=$rsdb[city_id];
+}
+$ckk=$city_id==$key?'selected':'';
+print <<<EOT
+-->
+                      <option value="$key" $ckk>$value</option>
+ <!--
+EOT;
+}
+print <<<EOT
+-->
+                    </select>
+                  </td>
+                </tr>
+                <!--
+EOT;
+}
+print <<<EOT
+-->
+                <tr> 
+                  <td width="18%" align="right">介绍图:</td>
+                  <td width="82%">
+                    <input type="text" name="postdb[picurl]" id="atc_pic" size="40" value="$rsdb[picurl]"><iframe frameborder=0 height=23 scrolling=no src='$webdb[www_url]/do/upfile.php?fn=upfile&dir=$_pre/$fid' width="310"></iframe>
+                  </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>活动性质:<br></td>
+                  <td > <input type='radio' style='border:0;' name='postdb[sortid]' value='1' {$rsdb[sortid]['1']}>网友自发组织  <input type='radio' style='border:0;' name='postdb[sortid]' value='2' {$rsdb[sortid]['2']}>商家组织  </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>活动地点:<br></td>
+                  <td > <input   type='text' name='postdb[place]' id='atc_place' style='width:230px;' value='$rsdb[place]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>集合时间:<br></td>
+                  <td ><input  onclick="setday(this,1)" type='text' name='postdb[jointime]' id='atc_jointime' size='20' value='$rsdb[jointime]'>  </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>报名截止时间:<br></td>
+                  <td ><input  onclick="setday(this,1)" type='text' name='postdb[end_time]' id='atc_end_time' size='20' value='$rsdb[end_time]'>  </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>活动简介:<br></td>
+                  <td >	<textarea name='postdb[content]' id='atc_content' style='width:700px;height:250px;visibility:hidden;'>$rsdb[content]</textarea> 
+<script type='text/javascript'>
+CKEDITOR.replace( 'atc_content',
+{
+width:'100%',
+height:'250px',
+filebrowserBrowseUrl : '$webdb[www_url]/ewebeditor/ckfinder/ckfinder.html',
+filebrowserImageBrowseUrl : '$webdb[www_url]/ewebeditor/ckfinder/ckfinder.html?Type=Images',
+filebrowserFlashBrowseUrl : '$webdb[www_url]/ewebeditor/ckfinder/ckfinder.html?Type=Flash',
+filebrowserUploadUrl : '$webdb[www_url]/ewebeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+filebrowserImageUploadUrl : '$webdb[www_url]/ewebeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+filebrowserFlashUploadUrl : '$webdb[www_url]/ewebeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+});
+</script></td>
+                </tr>
+                <!---->
+				
+				
+				<tr> 
+                  <td align='right'>地图位置</td>
+                  <td ><input type="text" name="postdb[gg_maps]" id="mapid" size="40" value="$rsdb[gg_maps]" readonly  onclick="window.open('$webdb[www_url]/hy/job.php?job=ggmap_position&position=$rsdb[gg_maps]&mapid=mapid&cityid='+document.getElementById('mapid_v').value);">
+(<img src="$webdb[www_url]/images/default/icon_qi.gif"><a onclick="window.open('$webdb[www_url]/hy/job.php?job=ggmap_position&position=$rsdb[gg_maps]&mapid=mapid&cityid='+document.getElementById('mapid_v').value);" href="#" >点击标注地图位置</a> 
+<font color="#999999">标注后，店铺将定位到电子地图上</font>) (<A onclick="document.getElementById('mapid').value='';" HREF="#">清除</A>) 
+<input type="hidden" name="hiddenField" id="mapid_v" value="$city_id"> </td>
+                </tr>
+				
+                <tr> 
+                  <td width="18%" align='right'>&nbsp;</td>
+                  <td width="82%"> 
+                    <input type="submit" name="Submit" value="提 交">
+                    <input type="hidden" name="fid" value="$fid">
+                    <input type="hidden" name="id" value="$id">
+              
+                    
+                    
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+        <tr> 
+          <td class="foot"> 
+            <h3 class="L"></h3>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+ 
+<!--
+EOT;
+?>
+-->

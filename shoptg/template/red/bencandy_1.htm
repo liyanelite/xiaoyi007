@@ -1,0 +1,185 @@
+<!--
+<?php
+$rsdb[save] = $rsdb[market_price] - $rsdb[price];
+$rsdb[end_time] && $rsdb[end_time] = strtotime("$rsdb[end_time] 23:59:59");
+$listtime = $rsdb[end_time] - $timestamp;
+if($listtime>=0){
+$displayword = $rsdb[pay_num] >= $rsdb[min_num] ? "<img src=\"$webdb[www_url]/images/yellow/stg-buy.gif\">团购成功,还可以<br/>继续购买..." : "<img src=\"$webdb[www_url]/images/yellow/stg-no.gif\">团购还没成功,请大家<br/>继续推荐...";
+}else{
+$displayword = "<img src=\"$webdb[www_url]/images/yellow/stg-over.gif\">活动已经结束,请不要<br/>再抢购...";
+}
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/shoptg/becandy.css">
+<SCRIPT LANGUAGE="JavaScript">   
+<!--   
+var maxtime = $listtime; //一个小时，按秒计算，自己调整!   
+function CountDown(){   
+	if(maxtime>=0){
+		days = Math.floor(maxtime/86400);
+		hours = Math.floor(maxtime%86400/3600); 
+		minutes = Math.floor(maxtime%86400%3600/60);   
+		seconds = Math.floor(maxtime%60);
+		msg = "<div class='word'>距离本这团购结束还有:<br/>"+days+"天"+hours+"时"+minutes+"分"+seconds+"秒</div><div class='pic'><img src='$webdb[www_url]/images/yellow/time.gif'></div>" ; 		   
+		if(maxtime == 3*60){
+			msg = "<div class='word'><font color='red'>最后只有三分钟</font></div><div class='pic'><img src='$webdb[www_url]/images/yellow/time.gif'></div>";
+		} 
+		document.getElementById('timer').innerHTML=msg;  
+		--maxtime;   
+	}   
+	else{
+		document.getElementById('timer').innerHTML="<div class='word'><font color='red'>本次团购活动<br/>已经结束</font></div><div class='pic'><img src='$webdb[www_url]/images/yellow/time0.gif'></div>"; 
+	}   
+}   
+timer = setInterval("CountDown()",1000);   
+//-->   
+</SCRIPT>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="shoptgad">
+  <tr>
+    <td class="ad1">{$label[red_stg_bad1]}</td>
+    <td class="ad2">{$label[red_stg_bad2]}</td>
+    <td class="ad3">{$label[red_stg_bad3]}</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer">
+  <tr>
+    <td class="Main">
+       <div class="hotshoptg">
+       		<div class="list1"><span>1</span></div>
+            <div class="about">
+           		<span>{$city_DB[name][$rsdb[city_id]]}</span>{$rsdb[about]}             
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="moreinfo">
+              <tr>
+                <td class="left">
+                	<div class="actionspace">
+                        <div class="action">
+                            <div class="butter">
+                                <span class="price">￥{$rsdb[price]}</span>
+                                <span class="cg">
+                                	<a href="join.php?fid=$fid&cid=$id&hownum=1" target="_blank"><img src="$webdb[www_url]/images/yellow/stg-cg.gif"></a>
+                                </span>
+                            </div>
+                            <div class="Offer">
+                                <div><span>原价</span><span><strike>￥{$rsdb[market_price]}</strike></span></div>
+                                <div><span>折扣</span><span>{$rsdb[shoptype]}</span></div>
+                                <div class="red"><span>节省</span><span>￥{$rsdb[save]}</span></div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="timeover" id="timer">
+                    	<br/>
+                    </div> 
+                    <div class="Status">
+                    	<div class="now">报名<span>{$rsdb[join_num]}</span>人 确定参与<span>{$rsdb[pay_num]}</span>人</div>
+                        <div class="red">{$displayword}</div>
+                        <div class="m">最低团购人数:{$rsdb[min_num]}人</div>
+                    </div>                  
+                </td>
+                <td class="right">
+                	<div class="img">
+                    <a href="$city_url/job.php?job=show_img&fid=$fid&id=$id" class="picurl" target="_blank"> 
+              			<img src='$rsdb[picurl]' onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="450" height="300"> 
+              		</a>
+              		</div>
+                    <div class="title">{$rsdb[title]}</div>
+                    <div class="Address"><span>地址:</span>$rsdb[address]</div>
+                </td>
+              </tr>
+            </table>
+       </div> 
+       <div class="content"> 
+          <div class="h"><span><a  editurl='$Murl/job.php?job=bencandy&fid=$fid&id=$id&act=do'>详细介绍</a></span></div>
+          <div class="c">
+              <table width="100%" cellspacing="0" cellpadding="0" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word' align="center">
+                <tr> 
+                  <td>$rsdb[content]</td>
+                </tr>
+              </table>
+          </div>
+       </div>
+    </td>
+    <td class="Side">
+    	<div class="shoptgsoft">
+        	<div class="head"><span class="fl">官方团购分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $key=>$name){
+$name=get_word($name,20);
+print <<<EOT
+-->
+				<dl>
+                	<dt><a href="list.php?fid=$key" target="_blank">$name</a></dt>
+                    <dd>
+<!--
+EOT;
+foreach($Fid_db[$key] AS $fid=>$name ){
+$name=get_word($name,24);
+print <<<EOT
+-->
+						<a href="list.php?fid=$fid" target="_blank">$name</a> | 
+<!--
+EOT;
+}print <<<EOT
+-->
+                    </dd>
+                </dl>
+<!--
+EOT;
+}print <<<EOT
+-->	          
+            </div>
+            <div class="foot"><br/></div>
+        </div> 
+		
+<!--
+EOT;
+if($rsdb[gg_maps]){
+print <<<EOT
+-->
+		        <div class="notecontainer">
+          <div class="head"><span class="fl">地图位置</span></div>
+          <div class="cont">
+<p style='color:#fff;height:350px;'>
+
+<iframe src="$webdb[www_url]/hy/job.php?job=show_ggmaps&position=$rsdb[gg_maps]&title=$rsdb[title]"  width="100%" height="350" scrolling="no" frameborder="0" ></iframe>
+</p>
+          </div>
+          <div class="foot"><br/></div>
+        </div>
+		<br/>
+<!--
+EOT;
+}
+print <<<EOT
+-->	
+		
+        <div class="notecontainer">
+          <div class="head"><span class="fl">最新团购消息</span></div>
+          <div class="cont">
+<!--
+EOT;
+$array=list_title('new',10);
+foreach($array AS $rs){print <<<EOT
+-->
+             <div class="list"><a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+          </div>
+          <div class="foot"><br/></div>
+        </div>
+		
+		
+		
+		
+		
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

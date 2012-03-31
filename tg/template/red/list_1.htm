@@ -1,0 +1,98 @@
+<!--
+<?php
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/tg/list.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr> 
+    <td class="SideL">
+    	<div class="sortcontainer">
+        	<div class="head"><span>商品分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+print <<<EOT
+-->
+				<div class="listsort"><a href="list.php?fid=$fkey">{$fvalue}</a></div>			
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </div>
+        </div>
+        <div class="sidecontainer">
+        	<div class="head"><span>热门活动</span></div>
+            <div class="cont"><!--
+EOT;
+$array=list_tg(5,'hot','',30);
+foreach($array AS $rs){
+print <<<EOT
+-->
+				
+          <div class="list"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->	
+            </div>
+        </div>
+    </td>
+    <td class="MainR">
+    	<div class="dragcontainer">
+        	
+        <div class="head"> <span class="L">{$fidDB[name]}</span> <span class="R"><a href="$webdb[www_url]/member/?main=$Murl/member/post.php?fid=$fid" target="_blank"><img src="$webdb[www_url]/images/yellow/tuangou_post.gif" border="0"/></a></span> 
+        </div>
+            <div class="cont">
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$rs[title]=get_word($rs[title],50);
+print <<<EOT
+-->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="listtable">
+                  <tr>
+                    
+              <td rowspan="2" class="pic"> <a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank"><img src="$rs[picurl]" onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="120" height="90" border="0" /></a> 
+              </td>
+                    <td class="word">
+                    	<div class="title"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="$target" title='$rs[full_title]'>{$rs[title]}</a></div>
+                        <div class="describ">&nbsp;&nbsp;&nbsp;&nbsp;{$rs[content]}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    
+              <td class="info"> <span class="l">日期:{$rs[posttime]} 浏览:{$rs[hits]}次 
+                发布者:{$rs[username]} 
+				
+						 活动性质:{$rs[sortid]}  
+<!---->
+
+                    
+				</span> <span class="r"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank"><img src="$webdb[www_url]/images/yellow/tuangou_see.gif"/></a></span> 
+              </td>
+                  </tr>
+                </table>
+<!--
+EOT;
+}if($showpage){print <<<EOT
+-->
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr> 
+                    <td class="page">$showpage</td>
+                  </tr>
+                </table>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

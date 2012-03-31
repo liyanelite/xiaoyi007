@@ -1,0 +1,105 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/shoptg/list.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="main">
+    	<div class="shoptgsort">
+<!--
+EOT;
+foreach($Fid_db[0] AS $key=>$name){
+$name=get_word($name,20);
+print <<<EOT
+-->
+				<a href="list.php?fid=$key" target="_blank">$name</a>
+<!--
+EOT;
+}print <<<EOT
+-->	
+        </div>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listcont">
+          <tr>
+            <td class="head">
+            	<span class="FL">{$fidDB[name]}</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$i=0;
+foreach($listdb AS $key=>$rs){
+$i++;
+$leftlist = $i%2==1 ? "leftlist" : "rightlist";
+$rs[content]=get_word($rs[content],200);
+$rs[save] = $rs[market_price] - $rs[price];
+print <<<EOT
+-->
+				<div class="listtg $leftlist">
+                	<div class="d">{$rs[posttime]}</div>
+                    <div class="t"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="$target" title='$rs[full_title]'>{$rs[content]}</a></div>
+                    <div class="pic">
+                    	<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank"><img src="$rs[picurl]" onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="200" height="150" border="0" /></a>
+                    </div>
+                    <div class="info">
+                    	<div class="buy"><span>{$rs[pay_num]}</span>人购买</div>
+                        <div class="p">原价：<strike>￥{$rs[market_price]}</strike></div>
+                        <div class="p">现价：<span>￥{$rs[price]}</span></div>
+                        <div class="s">折扣：<span>{$rs[shoptype]}折</span></div>
+                        <div class="p">节省：<span>￥{$rs[save]}</span></div>
+                    </div>
+                </div>			
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </td>            
+          </tr>
+          <tr>
+            <td class="page">$showpage &nbsp;</td>
+          </tr>
+        </table>
+    </td>
+    <td class="side">
+    	<div class="aboutshoptg">
+        	<div class="head"><span>来团购吧 享受无敌折扣</span></div>
+        	<div class="show1">
+            	<div class="b">第一步</div>
+                <div class="s">查看今日团购价格</div>
+            </div>
+            <div class="show2">
+            	<div class="b">第二步</div>
+                <div class="s">立即购买,等待凑够人数</div>
+            </div>
+            <div class="show3">
+            	<div class="b">第三步</div>
+                <div class="s">人数凑够,团购成功</div>
+            </div>
+        </div>
+    	<div class="notecontainer">
+        	<div class="head"><span class="fl">热门产品</span><span class="fr"><br/></span></div>
+        	<div class="cont">
+<!--
+EOT;
+$array=list_title('hot',8);
+foreach($array AS $rs){print <<<EOT
+-->
+             
+            <div class="list"><a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+          	<div class="foot"><br/></div>
+        </div>	
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

@@ -1,0 +1,134 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td height="100" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" >
+        <tr> 
+          <td class="head">网银帐号设置</td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="3" class="linetable">
+              <form name="form_work" method="post" action="?action=set">
+                <tr class="head3"> 
+                  <td colspan="3" bgcolor="#cccccc">易宝支付信息</td>
+                </tr>
+                <tr> 
+                  <td width='28%' bgcolor='#FFFFFF'>收款易宝支付商户编号：</td>
+                  <td colspan='2' bgcolor='#FFFFFF'> 
+                    <input    type='text' size='30' value='$conf[yeepay_id]' name='postdb[yeepay_id]'>
+                    <a href="https://www.yeepay.com/reg.html" target="_blank">注册</a> 
+                    <a href="https://www.yeepay.com/individualservice/Login.action" target="_blank">登录</a></td>
+                </tr>
+                <tr> 
+                  <td width='28%' bgcolor='#FFFFFF'>收款易宝支付商户密钥：</td>
+                  <td colspan='2' bgcolor='#FFFFFF'> 
+                    <input    type='text' size='40' value='$conf[yeepay_key]' name='postdb[yeepay_key]'>
+                  </td>
+                </tr>
+                <tr class="head3"> 
+                  <td colspan="3" bgcolor="#cfcfcf">财付通信息</td>
+                </tr>
+                <tr> 
+                  <td width='28%' bgcolor='#FFFFFF' >收款财付通商户号：</td>
+                  <td colspan='2' bgcolor='#FFFFFF' > 
+                    <input    type='text' size='30' value='$conf[tenpay_id]' name='postdb[tenpay_id]'>
+                    (<a href="http://union.tenpay.com/mch/mch_register.shtml?posid=123&actid=84&opid=50&whoid=31&sp_suggestuser=1202267301" target="_blank">注册</a> 
+                    <a href="http://mch.tenpay.com/" target="_blank">登录</a></td>
+                </tr>
+                <tr> 
+                  <td width='28%' bgcolor='#FFFFFF' >收款财付通商户密钥：</td>
+                  <td colspan='2' bgcolor='#FFFFFF' > 
+                    <input    type='text' size='40' value='$conf[tenpay_key]' name='postdb[tenpay_key]'>
+                  </td>
+                </tr>
+                <tr class="head3"> 
+                  <td colspan="3" bgcolor="#cfcfcf">支付宝信息</td>
+                </tr>
+                <tr bgcolor="#FFFFFF"> 
+                  <td width='28%'>收款支付宝帐号：</td>
+                  <td colspan='2'> 
+                    <input    type='text' size='30' value='$conf[alipay_id]' name='postdb[alipay_id]'>
+                    <a href="https://www.alipay.com/user/user_register.htm" target="_blank">注册</a> 
+                    <a href="https://www.alipay.com/" target="_blank">登录</a></td>
+                </tr>
+                <tr bgcolor="#FFFFFF"> 
+                  <td width='28%'>交易安全校验码（key）:</td>
+                  <td colspan='2'> 
+                    <input    type='text' size='30' value='$conf[alipay_key]' name='postdb[alipay_key]'>
+                  </td>
+                </tr>
+                <tr bgcolor="#FFFFFF"> 
+                  <td width='28%'>合作者身份（partnerID）：</td>
+                  <td colspan='2'> 
+                    <input    type='text' size='30' name='postdb[alipay_partner]' value='$conf[alipay_partner]'>
+                    <a href="https://www.alipay.com/user/login.htm?goto=https%3A%2F%2Fwww.alipay.com%2Fhimalayas%2Fpracticality_profile_edit.htm" target="_blank" style="color:#03F">签约地址</a>(您可以通过注册获得一个支付宝的合作者身份ID，拥有该ID，您可以在支付宝网站上查询到该ID产生的所有交易历史</td>
+                </tr>
+                <tr bgcolor="#FFFFFF"> 
+                  <td width='28%'>接口类型</td>
+                  <td colspan='2'> 
+                    <select name="postdb[alipay_service]">
+                      <option value="create_partner_trade_by_buyer" $alipay_service[create_partner_trade_by_buyer]>纯担保交易</option>
+                      <option value="trade_create_by_buyer" $alipay_service[trade_create_by_buyer]>标准实物</option>
+                      <option value="create_direct_pay_by_user" $alipay_service[create_direct_pay_by_user]>即时到账</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr bgcolor="#FFFFFF" style="display:none;"> 
+                  <td width='28%'>提交方式</td>
+                  <td colspan='2'> 
+                    <select name="postdb[alipay_transport]">
+                      <option value="https" $alipay_transport[https]>https</option>
+                      <option value="http" $alipay_transport[http]>http</option>
+                    </select>
+                  </td>
+                </tr>
+              
+                
+                <tr class="head3"> 
+                  <td colspan="3" bgcolor="#cfcfcf">邮费设置</td>
+                </tr>
+                <tr> 
+                  <td width='28%' bgcolor='#FFFFFF' >普通快递邮费：</td>
+                  <td colspan='2' bgcolor='#FFFFFF' > 
+                    <input    type='text' size='5' value='$conf[norm_send]' name='postdb[norm_send]'>
+                    <a href="https://www.99bill.com/website/login/authentication.htm" target="_blank"></a>元 
+                  </td>
+                </tr>
+                <tr> 
+                  <td width='28%' bgcolor='#FFFFFF' >EMS邮费：</td>
+                  <td colspan='2' bgcolor='#FFFFFF' > 
+                    <input    type='text' size='5' value='$conf[ems_send]' name='postdb[ems_send]'>
+                    元 </td>
+                </tr>
+                <tr> 
+                  <td width='28%' bgcolor='#FFFFFF' >平邮邮费：</td>
+                  <td colspan='2' bgcolor='#FFFFFF' > 
+                    <input    type='text' size='5' value='$conf[slow_send]' name='postdb[slow_send]'>
+                    <a href="https://www.99bill.com/website/login/authentication.htm" target="_blank"></a>元 
+                  </td>
+                </tr>
+                <tr bgcolor="#FFFFFF"> 
+                  <td width="27%" align="center">&nbsp;</td>
+                  <td width="73%"> 
+                    <input type="submit" name="Submit" value="修改">
+                  </td>
+                </tr>
+              </form>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td class="foot"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

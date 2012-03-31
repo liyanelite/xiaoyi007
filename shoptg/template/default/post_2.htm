@@ -1,0 +1,148 @@
+<!--
+<?php
+print <<<EOT
+-->
+  <script type="text/javascript" src="$webdb[www_url]/ewebeditor/ckeditor/ckeditor.js"></script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td height="100" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" >
+        <tr> 
+          <td class="head">
+            <h3 class="L"></h3>
+            <span class="TAG">下订单</span>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="100%" cellspacing="5" cellpadding="5" >
+              <tr> 
+                <td align="left"> 
+                  
+                <form name="form_order" method="post" action="?action=$atc" enctype="multipart/form-data">
+                    <table width="100%" border="0" cellspacing="4" cellpadding="5" style="border:1px dotted #ccc;">
+                      <tr align="center" > 
+                        <td colspan="3"><b>订单详情</b></td>
+                      </tr>
+                      <tr align="center"> 
+                        <td bgcolor="#F0F0F0"><b><font color="#FF0000">名称</font></b><b></b></td>
+                        <td width="18%" bgcolor="#F0F0F0"><b><font color="#FF0000">数 
+                          量</font></b> </td>
+                        <td width="28%" bgcolor="#F0F0F0"><b><font color="#FF0000">总 
+                          额</font></b></td>
+                      </tr>
+                      <tr > 
+                        <td ><a href="bencandy.php?city_id=$infodb[city_id]&fid=$fid&id=$cid" target="_blank">$infodb[title]</a></td>
+                        <td width="18%" align="center" > 
+                          <input type="text" name="shopnum" value="$hownum" size="5" onBlur="cknum(this)">
+                          <SCRIPT LANGUAGE="JavaScript">
+ <!--
+ function cknum(obj){
+	 num=Math.ceil(obj.value);
+	 if(num<1){
+		 num=1;
+	 }
+	obj.value=num;
+	
+	document.getElementById("price_show").innerHTML=num*'$infodb[price]';
+ }
+ //-->
+ </SCRIPT>
+                        </td>
+                        <td align="center" width="28%" ><font color="#FF0000" id="price_show">{$infodb[price]}</font>元</td>
+                      </tr>
+                    </table>
+                
+                  
+                   
+                  <table width="100%" border="0" cellspacing="4" cellpadding="4" style="border:1px dotted #ccc;margin-top:5px;">
+                    
+                      <tr align="center" bgcolor="#F0F0F0" > 
+                        <td colspan="2"><b>订单资料</b></td>
+                      </tr><tr> 
+                        <td width="16%">注意事项:</td>
+                        <td width="84%">送货方式选择邮寄的话,普通快递加收<b><font color="#FF0000">{$conf[norm_send]}</font></b>元,EMS快递加收<b><font color="#FF0000">{$conf[ems_send]}</font></b>元,平邮加收<b><font color="#FF0000">{$conf[slow_send]}</font></b>元</td>
+                      </tr>
+					  
+                      <tr> 
+                        <td width="16%">顾客姓名:<br></td>
+                        <td width="84%">  <input   type='text' name='postdb[order_username]' id='atc_order_username' style='width:100px;' value='$rsdb[order_username]'> </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">联系电话:<br></td>
+                        <td width="84%">  <input   type='text' name='postdb[order_phone]' id='atc_order_phone' style='width:100px;' value='$rsdb[order_phone]'> </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">联系手机:<br></td>
+                        <td width="84%">  <input   type='text' name='postdb[order_mobphone]' id='atc_order_mobphone' style='width:100px;' value='$rsdb[order_mobphone]'> </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">联系邮箱:<br></td>
+                        <td width="84%">  <input   type='text' name='postdb[order_email]' id='atc_order_email' style='width:100px;' value='$rsdb[order_email]'> </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">联系QQ:<br></td>
+                        <td width="84%">  <input   type='text' name='postdb[order_qq]' id='atc_order_qq' style='width:100px;' value='$rsdb[order_qq]'> </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">邮政编码:<br></td>
+                        <td width="84%">  <input   type='text' name='postdb[order_postcode]' id='atc_order_postcode' style='width:100px;' value='$rsdb[order_postcode]'> </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">配送方式:<br></td>
+                        <td width="84%">  <input type='radio' style='border:0;' name='postdb[order_sendtype]' value='1' {$rsdb[order_sendtype]['1']}>上门取货  <input type='radio' style='border:0;' name='postdb[order_sendtype]' value='2' {$rsdb[order_sendtype]['2']}>平邮  <input type='radio' style='border:0;' name='postdb[order_sendtype]' value='3' {$rsdb[order_sendtype]['3']}>普通快递  <input type='radio' style='border:0;' name='postdb[order_sendtype]' value='4' {$rsdb[order_sendtype]['4']}>EMS快递  </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">支付方式:<br></td>
+                        <td width="84%">  <input type='radio' style='border:0;' name='postdb[order_paytype]' value='1' {$rsdb[order_paytype]['1']}>货到付款   <input type='radio' style='border:0;' name='postdb[order_paytype]' value='2' {$rsdb[order_paytype]['2']}>银行电汇或ATM转帐  <input type='radio' style='border:0;' name='postdb[order_paytype]' value='3' {$rsdb[order_paytype]['3']}>邮局汇款  <input type='radio' style='border:0;' name='postdb[order_paytype]' value='4' {$rsdb[order_paytype]['4']}>网上即时支付  </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">联系地址:<br></td>
+                        <td width="84%">  <input   type='text' name='postdb[order_address]' id='atc_order_address' style='width:200px;' value='$rsdb[order_address]'> </td>
+                      </tr>
+                      <tr> 
+                        <td width="16%">附注留言:<br></td>
+                        <td width="84%"> <textarea  name='postdb[content]' id='atc_content' style='width:400px;height:50px;'>$rsdb[content]</textarea> </td>
+                      </tr><!----> 
+                      <tr> 
+                        <td width="16%">&nbsp;</td>
+                        <td width="84%"> 
+                          <input type="submit" name="Submit" value="提交订单"  >
+                          <input type="hidden" name="fid" value="$fid">
+                          <input type="hidden" name="id" value="$id">
+                          <input type="hidden" name="cid" value="$cid">
+                          <input type="hidden" name="postdb[title]" id="atc_title" size="50" value="$infodb[title]">
+                          <!--
+EOT;
+if($job=='edit'){print <<<EOT
+-->
+                          <a href="?action=del&id=$id&cid=$cid&fid=$rsdb[fid]" onClick="return confirm('你确认要删除吗?');">删除</a> 
+                          <!--
+EOT;
+}print <<<EOT
+-->
+                        </td>
+                      </tr>
+                   
+                  </table>
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="foot">
+            <h3 class="L"></h3>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

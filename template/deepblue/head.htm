@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<?php
+$thiscityname = $city_DB[name][$city_id] ? $city_DB[name][$city_id] : "&nbsp;";
+$GuideFid[$fid]=str_replace("<a href='$webdb[www_url]' class='guide_menu'>&gt;首页</a>","",$GuideFid[$fid]);
+$bodyondblclick = (function_exists('label_array')&&$web_admin&&!$MakeIndex) ?"dblclick_label();":"";
+print <<<EOT
+-->
+<head>
+<title>$titleDB[title]</title>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/deepblue/style.css">
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/deepblue/cms.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="keywords" content="$titleDB[keywords]">
+<meta name="description" content="$titleDB[description]">
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function killErr(){
+	return true;
+}
+window.onerror=killErr;
+//-->
+</SCRIPT>
+<!--
+EOT;
+if($webdb[cookieDomain]){print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+//解决不同域名的框架跨域问题
+document.domain = "$webdb[cookieDomain]";
+</SCRIPT>
+<!--
+EOT;
+}print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/inc.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/default.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/swfobject.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/jquery-1.2.6.min.js"></SCRIPT>
+<script type="text/javascript" src="$webdb[www_url]/images/blue/sliding.js"></script>
+
+<body ondblclick="$bodyondblclick">
+<div class="TopContainer">
+	<div class="top_login">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="top_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=top_loginer&styletype=deepblue" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>    
+    </div>
+    <div class="Time"> 
+<script language="JavaScript"> 
+<!---
+today=new Date();
+var hours = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+var timeValue = "<FONT COLOR=black>" + ((hours >12) ? hours -12 :hours); timeValue += ((minutes < 10) ? "<BLINK><FONT COLOR=black>:</FONT></BLINK>0" : "<BLINK><FONT COLOR=black>:</FONT></BLINK>") + minutes+"</FONT></FONT>";
+timeValue += (hours >= 12) ? " 下午 " : " 上午 ";
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray("<font color=RED>星期日","<font color=black>星期一","<font color=black>星期二","<font color=black>星期三","<font color=black>星期四","<font color=black>星期五","<font color=red>星期六"); document.write("<font color=black>",today.getFullYear(),"<font color=black>年","<font color=black>",today.getMonth()+1,"<font color=black>月","<font color=black>",today.getDate(),"<font color=black>日 </FONT>",d[today.getDay()+1]," ",timeValue);  //-->
+</script>
+       <a class=top onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('$webdb[www_url]/');" href="#">设为首页</a> 
+       <a class=top   href="javascript:window.external.AddFavorite('$webdb[www_url]/','$webdb[webname]')">加入收藏</a> 
+	</div>
+</div><CENTER><SCRIPT LANGUAGE='JavaScript' src='$webdb[www_url]/a_d/a_d_s.php?job=js&ad_id=AD_9724'></SCRIPT></CENTER>
+<div class="TopMenu">
+{$label[deepblue_topmeun]}
+</div>
+<div class="LogoInfo">
+	<div class="Leftcont">
+    	<div class="logo">
+            <a href="$webdb[www_url]"><img src="$webdb[www_url]/images/deepblue/logo.gif"/></a>           
+        </div>
+        <div class="changecity">
+            <span class="city">{$thiscityname}</span>
+            <span class="change"><a href="$webdb[www_url]/allcity.php">[切换城市]</a></span>      
+        </div>
+        <div class="search">
+            <form name="topform" id="topsearchform" target="_blank" method="post" action='$webdb[www_url]/f/search.php?action=search' onsubmit="return checkf();">
+                <div class="searchtype">
+                    <a href="javascript:;" onmouseover="selecttype(this,'f','分类')" class="choose">分类</a>
+                    <a href="javascript:;" onmouseover="selecttype(this,'shop','商品')">商品</a> 
+                    <a href="javascript:;" onmouseover="selecttype(this,'news','资讯')">资讯</a>
+                    <a href="javascript:;" onmouseover="selecttype(this,'tg','团购')">团购</a>
+                    <a href="javascript:;" onmouseover="selecttype(this,'hy','商家')">商家</a> 
+                    <a href="javascript:;" onmouseover="selecttype(this,'coupon','促销')">促销</a>
+                    <a href="javascript:;" onmouseover="selecttype(this,'hr','招聘')">招聘</a>
+                 </div>
+                <div class="searchinput">
+                  <span class="input">
+                    <input name="keyword" type="text" value="请输入您要查找的内容" onClick="this.value=''" id="topkeyword"/>
+                  </span>
+                  <span class="submit"><input name="" type="image" src="$webdb[www_url]/images/deepblue/qbsearch.gif" /></span>
+                </div>
+            </form>
+        </div>
+        <div class="moreinfo">
+            <div id=demo>
+                <div id=demo1>{$label[deepblue_hotsearch]}</div>
+                <div id=demo2></div>
+            </div>
+<script> 
+  var speed  = 1;//滚动速度
+  var rows  = 20;//每行高度
+  var stim  = 100; //停留时间倍数 * speed
+  var stop  = 0; //初始化值，不管
+  var demo2=document.getElementById('demo2');
+  var demo1=document.getElementById('demo1');
+  var demo=document.getElementById('demo');
+  demo2.innerHTML = demo1.innerHTML
+  function Marquee(){
+    if(demo.scrollTop%rows==0 && stop<=stim){
+      stop++;
+      return;
+    }
+    stop = 0;
+    if(demo2.offsetTop-demo.scrollTop<=0)
+      demo.scrollTop-=demo1.offsetHeight
+    else{
+      demo.scrollTop++
+    }
+  }
+  var MyMar = setInterval(Marquee,speed);
+</script>
+			<div class="hottz">{$label[deepblue_hottz]}</div>
+            <div class="weather">{$label[deepblue_weather]}</div>
+        </div>
+    </div> 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function selecttype(theA,word,keyword){
+	obj=document.getElementById("topsearchform").getElementsByTagName("a");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	theA.className='choose';
+	if (document.getElementById("topkeyword").value=='')
+	{
+		document.getElementById("topkeyword").value='请输入您要查找的'+keyword+'内容';
+	}
+	document.getElementById("topsearchform").action="$webdb[www_url]/"+word+"/search.php?action=search";		
+}
+function checkf(){
+	if (document.getElementById("topkeyword").value=='')
+	{
+		alert('关键字不能为空!');
+		return false;
+	}
+}
+//-->
+</SCRIPT>
+	<div class="topadcont">{$label[deepblue_topadcont]}</div>
+</div>
+<ul id="Mainmenu">
+<!--
+EOT;
+$choose_class[intval($webdb['module_id'])]='ck';
+$detail=explode("\r\n",$webdb[guide_word]);
+foreach($detail AS $key=>$value){
+if(!$value)continue;
+list($Hname,$Hurl,$Hblank,$Hcolor,$Hlid,$link)=explode("|",$value);
+if(ereg("^\/",$Hurl)){$Hurl="$webdb[www_url]$Hurl";}elseif(!ereg("://",$Hurl)){$Hurl="$webdb[www_url]/$Hurl";}
+$Hblank=$Hblank?"  target=\"_blank\"":'';
+$Hcolor=$Hcolor?" style=\"color:$Hcolor;\"":'';
+print <<<EOT
+-->
+	<li><a href="$Hurl"{$Hblank}{$Hcolor} onmousemove="changmenu(this)" class="{$choose_class[$link]}"><span>{$Hname}</span></a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+</ul>
+<script language="javascript">
+function changmenu(obj){
+	var alinks=document.getElementById('Mainmenu').getElementsByTagName('a');
+	for(var i=0;i<alinks.length;i++){
+		alinks[i].className='';
+	}								
+	obj.className='ck';
+}
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--//目的是为了做风格方便
+document.write('<div class="wrap">');
+//-->
+</SCRIPT>
+<!--
+EOT;
+if($GuideFid[$fid]){
+print <<<EOT
+-->
+<div id="nav_guide">
+	<div class="t1">当前位置：</div><div class="t2"><a href="$Mdomain/">首页</a> $GuideFid[$fid] </div>
+</div>
+<!--
+EOT;
+}
+?>
+-->
+

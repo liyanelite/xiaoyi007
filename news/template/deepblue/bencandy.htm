@@ -1,0 +1,246 @@
+<!--
+<?php
+$rsdb[iframeurl]?$isiframe[1]=" checked ":$isiframe[0]=" checked ";
+if(!$nextdb[id]){$nextdb[links]=" onclick='return false;' ";$nextdb[subject]="没有了";}
+if(!$backdb[id]){$backdb[links]=" onclick='return false;' ";$backdb[subject]="没有了";}
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/news/bencandy.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>
+    <td class="main">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable">
+          <tr>
+            <td class="head"><div class="TAG"><a editurl='{$Mdomain}/ajax.php?inc=bencandy&fid=$fid&id=$id&rid=$rsdb[rid]&job=do'>TOP</a></div></td>
+          </tr>
+          <tr>
+            <td class="cont">
+				<div class="action">
+<!--
+EOT;
+if($lfjuid){
+print <<<EOT
+-->
+                  <a href="$webdb[www_url]/member/?main=$Murl/member/post.php?fid=$fid">投稿</a> 
+<!--
+EOT;
+}
+if(($lfjuid&&$lfjuid==$rsdb[uid])||$web_admin){
+print <<<EOT
+-->
+                   &nbsp;<a href="$webdb[www_url]/member/?main=$Murl/member/post.php?job=edit&fid=$fid&id=$id&rid=$rid">修改</a>&nbsp;<a href="$webdb[www_url]/member/?main=$Murl/member/post.php?action=del&fid=$fid&id=$id&rid=$rsdb[rid]">删除</a> 
+<!--
+EOT;
+}print <<<EOT
+--> 
+                </div>
+                <div class="title">$rsdb[title]</div>
+                <div class="info">
+                	[ 编辑:{$rsdb[username]} |&nbsp;时间:{$rsdb[posttime]} 
+                  | 浏览:<font id="hits">{$rsdb[hits]}</font>次 | 来源:<a href="$rsdb[copyfromurl]" target="_blank">{$rsdb[copyfrom]}</a>  | 作者:{$rsdb[author]} ]
+                </div>
+                <table class="content" width="99%" cellspacing="0" cellpadding="0" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word'>
+                  <tr> 
+                    <td align="left" class="content_word"><font id="zoom" face="宋体"><span id="post1">$rsdb[content]</span></font></td>
+                  </tr>
+                </table>
+                <div class="daction">
+                	<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/bencandy.js"></SCRIPT>【<a href="javascript:doZoom(18)">大</a> 
+                    <a href="javascript:doZoom(14)">中</a> 
+                    <a href="javascript:doZoom(12)">小</a>】
+                    【<a href="javascript:doPrint()">打印</a>】
+                    <input type=hidden value=1 name="h1" id="h1">
+                    【<a href="javascript:ft(1)" id="Maiweb1">繁体</a>】
+                    【<a href="$webdb[www_url]/member/?main=$Murl/member/post.php?fid=$fid" target=_blank>投稿</a>】 
+                    【<a  href="javascript:window.close()">关闭</a>】【<a href="$Mdomain/comment.php?fid=$fid&id=$id" target=_blank>评论</a>】 
+                    【<a  href="javascript:window.close()"></a><a href="#">返回顶部</a>】
+                </div>
+<!--
+EOT;
+if($showpage){
+print <<<EOT
+-->
+            	<div class="page">$showpage</div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+				<table width="99%" border="0" cellspacing="0" cellpadding="0">
+                  <tr> 
+                    <td class="up">[<a href="bencandy.php?fid=$backdb[fid]&id=$backdb[id]">上一篇</a>]<a $backdb[links] href="bencandy.php?fid=$backdb[fid]&id=$backdb[id]" title="$backdb[title]">$backdb[subject]</a></td>
+                    <td class="down">[<a href="bencandy.php?fid=$nextdb[fid]&id=$nextdb[id]">下一篇</a>]<a $nextdb[links] href="bencandy.php?fid=$nextdb[fid]&id=$nextdb[id]" title="$nextdb[title]">$nextdb[subject]</a></td>
+                  </tr>
+                </table>
+            </td>
+          </tr>
+        </table>
+<!--
+EOT;
+if( $fidDB[allowcomment] ){
+print <<<EOT
+-->
+	 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable mt10" id="commentTable">
+        <tr> 
+          <td class="head"><span class="TAG">评论</span></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div id="comment"></div>
+            <table width="99%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="tdL">称呼:</td>
+                <td class="tdR"><input type="text" name="textfield2" id="comment_username" value="$lfjid"></td>
+              </tr>
+<!--
+EOT;
+if(!$web_admin){
+print <<<EOT
+-->
+              <tr> 
+                <td class="tdL">验 证 码:</td>
+                <td class="tdR"> 
+                  <input id="yzImgNum" type="text" name="yzimg" size="8">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<img border="0" name="imageField" onclick="this.src=this.src+Math.random();" src="$webdb[www_url]/do/yzimg.php?'+Math.random()+'">');
+//-->
+</SCRIPT>
+                </td>
+              </tr>
+              <!--
+EOT;
+}
+print <<<EOT
+-->
+              <tr> 
+                <td class="tdL">内容:</td>
+                <td class="tdR"> 
+                  <textarea name="textfield" cols="50" rows="5" id="comment_content" onKeyDown="quickpost(event)"></textarea>
+                  </td>
+              </tr>
+              <tr> 
+                <td class="tdL"> 
+<script language="JavaScript">
+<!--
+getcomment("{$Mdomain}/comment_ajax.php?fid=$fid&id=$id");
+cnt = 0;
+function quickpost(event)
+{
+	if((event.ctrlKey && event.keyCode == 13)||(event.altKey && event.keyCode == 83))
+	{
+		cnt++;
+		if (cnt==1){
+			postcomment('{$Mdomain}/comment_ajax.php?action=post&fid=$fid&id=$id')
+		}else{
+			alert('内容正在提交...');
+		}
+	}	
+}
+//-->
+</script>
+                </td>
+                <td class="tdR" style="padding-bottom:10px;"> 
+                  <input type="button" id="comment_submit" name="Submit" value="提交" onClick="postcomment('{$Mdomain}/comment_ajax.php?action=post&fid=$fid&id=$id','$webdb[yzImgComment]')">
+                  </td>
+              </tr>
+            </table>
+         </td>
+        </tr>
+     </table>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+    </td>
+    <td class="side">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable" id="sonSortName">
+          <tr>
+            <td class="head"><span class="TAG">相关栏目</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$webdb[InfoListsortnameline]>0 || $webdb[InfoListsortnameline]=1;
+$Listsortnameline=floor(94/$webdb[InfoListsortnameline]).'%';
+$array=$listdb_moresort?$Fid_db[$fid]:$Fid_db[$fidDB[fup]];
+foreach($array AS $key=>$value){
+print <<<EOT
+-->
+            	<div class="listsort"><a href="list.php?fid=$key">$value</a></div>
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable mt10">
+          <tr>
+            <td class="head"><span class="TAG">热门文章</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$array=Get_Info($type='hot',$webdb[InfoJsListRows]>0?$webdb[InfoJsListRows]:8,$webdb[InfoJsListLeng]>0?$webdb[InfoJsListLeng]:28,$fid,$mid=0);
+foreach($array AS $rs){
+print <<<EOT
+-->
+              <div class="list"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable mt10">
+          <tr>
+            <td class="head"><span class="TAG">最新文章</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$array=Get_Info($type='new',$webdb[InfoJsListRows]>0?$webdb[InfoJsListRows]:8,$webdb[InfoJsListLeng]>0?$webdb[InfoJsListLeng]:28,$fid,$mid=0);
+foreach($array AS $rs){
+print <<<EOT
+-->
+              <div class="list"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable mt10">
+          <tr>
+            <td class="head"><span class="TAG">推荐文章</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$array=Get_Info($type='level',$webdb[InfoJsListRows]>0?$webdb[InfoJsListRows]:8,$webdb[InfoJsListLeng]>0?$webdb[InfoJsListLeng]:28,$fid,$mid=0);
+foreach($array AS $rs){
+print <<<EOT
+-->
+              <div class="list"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

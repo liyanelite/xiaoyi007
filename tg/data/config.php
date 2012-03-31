@@ -1,0 +1,10 @@
+<?php
+$webdb['module_id']='28';
+$webdb['Info_allowpost']='9';
+$webdb['Info_webOpen']='1';
+$webdb['Info_ReportDB']='虚假信息
+过期信息
+垃圾信息';
+$webdb['module_pre']='tuangou_';
+$webdb['Info_webname']='团购系统';
+$webdb['module_close']='0';

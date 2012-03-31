@@ -1,0 +1,111 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/tg/index.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer">
+  <tr>    
+    <td class="main">
+    	<div class="TheNewHd">
+            <div class="head"><div class="tag">最新活动</div></div>
+            <div class="cont">
+                $label[tuangou_hot]                
+            </div>
+        </div>
+        <div class="SlideCont">$label[tuangou_rollpic]</div>
+    </td>
+    <td class="side">
+    	<div class="TheTzHd">
+        	<div class="head"><div class="tag">$label[tuangou_xz1]</div></div>
+            <div class="cont">
+                $label[tuangou_vz1]                
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>    
+    <td class="main">
+    	<div class="SideContainer">
+            <div class="head"><div class="tag">$label[tuangou_xz2]</div><div class="more"><br/></div></div>
+            <div class="cont piccont">$label[tuangou_xz3]
+            </div>
+        </div>
+    </td>
+    <td class="side">
+    	<div class="SideContainer">            
+            <div class="head"><div class="tag">$label[tuangou_hy0]</div><div class="more"><br/></div></div>
+            <div class="cont">
+                <div class="listtz">$label[tuangou_hy1]</div>
+                <div class="listtz">$label[tuangou_hy2]</div>
+                <div class="listtz">$label[tuangou_hy3]</div>
+                <div class="listtz">$label[tuangou_hy4]</div>
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>    
+    <td class="main">
+    	<div class="SideContainer1">
+            <div class="head">
+            	<div class="tag"><span>热门活动</span></div>
+                <div class="more">
+<!--
+EOT;
+foreach($Fid_db[0] AS $key=>$name){
+$url=get_info_url('',$key,$city_id);
+print <<<EOT
+-->
+        			<a href="$url">$name</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+                </div>
+            </div>
+            <div class="cont">
+            	$label[tuangou_main]
+            </div>
+        </div>
+    </td>
+    <td class="side">
+    	<div class="posttg">
+        	<div class="go"><a href="$webdb[www_url]/member/?main=$Murl/member/post_choose.php" target="_blank">我要发起活动</a></div>
+            <div>火热团购活动正在进行中</div>
+        </div>
+        <div class="wanto">
+        	<a href="#">想与商家加盟合作 请进&gt;&gt;</a>
+        </div>
+        <div class="RightCont">
+        	<div class="head"><div class="tag">报名状态</div></div>
+        	<div class="cont">
+<!--
+EOT;
+$array=list_apply(5);
+foreach($array AS $rs){
+print <<<EOT
+-->
+                <div class="lista">
+                    <span>$rs[username]</span>于<span>$rs[posttime]</span>申请参加<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a>
+                </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+		   
+        	</div>
+        	<div class="head"><div class="tag">注意事项</div></div>
+        	<div class="cont">
+           	  $label[tuangou_news]            
+        	</div>
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

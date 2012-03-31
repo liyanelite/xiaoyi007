@@ -1,0 +1,158 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/shop/index.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>
+  	<td class="SideL">
+    	<div class="shopsort">
+        	<div class="head"><span>全部商品分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+$j=0;
+foreach($Fid_db[0] AS $key=>$name){
+$j++;
+$name=get_word($name,20);
+print <<<EOT
+-->
+				
+          <div class="bigsort list$j"><a href="list.php?fid=$key" target="_blank">$name</a></div>               
+          <div class="sort"> 
+            <!--
+EOT;
+foreach($Fid_db[$key] AS $fid=>$name ){
+$name=get_word($name,24);
+print <<<EOT
+-->
+            <a href="list.php?fid=$fid" target="_blank">$name</a> | 
+            <!--
+EOT;
+}print <<<EOT
+-->
+          </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+        </div>
+        <div class="shopTopcontainer mt10">
+        	<div class="head"><span>$label[shop_tt8]</span></div>
+            <div class="selectdisplay">
+            	<div onclick="ShowTab(1,1,4)" id="Span1"><span>$label[shop_tt9]</span></div>
+                <div onclick="ShowTab(2,1,4)" id="Span2"><span>$label[shop_tt10]</span></div>
+                <div onclick="ShowTab(3,1,4)" id="Span3"><span>$label[shop_tt11]</span></div>
+            </div>
+            <div id="Tab1" class="showcont">
+				$label[shop_x1]
+            </div>
+           <div id="Tab2" class="showcont"> 
+          		$label[shop_x2]
+            </div>
+            <div id="Tab3" class="showcont"> 
+           		$label[shop_x3]
+            </div>
+            <SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,4);</SCRIPT>
+        </div>        
+    </td>
+    <td class="SideC">  
+    	<div class="slidecontainer">$label[shop_rollpic]</div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="shopTheNew mt10">
+          <tr>
+            <td class="head">
+            	<span onmouseover="ShowTab(4,4,7)" id="Span4">最新商品</span>
+                <span onmouseover="ShowTab(5,4,7)" id="Span5">推荐商品</span>
+                <span onmouseover="ShowTab(6,4,7)" id="Span6">热门商品</span>
+                <span class="R">$label[shop_m1]</span>
+            </td>
+          </tr>
+          <tr id="Tab4">
+            <td class="cont">
+            	$label[shop_hot]                
+            </td>
+          </tr>
+          <tr id="Tab5">
+            <td class="cont">
+            	$label[blue_shoplist1]                
+            </td>
+          </tr>
+          <tr id="Tab6">
+            <td class="cont">
+            	$label[blue_shoplist2]                
+            </td>
+          </tr>
+          <SCRIPT LANGUAGE="JavaScript">ShowTab(4,4,7);</SCRIPT>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="shopTheNew shopTheNew1 mt10">
+          <tr>
+            <td class="head"><span class="L">数码影音</span><span class="R"><a href="list.php?fid=5" target="_blank">更多</a></span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	$label[blue_shoplist3]
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="SideR">   
+    	<div class="shopnews">
+        	<div class="head"><span>$label[shop_tt1]</span></div>
+            <div class="cont">
+            	$label[shop_news]                
+            </div>
+        </div> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidecontainer mt10">
+          <tr>
+            <td class="head"><span class="L">$label[shop_tt2]</span><span class="R">$label[shop_m3]</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+                $label[shop_a1]
+				$label[shop_a2]
+            </td>
+          </tr>
+          <tr>
+            <td class="head head1"><span class="L">$label[shop_tt3]</span><span class="R">$label[shop_m4]</span></td>
+          </tr>
+          <tr>
+            <td class="cont"> 
+            	$label[shop_a3]
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>
+  	<td class="SideL">
+    	<div class="shopsidelad">{$label[blue_shopsidelad1]}</div>
+        <div class="shopsidelad">{$label[blue_shopsidelad2]}</div>
+    </td>
+    <td class="MainR">
+    	<div class="moreaction">
+        	<ul>
+        	<dl>
+            	{$label[blue_maction1]}            	
+            </dl>
+            <dl>
+            	{$label[blue_maction2]}            	
+            </dl>
+            <dl>
+            	{$label[blue_maction3]}            	
+            </dl>
+            <dl>
+            	{$label[blue_maction4]}            	
+            </dl>            
+            </ul>
+            <div class="bottom"><div><br/></div></div>            
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

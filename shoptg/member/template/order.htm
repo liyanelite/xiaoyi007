@@ -1,0 +1,84 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td height="100" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" >
+        <tr> 
+          <td class="head">订单管理</td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="3" class="linetable">
+              <tr align="center" class="head3"> 
+                <td  width="4%">订单号</td>
+                <td width="13%" >名称</td>
+                <td  width="10%">单价</td>
+                <td  width="8%">数量</td>
+                <td  width="9%">应付总额</td>
+                <td  width="8%">订购时间</td>
+                <td  width="8%">客户</td>
+                <td  width="7%">付款</td>
+                <td  width="8%">发货</td>
+                <td width="13%">消费密码</td>
+                <td width="12%">详情 / 改 / 删</td>
+              </tr>
+              <!--
+EOT;
+foreach($listdb AS $key=>$rs){print <<<EOT
+-->
+              <tr> 
+                <td class="middle" align="center" width="4%">$rs[id]</td>
+                <td class="middle" width="13%" ><a href="../bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[cid]&city_id={$rs[shop][city_id]}" target="_blank">{$rs[shop][title]}</a></td>
+                <td class="middle"  align="center" width="10%">{$rs[shop][price]}</td>
+                <td class="middle"  align="center" width="8%">$rs[shopnum]</td>
+                <td class="middle"  align="center" width="9%">$rs[totalmoney]</td>
+                <td class="middle" align="center" width="8%">$rs[posttime]</td>
+                <td class="middle" align="center" width="8%">$rs[username]</td>
+                <td class="middle"  align="center" width="7%">$rs[pay]</td>
+                <td class="middle"  align="center" width="8%">$rs[send]</td>
+                <td class="middle"  align="center" width="13%">$rs[password]</td>
+                <td class="middle"  align="center" width="12%"><a href="joinshow.php?fid=$rs[fid]&id=$rs[id]">查看</a> 
+                  / <a href='$rs[editurl]'>改</a> / <a href="?action=del&id=$rs[id]&fid=$rs[fid]&cid=$rs[cid]">删</a></td>
+              </tr>
+              <!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+      
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center">
+            <p>&nbsp;</p>
+            <p>$showpage</p>
+          </td>
+        </tr>
+      </table></td>
+        </tr>
+        <tr>
+          <td class="foot"></td>
+        </tr>
+      </table><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" >
+        <tr> 
+          <td class="head">注意事项:</td>
+        </tr>
+        <tr> 
+          <td class="middle" height="30" style="padding:10px;">1.如果你支付成功后,请不要删除订单,否则管理员查不到你的信息,会认为你没付款!<br>
+            2.如果你要上门取货或者是去实体店消费的话,请牢记你的消费密码.商家会凭消费密码核实你是否已付款,请不要泄露你的消费密码.<br>
+            3.如果你还没付款的话,你可以点击在线付款. </td>
+        </tr>
+        <tr>
+          <td class="foot"></td>
+        </tr>
+      </table>
+    
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

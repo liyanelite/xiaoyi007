@@ -1,0 +1,60 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<style>
+.conttd{
+	text-align:left;
+}
+.conttd a{
+	display:block;
+	padding-left:5px;
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+}
+</style> 
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+  <form name="form1" method="post" action="$admin_path&action=$job">
+    <tr class="head" align="center"> 
+      <td width="6%">序号 </td>
+      <td width="50%">内容</td>
+      <td width="10%">用户名</td>
+      <td width="10%">时间</td>
+      <td width="10%">状态</td>
+      <td width="14%">删除/查看</td>
+    </tr>
+    <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td>$rs[id]</td>
+      <td class="conttd"><a href="$Murl/vote.php?job=show&cid=$rs[cid]" target="_blank">$rs[content]</a></td>
+      <td>$rs[username]</td>
+      <td>$rs[posttime]</td>
+      <td>$rs[yz]</td>
+      <td><a href="$admin_path&action=delete&cid=$rs[cid]&id=$rs[id]"  onclick="return confirm('删除后不可恢复,你确实要删除吗?')"><img alt='点击删除' src='../member/images/del_icon2.gif' border=0></a> 
+        / <a href="$Murl/vote.php?job=show&cid=$rs[cid]" target="_blank"><img alt='浏览' src='../member/images/icon_view.gif' border=0></a></td>
+    </tr>
+<!--
+EOT;
+}if($showpage){print <<<EOT
+-->
+    <tr align="center"> 
+      <td colspan="6"> $showpage </td>
+    </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+    <tr> 
+      <td colspan="6">&nbsp; </td>
+    </tr>
+  </form>
+</table>
+<!--
+EOT;
+?>
+-->

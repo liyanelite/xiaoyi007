@@ -1,0 +1,195 @@
+<!--
+<?php
+$rsdb[price] || $rsdb[price]='';
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/tuangou_bencandy.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr> 
+    <th class="toptitle">{$rsdb[title]}</th>
+  </tr>
+  <tr> 
+    <td>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="baseinfo">
+          <tr>
+            <td class="left">
+            	<a href="$rsdb[picurl]" class="picurl" target="_blank"><img src='$rsdb[picurl]' onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="220" ></a>
+            </td>
+            <td class="center">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listinfo">
+                  <tr>
+                    <td>
+                    	<div><span>活动编号：</span>【{$numtag}】</div>
+                 <!--{template}-->
+						<div><span>{title}：</span>{value}</div>
+<!--{/template}-->
+
+                    </td>
+                  </tr>
+                </table>            	
+				<div class="moreaction">
+                	<input type="button" value="举报该信息" onClick="window.open('job.php?job=report&fid=$fid&id=$id');" class="zb"/>
+                    <input type="button" value="推荐给朋友" onClick="window.location.href='mailto:';" class="tz"/>
+                    <input type="button" value="加入收藏夹" onClick="javascript:window.external.AddFavorite('$WEBURL','$rsdb[title]')" class="sc"/>
+                </div>
+            </td>
+            <td class="right">
+            	<div class="list">已报名人数:<span>$rsdb[totaluser]</span>人</div>
+                <div class="list">&nbsp;&nbsp;发布时间:<a editurl='$Murl/job.php?job=bencandy&fid=$fid&id=$id&act=do'>{$rsdb[posttime]}</a></div>
+                <div class="list">&nbsp;&nbsp;&nbsp;&nbsp;发起者:<span>{$rsdb[username]}</span></div>
+                <div class="list">&nbsp;&nbsp;关注度:<span>{$rsdb[hits]}</span>人次</div>
+                
+            <div class="list">&gt;&gt;<a href="$webdb[www_url]/member/?main=$Murl/member/joinlist.php?cid=$id" target="_blank">查看已报名人数</a></div>
+                
+            <div class="join"> <a href="$webdb[www_url]/member/?main=$Murl/member/join.php?fid=$fid&cid=$id" target="_blank"><img src="$webdb[www_url]/images/yellow/tuangou_bm.gif" border="0"></a> 
+            </div>
+            </td>
+          </tr>
+        </table>        
+    </td>
+  </tr>
+  <tr> 
+    <td class="ContentTd">
+    	<div class="content">
+        	<div class="head">活动详情</div>
+            <div class="cont">{$rsdb[content]}</div>
+        </div>
+		<!--
+EOT;
+if($rsdb[gg_maps]){
+print <<<EOT
+-->
+			<div class="content">
+        	<div class="head">地图位置</div>
+            <div class="cont">
+			
+			<iframe src="$webdb[www_url]/hy/job.php?job=show_ggmaps&position=$rsdb[gg_maps]&title=$rsdb[title]"  width="100%" height="350" scrolling="no" frameborder="0" ></iframe>
+ </div>
+        </div><!--
+EOT;
+}
+print <<<EOT
+-->
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="commentTable">
+  <tr> 
+    <th><span>最新评论</span></th>
+  </tr>
+  <tr> 
+    <td>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="listcomment">
+            	<div id="comment"></div>
+            </td>
+            <td class="addcomment">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="comment_form">
+                  <tr>
+                    <td colspan="2" class="head"><span class="L">添加新评论</span><span class="R"><a href="#">&nbsp;</a></span></td>
+                  </tr>
+<!--
+EOT;
+if($lfjid){$none='none';}
+print <<<EOT
+-->
+                  <tr style="display:$none;">
+                    <td class="left">称呼:</td>
+                    <td class="right"><input type="text" name="textfield2" id="comment_username" value="$lfjid"></td>
+                  </tr>
+<!--
+EOT;
+if($groupdb['comment_img']){
+$webdb[yzImgComment]=1;
+print <<<EOT
+--> 
+				  <tr>
+                    <td class="left">验证码:</td>
+                    <td class="right">
+                    	<input id="yzImgNum" type="text" name="yzimg" size="8" onFocus="commentyzimg()">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function commentyzimg(){
+	if(/yzimg\.php/.test($("#yz_Img")[0].src)==false){
+		$("#yz_Img").show();
+		$("#yz_Img")[0].src='$webdb[www_url]/do/yzimg.php?'+Math.random();
+	}	
+}
+document.write('<img border="0" id="yz_Img" name="imageField" onclick="this.src=this.src+Math.random();" src="" style="display:none;">');
+//-->
+</SCRIPT>
+                    </td>
+                  </tr>
+<!--
+EOT;
+}
+print <<<EOT
+--> 
+				  <tr>
+                    <td class="left">内容:</td>
+                    <td class="right"><textarea name="textfield" rows="8" id="comment_content" onKeyDown="quickpost(event)"></textarea></td>
+                  </tr>
+                  <tr>
+                    <td class="left">
+<script language="JavaScript">
+<!--
+getcomment("job.php?job=comment_ajax&fid=$fid&id=$id");
+cnt = 0;
+function quickpost(event)
+{
+	if((event.ctrlKey && event.keyCode == 13)||(event.altKey && event.keyCode == 83))
+	{
+		cnt++;
+		if (cnt==1){
+			post_comment();
+		}else{
+			alert('内容正在提交...');
+		}
+	}	
+}
+function post_comment(){
+	postcomment('job.php?job=comment_ajax&action=post&fid=$fid&id=$id','$webdb[yzImgComment]');
+	if(document.getElementById("yz_Img")!=null){
+		//document.getElementById("yz_Img").src="$webdb[www_url]/do/yzimg.php?"+Math.random();;
+		$("#yz_Img")[0].src='';
+		$("#yz_Img").hide();
+	}
+}
+//-->
+</script>
+                    </td>
+                    <td class="right"><input type="button" id="comment_submit" name="Submit" value="提交" onClick="post_comment();"></td>
+                  </tr>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="comment_form mt10">
+                  <tr>
+                    <td class="head">热门活动</td>
+                  </tr>
+                  <tr>
+                    <td class="cont">
+<!--
+EOT;
+$array=list_tg(5,'hot');
+foreach($array AS $rs){
+$rs[t]=date("m-d",$rs[fulltime]);
+print <<<EOT
+-->
+                    	<div class="list"><span>$rs[t]</span><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+                    </td>
+                  </tr>
+               </table>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

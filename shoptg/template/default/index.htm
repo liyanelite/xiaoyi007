@@ -1,0 +1,145 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/stg_index.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="shoptgad">
+  <tr>
+    <td class="ad1">$label[shoptg_ad1]</td>
+    <td class="ad2">$label[shoptg_ad2]</td>
+    <td class="ad3">$label[shoptg_ad13]</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer">
+  <tr>
+    <td class="Main">
+<!--
+EOT;
+$listtg = list_title($type='new',$rows=3);
+$i=0;
+foreach($listtg AS $key=>$rs){
+$i++;
+$rs[save] = $rs[market_price] - $rs[price];
+//$rs[end_time] && $rs[end_time] = strtotime("$rs[end_time] 23:59:59");
+$rs[end_time] && $rs[end_time]=preg_replace("/([\d]+)-([\d]+)-([\d]+) ([\d]+):([\d]+):([\d]+)/eis","mk_time('\\4','\\5', '\\6', '\\2', '\\3', '\\1')","$rs[end_time] 23:59:59");
+$listtime = $rs[end_time] - $timestamp;
+if($listtime>=0){
+$displayword = $rs[pay_num] >= $rs[min_num] ? "<img src=\"$webdb[www_url]/images/yellow/stg-buy.gif\">团购成功,还可以<br/>继续购买..." : "<img src=\"$webdb[www_url]/images/yellow/stg-no.gif\">团购还没成功,请大家<br/>继续推荐...";
+}else{
+$displayword = "<img src=\"$webdb[www_url]/images/yellow/stg-over.gif\">活动已经结束,请不要<br/>再抢购...";
+}
+print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">   
+<!-- 
+	var maxtime{$i} = $listtime; //一个小时，按秒计算，自己调整!
+	function CountDown{$i}(){ 
+		if(maxtime{$i}>=0){
+			days{$i} = Math.floor(maxtime{$i}/86400);
+			hours{$i} = Math.floor(maxtime{$i}%86400/3600); 
+			minutes{$i} = Math.floor(maxtime{$i}%86400%3600/60);   
+			seconds{$i} = Math.floor(maxtime{$i}%60);
+			msg{$i} = "<div class='word'>距离本这团购结束还有:<br/>"+days{$i}+"天"+hours{$i}+"时"+minutes{$i}+"分"+seconds{$i}+"秒</div><div class='pic'><img src='$webdb[www_url]/images/yellow/time.gif'></div>" ;
+			--maxtime{$i};
+		} 
+		else{
+			msg{$i} = "<div class='word'><font color='red'>本次团购活动<br/>已经结束</font></div><div class='pic'><img src='$webdb[www_url]/images/yellow/time0.gif'></div>" ;
+		} 
+		document.getElementById('timer'+$i).innerHTML=msg{$i};
+	}
+	timer{$i} = setInterval("CountDown{$i}()",1000);
+//-->   
+</SCRIPT> 
+
+		<div class="hotshoptg">
+       		<div class="list{$i}"><span>{$i}</span></div>
+            <div class="about">
+           		<span>{$city_DB[name][$rs[city_id]]}</span><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">{$rs[about]}</a>              
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="moreinfo">
+              <tr>
+                <td class="left">
+                	<div class="actionspace">
+                        <div class="action">
+                            <div class="butter">
+                                <span class="price">￥{$rs[price]}</span>
+                                <span class="cg"><a href="join.php?fid=$rs[fid]&cid=$rs[id]&hownum=1" target="_blank"><img src="$webdb[www_url]/images/yellow/stg-cg.gif"></a></span>
+                            </div>
+                            <div class="Offer">
+                                <div><span>原价</span><span><strike>￥{$rs[market_price]}</strike></span></div>
+                                <div><span>折扣</span><span>{$rs[shoptype]}</span></div>
+                                <div class="red"><span>节省</span><span>￥{$rs[save]}</span></div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="timeover" id="timer{$i}">这里是用JS调用出来的剩余时间...</div> 
+                    <div class="Status">
+                    	<div class="now">报名<span>{$rs[join_num]}</span>人 确定参与<span>{$rs[pay_num]}</span>人</div>
+                        <div class="red">{$displayword}</div>
+                        <div class="m">最低团购人数:{$rs[min_num]}人</div>
+                    </div>                  
+                </td>
+                <td class="right">
+                	<div class="img">
+                    <a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank"> 
+              			<img src='$rs[picurl]' onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="450" height="300"> 
+              		</a>
+              		</div>
+                    <div class="title"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">{$rs[title]}</a></div>
+                    <div class="Address"><span>地址:</span>$rs[address]</div>
+                </td>
+              </tr>
+            </table>
+       </div>
+<!--
+EOT;
+}
+print <<<EOT
+-->       
+    </td>
+    <td class="Side">
+    	<div class="shoptgsoft">
+        	<div class="head"><span class="fl">官方团购分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $key=>$name){
+$name=get_word($name,20);
+print <<<EOT
+-->
+				<dl>
+                	<dt><a href="list.php?fid=$key" target="_blank">$name</a></dt>
+                    <dd>
+<!--
+EOT;
+foreach($Fid_db[$key] AS $fid=>$name ){
+$name=get_word($name,24);
+print <<<EOT
+-->
+						<a href="list.php?fid=$fid" target="_blank">$name</a> | 
+<!--
+EOT;
+}print <<<EOT
+-->
+                    </dd>
+                </dl>
+<!--
+EOT;
+}print <<<EOT
+-->	          
+            </div>
+            <div class="foot"><br/></div>
+        </div> 
+        <div class="notecontainer">
+          
+        <div class="head"><span class="fl">$label[shoptg_tt4]</span><span class="fr">$label[shoptg_m5]</span></div>
+        <div class="cont">$label[shoptg_a4]</div>
+          <div class="foot"><br/></div>
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

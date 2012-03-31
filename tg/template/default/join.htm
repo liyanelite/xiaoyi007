@@ -1,0 +1,49 @@
+<!--
+<?php
+print <<<EOT
+-->  <script type="text/javascript" src="$webdb[www_url]/ewebeditor/ckeditor/ckeditor.js"></script>
+<script src="$webdb[www_url]/images/default/setday.js"></script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td width="100%" height="393" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" id="viewarticle">
+        <tr> 
+          <td class="head"> 
+            <h3 class="L"></h3>
+            <span class="TAG"><a href='bencandy.php?fid=$fid&id=$cid'>$infodb[title]</a></span> 
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="99%" border="0" cellspacing="1" cellpadding="3" id="bigtable">
+              <form name="FORM" method="post" action="?action=$atc" enctype="multipart/form-data">
+                <!--{template}--><tr> <td align='right'>{title}</td> <td >{value}</td></tr><!--{/template}--> 
+                <tr> 
+                  <td width="18%">&nbsp;</td>
+                  <td width="82%"> 
+                    <input type="submit" name="Submit" value="Ìב ½»" class='submit'>
+                    <input type="hidden" name="fid" value="$fid">
+                    <input type="hidden" name="id" value="$id">
+                    <input type="hidden" name="cid" value="$cid">
+                    <input type="hidden" name="postdb[title]" id="atc_title" size="50" value="$infodb[title]">
+                  </td>
+                </tr>
+              </form>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td class="foot"> 
+            <h3 class="L"></h3>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

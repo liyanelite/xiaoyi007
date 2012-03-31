@@ -1,0 +1,315 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/index.css">
+<div class="LifeTopContainer">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="contL">
+    	$label[life_t1]
+    </td>
+    <td class="contC">
+    $label[life_t3]
+    </td>
+    <td class="contR">$label[life_t2]
+    
+    </td>
+  </tr>
+</table>
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+    	<table width="100%" cellspacing="0" cellpadding="0" class="NewsTable">
+          <tr>
+            <td class="TdL">
+            	<div class="SlideContainer">$label[life_t4]</div>
+                <div class="picnews">
+                	<div class="head"><span class="L">图文资讯</span><span class="R"><a href="#" target="_blank">更多</a></span></div>
+                    <div class="cont">
+                   $label[life_t6]		
+                        
+                    </div>
+                </div>
+            </td>
+            <td class="TdR">
+            	<div class="centertitle">
+                $label[life_t5]
+                </div>
+                <div class="morenews">
+                	
+                    $label[life_t7]
+                </div><div class="morenews">
+                   $label[life_t8]
+                </div>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="fenliecontainer">
+          <tr>
+            
+          <td class="head"> <span class="L">分类信息</span> <span class="R">$label[life_a1]
+            <a href="$webdb[www_url]/f/post.php" target="_blank" class="post">免费发布</a></span> 
+          </td>
+          </tr>
+          <tr>
+            <td class="cont">$label[life_a2]
+            		
+                 
+            </td>
+          </tr>
+        </table>
+    </td>
+  	<td class="SideR">
+    	<div class="UserInfo">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="butter">
+              <tr>
+                <td>
+                  <a href="$webdb[www_url]/f/post.php" class="post" target="_blank"><span>免费发布信息</span></a> 
+                  <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/post_company.php" class="tg" target="_blank"><span>登记商家店铺</span></a> 
+                  <a href="$webdb[www_url]/member/?main=$webdb[www_url]/member/money.php?job=list" target="_blank" class="edite"><span>购买积分</span></a> 
+                  <a href="$webdb[www_url]/member/?main=$webdb[www_url]/member/buygroup.php?job=list" target="_blank" class="ns"><span>购买VIP</span></a> 
+                </td>
+              </tr>
+            </table> 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="life_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=life_loginer&styletype=lifeindex" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>  
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="notecontainer mt10">
+          <tr>
+            <td class="head"><span>公告</span><span>栏目</span></td>
+            <td class="cont">
+			 $label[life_t9]
+            	
+            </td>
+          </tr>
+        </table>
+        <div class="hotcontainer mt10">
+        	<div class="insidecont">
+            	<div class="head"><span>热门分类栏目</span></div>
+                <div class="cont">
+                    $label[life_a3]
+                    
+                </div>
+            </div>
+        </div>        
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="hycontainer">
+          <tr>
+            <td class="head">
+            	<span class="L">商家黄页</span>
+                <span class="R">$label[life_a4] <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/post_company.php" target="_blank" class="post">登记商家</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	
+                 $label[life_a5]
+            </td>
+          </tr>
+       </table> 
+    </td>
+    <td class="SideR">
+    	<div class="sidecontainer">
+            <div class="head"><span class="L">赞助商</span><span class="R"><a href="#">我要赞助</a></span></div>
+            <div class="cont">
+                <div class="listad"> $label[life_a6]</div>
+                <div class="listad"> $label[life_a7]</div>
+                <div class="listad"> $label[life_a8]</div>
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="hycontainer">
+          <tr>
+            <td class="head heada">
+            	<span class="L">团购活动</span>
+                <span class="R">$label[life_a11]<a href="$webdb[www_url]/member/?main=$webdb[www_url]/tg/member/post_choose.php" target="_blank" class="post">发布活动</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">	
+            $label[life_a9]
+                </td>
+          </tr>
+       </table> 
+    </td>
+    <td class="SideR">
+    	<div class="sidecontainer">
+            
+        <div class="head"><span class="L">推荐礼品</span><span class="R"><a href="$webdb[www_url]/gift/" target="_blank">更多</a></span></div>
+            <div class="cont">$label[life_a10]
+                
+                </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="hycontainer">
+          <tr>
+            <td class="head">
+            	<span class="L">商家产品</span>
+                <span class="R">$label[life_a12] <a href="$webdb[www_url]/member/?main=$webdb[www_url]/shop/member/post_choose.php" target="_blank" class="post">发布商品</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+             $label[life_a13]
+            </td>
+          </tr>
+       </table> 
+    </td>
+    <td class="SideR">
+    	<div class="sidecontainer">
+            
+        <div class="head"><span class="L">优惠券</span><span class="R"><a href="$webdb[www_url]/coupon/" target="_blank">更多</a></span></div>
+            <div class="cont conta">
+                $label[life_a14]
+				
+               
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ly_sstable">
+          <tr>
+            <td class="head">
+            	<span class="L1">$label[life_a20]</span><span class="R"> $label[life_a24]</span>
+            </td>
+            <td class="head">
+            	<span class="L2">$label[life_a21]</span><span class="R">$label[life_a25]</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont1">
+            $label[life_a22]	
+            </td>
+            <td class="cont2">
+             $label[life_a23]
+            </td>
+          </tr>
+        </table> 
+    </td>
+    <td class="SideR">
+    	<div class="pamincontout">
+        	<div class="paminin">
+			$label[life_a15]
+            	
+                <div class="listad">$label[life_a16]</div>
+            </div>
+        </div>
+        <div class="life_job1">
+        	<div class="head"><span>求职</span></div>
+            
+        <a href="f/list.php?fid=3" target="_blank" class="b">个人免费找工作</a> <a href="f/list.php?fid=3" target="_blank" class="goto"><span>去求职</span></a> 
+        <a href="f/post.php?fid=87" target="_blank" class="s">免费发布个人简历</a> 
+      </div>
+        <div class="life_job2">
+        	<div class="head"><span>招聘</span></div>
+            
+        <div class="cont"> <a href="f/list.php?fid=4" target="_blank" class="b">企业免费找人才</a> 
+          <a href="f/list.php?fid=4" target="_blank" class="goto"><span>去招聘</span></a> 
+          <a href="f/post.php?fid=55" target="_blank" class="s">免费发布招聘信息</a> </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="life_baibaos">
+          <tr>
+            <td class="head"><span>生活百宝箱</span></td>
+            <td class="query">
+            $label[life_a30]
+            </td>
+            <td class="querytel">$label[life_a31]
+            
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="SideR">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="centersever">
+          <tr>
+            <td class="head"><span>客服中心</span></td>
+            <td class="cont">$label[life_a32]
+            
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<div id="FrendLink">
+	<div class="head">友情链接 && 合作伙伴</div>
+    <div class="cont">
+    	<div class="piclink">
+
+<!--
+EOT;
+if($friendlinkDB[1]&&$friendlink_DB[$city_id][1]){
+$array = $friendlinkDB[1]+$friendlink_DB[$city_id][1];
+}elseif($friendlinkDB[1]){
+$array = $friendlinkDB[1];
+}else{
+$array = $friendlink_DB[$city_id][1];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[name] $rs[descrip]" target="_blank"><img src="$rs[logo]" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="88" height="31"/></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+
+
+        </div>
+        <div class="wordlink">
+<!--
+EOT;
+if($friendlinkDB[0]&&$friendlink_DB[$city_id][0]){
+$array = $friendlinkDB[0]+$friendlink_DB[$city_id][0];
+}elseif($friendlinkDB[0]){
+$array = $friendlinkDB[0];
+}else{
+$array = $friendlink_DB[$city_id][0];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[descrip]" target="_blank">$rs[name]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+       
+    </div>
+</div>
+<!--
+EOT;
+?>
+-->

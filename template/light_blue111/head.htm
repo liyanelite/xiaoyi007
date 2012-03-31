@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<?php
+$thiscityname = $city_DB[name][$city_id] ? $city_DB[name][$city_id] : "&nbsp;";
+$GuideFid[$fid]=str_replace("<a href='$webdb[www_url]' class='guide_menu'>&gt;首页</a>","",$GuideFid[$fid]);
+$bodyondblclick = (function_exists('label_array')&&$web_admin&&!$MakeIndex) ?"dblclick_label();":"";
+$changecity = count($city_DB[name])>1 ? "<a href=\"$webdb[www_url]/allcity.php\">[切换城市]</a>":"当前城市";
+print <<<EOT
+-->
+<head>
+<title>$titleDB[title]</title>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/light_blue/style.css">
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/light_blue/cms.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="keywords" content="$titleDB[keywords]">
+<meta name="description" content="$titleDB[description]">
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function killErr(){
+	return true;
+}
+window.onerror=killErr;
+//-->
+</SCRIPT>
+<!--
+EOT;
+if($webdb[cookieDomain]){print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+//解决不同域名的框架跨域问题
+document.domain = "$webdb[cookieDomain]";
+</SCRIPT>
+<!--
+EOT;
+}print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/inc.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/default.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/swfobject.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/jquery-1.2.6.min.js"></SCRIPT>
+<script type="text/javascript" src="$webdb[www_url]/images/light_blue/sliding.js"></script>
+
+<body ondblclick="$bodyondblclick">
+<div class="TopContainer">
+	<div class="userinfo">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="top_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&styletype=blue&iframeID=top_loginer" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>  
+    </div>
+    <div class="siteinfo">
+<script language="JavaScript"> 
+<!---
+today=new Date();
+var hours = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+var timeValue = ((hours >12) ? hours -12 :hours); 
+timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+timeValue += (hours >= 12) ? " 下午 " : " 上午 ";
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray("<span>星期日</span>","星期一","星期二","星期三","星期四","星期五","<span>星期六</span>"); 
+document.write(today.getFullYear(),"年",today.getMonth()+1,"月",today.getDate(),"日 ",d[today.getDay()+1]," ",timeValue); 
+//-->
+</script>
+		<a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('$webdb[www_url]');" href="#">设为首页</a>
+        <a href="javascript:javascript:window.external.AddFavorite('$webdb[www_url]','$webdb[webname]');">加入收藏</a>
+    </div>
+</div>
+
+<CENTER><SCRIPT LANGUAGE='JavaScript' src='$webdb[www_url]/a_d/a_d_s.php?job=js&ad_id=AD_9724'></SCRIPT></CENTER>
+
+<ul class="Logo_Ad_Info">
+	<li class="logo"><a href="$webdb[www_url]"><img src="$webdb[www_url]/images/light_blue/logo.gif"/></a></li>
+    <li class="changecity">
+        <span class="city">{$thiscityname}</span>
+        <span class="change">$changecity</span>      
+    </li>
+    <li class="ad">{$label[light_blue_topad]}</li>
+    <li class="info">{$label[light_blue_topinfo]}</li>
+</ul>
+<ul id="Mainmenu">
+<!--
+EOT;
+$choose_class[intval($webdb['module_id'])]="choose";
+$detail=explode("\r\n",$webdb[guide_word]);
+foreach($detail AS $key=>$value){
+if(!$value)continue;
+list($Hname,$Hurl,$Hblank,$Hcolor,$Hlid,$link)=explode("|",$value);
+if(ereg("^\/",$Hurl)){$Hurl="$webdb[www_url]$Hurl";}elseif(!ereg("://",$Hurl)){$Hurl="$webdb[www_url]/$Hurl";}
+$Hblank=$Hblank?"  target=\"_blank\"":'';
+$Hcolor=$Hcolor?" style=\"color:$Hcolor;\"":'';
+if($choose_class[$link]) $showkey = $key;
+print <<<EOT
+-->
+	<li onmousemove="changmenu($key)"><span><a href="$Hurl"{$Hblank}{$Hcolor} hidefocus>{$Hname}</a></span></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	<div id="MainPost"><a href="$webdb[www_url]/f/post.php"><img src="$webdb[www_url]/images/light_blue/postinfo.gif"/></a></div>
+</ul>
+<div id="MainSearch" onmouseover="changmenu($showkey)">    
+ <form name="mainsearchform" id="mainsearchform" target="_blank" method="post" action='$webdb[www_url]/f/search.php?action=search' onsubmit="return checkpost();">
+    <div id="searchtype">
+        <div id="SelectShow" onclick="ShowMore()">分类</div>
+        <div id="ListType" class="hidden">
+            <a href="javascript:;" onclick="selectsearcha(this,'f','分类')" class="ck">分类</a>
+            <a href="javascript:;" onclick="selectsearcha(this,'shop','商品')">商品</a> 
+            <a href="javascript:;" onclick="selectsearcha(this,'news','资讯')">资讯</a>
+            <a href="javascript:;" onclick="selectsearcha(this,'tg','团购')">团购</a>
+            <a href="javascript:;" onclick="selectsearcha(this,'hy','商家')">商家</a> 
+            <a href="javascript:;" onclick="selectsearcha(this,'coupon','促销')">促销</a>
+            <a href="javascript:;" onclick="selectsearcha(this,'hr','招聘')">招聘</a>
+        </div>
+    </div>
+    <div class="keyword">
+      <input name="keyword" type="text" value="请输入您要查找的内容" onClick="if(this.value.indexOf('请输入您要查找的')!=-1)this.value=''" id="Mainsearchkeyword"/>
+    </div>
+    <div class="subbutter">
+      <input type="submit" name="Submit" value="搜索"/>
+    </div>
+    <div class="hotsearch">
+      {$label[light_blue_hotsearch]}
+    </div>
+  </form>	
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function ShowMore(){
+		document.getElementById("SelectShow").className="click";
+		document.getElementById("ListType").className="show";
+	}
+function selectsearcha(theA,word,keyword){
+	document.getElementById("SelectShow").className="";
+	document.getElementById("ListType").className="hidden";
+	document.getElementById('SelectShow').innerHTML = keyword;
+	obj=document.getElementById("ListType").getElementsByTagName("a");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	theA.className='ck';
+	if (document.getElementById("Mainsearchkeyword").value==''){
+		document.getElementById("Mainsearchkeyword").value='请输入您要查找的'+keyword+'内容';
+	}	
+	document.getElementById("mainsearchform").action="$webdb[www_url]/"+word+"/search.php?action=search";
+}
+function checkpost(){
+	if (document.getElementById("Mainsearchkeyword").value=='')
+	{
+		alert('关键字不能为空!');
+		return false;
+	}
+}
+function hiddensearchtype(){
+	document.getElementById("ListType").className="hidden";
+	document.getElementById("SelectShow").className="";
+}
+function changmenu(obj){
+	var alinks=document.getElementById('Mainmenu').getElementsByTagName('li');
+	up = obj-1;
+	for(var i=0;i<alinks.length;i++){
+		if(up==i){
+			alinks[i].className='up';
+		}else if(obj==i){
+			alinks[i].className='ck';
+		}else{
+			alinks[i].className='';
+		}
+	}	
+}
+changmenu($showkey);
+//目的是为了做风格方便
+document.write('<div class="wrap" onmouseover=hiddensearchtype()>');
+//-->
+</SCRIPT>
+
+<!--
+EOT;
+if($GuideFid[$fid]){
+print <<<EOT
+-->
+<div id="nav_guide">
+	<div class="t1">当前位置：</div><div class="t2"><a href="$Mdomain/">首页</a> $GuideFid[$fid] </div>
+</div>
+<!--
+EOT;
+}
+?>
+-->
+

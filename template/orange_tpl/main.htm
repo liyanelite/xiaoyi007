@@ -1,0 +1,252 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/orange/main.css">
+<ul class="mainadContainer">
+	<li class="ad1">{$label[orange_mad1]}</li>
+    <li class="ad2">{$label[orange_mad2]}</li>
+    <li class="ad3">{$label[orange_mad3]}</li>
+</ul>
+<div class="MainContainer MContainer1">
+	<div class="sideL">
+    	<div id="SlideCont">{$label[orange_slide]}</div>
+        <div class="picwordcont">
+        	<div class="head">{$label[orange_mh1]}</div>
+            <div class="cont">
+            	{$label[orange_mt1]}
+                {$label[orange_mt2]}
+            </div>
+        </div>
+    </div>
+    <div class="sideC">
+    	<div class="HotNews">
+        	<div class="head"><span>hot</span></div>
+            <div class="cont">
+            	{$label[orange_mt3]}
+                {$label[orange_mt4]}
+            </div>
+        </div>
+    </div>
+    <div class="sideR">
+    	<div class="hournews">
+        	<div class="head">{$label[orange_mh2]}</div>
+            <div class="cont">
+            	{$label[orange_mt5]}
+            </div>
+        </div>
+        <div class="noteinfo">
+        	<div class="word">{$label[orange_mt6]}</div>
+            <div class="pic">{$label[orange_mt7]}</div>
+            <div class="word">{$label[orange_mt8]}</div>
+            <div class="pic">{$label[orange_mt9]}</div>
+        </div>
+    </div>
+</div>
+<div class="MainContainer MContainer2">
+	<div class="sideL">
+    	<div class="ShowFenlie">
+        	<div class="head">
+            	{$label[orange_mh3]}
+            </div>
+            <div class="cont" id="Tab1">{$label[orange_mt11]}</div>
+            <div class="cont" id="Tab2">{$label[orange_mt12]}</div>
+            <div class="cont" id="Tab3">{$label[orange_mt13]}</div>
+        </div>
+        <SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,4);</SCRIPT>
+        <div class="FenlieHotSort">
+        	<div class="head"><span class="tag">{$label[orange_mh4]}</span></div>
+            <div class="cont">{$label[orange_mt10]}</div>
+        </div>
+    </div>
+    <div class="sideC">
+    	<div class="ShowHouse">
+        	<div class="head">
+            	{$label[orange_mh5]}            	
+            </div>
+            <div class="cont" id="Tab4">{$label[orange_mt14]}</div>
+            <div class="cont" id="Tab5">{$label[orange_mt15]}</div>
+            <div class="cont" id="Tab6">{$label[orange_mt16]}</div>
+        </div>
+        <SCRIPT LANGUAGE="JavaScript">ShowTab(4,4,7);</SCRIPT>
+    </div>
+    <div class="sideR">
+    	<div class="HotHouse">
+        	<div class="head"> 
+            	{$label[orange_mh6]}
+            </div>
+            <dl class="cont">
+            	<dt>{$label[orange_mt17]}</dt>
+                <dd>{$label[orange_mt18]}</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="MainContainer MContainer3">
+	<div class="sideL">
+    	<div class="ShowShop">
+        	<div class="head">
+            	{$label[orange_mh7]}            	
+            </div>
+            <div class="cont" id="Tab7">{$label[orange_mt18a]}</div>
+            <div class="cont" id="Tab8">{$label[orange_mt19]}</div>
+            <div class="cont" id="Tab9">{$label[orange_mt20]}</div>
+        </div>
+        <SCRIPT LANGUAGE="JavaScript">ShowTab(7,7,10);</SCRIPT>
+    </div>
+    <div class="sideC">
+    	<div class="ShowCompany">
+        	<div class="head">
+            	{$label[orange_mh8]}            	
+            </div>
+            <div class="cont" id="Tab10">{$label[orange_mt21]}</div>
+            <div class="cont" id="Tab11">{$label[orange_mt22]}</div>
+            <div class="cont" id="Tab12">{$label[orange_mt23]}</div>
+        </div>
+        <SCRIPT LANGUAGE="JavaScript">ShowTab(10,10,13);</SCRIPT>
+    </div>
+    <div class="sideR">
+    	<div class="ShowCoupon">
+        	<div class="head">            	
+                {$label[orange_mh9]}  
+            </div>
+            <div class="cont">
+            	{$label[orange_mt24]}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="MainBanner">{$label[orange_mt25]}</div>
+<div class="MainContainer MContainer4">
+	<div class="sideL">
+    	<div class="ShowTging">
+        	<div class="head">
+            	{$label[orange_mh10]}            	
+            </div>
+            <div class="cont">{$label[orange_mt26]}</div>
+        </div>
+    </div>
+    <div class="mainR">
+    	<div class="ShowTgCont">
+        	<div class="head">
+            	{$label[orange_mh11]} 
+            </div>
+            <div class="cont" id="Tab13">{$label[orange_mt27]}</div>
+            <div class="cont" id="Tab14">{$label[orange_mt28]}</div>
+            <div class="cont" id="Tab15">{$label[orange_mt29]}</div>
+        </div>
+        <SCRIPT LANGUAGE="JavaScript">ShowTab(13,13,16);</SCRIPT>
+    </div>
+</div>
+<div class="MainContainer MContainer5">
+	<div class="sideL">
+    	<div class="ShowHrPic">
+        	<div class="head">
+            	<span class="tag">{$label[orange_mh12]}</span>
+            </div>
+            <div class="cont">{$label[orange_mt30]}</div>
+        </div>
+    </div>
+    <div class="sideCb">
+    	<div class="ShowHrCont">
+        	<div class="head">
+            	{$label[orange_mh13]}                
+                <span class="other"><br/></span>
+            </div>
+            <div class="cont" id="Tab16">{$label[orange_mt31]}</div>
+            <div class="cont" id="Tab17">{$label[orange_mt32]}</div>
+        </div>
+        <SCRIPT LANGUAGE="JavaScript">ShowTab(16,16,18);</SCRIPT>
+    </div>
+    <div class="sideRb">
+    	<div class="pamincontout">
+        	<div class="paminin">
+			$label[life_a15]            	
+                <div class="listad">$label[life_a16]</div>
+            </div>
+        </div>
+        <ul class="life_job1"> 
+        <li> {$label[orange_mt33]}</li> 
+        </ul>
+        <ul class="life_job2"> 
+        <li>  {$label[orange_mt34]}</li>
+        </ul>
+    </div>
+</div>
+<div class="MainContainer MContainer6">
+	<div class="mainL">{$label[orange_mt35]}</div>
+    <div class="sideRb">{$label[orange_mt36]}</div>
+</div>
+<div class="MainContainer MContainer7">
+	<div class="mainL">
+    	<div class="ShowBaibaos">
+        	<div class="head">
+            	{$label[orange_mh14]}            	
+            </div>
+            <dl class="cont">
+            	<dt>$label[life_a30]</dt>
+                <dd>$label[life_a31]</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="sideRb">
+    	<div class="centersever">
+        	<div class="head">
+            	<span class="tag">{$label[orange_mh15]}</span><span class="more"><br/></span>
+            </div>
+            <div class="cont">
+            	$label[life_a32]
+            </div>
+        </div>
+    </div>
+</div>
+<div id="FrendLink">
+	<div class="head">
+    	{$label[orange_mh16]}    	    
+   </div>
+   <div class="cont">
+    	<div class="piclink">
+<!--
+EOT;
+if($friendlinkDB[1]&&$friendlink_DB[$city_id][1]){
+$array = $friendlinkDB[1]+$friendlink_DB[$city_id][1];
+}elseif($friendlinkDB[1]){
+$array = $friendlinkDB[1];
+}else{
+$array = $friendlink_DB[$city_id][1];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[name] $rs[descrip]" target="_blank"><img src="$rs[logo]" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="88" height="31"/></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+        <div class="wordlink">
+<!--
+EOT;
+if($friendlinkDB[0]&&$friendlink_DB[$city_id][0]){
+$array = $friendlinkDB[0]+$friendlink_DB[$city_id][0];
+}elseif($friendlinkDB[0]){
+$array = $friendlinkDB[0];
+}else{
+$array = $friendlink_DB[$city_id][0];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[descrip]" target="_blank">$rs[name]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+       
+    </div>
+</div>
+<!--
+EOT;
+?>
+-->

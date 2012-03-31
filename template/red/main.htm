@@ -1,0 +1,238 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/red/main.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContain" style="margin-top:0;">
+  <tr>
+    <td class="SideL">
+    	<div class="SideBox1">
+        	<div class="head">{$label[index_redlisthead1]}</div>
+            <div class="cont img_title">
+            	{$label[index_redlisttitle1]}
+            </div>
+        </div>
+    </td>
+    <td class="SideC">
+    	<div class="slidecontainer">{$label[red_indexslide]}</div>
+    </td>
+    <td class="SideR">
+    	<div class="notecont">
+        	<div class="webinfo">{$label[red_indexwebinfo]}</div>
+			<div class="notebox">
+            	<div class="head">{$label[red_indexnoteh]}</div>
+                <div class="cont">
+                	{$label[red_indexnote]}
+                </div>
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContain">
+  <tr>
+    <td class="MainL">
+    	<div class="maincont">
+        	<div class="head">
+            	<span class="tag">分类信息</span>
+                <span class="choos"><a href="$webdb[www_url]/f/listall.php" target="_blank">最新信息</a></span>
+                <span class="other"><a href="$webdb[www_url]/f/listall.php?ordertype=hits" target="_blank">热门信息</a> | 
+                <a href="$webdb[www_url]/f/listall.php?ordertype=levelstime" target="_blank">推荐信息</a> |</span>
+                <span class="more"><a href="$webdb[www_url]/f/post.php" target="_blank">免费发布</a></span>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont">
+              <tr>
+                <td class="fenliecont">
+                	{$label[red_indexfenlie]} 
+                </td>
+              </tr>
+            </table>
+        </div>
+    </td>
+    <td class="SideR">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidetable">
+          <tr>
+            <td class="head">
+            	<span class="tag">热门信息</span>
+                <span class="more"><a href="$webdb[www_url]/f/listall.php?ordertype=hits" target="_blank">更多</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	{$label[red_indexfenliehot]}  
+                <div class="fenlieimg">
+                	{$label[red_indexfenlieimg]}                	
+                </div>     	                 
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContain">
+  <tr>
+    <td class="MainL">
+    	<div class="maincont">
+        	<div class="head">
+            	<span class="tag tag2">商家黄页</span>
+                <span class="choos"><a href="$webdb[www_url]/hy/" target="_blank">著名企业</a></span>
+                <span class="other"><a href="$webdb[www_url]/hy/listall.php" target="_blank">最新店铺</a> | 
+                <a href="$webdb[www_url]/hy/listall.php?ordertype=hits" target="_blank">热门店铺</a> |</span>
+                <span class="more"><a href="$webdb[www_url]/member/index.php?main=/hy/member/post_company.php" target="_blank">登记企业</a></span>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont">
+              <tr>
+                <td class="hycont">
+                	{$label[red_indexhy]} 
+                </td>
+              </tr>
+            </table>
+        </div>
+    </td>
+    <td class="SideR">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidetable">
+          <tr>
+            <td class="head">
+            	<span class="tag">推荐商家</span>
+                <span class="more"><a href="$webdb[www_url]/hy/listall.php?ordertype=levelstime" target="_blank">更多</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont hothy">
+            	{$label[red_indexhyhot]}    	                 
+            </td>
+          </tr>
+        </table>
+        <div class="hyadcont">{$label[red_indexhyimg]}</div>
+    </td>
+  </tr>
+</table>
+<div class="Banner_Ad">{$label[index_redbannerad]}</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContain">
+  <tr>
+    <td class="MainL">
+    	<div class="maincont">
+        	<div class="head">
+            	<span class="tag">团购活动</span>
+                <span class="choos"><a href="$webdb[www_url]/tg/listall.php" target="_blank">最新活动</a></span>
+                <span class="other"><a href="$webdb[www_url]/tg/listall.php?ordertype=hits" target="_blank">热门活动</a> | 
+                <a href="$webdb[www_url]/tg/listall.php?ordertype=levelstime" target="_blank">推荐活动</a> |</span>
+                <span class="more"><a href="$webdb[www_url]/member/?main=$webdb[www_url]/tg/member/post_choose.php" target="_blank">发起活动</a></span>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont">
+              <tr>
+                <td class="tgcont">
+                	{$label[red_indextg]} 
+                </td>
+              </tr>
+            </table>
+        </div>
+    </td>
+    <td class="SideR">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidetable">
+          <tr>
+            <td class="head">
+            	<span class="tag">热门活动</span>
+                <span class="more"><a href="$webdb[www_url]/tg/listall.php?ordertype=hits">更多</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont hottgcont">
+            	{$label[red_indextghot]}  
+                <div class="tztgcont">
+                	<div class="h"><a href="$webdb[www_url]/tg/listall.php?ordertype=levelstime">推荐活动</a></div>
+                    <div class="c">{$label[red_indextgtz]} </div>                	
+                </div>     	                 
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContain">
+  <tr>
+    <td class="MainL">
+    	<div class="maincont">
+        	<div class="head">
+            	<span class="tag tag2">商家产品</span>
+                <span class="choos"><a href="$webdb[www_url]/shop/listall.php" target="_blank">最新产品</a></span>
+                <span class="other"><a href="$webdb[www_url]/shop/listall.php?ordertype=hits" target="_blank">热门产品</a> | 
+                <a href="$webdb[www_url]/shop/listall.php?ordertype=levelstime" target="_blank">推荐产品</a> |</span>
+                <span class="more"><a href="$webdb[www_url]/member/?main=$webdb[www_url]/shop/member/post_choose.php" target="_blank">发布产品</a></span>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont">
+              <tr>
+                <td class="shopcont">
+                	{$label[red_indexshop]} 
+                </td>
+              </tr>
+            </table>
+        </div>
+    </td>
+    <td class="SideR">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidetable">
+          <tr>
+            <td class="head">
+            	<span class="tag">优惠券</span>
+                <span class="more"><a href="$webdb[www_url]/coupon/">更多</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont couponcont">
+            	{$label[red_indexcouponcont]}    	                 
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<div class="FrendLink">
+	<div class="head">
+    	<span class="tag">友情链接 && 合作伙伴</span>
+      	<span class="more"><a href="$webdb[www_url]/do/friendlink.php?job=apply">申请链接</a> <a href="$webdb[www_url]/do/friendlink.php" target="_blank">查看更多</a> </span>
+    </div>
+    <div class="cont">
+    	<div class="piclink">
+<!--
+EOT;
+if($friendlinkDB[1]&&$friendlink_DB[$city_id][1]){
+$array = $friendlinkDB[1]+$friendlink_DB[$city_id][1];
+}elseif($friendlinkDB[1]){
+$array = $friendlinkDB[1];
+}else{
+$array = $friendlink_DB[$city_id][1];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[name] $rs[descrip]" target="_blank"><img src="$rs[logo]" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="88" height="31"/></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+        <div class="wordlink">
+<!--
+EOT;
+if($friendlinkDB[0]&&$friendlink_DB[$city_id][0]){
+$array = $friendlinkDB[0]+$friendlink_DB[$city_id][0];
+}elseif($friendlinkDB[0]){
+$array = $friendlinkDB[0];
+}else{
+$array = $friendlink_DB[$city_id][0];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[descrip]" target="_blank">$rs[name]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+    </div>
+</div>
+<!--
+EOT;
+?>
+-->

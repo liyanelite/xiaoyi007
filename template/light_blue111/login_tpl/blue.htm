@@ -1,0 +1,46 @@
+<!--
+<?php
+if($lfjid){print <<<EOT
+-->
+<span class="word">
+    欢迎你回来:<em>$lfjid</em>  $MSG   
+<!--
+EOT;
+if($ModuleDB['blog_']){print <<<EOT
+-->
+	<a HREF="$webdb[www_url]/blog/?uid=$lfjuid" target="_blank">我的博客</a> 
+<!--
+EOT;
+}print <<<EOT
+-->
+	<a href="$webdb[www_url]/member/homepage.php?uid=$lfjuid" target="_blank">个人信息</a> 
+    <a href="$webdb[www_url]/member/" target="_blank">会员中心</a> 
+    <a href="$webdb[www_url]/do/login.php?action=quit">安全退出</a> 
+</span>
+<!--
+EOT;
+}else{print <<<EOT
+-->
+<form class="login_form" name="form_login" method="post" action="$webdb[www_url]/do/login.php">
+    <span class="word">通行证 | 帐号:</span>
+    <span class="input"><input type="text" name="username"></span>
+    <span class="word">密码:</span>
+    <span class="input"><input type="password" name="password"></span>
+    <span class="sub"><input name="Submit" type="image" src="$webdb[www_url]/images/light_blue/login.gif" /></span>
+    <span class="word"><a href="$webdb[www_url]/do/reg.php">注册</a>  | <a href="$webdb[www_url]/do/login.php">登录</a></span>
+    <input type="hidden" name="step" value="2">
+    <input class="radio" type="hidden" name="cookietime" value="86400" >
+<!--
+EOT;
+if($webdb[QQ_login]){print <<<EOT
+-->
+	<span class="img"><a href="$webdb[www_url]/do/qq_login.php"><img src="$webdb[www_url]/images/light_blue/qqlogin.gif"/></a></span>
+<!--
+EOT;
+}print <<<EOT
+-->
+</form>  
+<!--
+EOT;
+}?>
+-->

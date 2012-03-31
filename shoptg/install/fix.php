@@ -1,0 +1,9 @@
+<?php
+
+return array(
+	'name'=>'¹Ù·½ÍÅ¹º',
+	'pre'=>'shoptg_',
+	'setup'=>1,
+);
+
+?>

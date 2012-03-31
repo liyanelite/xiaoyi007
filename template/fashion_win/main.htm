@@ -1,0 +1,294 @@
+<!--
+<?php
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/fashion/main/main.css"> 
+<div class="MainCont1">
+	<div class="SideL">
+    	{$label[fashoin_mainslide]}
+    </div>
+    <div class="SideC">
+    	<div class="MainNews">
+        	<div class="head"><span class="tag">WHAT's NEW</span></div>
+            <div class="cont">
+            	{$label[fashoin_maint1]}
+            </div>
+        </div>
+    </div>
+    <div class="SideR">
+    	<div class="sidecont1">
+        	<div class="head"><span class="tag">{$label[fashoin_mainh1]}</span></div>
+            <div class="UserAction">
+<!--
+EOT;
+if($lfjid){
+print <<<EOT
+-->
+				<div>
+                	<a href="$webdb[www_url]/member/"><img src="$webdb[www_url]/images/fashion/main/member.gif"></a>
+                    <a href="$webdb[www_url]/home/?uid=$lfjuid"><img src="$webdb[www_url]/images/fashion/main/hy.gif"></a>
+                </div>
+<!--
+EOT;
+}else{
+print <<<EOT
+-->
+				<div>
+                	<a href="$webdb[www_url]/do/login.php"><img src="$webdb[www_url]/images/fashion/main/login.gif"></a>
+                    <a href="$webdb[www_url]/do/reg.php"><img src="$webdb[www_url]/images/fashion/main/reg.gif"></a>
+                </div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+				<div><a href="$webdb[www_url]/f/post.php"><img src="$webdb[www_url]/images/fashion/main/postinfo.gif"></a></div>
+            </div>
+        </div>
+        <div class="sidecont1">
+        	<div class="head"><span class="tag">{$label[fashoin_mainh2]}</span></div>
+            <div class="LifeBaibao">
+            	{$label[fashoin_maint2]}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="MainCont2">
+	<div class="MainL">
+    	<div class="mainladcont">{$label[fashoin_mainad1]}</div>
+        <div class="maincont1">
+        	<div class="head">{$label[fashoin_mainh3]}
+            </div>
+            <div class="showfenlie">
+            	{$label[fashoin_maint3]}
+            </div>
+            <div class="head">{$label[fashoin_mainh4]}
+            </div>
+            <div class="showhouse">    			
+                {$label[fashoin_maint4]} 
+            </div>
+        </div>
+    </div>
+    <div class="SideR">
+    	<div class="SiteServer">
+        	<div class="head">
+            	<span class="tag">{$label[fashoin_mainh5]}</span>
+            </div>
+            <div class="cont">
+            	{$label[fashoin_maint5]}
+            </div>
+        </div>
+        <div class="sideradcont">{$label[fashoin_mainad2]}</div>
+    </div>
+</div>
+<div class="BannerCont">
+	{$label[fashoin_mainbanner1]}
+</div>
+<div class="MainCont3">
+	<div class="MainL">
+    	<div class="maincont1">
+        	<div class="showhycont">
+            	<div class="h">{$label[fashoin_mainh6]}
+                </div>
+                <div class="c">
+                	<div class="c1">
+                    	{$label[fashoin_maint6]}
+                    </div>
+                    <div class="c1">
+                    	{$label[fashoin_maint7]}
+                    </div>
+                </div>
+            </div>
+            <div class="showshopcont">
+            	<div class="h">{$label[fashoin_mainh7]}
+                </div>
+                <div class="c">
+                	{$label[fashoin_maint8]}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="SideR">
+    	<div class="sidecont1">
+        	<div class="head"><span class="tag">{$label[fashoin_main8h]}</span></div>
+            <div class="showcoupon">
+            	<div class="h">{$label[fashoin_mainh9]}
+                </div>
+                <div class="c" id="Tab1">
+                	{$label[fashoin_maint9]}
+                </div>
+                <div class="c" id="Tab2">
+                	{$label[fashoin_maint10]}
+                </div>
+                <SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,3);</SCRIPT>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="BannerCont">
+	{$label[fashoin_mainbanner2]}
+</div>
+<div class="MainCont4">
+	<div class="MainL">
+    	<div class="maincont1">
+        	<div class="showtgcont">
+            	<div class="h">{$label[fashoin_mainh10]}
+                </div>
+                <div class="c">
+                	{$label[fashoin_maint11]}
+                </div>
+            </div>
+            <div class="showshoptgcont">
+            	<div class="h">
+                	<span class="tg">{$label[fashoin_mainh11]}</span>
+                    <span class="m"><br/></span>
+                </div>
+                <div class="c">
+                	{$label[fashoin_maint12]}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="SideR">
+    	<div class="sidecont1">
+        	<div class="head"><span class="tag">{$label[fashoin_mainh12]}</span></div>
+            <div class="showtopnews">
+            	<div class="h">
+                	{$label[fashoin_mainh13]}
+                </div>
+                <div class="c" id="Tab3">
+                	{$label[fashoin_maint13]}
+                </div>
+                <div class="c" id="Tab4">
+                	{$label[fashoin_maint14]}
+                </div>
+                <SCRIPT LANGUAGE="JavaScript">ShowTab(3,3,5);</SCRIPT>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="BannerCont">
+	{$label[fashoin_mainbanner3]}
+</div>
+<div class="MainCont5">
+	<div class="MainL">
+    	<div class="maincont1">
+        	<div class="showhrcont">
+            	<div class="h">{$label[fashoin_mainh14]}                	
+                </div>
+                <div class="c">
+                	{$label[fashoin_maint15]}
+                </div>
+            </div>
+            <div class="showjobcont">
+            	<div class="h">{$label[fashoin_mainh15]}                	
+                </div>
+                <div class="c">
+                	{$label[fashoin_maint16]}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="SideR">
+    	<div class="sidecont1">
+        	<div class="head"><span class="tag">{$label[fashoin_mainh16]}</span></div>
+            <div class="showhrpic">
+            	{$label[fashoin_maint17]}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="BannerCont">
+	{$label[fashoin_mainbanner4]}
+</div>
+<div class="MainCont6">
+	<div class="MainL">
+    	<div class="maincont1">
+        	<div class="showtznewscont">
+            	<div class="head">
+                	<span class="tag">{$label[fashoin_mainh17]}</span>
+                </div>
+                <div class="cc">
+                	{$label[fashoin_maint18]}
+                </div>
+            </div>
+            <div class="showtznewscont1">
+            	<div class="c1">
+                	{$label[fashoin_maint19]}
+                </div>
+                <div class="c2">
+                	{$label[fashoin_maint20]}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="SideR">
+    	<div class="sidecont1">
+        	<div class="head"><span class="tag">{$label[fashoin_mainh18]}</span></div>
+            <div class="servercenter">
+            	{$label[fashoin_maint21]}
+            </div>
+        </div>
+        <div class="sideradcont">{$label[fashoin_mainad5]}</div>
+    </div>
+</div>
+<div class="MainCont7">
+	<div class="head">{$label[fashoin_mainh19]}    	
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="cont">
+        	{$label[fashoin_maint22]}
+        </td>
+      </tr>
+    </table>
+</div>
+<div id="FrendLink">
+	<div class="head">{$label[fashoin_mainh20]}    	
+    </div>
+    <div class="cont">
+    	<div class="piclink">
+<!--
+EOT;
+if($friendlinkDB[1]&&$friendlink_DB[$city_id][1]){
+$array = $friendlinkDB[1]+$friendlink_DB[$city_id][1];
+}elseif($friendlinkDB[1]){
+$array = $friendlinkDB[1];
+}else{
+$array = $friendlink_DB[$city_id][1];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[name] $rs[descrip]" target="_blank"><img src="$rs[logo]" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="88" height="31"/></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+        <div class="wordlink">
+<!--
+EOT;
+if($friendlinkDB[0]&&$friendlink_DB[$city_id][0]){
+$array = $friendlinkDB[0]+$friendlink_DB[$city_id][0];
+}elseif($friendlinkDB[0]){
+$array = $friendlinkDB[0];
+}else{
+$array = $friendlink_DB[$city_id][0];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[descrip]" target="_blank">$rs[name]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+       
+    </div>
+</div>
+<!--
+EOT;
+?>
+-->

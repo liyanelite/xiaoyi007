@@ -1,0 +1,72 @@
+<!--
+<?php
+print <<<EOT
+-->
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+  <form name="form_work" method="post" action="$admin_path">
+    <tr align="center" class="head"> 
+      <td width="12%" >报名者姓名</td>
+      <td width="11%" >报名者帐号</td>
+      <td width="26%" >活动名称</td>
+      <td width="12%" > 报名时间</td>
+      <td width="8%" >参与人数</td>
+      <td width="9%" >联系电话</td>
+      <td width="8%" >审核与否</td>
+      <td width="7%" >详情</td>
+      <td width="7%" >删除</td>
+    </tr>
+    <!--
+EOT;
+foreach($listdb AS $key=>$rs){print <<<EOT
+-->
+    <tr> 
+      <td class="middle" valign="top" width="12%" align="left"><a href="../bencandy.php?fid=$rs[fid]&id=$rs[cid]&city_id={$rs[shop][city_id]}" target="_blank"> 
+        <input type="checkbox" name="iddb[]" value="$rs[id]">
+        </a>$rs[realname]</td>
+      <td class="middle" valign="top" width="11%" align="center"><a href="/member/homepage.php?uid=$rs[uid]" target="_blank">$rs[username]</a></td>
+      <td class="middle" valign="top" width="26%" align="center"><a href="../bencandy.php?fid=$rs[fid]&id=$rs[cid]&city_id={$rs[C][city_id]}" target="_blank">{$rs[C][title]}</a></td>
+      <td class="middle" valign="top" width="12%" align="center">$rs[posttime]</td>
+      <td class="middle" valign="top" width="8%" align="center">$rs[join_num]</td>
+      <td class="middle" valign="top" width="9%" align="center">$rs[telphone]</td>
+      <td class="middle" valign="top" width="8%" align="center">$rs[yzshow]</td>
+      <td class="middle" valign="top" width="7%" align="center"><a href="$Murl/member/joinshow.php?fid=$rs[fid]&id=$rs[id]" target="_blank">查看</a></td>
+      <td class="middle" valign="top" width="7%" align="center"><a href="$admin_path&act=del&iddb[]=$rs[id]">删除</a></td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td colspan="9"> {$showpage}</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td colspan="9"> <a href="#" onClick="CheckAll('all')">全选</a>/<a href="#" onClick='CheckAll()'>反选</a> 
+        <input type="button" name="Submit" value="删除" onclick="postdo()">
+        <input type="hidden" name="act" value="del">
+      </td>
+    </tr>
+  </form>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function postdo(){
+	document.form_work.submit();
+}
+function CheckAll(va){
+	form=document.form_work
+	for (var i=0;i<form.elements.length;i++){
+		var e = form.elements[i];
+		if(va=='all'){
+			e.checked = true;
+		}else{
+			e.checked == true ? e.checked = false : e.checked = true;
+		}
+	}
+}
+//-->
+</SCRIPT>
+<!--
+EOT;
+?>
+-->

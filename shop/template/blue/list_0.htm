@@ -1,0 +1,103 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/shop/list.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer">
+  <tr>
+    <td class="main">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="showsort">
+        <tr>
+          <td class="sorttd">
+          	<div class="head">分类</div>
+            <div class="cont">
+<!--
+EOT;
+$array=$Fid_db[$fid]?$Fid_db[$fid]:$Fid_db[$fidDB[fup]];
+foreach($array AS $fkey=>$fvalue){
+$thissort = $fid==$fkey?" style=\"color:red\"":"";
+print <<<EOT
+-->
+			<a href="list.php?fid=$fkey"{$thissort}>$fvalue</a>
+ <!--
+EOT;
+}print <<<EOT
+-->
+			</div>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="conttable">
+        <tr>
+          <td class="head"><div class="TAG"><span>{$fidDB[name]}</span></div><div class="more"><br/></div></td>
+        </tr>
+        <tr>
+          <td class="cont">
+          	  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="listtable">
+                <tr class="h">
+                  <td class="td1"><br/></td>
+                  <td class="td2">商品详情</td>
+                  <td class="td3">价格</td>
+                  <td class="td4">商家认证</td>
+                </tr>
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+                <tr class="c">
+                  <td class="td1">
+                  	<a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]"><img src="$rs[picurl]" onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="120" height="90"></a>                  </td>
+                  <td class="td2">
+                  	<div class="title"><a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="$target" title='$rs[full_title]'>$rs[title]</a></div>
+                    <div class="other">日期:{$rs[posttime]} 浏览:{$rs[hits]}次 发布者:{$rs[username]}</div>
+                    <div class="company_name"><span>类别:</span>$rs[fname] <!--{template}-->
+                      <span>{title}:</span>{value} 
+                      <!--{/template}--></div>                  </td>
+                  <td class="td3"><div class="price">￥{$rs[price]} 元</div></td>
+                  <td class="td4"><img alt="{$renzhengDB[$rs[renzheng]]}" src="$webdb[www_url]/images/yellow/company_renzheng{$rs[renzheng]}.gif"></td>
+                </tr>
+<!--
+EOT;
+}if($showpage){print <<<EOT
+-->
+				<tr class="page">
+                  <td colspan="4">$showpage</td>
+                </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+              </table>	
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="side">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidetable">
+        <tr> 
+          <td class="head"><div class="TAG">热门产品</div></td>
+        </tr>
+        <tr> 
+          <td class="cont"> 
+<!--
+EOT;
+$array=list_title('hot',10);
+foreach($array AS $rs){print <<<EOT
+-->
+             
+            <div class="list"><a href="bencandy.php?city_id=$rs[city_id]&fid=$rs[fid]&id=$rs[id]" target="_blank" title="$rs[title]">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

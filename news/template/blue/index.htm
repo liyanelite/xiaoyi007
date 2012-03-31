@@ -1,0 +1,301 @@
+<!--
+<?php
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/news/index.css">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" class="newsmenutb"> 
+  <tr>   
+	<td>
+    	<div class="logo"><img src="$webdb[www_url]/images/$STYLE/news/nlogo.gif" width="129" height="51"/></div>
+       	$label[news_0]
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>
+    <td>{$label[blue_newsad1]}</td>
+  </tr>
+</table>
+<table width="100%" align="center" cellpadding="0" cellspacing="0" class="MainContainer mt10">
+  <tr>
+    <td class="lefttd">    	
+    	<div class="newsmaximg">
+        	<div class="head"><span>{$label[blue_newsth1]}</span></div>
+        	<div class="cont">$label[news_rollpic]</div>
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tznews mt10">
+          <tr>
+            <td class="head"><div>{$label[blue_newsth2]}</div></td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<div class="photo">
+                	{$label[blue_newstzs]}                	
+                </div>
+                <div class="word">
+                	{$label[blue_newstzs1]} 
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="other">
+            	{$label[blue_newsother]}
+            </td>
+          </tr>
+        </table>          
+    </td>
+    <td class="centertd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="newestnews">
+          <tr>
+            <td class="head">
+            	<div class="tag">{$label[blue_newsth3]}</div>
+                <div class="more">{$label[blue_morenest]}</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<div class="topnewest">
+                	{$label[blue_topnewest]}
+                </div>
+                <div class="othernewest">
+                	{$label[blue_othernewest]}
+                </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="righttd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hotnews">
+          <tr>
+            <td class="head">{$label[blue_newsth4]}</td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	{$label[blue_hotnews]}
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortnews mt10">
+          <tr>
+            <td class="head">
+            	<div onmouseover="ShowTab(1,1,3)" id="Span1"><span>$label[blue_sortnewhead1]</span></div>
+                <div onmouseover="ShowTab(2,1,3)" id="Span2"><span>$label[blue_sortnewhead2]</span></div>
+            </td>
+          </tr>
+          <tr id="Tab1">
+            <td class="cont">
+            	<div class="photo">$label[blue_sortimg1]</div>
+                <div class="word">$label[blue_sortword1]</div>
+            </td>
+          </tr>
+          <tr id="Tab2">
+            <td class="cont">
+            	<div class="photo">$label[blue_sortimg2]</div>
+                <div class="word">$label[blue_sortword2]</div>
+            </td>
+          </tr>
+<SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,3);</SCRIPT> 
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" align="center" cellpadding="0" cellspacing="0" class="Newsimages mt10">
+  <tr>
+	<td class="head"><div>{$label[blue_newsth5]}</div></td>
+  </tr>
+  <tr>
+	<td class="cont">
+    	{$label[blue_newsimages]}
+    </td>
+  </tr>
+</table>
+<table width="100%" align="center" cellpadding="0" cellspacing="0" class="MainContainer mt10">
+  <tr>
+	<td class="MainLeft">
+   	  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mainconts">
+          <tr>
+            <td class="head"><div class="tag">{$label[blue_newsth6]}</div></td>
+          </tr>
+          <tr>
+            <td class="cont">
+           	  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidecontl">
+                  <tr>
+                    <td class="h">{$label[blue_newsth7]}</td>
+                  </tr>
+                  <tr>
+                    <td class="c">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont1">
+                          <tr>
+                            <td class="tdl">{$label[blue_ntitle1]}</td>
+                            <td class="tdr">{$label[blue_ntitle2]}</td>
+                          </tr>
+                        </table>
+                        <div class="cont2">
+                        	{$label[blue_ntitle3]}
+                        </div>
+                    </td>
+                  </tr>
+              </table>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidecontr">
+                  <tr>
+                    <td class="h">
+                    	<div class="tag">{$label[blue_newsth8]}</div>
+                        <div class="showmore">
+                            <span onmouseover="ShowTab(3,3,7)" id="Span3">$label[blue_showh1]</span>
+                            <span onmouseover="ShowTab(4,3,7)" id="Span4">$label[blue_showh2]</span>
+                            <span onmouseover="ShowTab(5,3,7)" id="Span5">$label[blue_showh3]</span>
+                            <span onmouseover="ShowTab(6,3,7)" id="Span6">$label[blue_showh4]</span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr id="Tab3">
+                    <td class="c">
+                        <div class="cont1">
+                        	{$label[blue_ntitle4]}
+                        </div>
+                        <div class="cont2">
+                        	{$label[blue_ntitle5]}
+                        </div>
+                    </td>
+                  </tr>
+                  <tr id="Tab4">
+                    <td class="c">
+                        <div class="cont1">
+                        	{$label[blue_ntitle6]}
+                        </div>
+                        <div class="cont2">
+                        	{$label[blue_ntitle7]}
+                        </div>
+                    </td>
+                  </tr>
+                  <tr id="Tab5">
+                    <td class="c">
+                        <div class="cont1">
+                        	{$label[blue_ntitle8]}
+                        </div>
+                        <div class="cont2">
+                        	{$label[blue_ntitle9]}
+                        </div>
+                    </td>
+                  </tr>
+                  <tr id="Tab6">
+                    <td class="c">
+                        <div class="cont1">
+                        	{$label[blue_ntitle10]}
+                        </div>
+                        <div class="cont2">
+                        	{$label[blue_ntitle11]}
+                        </div>
+                    </td>
+                  </tr>
+                  <SCRIPT LANGUAGE="JavaScript">ShowTab(3,3,7);</SCRIPT> 
+                </table>
+            </td>
+          </tr>
+      </table>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="maincont2">
+          <tr>
+            <td colspan="2" class="h">
+            	{$label[blue_newsth9]}           
+            </td>
+          </tr>
+          <tr>
+            <td class="c1">
+            	<div class="photo">{$label[blue_ntitle12]}</div>
+                <div class="word">{$label[blue_ntitle13]}</div>
+            </td>
+            <td class="c2">{$label[blue_ntitle14]}</td>
+          </tr>
+        </table>
+    </td>
+    <td class="righttd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="todaynews">
+          <tr>
+            <td class="head">{$label[blue_newsth10]}</td>
+          </tr>
+          <tr>
+            <td class="cont">{$label[blue_ntitle15]}</td>
+          </tr>
+        </table>
+        <div class="nrightad  mt10">{$label[blue_nrightad]}</div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="nsideright mt10">
+          <tr>
+            <td class="head">{$label[blue_newsth11]}</td>
+          </tr>
+          <tr>
+            <td class="cont">{$label[blue_ntitle16]}</td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" align="center" cellpadding="0" cellspacing="0" class="MainContainer mt10">
+  <tr>
+	<td class="MainLeft">
+   	  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mainconts">
+          <tr>
+            <td class="head head1"><div class="tag">{$label[blue_newsth12]}</div></td>
+          </tr>
+          <tr>
+            <td class="cont">
+           	  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidecontl">
+                  <tr>
+                    <td colspan="2" class="h">{$label[blue_newsth13]}</td>
+                  </tr>
+                  <tr>
+                    <td class="c1">{$label[blue_ntitle17]}</td>
+                    <td class="c2">{$label[blue_ntitle18]}</td>
+                  </tr>
+              </table>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidecontr">
+                  <tr>
+                    <td colspan="2" class="h">{$label[blue_newsth14]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="c1">{$label[blue_ntitle19]}</td>
+                    <td class="c2">{$label[blue_ntitle20]}</td>
+                  </tr>
+                </table>
+            </td>
+          </tr>
+      </table>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="maincont2">
+          <tr>
+            <td colspan="2" class="h">{$label[blue_newsth15]}           
+            </td>
+          </tr>
+          <tr>
+            <td class="c3">
+            	{$label[blue_ntitle21]}
+            </td>
+            <td class="c2">{$label[blue_ntitle22]}</td>
+          </tr>
+        </table>
+    </td>
+    <td class="righttd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="todaynews">
+          <tr>
+            <td class="head head1">{$label[blue_newsth16]}</td>
+          </tr>
+          <tr>
+            <td class="cont">{$label[blue_ntitle23]}</td>
+          </tr>
+        </table>
+        <div class="nrightad  mt10">{$label[blue_nrightad2]}</div>
+        <div class="nrightad  mt10">{$label[blue_nrightad3]}</div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="nsideright mt10">
+          <tr>
+            <td class="head">{$label[blue_newsth17]}</td>
+          </tr>
+          <tr>
+            <td class="cont">{$label[blue_ntitle24]}</td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

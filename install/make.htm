@@ -1,0 +1,443 @@
+<!--
+<?php
+print <<<EOT
+-->
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>齐博地方生活门户系统安装程式</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #E6E6E6;
+}
+td{
+	font-size: 9pt;
+}
+.style1 {
+	color: #FFFFFF;
+	font-size: 9pt;
+	line-height: 16px;
+}
+.style5 {font-size: 18px; font-family: "黑体";}
+.style9 {
+	font-size: 9pt;
+	color: #666666;
+	line-height: 16px;
+}
+.style11 {
+	color: #990000;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style13 {font-family: Arial, Helvetica, sans-serif}
+.style17 {font-size: 18px; font-family: "黑体"; color: #990000; }
+.style18 {color: #000000}
+-->
+</style>
+</head>
+
+<body>
+<table width="100%" height="90"  border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="1%" class="style5">&nbsp;</td>
+    <td height="59" class="style5">欢迎您使用齐博地方生活门户系统<br>
+      该界面为<span class="style11">程序初始化</span><span class="style5">安装</span> </td>
+    <td width="580" align="right" background="install/images/b_right.gif" class="style5">&nbsp;</td>
+  </tr>
+</table>
+<table width="100%" height="33"  border="0" cellpadding="0" cellspacing="0" background="install/images/Bottom.gif">
+  <tr>
+    <td class="style13">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" align="center" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF" class="style9">
+  <tr>
+    <td> 
+      <!--
+EOT;
+if($job=='start'){
+print <<<EOT
+-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <form name="form40" id="form40" method="post" action="?action=end_choose">
+          <tr> 
+            <td colspan="2">安装前,如果你的服务器不是windows的话,请确认已修改以下文件与目录属性为0777可写,否则会运行不正常<br>
+				
+              <font color="#FF0000">data/</font> 目录与目录下所有文件<br>
+			  <font color="#FF0000">upload_files/</font> 目录与目录下所有文件<br>
+              <font color="#FF0000">cache/</font> 目录与目录下所有文件</td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="center"> 
+              <input type="radio" name="ifpassport" id="ifpassport0" value="0"   onclick="document.getElementById('ifpassport_tr').style.display='none';" $readonly2 checked>
+              独立安装 
+      <!--
+EOT;
+if($addPW){
+print <<<EOT
+-->
+			  <input type="radio" name="ifpassport" id="ifpassport2" value="2"  onclick="document.getElementById('ifpassport_tr').style.display='none';"  >
+              同时全新安装一个phpwind论坛(将删除原有论坛)  
+      <!--
+EOT;
+}
+print <<<EOT
+-->
+              <input type="radio" name="ifpassport" id="ifpassport1" value="1" onclick="document.getElementById('ifpassport_tr').style.display='';">
+              整合已有论坛(比如:phpwind、discuz、动网PHP论坛)</td>
+          </tr>
+          <tr id="ifpassport_tr" style="display:none;"> 
+            <td width="24%" align="right">请选择整合哪个论坛:</td>
+            <td width="76%"> 请必须确认已安装其中一个论坛，并且本程序的数据库要跟论坛同在一个库里<br>
+              <input type="radio" name="passportType" value="pwbbs5" checked>
+              phpwind论坛5.x/6.x/7.x<br>
+              <input type="radio" name="passportType" value="dzbbs5" disabled>
+              discuz论坛(只能安装后,再手工设置整合uc_center)<br>
+              论坛相对本程序的目录： 
+              <input type="text" name="passportPath" size="9" value="bbs">
+              <br>
+              举例：<br>
+              情况一：<br>
+              论坛：http://www.qibosoft.com/bbs/<br>
+              整站：http://www.qibosoft.com/<br>
+              此时上面输入<font color="#FF0000"><b>bbs</b></font><br>
+              情况二： <br>
+              论坛：http://www.qibosoft.com/<br>
+              整站：http://www.qibosoft.com/web/<br>
+              此时上面输入<font color="#FF0000"><b>../</b></font><br>
+              情况三： <br>
+              论坛：http://www.qibosoft.com/bbs/<br>
+              整站：http://www.qibosoft.com/web/<br>
+              此时上面输入<font color="#FF0000"><b>../bbs</b></font><br>
+              论坛数据表前缀： 
+              <input type="text" name="passportPre" size="8" value="pw_">
+              PW论坛默认是<font color="#0000FF">pw_</font> 如果你修改过的话,对应要使用修改后的<br>
+              注意:如果跟论坛不同一个数据库,数据表前面需要加上论坛数据库的名字如“<font color="#FF0000">db3.pw_</font>”</td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="center"> 
+              <input type="submit" name="Submit3" value="点击下一步"><SCRIPT LANGUAGE="JavaScript">
+<!--
+function choose_passport(t){
+	document.getElementById('ifpassport0').checked=false;
+	document.getElementById('ifpassport1').checked=false;
+	if(t==0||t==''){
+		document.getElementById('ifpassport_tr').style.display='none';
+		document.getElementById('ifpassport0').checked=true;
+	}else{
+		document.getElementById('ifpassport_tr').style.display='';
+		document.getElementById('ifpassport1').checked=true;
+	}
+	if(t==2){
+		form=document.getElementById('form40');
+		for (var i=0;i<form.elements.length;i++){
+			var e = form.elements[i];
+			if(e.type=='submit')continue;
+			e.readOnly=true;
+		}
+	}
+}
+choose_passport('$ifPW');
+//-->
+</SCRIPT>
+
+
+ 
+            </td>
+          </tr>
+        </form>
+      </table>
+      <!--
+EOT;
+}
+print <<<EOT
+-->
+      <!--
+EOT;
+if($job=='addmysqlpwd'){
+print <<<EOT
+-->
+      <font color="#0000FF">注：MYSQL数据库帐号、数据库密码、所使用的数据库请向空间商咨询或购买。 </font> 
+      <form name="form1" method="post" action="?action=addmysqlpwd"> 
+        <table width="98%" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td width="33%">数据库主机:</td>
+            <td width="67%"> 
+              <input type="text" name="dbhost" value="$dbhost">
+              <font color="#0000FF" size="2">(一般不必修改)</font> </td>
+          </tr>
+          <tr> 
+            <td width="33%">数据库帐号(即是用户名):</td>
+            <td width="67%"> 
+              <input type="text" name="dbuser" value="$dbuser">
+            </td>
+          </tr>
+          <tr> 
+            <td width="33%">数据库密码:</td>
+            <td width="67%"> 
+              <input type="text" name="dbpw" value="$dbpw">
+            </td>
+          </tr>
+          <tr> 
+            <td width="33%">所使用的<font color="#0000FF">数据库</font>:</td>
+            <td width="67%"> 
+              <input type="text" name="dbname" value="$dbname">
+            </td>
+          </tr>
+          <tr> 
+            <td width="33%">整站数据表区分符:</td>
+            <td width="67%"> 
+              <input type="text" name="db168" value="qb_">
+              <font color="#0000FF" size="2">建议不要修改,方便以后升级维护，并减少出错的机会</font> </td>
+          </tr>
+          <tr> 
+            <td width="33%">数据库支持的编码:</td>
+            <td width="67%">
+              <select name="dbcharset">
+                <option value="gbk">默认</option>
+                <option value="latin1">latin1</option>
+                <option value="gbk">gbk</option>
+                <option value="utf8">utf8</option>
+                <option value="big5">big5</option>
+              </select>
+              {$charset_msg}一般情况不必选择</td>
+          </tr>
+          <tr> 
+            <td width="33%"> 
+              <input type="hidden" name="ifpassport" value="$ifpassport">
+              <input type="hidden" name="passportType" value="$passportType">
+              <input type="hidden" name="passportPath" value="$passportPath">
+              <input type="hidden" name="passportPre" value="$passportPre">
+            </td>
+            <td width="67%"> 
+              <input type="submit" name="Submit" value="点击下一步">
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!--
+EOT;
+}
+if($job=='exist_sql'){
+print <<<EOT
+-->
+      <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <p align="center"><b><font size="6" color="#FF0000">特别提醒！！！</font></b></p>
+            <p>系统已检测到你已经安装了相关论坛或整站程序, 你是否还要继续,如果是的话.将会清空原来的数据,请仔细考虑, 此时建议你修改数据表前缀,把<font color=red> 
+              {$db168} </font>换成其他的吧 </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table width="98%" cellspacing="0" cellpadding="4">
+              <form name="form2" method="post" action="?action=addmysqlpwd">
+                <tr> 
+                  <td width="21%">数据表区分符:</td>
+                  <td width="79%"> 
+                    <input type="text" name="db168" value="qibosoft_">
+                    <font color="#0000FF" size="2">建议修改，否则将会清空原来的数据</font></td>
+                </tr>
+                <tr> 
+                  <td width="21%"> <input type="hidden" name="ifpassport" value="$ifpassport">
+              <input type="hidden" name="passportType" value="$passportType">
+              <input type="hidden" name="passportPath" value="$passportPath">
+              <input type="hidden" name="passportPre" value="$passportPre">
+
+                    <input type="hidden" name="step" value="continue">
+                  </td>
+                  <td width="79%"> 
+                    <input type="submit" name="Submit2" value="继续下一步">
+                    <input type="hidden" name="dbhost" value="$dbhost">
+                    <input type="hidden" name="dbuser" value="$dbuser">
+                    <input type="hidden" name="dbpw" value="$dbpw">
+                    <input type="hidden" name="dbname" value="$dbname">
+                    <input type="hidden" name="dbcharset" value="$dbcharset">
+                  </td>
+                </tr>
+              </form>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!--
+EOT;
+}
+if($job=='adduser'){
+print<<<EOT
+-->
+      <table width="100%" cellspacing="0" cellpadding="0">
+        <form name="form3" method="post" action="?action=adduser">
+          <tr> 
+            <td colspan="2"> 
+              <div align="center"><b><font color="#FF0000" size="6">请设置管理员帐号密码</font></b></div>
+            </td>
+          </tr>
+          <tr align="left"> 
+            <td height="4" colspan="2"> <font color="#0000FF">
+			
+      <!--
+EOT;
+if($ifPW){
+print<<<EOT
+-->    
+提示:当前系统版本为：qibosoft&phpwind整合版,建议使用默认管理员帐号.
+
+  <!--
+EOT;
+}elseif($ifpassport==1){print<<<EOT
+-->
+			提示:你选择了整合论坛,请必须把帐号密码设置与论坛的帐号密码一样.
+      <!--
+EOT;
+}
+print<<<EOT
+-->
+			</font></td>
+          </tr>
+          <tr> 
+            <td height="4" align="right"><font color="#FF0000">超级管理员帐号</font>：</td>
+            <td height="4"> 
+              <input type="text" name="admin_name" value="$default_admin" $readonlymsg>
+            </td>
+          </tr>
+          <tr> 
+            <td height="4"> 
+              <div align="right"><font color="#0000FF">超级管理员密码</font>：</div>
+            </td>
+            <td height="4"> 
+              <input type="password" name="admin_pwd">
+            </td>
+          </tr>
+          <tr> 
+            <td height="2"> 
+              <div align="right"><font color="#0000FF">重复输入管理密码</font>：</div>
+            </td>
+            <td height="2"> 
+              <input type="password" name="admin_pwd2">
+            </td>
+          </tr>
+          <tr> 
+            <td height="0"> 
+              <div align="right">电子邮箱：</div>
+            </td>
+            <td height="0"> 
+              <input type="text" name="admin_email" value="admin@admin.com">
+            </td>
+          </tr>
+          <tr>
+            <td height="1" align="right">是否清空测试数据：</td>
+            <td height="1">
+              <input type="radio" name="delete_all" value="0" checked>
+              保留（推荐） 
+              <input type="radio" name="delete_all" value="1" $readonly2>
+              清空（不推荐） </td>
+          </tr>
+          <tr style="display:none;"> 
+            <td height="1"> 
+              <div align="right"></div>
+            </td>
+            <td height="1"> 
+              <input type="radio" name="is_del" value="1" checked>
+              自动删除安装文件</td>
+          </tr>
+          <tr> 
+            <td colspan="2" height="23"> 
+              <input type="hidden" name="ifpassport" value="$ifpassport">
+              <input type="hidden" name="passportType" value="$passportType">
+              <input type="hidden" name="passportPath" value="$passportPath">
+              <input type="hidden" name="passportPre" value="$passportPre">
+              <input type="hidden" name="dbhost" value="$dbhost">
+              <input type="hidden" name="dbuser" value="$dbuser">
+              <input type="hidden" name="dbpw" value="$dbpw">
+              <input type="hidden" name="dbname" value="$dbname">
+              <input type="hidden" name="db168" value="$db168">
+              <input type="hidden" name="dbcharset" value="$dbcharset">
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2"> 
+              <div align="center"> 
+                <input type="submit" name="Submit22" value="继续下一步">
+              </div>
+            </td>
+          </tr>
+        </form>
+      </table> 
+      <!--
+EOT;
+}
+if($job=='succee'){
+print<<<EOT
+-->
+      <table width="100%" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <div align="center"><b><font size="6" color="#FF0000">恭喜你!!齐博地方门户安装成功!!</font></b></div>
+          </td>
+        </tr>
+        <tr> 
+          <td>$show</td>
+        </tr>
+        <tr> 
+          <td height="25"> 
+            <div align="center"><a href="index.php">点击进入主页</a></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="27"> 
+            <div align="center"><a href="admin/index.php">点击进入后台</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td height="13"><b><font color="#0000FF">在使用过程中遇到任何问题,欢迎前来咨询:</font></b><a href="http://www.qibosoft.com" target="_blank">http://www.qibosoft.com</a></td>
+        </tr>
+      </table>
+      <!--
+EOT;
+}
+if($show){
+print<<<EOT
+-->
+      <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <div align="center"><font size="6"><b><i><font color="#FF0000">出错警告!!!</font></i></b></font></div>
+          </td>
+        </tr>
+        <tr>
+          <td height="52">$show</td>
+        </tr>
+      </table>
+      <!--
+EOT;
+}
+print <<<EOT
+-->
+    </td>
+  </tr>
+</table>
+<table width="770"  border="0" align="center" cellpadding="10" cellspacing="0" background="install/images/Bottom.gif">
+  <tr> 
+    <td>
+<hr>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" class="style1"></td>
+  </tr>
+</table>  
+<br>
+</body>
+</html>
+<!--
+EOT;
+?>
+-->

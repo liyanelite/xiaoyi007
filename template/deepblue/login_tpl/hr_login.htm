@@ -1,0 +1,45 @@
+<!--
+<?php
+if($lfjid){
+$lfjdb[regdate] = date("Y-m-d",$lfjdb[regdate]);
+print <<<EOT
+-->
+<div class="Logincont">
+    <div class="head"><span>欢迎回来</span></div>
+    <div class="img">
+        <a href="$webdb[www_url]/member/?uid=$lfjuid" target="_blank"><img src="$lfjdb[icon]" onload="makesmallpic(this,100,100);" width="100" height="100" onerror="this.src='$webdb[www_url]/images/default/noface.gif'"/></a>
+    </div>
+    <div class="name">{$lfjid}</div>
+    <div class="info"><a href="$webdb[www_url]/member/" target="_blank">会员中心</a> <a href="$webdb[www_url]/do/login.php?action=quit">安全退出</a></div>
+    <div class="info">注册日期:{$lfjdb[regdate]}</div>
+</div>
+<!--
+EOT;
+}else{print <<<EOT
+-->		
+<div class="Logincont">
+    <div class="head"><span>会员登录</span></div>
+    <form id="form1aa" name="formhr" method="post" action="$webdb[www_url]/do/login.php">
+    <dl>
+        <dt>用户名:</dt>
+        <dd class="input"><input name="username" type="text" /></dd>
+    </dl>
+    <dl>
+        <dt>密 码:</dt>
+        <dd class="input"><input name="password" type="password" /></dd>
+    </dl>
+    <dl>
+        <div class="login"><input type="image" src="$webdb[www_url]/images/$STYLE/hr/submit.gif"/></div> 
+        <div class="word"><a href="$webdb[www_url]/do/sendpwd.php">忘记密码?</a></div>
+    </dl>
+    <dl class="reg">
+        <a href="$webdb[www_url]/do/reg.php"><img src="$webdb[www_url]/images/$STYLE/hr/reg.gif" /></a></dd>
+    </dl>
+    <input type="hidden" name="step" value="2">
+    <input class="radio" type="hidden" name="cookietime" value="86400" > 
+    </form>
+</div>
+<!--
+EOT;
+}?>
+-->

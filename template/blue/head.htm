@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<?php
+$thiscityname = $city_DB[name][$city_id] ? $city_DB[name][$city_id] : "&nbsp;";
+$GuideFid[$fid]=str_replace("<a href='$webdb[www_url]' class='guide_menu'>&gt;首页</a>","",$GuideFid[$fid]);
+$bodyondblclick = (function_exists('label_array')&&$web_admin&&!$MakeIndex) ?"dblclick_label();":"";
+print <<<EOT
+-->
+<head>
+<title>$titleDB[title]</title>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/blue/style.css">
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/blue/cms.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="keywords" content="$titleDB[keywords]">
+<meta name="description" content="$titleDB[description]">
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function killErr(){
+	return true;
+}
+window.onerror=killErr;
+//-->
+</SCRIPT>
+<!--
+EOT;
+if($webdb[cookieDomain]){print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+//解决不同域名的框架跨域问题
+document.domain = "$webdb[cookieDomain]";
+</SCRIPT>
+<!--
+EOT;
+}print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/inc.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/default.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/swfobject.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/jquery-1.2.6.min.js"></SCRIPT>
+<script type="text/javascript" src="$webdb[www_url]/images/blue/sliding.js"></script>
+
+<body ondblclick="$bodyondblclick">
+<CENTER><SCRIPT LANGUAGE='JavaScript' src='$webdb[www_url]/a_d/a_d_s.php?job=js&ad_id=AD_9724'></SCRIPT></CENTER>
+<div class="TopContainer">
+	<div class="top_login">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="top_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=top_loginer&styletype=blue" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>    
+    </div>
+    <div class="Time"> 
+<script language="JavaScript"> 
+<!---
+today=new Date();
+var hours = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+var timeValue = "<FONT COLOR=black>" + ((hours >12) ? hours -12 :hours); timeValue += ((minutes < 10) ? "<BLINK><FONT COLOR=black>:</FONT></BLINK>0" : "<BLINK><FONT COLOR=black>:</FONT></BLINK>") + minutes+"</FONT></FONT>";
+timeValue += (hours >= 12) ? " 下午 " : " 上午 ";
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray("<font color=RED>星期日","<font color=black>星期一","<font color=black>星期二","<font color=black>星期三","<font color=black>星期四","<font color=black>星期五","<font color=red>星期六"); document.write("<font color=black>",today.getFullYear(),"<font color=black>年","<font color=black>",today.getMonth()+1,"<font color=black>月","<font color=black>",today.getDate(),"<font color=black>日 </FONT>",d[today.getDay()+1]," ",timeValue);  //-->
+</script>
+       <a class=top onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('$webdb[www_url]/');" href="#">设为首页</a> 
+       <a class=top   href="javascript:window.external.AddFavorite('$webdb[www_url]/','$webdb[webname]')">加入收藏</a> 
+	</div>
+</div>
+<div class="LogoContainer">
+	<div class="logo"><a href="$webdb[www_url]"><img src="$webdb[www_url]/images/blue/logo.gif"/></a></div>
+    <div class="changecity">
+        <span class="city">{$thiscityname}</span>
+        <span class="change"><a href="$webdb[www_url]/allcity.php">[切换城市]</a></span>      
+    </div>
+    <ul id="MainMenu">
+      	<li class="index"><a href="$webdb[www_url]/house/">房产频道</a></li>
+        <li class="news"><a href="$webdb[www_url]/news/">新闻资讯</a></li>	
+        <li class="f"><a href="$webdb[www_url]/f/">分类信息</a></li>
+        <li class="shop"><a href="$webdb[www_url]/shop/">同城网购</a></li>
+        <li class="hy"><a href="$webdb[www_url]/hy/">商家黄页</a></li>
+        <li class="tg"><a href="$webdb[www_url]/tg/">团购活动</a></li>
+        <li class="coupon"><a href="$webdb[www_url]/coupon/">优惠促销</a></li>	
+        <li class="hr"><a href="$webdb[www_url]/hr/">求职招聘</a></li>	
+        <li class="gift"><a href="$webdb[www_url]/gift/">礼品兑换</a></li>
+        <li class="shoptg"><a href="$webdb[www_url]/shoptg/">官方团</a></li>		
+    </ul> 
+</div>
+<div id="SideMenu">
+<ul>
+    <dl class="dl1">
+    	<dt><a href="$webdb[www_url]/f/" target="_blank"><img src="$webdb[www_url]/images/blue/w-f.gif"></a></dt>
+        <dd>
+        	<a href="$webdb[www_url]/f/post.php" target="_blank">免费发布</a> |
+            <a href="$webdb[www_url]/member/?main=/f/member/list.php" target="_blank">修改信息</a> |
+        	<a href="$webdb[www_url]/f/listall.php" target="_blank">查看信息</a> 
+        </dd> 
+    </dl>
+    <dl class="dl2">
+    	<dt><a href="$webdb[www_url]/hr/" target="_blank"><img src="$webdb[www_url]/images/blue/w-hr.gif"></a></dt>
+        <dd>
+        	<a href="$webdb[www_url]/member/?main=/hr/member/applyjob.php?job=list" target="_blank">找工作</a> |
+            <a href="$webdb[www_url]/hr/listperson.php" target="_blank">找人才</a> |
+        	<a href="$webdb[www_url]/member/?main=/hr/member/post_choose.php" target="_blank">发职位</a> |
+            <a href="$webdb[www_url]/member/?main=/hr/member/join.php" target="_blank">投简历</a>
+        </dd> 
+    </dl>
+    <dl class="dl3">
+    	<dt><a href="$webdb[www_url]/shop/" target="_blank"><img src="$webdb[www_url]/images/blue/w-shop.gif"></a></dt>
+        <dd>
+        	<a href="$webdb[www_url]/shop/list.php?fid=5" target="_blank">影音数码</a> |
+            <a href="$webdb[www_url]/shop/list.php?fid=4" target="_blank">配饰</a> |
+        	<a href="$webdb[www_url]/shop/list.php?fid=54" target="_blank">服装</a> |
+            <a href="$webdb[www_url]/shop/list.php?fid=71" target="_blank">保险</a> 
+        </dd> 
+    </dl>
+    <dl class="dl4">
+    	<dt><a href="$webdb[www_url]/gift/" target="_blank"><img src="$webdb[www_url]/images/blue/w-gift.gif"></a></dt>
+        <dd>
+        	<a href="$webdb[www_url]/member/?main=/gift/member/apply.php" target="_blank">我申请的礼品</a> |
+            <a href="$webdb[www_url]/member/?main=/gift/member/post_choose.php" target="_blank">发布礼品</a> 
+        </dd> 
+    </dl>
+    <dl class="dl5">
+    	<dt><a href="$webdb[www_url]/news/" target="_blank"><img src="$webdb[www_url]/images/blue/w-news.gif"></a></dt>
+        <dd>
+        	<a href="$webdb[www_url]/news/list.php?fid=33" target="_blank">旅游保险</a> |
+            <a href="$webdb[www_url]/news/list.php?fid=32" target="_blank">渡假生活</a> |
+        	<a href="$webdb[www_url]/news/list.php?fid=39" target="_blank">饮食文化</a> 
+        </dd> 
+    </dl>
+    <dl class="dl6">
+    	<dt><a href="$webdb[www_url]/tg/" target="_blank"><img src="$webdb[www_url]/images/blue/w-tg.gif"></a></dt>
+        <dd>
+        	<a href="$webdb[www_url]/tg/list.php?fid=1" target="_blank">购房团</a> |
+            <a href="$webdb[www_url]/tg/list.php?fid=2" target="_blank">建材团</a> |
+        	<a href="$webdb[www_url]/tg/list.php?fid=3" target="_blank">旅游团</a> |
+            <a href="$webdb[www_url]/tg/list.php?fid=3" target="_blank">购车团</a> 
+        </dd> 
+    </dl>
+    <dl class="dl7">
+    	<dt><a href="$webdb[www_url]/coupon/" target="_blank"><img src="$webdb[www_url]/images/blue/w-coupon.gif"></a></dt>
+        <dd>
+        	<a href="$webdb[www_url]/coupon/list.php?fid=1" target="_blank">时尚购物</a> |
+            <a href="$webdb[www_url]/coupon/list.php?fid=2" target="_blank">餐饮美食</a> |
+        	<a href="$webdb[www_url]/coupon/list.php?fid=3" target="_blank">休闲娱乐</a> 
+        </dd> 
+    </dl>
+    <dl class="dl8">
+    	<dt><a href="$webdb[www_url]/hy/" target="_blank"><img src="$webdb[www_url]/images/blue/w-hy.gif"></a></dt>
+        <dd>
+        	<a href="$webdb[www_url]/member/?main=/hy/member/post_company.php" target="_blank">店铺管理</a> |
+            <a href="$webdb[www_url]/member/?main=/hy/member/renzheng.php" target="_blank">修改信息</a> |
+            <a href="$webdb[www_url]/member/?main=/member/money.php?job=list" target="_blank">充值</a>  
+        </dd> 
+    </dl>
+</ul>
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+<!--//目的是为了做风格方便
+document.write('<div class="wrap" onmouseover=hiddendiv("listselect")>');
+//-->
+</SCRIPT>
+<!--
+EOT;
+if($GuideFid[$fid]){
+print <<<EOT
+-->
+<div id="nav_guide">
+	<div class="t1">当前位置：</div><div class="t2"><a href="$Mdomain/">首页</a> $GuideFid[$fid] </div>
+</div>
+<!--
+EOT;
+}
+?>
+-->
+

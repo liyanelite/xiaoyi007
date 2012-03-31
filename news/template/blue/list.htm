@@ -1,0 +1,120 @@
+<!--
+<?php
+if($fidDB[config][ListShowType]!=1&&$fidDB[config][ListShowType]!=3){
+$listdb_pic=Get_Info($type='pic',$webdb[InfolistPicRows]?$webdb[InfolistPicRows]:4,$leng=30,$fid,$mid=0);
+}
+$listdb_pic || $hide_listpic='none';	//不存在图片主题的话.要把图片主题的边框隐藏
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/news/list.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>
+    <td class="main">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable">
+          <tr>
+            <td class="head"><div class="TAG"><a href="$webdb[www_url]/member/?main=$Murl/member/post.php?fid=$fid">投稿</a></div></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$target=$rs[target]?'_blank':'_self';
+print <<<EOT
+-->
+			<div class="list">
+            	<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="$target" title='$rs[full_title]' style="color:$rs[titlecolor]">$rs[title]</a>
+                <span>({$rs[posttime]})</span>
+            </div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </td>
+          </tr>
+<!--
+EOT;
+if($showpage){
+print <<<EOT
+-->
+          <tr>
+            <td class="page">$showpage</td>
+          </tr>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+        </table>
+    </td>
+    <td class="side">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable" id="sonSortName">
+          <tr>
+            <td class="head"><span class="TAG">相关栏目</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$webdb[InfoListsortnameline]>0 || $webdb[InfoListsortnameline]=1;
+$Listsortnameline=floor(94/$webdb[InfoListsortnameline]).'%';
+$array=$listdb_moresort?$Fid_db[$fid]:$Fid_db[$fidDB[fup]];
+foreach($array AS $key=>$value){
+print <<<EOT
+-->
+            	<div class="listsort"><a href="list.php?fid=$key">$value</a></div>
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable mt10">
+          <tr>
+            <td class="head"><span class="TAG">热门文章</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$array=Get_Info($type='hot',$webdb[InfoJsListRows]>0?$webdb[InfoJsListRows]:8,$webdb[InfoJsListLeng]>0?$webdb[InfoJsListLeng]:28,$fid,$mid=0);
+foreach($array AS $rs){
+print <<<EOT
+-->
+              <div class="list"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable mt10">
+          <tr>
+            <td class="head"><span class="TAG">推荐文章</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+<!--
+EOT;
+$array=Get_Info($type='level',$webdb[InfoJsListRows]>0?$webdb[InfoJsListRows]:8,$webdb[InfoJsListLeng]>0?$webdb[InfoJsListLeng]:28,$fid,$mid=0);
+foreach($array AS $rs){
+print <<<EOT
+-->
+              <div class="list"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

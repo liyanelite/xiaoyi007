@@ -1,0 +1,9 @@
+<?php
+
+return array(
+	'name'=>'ÍÅ¹ºÄ£¿é',
+	'pre'=>'tuangou_',
+	'setup'=>1,
+);
+
+?>

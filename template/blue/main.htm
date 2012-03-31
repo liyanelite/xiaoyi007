@@ -1,0 +1,461 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/blue/main.css">
+<div class="webinfo">
+	<div class="tzinfo">
+    	<span class="h">今日推荐</span>
+        {$label[blue_indextodaytz]}        
+    </div>
+    <div class="Weather">
+    	{$label[blue_indexweather]}    	
+    </div>
+</div>
+<!--
+EOT;
+$demostyle = $jobs=="show" ? "" : " style='height:40px;overflow:hidden;'";
+print <<<EOT
+-->
+<div id="Transform">
+	<div id=demo{$demostyle}>
+    	<div id=demo1>
+        	<div class="blue_indexmad">$label[blue_indexad1]</div>
+            <div class="blue_indexmad">$label[blue_indexad2]</div>
+            <div class="blue_indexmad">$label[blue_indexad3]</div>
+            <div class="blue_indexmad">$label[blue_indexad4]</div>
+        </div>
+        <div id=demo2></div>
+    </div>
+<script> 
+  var speed  = 1;//滚动速度
+  var rows  = 40;//每行高度
+  var stim  = 100; //停留时间倍数 * speed
+  var stop  = 0; //初始化值，不管
+  var demo2=document.getElementById('demo2');
+  var demo1=document.getElementById('demo1');
+  var demo=document.getElementById('demo');
+  demo2.innerHTML = demo1.innerHTML
+  function Marquee(){
+    if(demo.scrollTop%rows==0 && stop<=stim){
+      stop++;
+      return;
+    }
+    stop = 0;
+    if(demo2.offsetTop-demo.scrollTop<=0)
+      demo.scrollTop-=demo1.offsetHeight
+    else{
+      demo.scrollTop++
+    }
+  }
+  var MyMar = setInterval(Marquee,speed);
+</script>
+</div>
+<div class="BlueTopContainer">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="contL">
+    	$label[life_t1]
+    </td>
+    <td class="contC">
+    $label[life_t3]
+    </td>
+    <td class="contR">$label[life_t2]
+    
+    </td>
+  </tr>
+</table>
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="MainLtd">
+    <div id="Mainsearch">
+      <form name="mainsearchform" id="mainsearchform" target="_blank" method="post" action='$webdb[www_url]/f/search.php?action=search' onsubmit="return checkpost();">
+        <div class="searchtype">
+            <a href="javascript:;" onmouseover="selectsearcha(this,'f','分类')" class="choose">分类</a>
+            <a href="javascript:;" onmouseover="selectsearcha(this,'shop','商品')">商品</a> 
+            <a href="javascript:;" onmouseover="selectsearcha(this,'news','资讯')">资讯</a>
+            <a href="javascript:;" onmouseover="selectsearcha(this,'tg','团购')">团购</a>
+            <a href="javascript:;" onmouseover="selectsearcha(this,'hy','商家')">商家</a> 
+            <a href="javascript:;" onmouseover="selectsearcha(this,'coupon','促销')">促销</a>
+            <a href="javascript:;" onmouseover="selectsearcha(this,'hr','招聘')">招聘</a>
+            </div>
+        <div class="searchform">
+          <span class="input">
+          <input name="keyword" type="text" value="请输入您要查找的内容" onClick="if(this.value.indexOf('请输入您要查找的')!=-1)this.value=''" id="Mainsearchkeyword"/>
+          </span>
+          <span class="submit"><input type="submit" name="Submit" value="点击搜索"/></span>
+        </div>
+      </form>
+      </div>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function selectsearcha(theA,word,keyword){
+	obj=document.getElementById("Mainsearch").getElementsByTagName("a");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	theA.className='choose';
+	if (document.getElementById("Mainsearchkeyword").value=='')
+	{
+		document.getElementById("Mainsearchkeyword").value='请输入您要查找的'+keyword+'内容';
+	}
+	document.getElementById("mainsearchform").action="$webdb[www_url]/"+word+"/search.php?action=search";		
+}
+function checkpost(){
+	if (document.getElementById("Mainsearchkeyword").value=='')
+	{
+		alert('关键字不能为空!');
+		return false;
+	}
+}
+//-->
+</SCRIPT> 
+    </td>
+    <td class="SideRtd">
+    	{$label[blue_indexad5]}
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="MainLtd">
+    	<table width="100%" cellspacing="0" cellpadding="0" class="NewsTable">
+          <tr>
+            <td class="TdL">
+            	<div class="SlideContainer"><div class="slidein">$label[life_t4]</div></div>
+                <div class="picnews">
+                	<div class="head"><span class="L">图文资讯</span><span class="R"><a href="#" target="_blank">更多</a></span></div>
+                    <div class="cont">
+                   $label[life_t6]		
+                        
+                    </div>
+                </div>
+            </td>
+            <td class="TdR">
+            	<div class="centertitle">
+                $label[life_t5]
+                </div>
+                <div class="morenews">
+                    $label[life_t7]
+                </div>
+                <div class="morenews">
+                   $label[life_t8]
+                </div>
+            </td>
+          </tr>
+        </table>        
+    </td>
+    <td class="SideRtd">
+    	<ul class="UserAction">
+        	<li class="l1"><span><a href="$webdb[www_url]/f/post.php" target="_blank">免费发布信息</a></span></li>
+            <li class="l2"><span><a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/post_company.php" target="_blank">登记商家店铺</a></span></li>
+            <li class="l3"><span><a href="$webdb[www_url]/member/?main=$webdb[www_url]/member/money.php?job=list" target="_blank">购买积分</a></span></li>
+            <li class="l4"><span><a href="$webdb[www_url]/member/?main=$webdb[www_url]/member/buygroup.php?job=list" target="_blank">购买VIP</a></span></li>	
+        </ul>
+    	<div class="UserInfo"> 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="blue_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=blue_loginer&styletype=blue_main" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>  
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="notecontainer">
+          <tr>
+            <td class="head"><span>公告</span><span>栏目</span></td>
+            <td class="cont">
+			 $label[life_t9]
+            	
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<div class="Mainindexad">{$label[blue_middlead1]}</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="MainLtd">
+    	<div class="mainlistcont">
+        	<div class="head">
+            	<span onmouseover="ShowTab(1,1,4)" id="Span1">最新信息</span>
+                <span onmouseover="ShowTab(2,1,4)" id="Span2">推荐信息</span>
+                <span onmouseover="ShowTab(3,1,4)" id="Span3">热门信息</span>
+                <span class="goto"><a href="$webdb[www_url]/f/">进入分类信息</a></span>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab1">
+              <tr>
+                <td>
+                    {$label[blue_indexflist1]}
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab2">
+              <tr>
+                <td>
+                	{$label[blue_indexflist2]}
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab3">
+              <tr>
+                <td>
+                	{$label[blue_indexflist3]}
+                </td>
+              </tr>
+            </table>
+            <SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,4);</SCRIPT>
+        </div>
+        <div class="mainlistcont mt8">
+        	<div class="head">
+            	<span onmouseover="ShowTab(4,4,7)" id="Span4">最新商家</span>
+                <span onmouseover="ShowTab(5,4,7)" id="Span5">推荐商家</span>
+                <span onmouseover="ShowTab(6,4,7)" id="Span6">热门商家</span>
+                <span class="goto"><a href="$webdb[www_url]/hy/">进入商家黄页</a></span>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab4">
+              <tr>
+                <td>
+                    {$label[blue_indexhylist1]}
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab5">
+              <tr>
+                <td>
+                	{$label[blue_indexhylist2]}
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab6">
+              <tr>
+                <td>
+                	{$label[blue_indexhylist3]}
+                </td>
+              </tr>
+            </table>
+            <SCRIPT LANGUAGE="JavaScript">ShowTab(4,4,7);</SCRIPT>
+        </div>
+    </td>
+    <td class="SideRtd">
+    	<div class="hotcontainer">
+        	<div class="insidecont">
+            	<div class="head"><span>热门分类栏目</span></div>
+                <div class="cont">
+                    $label[life_a3]                    
+                </div>
+            </div>
+        </div>
+        <div class="sidecontainer mt8">
+            <div class="head"><span class="L">赞助商</span><span class="R"><a href="#">我要赞助</a></span></div>
+            <div class="cont">
+                <div class="listad"> $label[blue_mainadr1]</div>
+                <div class="listad"> $label[blue_mainadr2]</div>
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="MainLtd">
+        <div class="mainlistcont mainlistcont1">
+        	<div class="head">
+            	<span onmouseover="ShowTab(7,7,10)" id="Span7">最新团购</span>
+                <span onmouseover="ShowTab(8,7,10)" id="Span8">推荐团购</span>
+                <span onmouseover="ShowTab(9,7,10)" id="Span9">热门团购</span>
+                <span class="goto"><a href="$webdb[www_url]/gift/">进入团购活动</a></span>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab7">
+              <tr>
+                <td>
+                    {$label[blue_indexgiftlist1]}
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab8">
+              <tr>
+                <td>
+                	{$label[blue_indexgiftlist2]}
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab9">
+              <tr>
+                <td>
+                	{$label[blue_indexgiftlist3]}
+                </td>
+              </tr>
+            </table>
+            <SCRIPT LANGUAGE="JavaScript">ShowTab(7,7,10);</SCRIPT>
+        </div>
+    </td>
+    <td class="SideRtd">
+    	<div class="sidecontainer1">            
+            <div class="head"><span class="L">推荐礼品</span><span class="R"><a href="$webdb[www_url]/gift/" target="_blank">更多</a></span></div>
+            <div class="cont">$label[life_a10]</div>
+        </div>
+    </td>
+  </tr>
+</table>
+<div class="Mainindexad">{$label[blue_middlead2]}</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="MainLtd">
+        <div class="mainlistcont mainlistcont1">
+        	<div class="head">
+            	<span onmouseover="ShowTab(10,10,13)" id="Span10">最新商品</span>
+                <span onmouseover="ShowTab(11,10,13)" id="Span11">推荐商品</span>
+                <span onmouseover="ShowTab(12,10,13)" id="Span12">热门商品</span>
+                <span class="goto"><a href="$webdb[www_url]/shop/">进入同城网购</a></span>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab10">
+              <tr>
+                <td>
+                    {$label[blue_indexshoplist1]}
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab11">
+              <tr>
+                <td>
+                	{$label[blue_indexshoplist2]}
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab12">
+              <tr>
+                <td>
+                	{$label[blue_indexshoplist3]}
+                </td>
+              </tr>
+            </table>
+            <SCRIPT LANGUAGE="JavaScript">ShowTab(10,10,13);</SCRIPT>
+        </div>
+    </td>
+    <td class="SideRtd">
+    	<div class="sidecontainer1"> 
+    		<div class="head"><span class="L">优惠券</span><span class="R"><a href="$webdb[www_url]/coupon/" target="_blank">更多</a></span></div>
+            <div class="cont conta">
+                $label[life_a14]
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<div class="Mainindexad">{$label[blue_middlead3]}</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="MainLtd">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ly_sstable">
+          <tr>
+            <td class="head">
+            	<span class="L1">$label[life_a20]</span>
+            </td>
+            <td class="head">
+            	<span class="L2">$label[life_a21]</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont1">
+            $label[life_a22]	
+            </td>
+            <td class="cont2">
+             $label[life_a23]
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="SideRtd">
+    	<div class="pamincontout">
+        	<div class="paminin">
+			$label[life_a15]            	
+                <div class="listad">$label[life_a16]</div>
+            </div>
+        </div>
+        <div class="life_job1">
+        	<div class="head"><span>求职</span></div>            
+        <a href="f/list.php?fid=3" target="_blank" class="b">个人免费找工作</a> <a href="f/list.php?fid=3" target="_blank" class="goto"><span>去求职</span></a> 
+        <a href="f/post.php?fid=87" target="_blank" class="s">免费发布个人简历</a> 
+      </div>
+        <div class="life_job2">
+        	<div class="head"><span>招聘</span></div>            
+        <div class="cont"> <a href="f/list.php?fid=4" target="_blank" class="b">企业免费找人才</a> 
+          <a href="f/list.php?fid=4" target="_blank" class="goto"><span>去招聘</span></a> 
+          <a href="f/post.php?fid=55" target="_blank" class="s">免费发布招聘信息</a> </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="MainLtd">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="life_baibaos">
+          <tr>
+            <td class="head"><span>生活百宝箱</span></td>
+            <td class="query">
+            $label[life_a30]
+            </td>
+            <td class="querytel">$label[life_a31]</td>
+          </tr>
+        </table>
+    </td>
+    <td class="SideRtd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="centersever">
+          <tr>
+            <td class="head"><span>客服中心</span></td>
+            <td class="cont">$label[life_a32]</td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<div id="FrendLink">
+	<div class="head"><span>友情链接 && 合作伙伴</span></div>
+    <div class="cont">
+    	<div class="piclink">
+<!--
+EOT;
+if($friendlinkDB[1]&&$friendlink_DB[$city_id][1]){
+$array = $friendlinkDB[1]+$friendlink_DB[$city_id][1];
+}elseif($friendlinkDB[1]){
+$array = $friendlinkDB[1];
+}else{
+$array = $friendlink_DB[$city_id][1];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[name] $rs[descrip]" target="_blank"><img src="$rs[logo]" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="88" height="31"/></a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+        <div class="wordlink">
+<!--
+EOT;
+if($friendlinkDB[0]&&$friendlink_DB[$city_id][0]){
+$array = $friendlinkDB[0]+$friendlink_DB[$city_id][0];
+}elseif($friendlinkDB[0]){
+$array = $friendlinkDB[0];
+}else{
+$array = $friendlink_DB[$city_id][0];
+}
+foreach($array AS $rs){print <<<EOT
+-->
+		
+        	<a href="$rs[url]" title="$rs[descrip]" target="_blank">$rs[name]</a>
+<!--
+EOT;
+}print <<<EOT
+-->
+        </div>
+       
+    </div>
+</div>
+<!--
+EOT;
+?>
+-->

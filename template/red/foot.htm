@@ -1,0 +1,39 @@
+<!--
+<?php
+print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function selectsearch(theA,word){
+	obj=document.getElementById("selectsearch").getElementsByTagName("a");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	theA.className='choose';
+	document.getElementById("searchtype").value=word;
+}
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+clickEdit.init();
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--//目的是为了做风格方便
+document.write('</div>');
+//-->
+</SCRIPT>
+<div id="copyright">
+$webdb[copyright]<br>
+      Copyright@{$webdb[www_url]} all rights reserved <a href="http://www.miibeian.gov.cn" target="_blank">{$webdb[miibeian_gov_cn]}</a> 
+      <br>
+      Powered by <a href="http://www.qibosoft.com/" target="_blank">qibosoft {$qibosoft_Edition}</a> 
+      Code &copy; 2003-10 <a href="http://bbs.qibosoft.com/" target="_blank">qibosoft</a> 
+</div>
+</body>
+</html>
+<!--
+EOT;
+?>
+-->

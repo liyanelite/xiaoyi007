@@ -1,0 +1,9 @@
+<?php
+
+return array(
+	'name'=>'×ÊÑ¶ÆµµÀ',
+	'pre'=>'news_',
+	'setup'=>1,
+);
+
+?>
