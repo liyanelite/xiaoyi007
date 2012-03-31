@@ -1,0 +1,68 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td  height="393" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" id="viewarticle">
+        <tr> 
+          <td class="head"> 
+            <h3 class="L"></h3>
+            <span class="TAG">用户申请资料如下</span> 
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="16%"><a href="$webdb[www_url]/member/homepage.php?uid=$rsdb[uid]" title='$rs[full_title]' style="display:block;width:150px;height:150px;border:1px solid #ccc;" target="_blank"><img width="150" height="150" onError="this.src='$webdb[www_url]/images/default/noface.gif'"  src="$rsdb[picurl]" style="border:1px solid #fff;" border="0"></a></td>
+                <td width="84%" valign="top" style="padding-left:20px;"> <b>申请礼品:</b> 
+                  <a href="bencandy.php?fid={$rsdb[C][fid]}&id={$rsdb[C][id]}&city_id={$rsdb[C][city_id]}" target="_blank">{$rsdb[C][title]} 
+                  </a><br>
+                  <b>申请者帐号:</b> <a href="$webdb[www_url]/member/homepage.php?uid=$rsdb[uid]" target="_blank">$rsdb[username]</a><br>
+                  <b>申请时间:</b> $rsdb[posttime]<br>
+                  <b>审核与否:</b> 
+                  <!--
+EOT;
+if($rsdb[yz]){print <<<EOT
+-->
+                  <font color="#FF0000">已审核</font> 
+                  <!--
+EOT;
+}else{print <<<EOT
+-->
+                  <font color="#0000FF">未审核</font> 
+                  <!--
+EOT;
+}print <<<EOT
+-->
+                  <br>
+                  <!--{template}-->
+                  <span><b>{title}:</b></span> {value}<br>
+                  <!--{/template}--> 
+  
+
+<br>
+                </td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td class="foot"> 
+            <h3 class="L"></h3>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+      </table>
+    </td>
+  
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

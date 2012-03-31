@@ -1,0 +1,149 @@
+img{
+	border:0;
+}
+.mt10{
+	margin-top:10px;
+}
+.MainContainer{
+	background:url(coupon_head3.gif) left top repeat-x;
+}
+.MainContainer .maintdl{
+	width:80%;
+	padding-right:10px;
+	border-left:#FFE6C6 solid 1px;
+}
+.MainContainer .sidetdr{
+	width:20%;
+	border-left:#FFE6C6 solid 1px;
+	border-right:#FFE6C6 solid 1px;
+	background:#FFFBF1;
+	padding-top:10px;
+}
+.MainContainer .contenttd{
+	border:#FFE6C6 solid 1px;
+	padding:20px;
+}
+.MainContainer .headtr td{
+	height:32px;
+}
+.MainContainer .headtr .title{
+	position:absolute;
+	float:left;
+	margin:5px 0 0 10px;
+	height:32px;
+	line-height:32px;
+	padding-right:10px;
+	background:url(coupon_headl.gif) right bottom no-repeat;
+}
+.MainContainer .headtr .title span{
+	display:block;
+	padding-left:10px;
+	background:url(coupon_headl.gif) left bottom no-repeat;
+	font-size:14px;
+	font-weight:bold;
+}
+.MainContainer .baseinfo .left{
+	width:30%;
+	text-align:center;
+	padding:0 10px 5px 20px;
+}
+.MainContainer .baseinfo .left a{
+	display:block;
+	width:220px;
+	height:165px;
+	overflow:hidden;
+	border:#E6EAED solid 1px;
+	padding:1px;
+	margin:20px auto 10px auto;
+}
+.MainContainer .baseinfo .center{
+	width:70%;
+	padding-top:15px;
+}
+.MainContainer .baseinfo .center .listinfo{
+	height:100px;
+	border-top:#FFE6C6 dotted 1px;
+	border-bottom:#FFE6C6 dotted 1px;
+}
+.MainContainer .baseinfo .center .listinfo td{
+	padding:10px 0 5px 0;
+}
+.MainContainer .baseinfo .center .listinfo div{
+	height:25px;
+	line-height:25px;
+	font-size:14px;
+	color:#666;
+}
+.MainContainer .baseinfo .center .listinfo strike{
+	font-size:18px;
+	color:blue;
+}
+.MainContainer .baseinfo .center .listinfo div span{
+	color:#DE4900;
+}
+.MainContainer .baseinfo .center .moreaction{
+	text-align:center;
+	padding-top:20px;
+	word-spacing:15px;
+}
+.MainContainer .baseinfo .center .moreaction input{
+	width:100px;
+	padding-left:22px;
+	height:30px;
+	border:0;	
+	cursor:pointer;
+}
+.MainContainer .baseinfo .center .moreaction input.zb{
+	background:url(tuangou_butter.gif) center -60px no-repeat;
+}
+.MainContainer .baseinfo .center .moreaction input.tz{
+	background:url(coupon_butter.gif) center -30px no-repeat;
+}
+.MainContainer .baseinfo .center .moreaction input.sc{
+	background:url(coupon_butter.gif) center -60px no-repeat;
+}
+.MainContainer .sidetdr .list{
+	height:25px;
+	line-height:25px;
+	padding-left:20px;
+	background:url(brand_bbg.gif) center bottom no-repeat;
+}
+.MainContainer .sidetdr .list span{
+	font-weight:bold;
+	color:#DE4900;
+}
+.MainContainer .sidetdr .list a{
+	font-weight:bold;
+	padding-left:5px;
+}
+.MainContainer .sidetdr .join{
+	text-align:center;
+	padding-top:20px;
+}
+
+.MainContainer .contenttd .content{
+	background:url(tuangou_bg6.gif) left 10px repeat-x;
+}
+.MainContainer .contenttd .content .head{
+	background:url(tuangou_but3.gif) left top no-repeat;
+	line-height:28px;
+	padding:0 50px 0 20px;
+	font-weight:bold;
+	color:#DE4900;
+}
+.MainContainer .contenttd .content .cont{
+	padding:5px;
+	line-height:18px;
+	width:100%;
+	overflow:hidden;
+}
+.MainContainer .userinfo{
+	background:url(coupon_headr.gif) left bottom no-repeat;
+	height:28px;
+	line-height:28px;
+	padding-left:50px;
+	padding-top:4px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}

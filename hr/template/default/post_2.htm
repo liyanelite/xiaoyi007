@@ -1,0 +1,170 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function upfile(url,name,size,ty){
+	document.getElementById(ty).value=url;
+}
+//-->
+</SCRIPT>
+ <script type="text/javascript" src="$webdb[www_url]/ewebeditor/ckeditor/ckeditor.js"></script>
+<script src="$webdb[www_url]/images/default/setday.js"></script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td width="100%" height="393" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" id="viewarticle">
+        <tr> 
+          <td class="head"> 
+            <h3 class="L"></h3>
+            <span class="TAG">个人简历</span> 
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="99%" border="0" cellspacing="1" cellpadding="3" id="bigtable">
+              <form name="FORM" method="post" action="?action=$atc" enctype="multipart/form-data">
+                
+                <tr> 
+                  <td align='right'>期望职位:<br></td>
+                  <td > <input   type='text' name='postdb[hope_job]' id='atc_hope_job' style='width:300px;' value='$rsdb[hope_job]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>姓名:<br></td>
+                  <td > <input   type='text' name='postdb[truename]' id='atc_truename' style='width:100px;' value='$rsdb[truename]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>性别:<br></td>
+                  <td > <input type='radio' style='border:0;' name='postdb[sex]' value='1' {$rsdb[sex]['1']}>男  <input type='radio' style='border:0;' name='postdb[sex]' value='2' {$rsdb[sex]['2']}>女  </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>年龄:<br></td>
+                  <td > <input   type='text' name='postdb[age]' id='atc_age' style='width:50px;' value='$rsdb[age]'> 岁</td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>身高:<br></td>
+                  <td > <input   type='text' name='postdb[height]' id='atc_height' style='width:50px;' value='$rsdb[height]'> 厘米</td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>学历:<br></td>
+                  <td ><select name='postdb[school_age]' id='atc_school_age'><option value='1' {$rsdb[school_age]['1']}>小学</option><option value='2' {$rsdb[school_age]['2']}>初中</option><option value='3' {$rsdb[school_age]['3']}>高中</option><option value='4' {$rsdb[school_age]['4']}>中专</option><option value='5' {$rsdb[school_age]['5']}>大专</option><option value='6' {$rsdb[school_age]['6']}>本科</option><option value='7' {$rsdb[school_age]['7']}>研究生</option><option value='9' {$rsdb[school_age]['9']}>博士</option></select></td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>专业:<br></td>
+                  <td > <input   type='text' name='postdb[speciality]' id='atc_speciality' style='width:50px;' value='$rsdb[speciality]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>毕业学校:<br></td>
+                  <td > <input   type='text' name='postdb[alma_mater]' id='atc_alma_mater' style='width:100px;' value='$rsdb[alma_mater]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>毕业年份:<br></td>
+                  <td > <input   type='text' name='postdb[graduate_time]' id='atc_graduate_time' style='width:50px;' value='$rsdb[graduate_time]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>期望待遇:<br></td>
+                  <td ><select name='postdb[wage]' id='atc_wage'><option value='-1' {$rsdb[wage]['-1']}>面议</option><option value='1' {$rsdb[wage]['1']}>800~1500元</option><option value='2' {$rsdb[wage]['2']}>1500~2500元</option><option value='3' {$rsdb[wage]['3']}>2500~3500元</option><option value='4' {$rsdb[wage]['4']}>3500元以上</option></select></td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>手机号码:<br></td>
+                  <td > <input   type='text' name='postdb[mobphone]' id='atc_mobphone' style='width:100px;' value='$rsdb[mobphone]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>QQ号码:<br></td>
+                  <td > <input   type='text' name='postdb[qq]' id='atc_qq' style='width:100px;' value='$rsdb[qq]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>常用邮箱:<br></td>
+                  <td > <input   type='text' name='postdb[email]' id='atc_email' style='width:100px;' value='$rsdb[email]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>MSN帐号:<br></td>
+                  <td > <input   type='text' name='postdb[msn]' id='atc_msn' style='width:100px;' value='$rsdb[msn]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>期望工作城市:<br></td>
+                  <td > <input   type='text' name='postdb[lifeplace]' id='atc_lifeplace' style='width:100px;' value='$rsdb[lifeplace]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>工作年限:<br></td>
+                  <td ><select name='postdb[workyear]' id='atc_workyear'><option value='0' {$rsdb[workyear]['0']}>应届毕业生</option><option value='1' {$rsdb[workyear]['1']}>一年</option><option value='2' {$rsdb[workyear]['2']}>两年</option><option value='3' {$rsdb[workyear]['3']}>三年以上</option></select></td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>到岗日期:<br></td>
+                  <td > <input   type='text' name='postdb[worktime]' id='atc_worktime' style='width:100px;' value='$rsdb[worktime]'> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>相片:<br></td>
+                  <td ><input type='text' name='postdb[facephoto]' id='atc_facephoto' size='50' value='$rsdb[facephoto]'> <br><iframe frameborder=0 height=23 scrolling=no src='$webdb[www_url]/do/upfile.php?fn=upfile&dir=$_pre/$fid&label=atc_facephoto' width=310></iframe></td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>教育背景:<br></td>
+                  <td ><textarea  name='postdb[education]' id='atc_education' style='width:400px;height:100px;'>$rsdb[education]</textarea> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>工作经验:<br></td>
+                  <td ><textarea  name='postdb[work]' id='atc_work' style='width:500px;height:100px;'>$rsdb[work]</textarea> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>自我评价:<br></td>
+                  <td ><textarea  name='postdb[introduce]' id='atc_introduce' style='width:500px;height:100px;'>$rsdb[introduce]</textarea> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>技能特长:<br></td>
+                  <td ><textarea  name='postdb[skill]' id='atc_skill' style='width:500px;height:100px;'>$rsdb[skill]</textarea> </td>
+                </tr>
+                
+                <tr> 
+                  <td align='right'>体育爱好:<br></td>
+                  <td ><textarea  name='postdb[interest]' id='atc_interest' style='width:500px;height:100px;'>$rsdb[interest]</textarea> </td>
+                </tr>
+                <!---->
+                <tr> 
+                  <td width="18%">&nbsp;</td>
+                  <td width="82%"> 
+                    <input type="submit" name="Submit" value="提 交" class='submit'>
+                    <input type="hidden" name="id" value="$id">
+                    <input type="hidden" name="postdb[lifeplace]" value="{$city_DB[name][$city_id]}">
+                  </td>
+                </tr>
+              </form>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td class="foot"> 
+            <h3 class="L"></h3>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

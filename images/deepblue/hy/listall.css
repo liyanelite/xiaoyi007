@@ -1,0 +1,135 @@
+.MainContainer .side{
+	width:240px;
+	padding-left:10px;
+}
+.showcont .head{
+	height:43px;
+	background:url(hyhead6.gif) left top no-repeat;
+	padding-left:10px;	
+}
+.showcont .head div{
+	height:43px;
+	float:left;
+}
+.showcont .head div.more{
+	float:right;
+	width:300px;
+	line-height:30px;
+	padding-top:10px;
+	height:33px;
+	background:url(hyhead6.gif) right top no-repeat;
+}
+.showcont .head div.more a{
+	display:block;
+	width:99px;
+	text-align:center;
+	float:left;
+	background:url(hych.gif) center 2px no-repeat;
+	color:#6563D7;
+}
+.showcont .head div.more a.ch{
+	background:url(hych1.gif) center 2px no-repeat;
+	color:#f60;
+}
+.showcont .head div.tag{
+	padding-left:40px;
+	line-height:40px;
+	background:url(hytag1.gif) left top no-repeat;
+}
+.showcont .head div.tag span{
+	display:block;
+	padding-right:40px;
+	background:url(hytag1.gif) right top no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.showcont .cont{
+	border:#9DCBFF solid 1px;
+	border-top:0;
+	padding:1px;
+}
+.contlist .td1,.contlist .td3,.contlist .td4{
+	width:100px;
+	text-align:center;
+	vertical-align:middle;
+}
+.contlist  .h td{
+	line-height:30px;
+	border-bottom:#9DCBFF dotted 1px;
+}
+.contlist  .c td{
+	border-bottom:#ddd dotted 1px;
+}
+.contlist  .c .td1{
+	padding:10px;
+}
+.contlist  .c .td1 a{
+	display:block;
+	border:#DDD solid 1px;
+	padding:1px;
+}
+.contlist  .c .td2{
+	line-height:20px;
+}
+.contlist  .c .td2 .m{
+	color:#666;
+}
+.contlist  .c .title{
+	padding-top:8px;
+	line-height:25px;
+}
+.contlist  .c .title a{
+	font-size:14px;
+	font-weight:bold;
+	color:#00349A;
+}
+.contlist  .c .td3{
+	color:#f60;
+	font-weight:bold;
+}
+.contlist .page{
+	text-align:center;
+	line-height:55px;
+}
+.contlist .page a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}	
+.sidetable{
+	border:#9CCCFF solid 1px;
+	background:url(hybg1.gif) left top repeat-x;
+	margin-top:5px;
+}
+.sidetable .head{
+	height:30px;
+	border-left:#FFF solid 1px;
+	border-right:#FFF solid 1px;
+	padding:0 2px 0 2px ;
+}
+.sidetable .head .tag{
+	line-height:30px;
+	padding-left:10px;
+	border-bottom:#9CCCFF solid 1px;
+	font-size:14px;
+	font-weight:bold;
+}
+.sidetable .cont{
+	padding:10px;
+	line-height:20px;
+	border-left:#FFF solid 1px;
+	border-right:#FFF solid 1px;
+}
+.sidetable .cont .bigsort{
+	line-height:25px;
+	padding-left:20px;
+	background:url(hyicon5.gif) 3px 8px no-repeat;
+	font-weight:bold;
+}
+.sidetable .cont .sort{
+	padding-left:10px;
+	color:#666;
+}
+.sidetable .cont .sort a{
+	color:#666;
+}

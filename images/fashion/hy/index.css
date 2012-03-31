@@ -1,0 +1,598 @@
+.SideL{
+	width:250px;
+	float:left;
+}
+.MainR{
+	width:720px;
+	float:right;
+}
+.SideC{
+	width:490px;
+	float:left;
+}
+.SideR{
+	width:220px;
+	float:right;
+}
+.Clear{
+	clear:both;
+}
+.mt10{
+	margin-top:10px;
+}
+/*
+*
+*/
+.ShowSorts{
+	border:#DCDCDC solid 1px;
+	margin-bottom:10px;
+}
+.ShowSorts .head{
+	height:40px;
+	overflow:hidden;
+	background:url(head1.gif) repeat-x;
+}
+.ShowSorts .head .tag{
+	text-align:center;
+	padding-top:10px;
+}
+.ShowSorts .cont dl{
+	padding-top:10px;
+	border-top:#DDD dotted 1px;
+}
+.ShowSorts .cont dl dt{
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	padding:0 15px 0 60px;		
+}
+.ShowSorts .cont dl dt a{
+	font-size:14px;
+	font-weight:bold;
+	color:#369;
+}
+.ShowSorts .cont dl dd{
+	line-height:20px;
+	padding:0 10px 10px 60px;
+	color:#999999;	
+}
+.ShowSorts .cont dl dd div{
+	height:20px;
+	overflow:hidden;
+}
+.ShowSorts .cont dl dd a{
+	color:#666;
+}
+.ShowSorts .cont dl.dl1{
+	border-top:0;
+	background:url(icon1.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl2{
+	background:url(icon2.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl3{
+	background:url(icon3.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl4{
+	background:url(icon4.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl5{
+	background:url(icon5.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl6{
+	background:url(icon6.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl7{
+	background:url(icon7.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl8{
+	background:url(icon8.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl9{
+	background:url(icon9.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl10{
+	background:url(icon10.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl11{
+	background:url(icon11.gif) 15px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl12{
+	background:url(icon12.gif) 15px 15px no-repeat;
+}
+/*
+*
+*/
+.sidecont{
+	border:#E8E8E8 solid 1px;
+	padding:10px;
+}
+.sidecont .head{
+	height:25px;
+	overflow:hidden;
+	background:url(head2.gif) left 6px repeat-x;
+}
+.sidecont .head .tag{
+	float:left;
+	padding: 3px 6px 5px 0;
+	background:#FFF;
+}
+.sidecont .coupon {
+	padding-top:8px;
+}
+.sidecont .coupon div{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+}
+.sidecont .coupon div span{
+	display:block;
+	width:25px;
+	text-align:center;
+	float:left;
+	background:url(numbg.gif) center -27px no-repeat;
+	color:#FFF;
+}
+.sidecont .coupon div.list1 span,.sidecont .coupon div.list2 span,.sidecont .coupon div.list3 span{
+		background:url(numbg.gif) center 4px no-repeat;
+}
+.sidecont .coupon div a{
+	float:left;
+}
+.sidecont .coupon div em{
+	float:right;
+	font-style:normal;
+	padding-right:5px;
+	font-size:12px;
+	color:#888;
+}
+.sidecont .coupon div em font{
+	color:#c00;
+}
+.sidecont .hyadcont{
+	padding-top:5px;
+}
+.sidecont .hyadcont .list{
+	height:23px;
+	line-height:23px;
+	overflow:hidden;
+	background:url(array1.gif) 5px 9px no-repeat;
+	padding-left:15px;
+}
+.sidecont .hyadcont .img{
+	width:225px;
+	overflow:hidden;
+	margin:5px auto 8px auto;
+	text-align:center;
+}
+/*
+*
+*/
+.HoldCont{
+	height:380px;
+	overflow:hidden;
+}
+/*
+*SlideCont
+*/
+.SlideCont{
+	width:490px;
+	height:170px;
+	overflow:hidden;
+	position:relative;
+}
+.slidePic { 
+	width:490px; 
+	overflow:hidden;
+}
+.slidePic li {
+	display:none;
+}
+.slidePic li.cur { 
+	display:block; 
+	width:488px;
+	height:168px;
+	border:#e8e8e8 solid 1px;
+	overflow:hidden;
+}
+.slideTxt {
+	cursor:pointer; 
+	height:30px;	
+	position:absolute; 
+	right:5px; 
+	bottom:0px;
+}
+.slideTxt li { 
+	float:left; 
+	height:25px; 
+	width:25px;
+	line-height:25px;
+	overflow:hidden; 
+	text-align:center; 
+	background:url(numbg0.gif) center 2px no-repeat;
+}
+.slideTxt li a.hidefocus{ 
+	outline: none; 
+}
+.slideTxt li a.hidefocus::-moz-focus-inner{  
+	border:none; 
+}
+.slideTxt li a:link,.slideTxt li a:visited,.slideTxt li a:hover{
+	color:#FF7300;
+	text-decoration:none;
+}
+.slideTxt .cur { 
+	background:url(numbg1.gif) center top no-repeat;	
+}
+.slideTxt .cur a:link,.slideTxt .cur a:visited,.slideTxt .cur a:hover{
+	color:#FFF;
+	font-weight:bold;
+}
+/*
+*
+*/
+.BestCommany{
+	height:170px;
+	border:#EAEAEA solid 5px;
+	padding:10px;
+	overflow:hidden;
+	margin-top:10px;
+}
+.BestCommany .head{
+	height:30px;
+	overflow:hidden;
+}
+.BestCommany .head .tag{
+	float:left;
+}
+.BestCommany .head .more{
+	float:right;
+	line-height:30px;
+}
+.BestCommany .cont{
+	height:135px;
+	padding-top:5px;
+	overflow:hidden;
+}
+.BestCommany .cont .list{
+	width:50%;
+	height:28px;
+	overflow:hidden;
+	line-height:28px;
+	float:left;
+	background:url(array2.gif) 5px 9px no-repeat;
+}
+.BestCommany .cont .list a{
+	padding-left:20px;
+	color:#369;
+}
+/*
+*ActionCont
+*/
+.ActionCont{
+	height:72px;
+	overflow:hidden;
+}
+.ActionCont div{
+	width:50%;
+	height:36px;
+	overflow:hidden;
+	float:left;
+}
+.ActionCont div span{
+	display:block;
+	width:107px;
+	height:30px;
+	overflow:hidden;
+	background:url(butter.gif) no-repeat;
+	float:left;
+}
+.ActionCont div.but2 span,.ActionCont div.but4 span{
+	float:right;
+}
+.ActionCont a:link,.ActionCont a:visited,.ActionCont a:hover{
+	color:#FFF;
+	text-decoration:none;
+}
+.ActionCont div span a{
+	display:block;
+	padding:10px 0 5px 35px;	
+}
+.ActionCont div.but1 span a{
+	background:url(butbg.gif) 5px top no-repeat;
+}
+.ActionCont div.but2 span a{
+	background:url(butbg.gif) 5px -30px no-repeat;
+}
+.ActionCont div.but3 span a{
+	background:url(butbg.gif) 5px -60px no-repeat;
+}
+.ActionCont div.but4 span a{
+	background:url(butbg.gif) 5px -90px no-repeat;
+}
+/*
+*NewCommany
+*/
+.NewCommany{
+	height:270px;
+	overflow:hidden;
+	border:#EAEAEA solid 5px;
+	padding:10px;
+	overflow:hidden;
+	margin-top:8px;
+}
+.NewCommany .head{
+	height:30px;
+	overflow:hidden;
+	background:url(head2.gif) left 6px repeat-x;
+}
+.NewCommany .head .tag{
+	float:left;
+	padding:3px 5px 5px 0;
+	background:#FFF;
+}
+.NewCommany .cont .list{
+	height:30px;
+	overflow:hidden;
+	line-height:30px;
+}
+.NewCommany .cont .list span{
+	display:block;
+	width:25px;
+	float:left;
+	text-align:center;
+	color:#FFF;
+	background:url(numbg.gif) 4px 6px no-repeat;
+}
+/*
+*ChangeShow
+*/
+.ChangeShow{
+	height:350px;
+	overflow:hidden;
+	margin-top:10px;
+	border:#EAEAEA solid 5px;
+}
+.ChangeShow .head{
+	height:30px;
+	width:675px;
+	overflow:hidden;
+	border-left:#CCC dotted 1px;
+	margin:15px auto 0 auto;
+}
+.ChangeShow .head div{
+	width:150px;
+	height:30px;
+	border-right:#CCC dotted 1px;
+	overflow:hidden;
+	text-align:center;
+	float:left;
+	cursor:pointer;
+}
+.ChangeShow .head div.choose{
+	background:#FAFAFA;
+}
+.ChangeShow .head .more{
+	float:right;
+}
+.ChangeShow .cont{
+	width:690px;
+	height:290px;
+	overflow:hidden;
+	padding-top:15px;
+	padding-left:10px;
+}
+.ChangeShow .cont .listpic{
+	width:138px;
+	height:95px;
+	overflow:hidden;
+	float:left;
+}
+.ChangeShow .cont .listpic div{
+	width:120px;
+	margin:auto;
+	text-align:center;
+}
+.ChangeShow .cont .listpic div.img{
+	border:#DDD solid 1px;
+	padding:1px;
+}
+.ChangeShow .cont .listpic div.img a{
+	display:block;
+	width:120px;
+	height:60px;
+	overflow:hidden;
+	background:#fafafa;
+}
+.ChangeShow .cont .listpic div.t{
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	padding-top:5px;
+}
+/*
+*dianpingornews
+*/
+.dianpingornews{
+	margin-top:10px;
+	height:300px;
+	overflow:hidden;
+}
+.dianpingornews .dianpingcont{
+	width:438px;
+	height:278px;
+	overflow:hidden;
+	float:left;
+}
+.dianpingornews .newscont{
+	width:228px;
+	height:278px;
+	overflow:hidden;
+	float:right;
+}
+.dianpingornews .sidecont .cont{
+	height:245px;
+	overflow:hidden;
+	padding-top:5px;
+}
+.dianpingornews .sidecont .cont .listdianping{
+	height:80px;
+	overflow:hidden;
+	background:url(dotted.gif) left 79px repeat-x;
+}
+.dianpingornews .sidecont .cont .listdianping .t{
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	color:#888;
+	padding-top:8px;
+	padding-left:20px;
+	background:url(hicon.gif) 5px 10px no-repeat;
+}
+.dianpingornews .sidecont .cont .listdianping .t a{
+	color:#2F73C0;
+}
+.dianpingornews .sidecont .cont .listdianping .t a.b{
+	font-weight:bold;
+}
+.dianpingornews .sidecont .cont .listdianping .dp{
+	height:15px;
+	line-height:15px;
+	padding:5px 0 0 5px;
+	overflow:hidden;
+}
+.dianpingornews .sidecont .cont .listdianping .c{
+	height:20px;
+	line-height:20px;
+	padding-left:5px;
+	color:#888;
+	overflow:hidden;
+	padding-top:5px;
+}
+
+.dianpingornews .sidecont .cont .lista{
+	height:90px;
+	overflow:hidden;
+	background:url(dotted.gif) left 99px repeat-x;
+	padding-top:10px;
+	margin-bottom:8px;
+}
+.dianpingornews .sidecont .cont .lista .img{
+	width:75px;
+	height:75px;
+	overflow:hidden;
+	text-align:center;
+	background:#fafafa;
+	float:left;
+}
+.dianpingornews .sidecont .cont .lista .word{
+	width:140px;
+	float:left;
+	padding-left:10px;
+}
+.dianpingornews .sidecont .cont .lista .word .t{
+	height:20px;
+	overflow:hidden;
+	line-height:20px;
+}
+.dianpingornews .sidecont .cont .lista .word .t a{
+	font-size:14px;
+	font-weight:bold;
+}
+.dianpingornews .sidecont .cont .lista .word .c{
+	height:54px;
+	overflow:hidden;
+	line-height:18px;
+	padding-top:5px;
+	color:#888;
+	text-indent:20px;
+}
+.dianpingornews .sidecont .cont .listb{
+	height:28px;
+	line-height:28px;
+	overflow:hidden;
+	color:#888;
+}
+/*
+*ShopCont
+**/
+.ShopCont{
+	border:#DCDCDC solid 1px;
+	height:220px;
+	overflow:hidden;
+	margin-top:10px;
+}
+.ShopCont .head{
+	height:39px;
+	overflow:hidden;
+	background:url(head3.gif) repeat-x;
+}
+.ShopCont .head .tag{
+	float:left;
+	padding:10px 0 0 15px;
+}
+.ShopCont .head .more{
+	width:40px;
+	height:40px;
+	float:right;
+	background:url(hot.gif) no-repeat;
+}
+.ShopCont .cont{
+	height:180px;
+	overflow:hidden;
+	position:relative;
+}
+#showup,#showdown{
+	width:18px;
+	height:65px;
+	position:absolute;
+	z-index:1000;
+	top:55px;
+	background:url(array.gif) no-repeat;
+}
+#showup{
+	left:10px;
+}
+#showdown{
+	right:10px;
+	background:url(array.gif) -18px top no-repeat;
+} 
+#showup a,#showdown a{
+	display:block;
+	width:18px;
+	height:65px;					
+}
+.ShopCont .cont ul{
+	width:660px;
+	height:160px;
+	padding:20px 0 0 30px;
+	overflow:hidden;
+}
+.ShopCont .cont ul li{
+	width:132px;
+	height:160px;
+	overflow:hidden;
+	float:left;
+}
+.ShopCont .cont ul li div{
+	width:110px;
+	margin:auto;
+	text-align:center;
+}
+.ShopCont .cont ul li div.img{
+	border:#DDD solid 1px;
+	padding:1px;
+}	
+.ShopCont .cont ul li div.img a{
+	display:block;
+	width:110px;
+	height:110px;
+	overflow:hidden;
+	background:#fafafa;
+}
+.ShopCont .cont ul li div.t{
+	height:20px;
+	line-height:20px;
+	padding-top:8px;
+	overflow:hidden;
+}

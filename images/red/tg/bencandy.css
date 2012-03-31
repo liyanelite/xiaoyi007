@@ -1,0 +1,280 @@
+img{
+	border:0;
+}
+.mt10{
+	margin-top:10px;
+}
+.MainContainer{
+	border:#FFE6C6 solid 1px;
+	background:#FFF;
+}
+.MainContainer .toptitle{
+	background:url(tuangou_head.gif) left bottom repeat-x;
+	height:32px;
+	line-height:32px;
+	font-size:14px;
+	color:#DE4900;
+}
+.MainContainer .baseinfo .left{
+	width:20%;
+	text-align:center;
+	padding-bottom:5px;
+}
+.MainContainer .baseinfo .left a{
+	display:block;
+	width:220px;
+	height:165px;
+	overflow:hidden;
+	border:#E6EAED solid 1px;
+	padding:1px;
+	margin:10px auto 10px 20px;
+}
+.MainContainer .baseinfo .center{
+	width:50%;
+	padding:15px 15px 0 15px;
+}
+.MainContainer .baseinfo .center .listinfo{
+	height:100px;
+	border-top:#FFE6C6 dotted 1px;
+	border-bottom:#FFE6C6 dotted 1px;
+}
+.MainContainer .baseinfo .center .listinfo td{
+	padding:10px 0 5px 0;
+}
+.MainContainer .baseinfo .center .listinfo div{
+	width:49%;
+	height:20px;
+	line-height:20px;
+	float:left;
+	font-size:14px;
+	color:#666;
+}
+.MainContainer .baseinfo .center .listinfo div span{
+	color:#DE4900;
+}
+.MainContainer .baseinfo .center .moreaction{
+	text-align:center;
+	padding-top:20px;
+	word-spacing:15px;
+}
+.MainContainer .baseinfo .center .moreaction input{
+	width:100px;
+	padding-left:22px;
+	height:30px;
+	border:0;	
+	cursor:pointer;
+}
+.MainContainer .baseinfo .center .moreaction input.zb{
+	background:url(tuangou_butter.gif) center top no-repeat;
+}
+.MainContainer .baseinfo .center .moreaction input.tz{
+	background:url(tuangou_butter.gif) center -30px no-repeat;
+}
+.MainContainer .baseinfo .center .moreaction input.sc{
+	background:url(tuangou_butter.gif) center -60px no-repeat;
+}
+.MainContainer .baseinfo .right{
+	width:25%;
+	border-left:#FFE6C6 solid 1px;
+	padding-top:10px;
+}
+.MainContainer .baseinfo .right .list{
+	height:25px;
+	line-height:25px;
+	padding-left:20px;
+	background:url(brand_bbg.gif) center bottom no-repeat;
+}
+.MainContainer .baseinfo .right .list span{
+	font-weight:bold;
+	color:#DE4900;
+}
+.MainContainer .baseinfo .right .list a{
+	font-weight:bold;
+	padding-left:5px;
+}
+.MainContainer .baseinfo .right .join{
+	text-align:center;
+	padding-top:20px;
+}
+.MainContainer .ContentTd{
+	border-top:#FFE6C6 solid 1px;
+	padding:20px;
+}
+.MainContainer .ContentTd .content{
+	background:url(tuangou_bg6.gif) left 10px repeat-x;
+}
+.MainContainer .ContentTd .content .head{
+	background:url(tuangou_but3.gif) left top no-repeat;
+	line-height:28px;
+	padding:0 50px 0 20px;
+	font-weight:bold;
+	color:#DE4900;
+}
+.MainContainer .ContentTd .content .cont{
+	padding:5px;
+	line-height:18px;
+	width:100%;
+	overflow:hidden;
+}
+/*
+*评论部分样式
+*/
+.commentTable{
+	margin-top:10px;
+	border:#CFBD8C solid 1px;	
+	background:#FFF;
+}
+.commentTable th{
+	height:31px;
+	background:url(tuangou_head1.gif) left bottom repeat-x;
+}
+.commentTable th span{
+	float:left;
+	background:url(tuangou_l1.gif) center bottom no-repeat;
+	padding:6px 50px 0 50px;
+	line-height:25px;
+	font-size:14px;
+}
+.commentTable .listcomment{
+	width:50%;
+	padding:10px;
+}
+.commentTable .addcomment{
+	width:50%;
+	padding:10px 10px 10px 0;
+}
+#comment{
+	border:#E5E5E5 solid 1px;
+	border-bottom:0;
+}
+#comment .no_comment{
+	text-align:center;
+	line-height:200px;
+	background:url(check_company.gif) 60px 70px no-repeat;
+	font-size:32px;
+	color:#CFBD8C;
+	border-bottom:#E5E5E5 solid 1px;
+}
+#comment .list_table{
+	border-bottom:#E5E5E5 solid 1px;
+}
+#comment .list_table .img{
+	width:15%;
+	text-align:center;
+	padding:10px 10px 5px 10px;
+}
+#comment .list_table .img a{
+	display:block;	
+}
+#comment .list_table .img a.p{
+	width:50px;
+	height:50px;
+	padding:5px;
+	overflow:hidden;
+	background:url(comment_hicon.gif) center top no-repeat;
+	margin-bottom:8px;
+}
+#comment .list_table .cont{
+	width:85%;
+	padding:10px 5px 5px 0;
+	line-heihgt:20px;
+	font-size:13px;
+}
+#comment .list_table .info{
+	height:25px;
+	background:#F8F8F8;
+	line-height:25px;
+}
+#comment .list_table .info .l{
+	float:left;
+	padding-left:10px;
+	color:#999;
+}
+#comment .list_table .info .l a{
+	padding-left:20px;
+	color:#666;
+}
+#comment .list_table .info .l .fl{
+	background:url(comment_fl.gif) left top no-repeat;
+}
+#comment .list_table .info .l .egg{
+	background:url(comment_egg.gif) left top no-repeat;
+}
+#comment .list_table .info .l em{
+	font-style:normal;
+	color:red;
+}
+#comment .list_table .info .r{
+	float:right;
+	padding-right:10px;
+	padding-top:2px;
+}
+#comment .page{
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	border-bottom:#E5E5E5 solid 1px;
+}
+#comment .page a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+	color:#999;
+}
+#comment .page a:hover{
+	border:blue solid 1px;
+	color:red;
+}
+.comment_form{
+	border:#E5DABC solid 1px;
+}
+.comment_form .head{
+	height:25px;
+	line-height:25px;
+	padding:5px 10px 0 10px;
+	background:url(tuangou_head2.gif) left bottom repeat-x;
+}
+.comment_form .head .L{
+	float:left;
+	padding-left:20px;
+	background:url(tuangou_icon2.gif) 2px 5px no-repeat;
+	font-size:14px;
+}
+.comment_form .head .R{
+	float:right;
+}
+.comment_form .left{
+	width:15%;
+	text-align:right;
+	padding:5px;
+}
+.comment_form .right{
+	padding-top:3px;
+}
+.comment_form  .right textarea{
+	width:350px;
+}
+#comment_submit{
+	margin-bottom:10px;
+}
+.comment_form  .cont{
+	padding:5px;
+}
+.comment_form  .cont .list{
+	padding-top:5px;
+	height:20px;
+	lint-height:20px;
+}
+.comment_form  .cont .list span{
+	display:block;
+	width:50px;
+	float:left;
+	text-align:right;
+	border-right:#CCC solid 1px;
+	padding-right:10px;
+	color:red;
+}
+.comment_form  .cont .list a{
+	float:left;
+	padding-left:8px;
+	color:#226395;
+}

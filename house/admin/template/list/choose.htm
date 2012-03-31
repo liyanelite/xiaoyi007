@@ -1,0 +1,32 @@
+<!--
+<?php
+print <<<EOT
+-->
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+     <tr align="center" class="head"> 
+      <td width="36%">类别</td>
+      <td width="36%">内容</td>
+      <td width="28%">发布</td>
+    </tr>
+    <!--
+EOT;
+foreach($Fid_db['name'] AS $key=>$value){
+print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF"> 
+      
+    <td align="center" width="36%">$value</td>
+      
+    <td align="center" width="36%"><a href="$admin_path&job=list&fid=$key">管理</a></td>
+      <td align="center" width="28%"><a href="$Murl/post.php?fid=$key" target=_blank>发布</a></td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+ </table>
+<!--
+EOT;
+?>
+-->

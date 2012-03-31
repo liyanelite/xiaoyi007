@@ -1,0 +1,332 @@
+/*
+*初始化样式
+*/
+body, form, ul, li, p, dl, dd, dt ,h,td,th,h3{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size:12px;
+	background:url(bg.gif) repeat-x;
+}
+li,ul{
+	list-style: none;
+} 
+TD {
+	color: #333333;
+	VERTICAL-ALIGN: top;
+} 
+input,textarea{
+	border:1px solid #ccc;
+}
+a {
+	color:#333;
+}
+a:link {
+	color:#333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4E667B;
+}
+a:active {
+	text-decoration: none;
+}
+.wrap{
+	width:980px;
+	margin:auto;
+}
+.mt10{
+	margin-top:10px;
+}
+img{
+	border:0;
+}
+/*
+*顶部信息
+*/
+.TopContainer{
+	height:29px;
+	width:980px;
+	overflow:hidden;
+	margin:auto;
+	line-height:30px;
+	background:url(icon1.gif) 5px 8px no-repeat;
+}
+.TopContainer .top_login{
+	float:left;
+	padding-left:35px;
+	height:29px;
+}
+.TopContainer .top_login span{
+	display:block;
+	float:left;
+	padding-right:5px;
+}
+.TopContainer .top_login em{
+	color:red;
+	font-style:normal;
+}
+.TopContainer .top_login .input{
+	padding-top:3px;
+}
+.TopContainer .top_login .input input{
+	width:100px;
+	height:15px;
+}
+.TopContainer .top_login .sub{
+	padding-top:3px;
+}
+.TopContainer .top_login .img{
+	padding-top:4px;
+}
+.TopContainer .top_login .sub input{
+	background:#FFF;
+}
+.TopContainer .Time{
+	float:right;
+	padding-right:10px;
+}
+/*
+*logo&导航
+*/
+.LogoContainer{
+	clear:both;
+	width:980px;
+	height:50px;
+	margin:20px auto 15px auto;
+}
+.LogoContainer .logo{
+	float:left;
+	width:220px;
+	height:50px;
+	border-right:#E2E2E2 solid 1px; 
+}
+.LogoContainer .changecity{
+	float:left;
+	width:100px;
+	height:50px;
+	text-align:center;
+	background:url(citybg.gif) center top no-repeat;
+}
+.LogoContainer .changecity span{
+	display:block;	
+}
+.LogoContainer .changecity span.city{	
+	font-weight:bold;
+	padding-top:5px;
+	line-height:20px;
+	font-size:16px;
+	color:#F3650C;
+}
+.LogoContainer .changecity span.change{
+	line-height:25px;
+	font-size:13px;
+}
+.LogoContainer .changecity span.change a{
+	color:#999;
+}
+#MainSearch{
+	width:560px;
+	height:46px;
+	background:url(searchbg.gif) no-repeat;
+	float:right;
+}
+#MainSearch #searchtype{
+	width:86px;
+	position:relative;
+	float:left;
+}
+#MainSearch #searchtype #SelectShow{
+	height:39px;
+	overflow:hidden;
+	line-height:50px;
+	padding-left:20px;
+	font-size:14px;
+	cursor:pointer;
+}
+#MainSearch .click{
+	background:url(select.gif) 7px 5px no-repeat;
+}
+#MainSearch #searchtype #ListType{
+	position:absolute;
+	width:79px;
+	background:url(select.gif) center bottom no-repeat;
+	padding-bottom:2px;
+	left:7px;
+	z-index:1000;
+}
+#MainSearch #searchtype .hidden{
+	display:none;
+}
+#MainSearch #searchtype .show a{
+	display:block;
+	height:22px;
+	overflow:hidden;
+	line-height:25px;
+	padding-left:15px;
+	font-size:14px;
+	background:url(select.gif) center -90px no-repeat;
+}
+#MainSearch #searchtype .show a:hover{
+	background:url(select.gif) center -37px no-repeat;
+	text-decoration:none;
+	color:#fff;
+}
+#MainSearch #searchtype .show a.ck{
+	background:url(select.gif) center -64px no-repeat;
+	color:red;
+}
+#MainSearch .keyword{
+	width:380px;
+	float:left;
+	padding-top:7px;
+}
+#MainSearch .keyword input{
+	width:380px;
+	height:30px;
+	overflow:hidden;
+	line-height:33px;
+	border:0;
+	background:none;
+	font-size:14px;
+	color:#666;
+}
+#MainSearch .subbutter{
+	wdith:70px;
+	float:left;
+	padding:7px 0 0 5px;
+}
+#MainSearch .subbutter input{
+	width:70px;
+	height:30px;
+	text-align:center;
+	overflow:hidden;
+	line-height:35px;
+	border:0;
+	background:none;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:bold;
+	color:#AB1105;
+}	
+/*
+*导航
+*/
+#Mainmenu{
+	width:960px;
+	height:41px;
+	padding:0 10px 0 10px;
+	overflow:hidden;
+	margin:0 auto 10px auto;
+	background:url(menu.gif) no-repeat;
+}
+#Mainmenu li{
+	height:41px;
+	float:left;
+	line-height:45px;
+}
+#Mainmenu li a{
+	display:block;
+	padding:0 13px 0 10px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+	background:url(mspac.gif) right 18px no-repeat;
+}
+#Mainmenu li a.up{
+	background:none;
+	padding:0 0 0 10px;
+}
+#Mainmenu li a.ck{
+	width:96px;
+	padding:0 0 0 6px;
+	text-align:center;
+	background:url(mover.gif) no-repeat;
+	color:#333;
+}
+#Mainmenu li a:hover{
+	text-decoration:none;
+}
+#Mainmenu li.post{
+	width:81px;
+	height:41px;
+	overflow:hidden;
+	float:right;
+	background:url(mf.gif) center 1px no-repeat;
+}
+#Mainmenu li.post a{
+	padding:7px 15px 0 22px;
+	text-align:center;
+	line-height:16px;
+	color:#F20000;
+	font-size:12px;
+	background:none;
+}
+/*
+*nav_guide样式
+*/
+#nav_guide{
+	height:30px;
+	margin:0 auto 8px auto;
+	background:url(guidebg.gif) right -1px no-repeat ;
+}
+#nav_guide div{
+	float:left;
+	padding:2px 5px 0 5px;
+	line-height:28px;
+}
+#nav_guide .t1{
+	background:url(guidebg.gif) left -1px no-repeat ;
+	padding-left:28px;
+	color:#FF6A00;
+}
+/*
+*copyright样式
+*/
+#copyright{
+	clear:both;
+	text-align:center;
+	background:url(copyright.gif) repeat-x;
+	line-height:20px;
+	padding:25px 0 15px 0;
+	color:#666;
+}
+/*********************************************************************
+**********************************************************************
+AJAX在线编辑DIV容器
+这个会员看不到.只是版主管理员才可以看到.这是后台风格
+一般不必修改了.修改了会员也看不到
+**********************************************************************
+*********************************************************************/
+#AjaxEditTable{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}
+#AjaxEditTable .head{
+	height: 21px;
+	background: #DBEAFF;
+	border-bottom:1px solid #BEDDFF;
+	padding:3px 5px 0 7px;
+}
+#AjaxEditTable .head a{
+	color:#FFF;
+}
+#AjaxEditTable .head span{
+	DISPLAY: block; 
+	FLOAT: right;
+}
+#AjaxEditTable .middle{
+	background:#FFF;
+	line-height:18px;
+	padding:5px;
+}
+#AjaxEditTable .middle input,#AjaxEditTable .middle textarea{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}

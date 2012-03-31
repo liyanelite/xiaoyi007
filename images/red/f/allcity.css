@@ -1,0 +1,63 @@
+#allcitytoptable{
+	background:#FFF;
+}
+#allcitytoptable table{
+	width:33%;
+	float:left;
+	height:100px;
+	margin-top:15px;
+	margin-bottom:10px;
+}
+#allcitytoptable table.t3 td{
+	background:url(freefei.gif) no-repeat right;
+}
+#allcitytoptable table.t2 td{
+	line-height:170%;
+}
+#allcitytoptable table.t1 td .goto a{
+	background:url(allcity_post.gif);
+	display:block;
+	width:167px;
+	height:45px;
+	padding-left:75px;
+	padding-top:15px;
+	font-size:15px;
+	color:#fff;
+	font-weight:bold;
+	margin-top:10px;
+}
+#allcitytoptable table.t1 td .ti{
+	margin-top:10px;
+}
+
+.allcity{
+	border:1px solid #ccc;
+	margin-top:8px;
+	background:#FFF;
+}
+.allcity td{
+	padding:8px 8px 4px 8px;
+	font-size:13px;
+}
+.allcity td a{
+	font-size:13px;
+	margin-left:5px;
+}
+.allcity .L{
+	width:60px;
+	background:#eee;
+	border:1px solid #fff;
+	text-align:center;
+	font-weight:bold;
+}
+.hotcity{
+	margin-bottom:15px;
+}
+.hotcity td{
+	background:#ddd;
+	padding:7px 0 4px 5px;
+	font-size:13px;
+}
+.hotcity td a{
+	font-size:13px;
+}

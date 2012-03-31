@@ -1,0 +1,511 @@
+.MainContainer .Side{
+	width:250px;
+	padding-left:10px;
+}
+/*
+*第一栏样式
+*/
+.Main .todaytz{
+	height:34px;
+	overflow:hidden;
+	line-height:38px;
+	background:url(todaytz.gif) right top no-repeat;
+}
+.Main .todaytz .tag{
+	width:120px;
+	height:34px;
+	float:left;
+	text-align:center;
+	background:url(todaytz.gif) left top no-repeat;
+	padding-left:3px;
+	font-size:14px;
+}
+.Main .todaytz .cont{
+	width:590px;
+	float:left;
+	height:34px;
+}
+.Main .todaytz .cont .list{
+	width:275px;
+	float:left;
+	height:34px;
+	overflow:hidden;
+	float:left;
+	padding-left:16px;
+	background:url(ficon.gif) left 13px no-repeat;
+}
+.Main .todaytz .cont .list a{
+	color:#3074C1;
+}
+.Main .Fenlietg{
+	margin-top:10px;
+	border:#C8D8EA solid 1px;
+	background:url(ftgbg.gif) left top no-repeat;
+	height:129px;
+}
+.Main .Fenlietg td.tgin{
+	padding:10px 0 0 45px;
+}
+.Main .Fenlietg td.tgin div{
+	width:220px;
+	height:22px;
+	line-height:22px;
+	float:left;
+	color:#f60;
+}
+/*
+*用户登录样式 
+*/
+.UserCont{
+	border:#FDD79D solid 1px;
+	height:170px;
+}
+.UserCont .butter{
+	height:75px;
+	padding-top:10px;
+	background:url(fuserbg.gif) left top repeat-x;
+}
+.UserCont .butter a{
+	display:block;
+	width:49%;
+	overflow:hidden;
+	height:35px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	background:url(fenlie_butter.gif) center top no-repeat;
+	color:#7F2703;
+	font-size:14px;
+}
+.UserCont .butter a.post{
+	background:url(fenlie_butter1.gif) center top no-repeat;
+	font-weight:bold;
+}
+.UserCont .butter a.tg{
+	background:url(fenlie_butter2.gif) center top no-repeat;
+	font-weight:bold;
+	color:#FFF;
+}
+
+.UserCont .login{
+	border-top:#FDD79D solid 1px;
+	background:url(fuserbg.gif) left top repeat-x;
+	padding-top:10px;
+}
+.UserCont table td{
+	height:30px;
+	vertical-align:middle;
+}
+.UserCont table td.radio{
+	padding-left:10px;
+}
+.UserCont .input{
+	width:50%;
+	text-align:center;
+	
+}
+.UserCont .input input{
+	width:100px;
+}
+.UserCont .radio input{
+	border:0;
+}
+.UserCont .sub input{
+	border:0;
+}
+.UserCont .img{
+	width:15%;
+	height:70px;
+	vertical-align:middle;
+	padding:0 20px 0 20px;
+}
+.UserCont .word .name{
+	line-height:20px;
+	color:blue;
+	font-weight:bold;
+}
+.UserCont .word .day{
+	padding-top:5px;
+	color:green;
+}
+/*
+*最新信息 
+*/
+.fenlienewest .head{
+	height:30px;
+	background:url(fhead.gif) right top no-repeat;
+}
+.fenlienewest .head div{
+	float:left;
+	height:30px;
+	overflow:hidden;
+	line-height:35px;
+}
+.fenlienewest .head .tag{
+	width:100px;
+	padding-right:20px;
+	text-align:center;
+	background:url(fhead.gif) left top no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.fenlienewest .head .more{
+	float:right;
+	padding-right:10px;
+	color:#3074C1;
+}
+.fenlienewest .head .more a{
+	color:#3074C1;
+}
+.fenlienewest .cont{
+	border:#C8D8EA solid 1px;
+	border-top:0;
+	background:url(fcont.gif) left top repeat-x;
+	padding:10px;
+}
+.fenlienewest .cont .piccont{
+	width:315px;
+	height:230px;
+	overflow:hidden;
+	border-right:#DDD dotted 1px;
+	float:left;
+}
+.fenlienewest .cont .piccont .listpic{
+	width:105px;
+	height:115px;
+	overflow:hidden;
+	float:left;
+}
+.fenlienewest .cont .piccont .listpic a{
+	display:block;
+	width:92px;
+	height:35px;
+	line-height:35px;
+	overflow:hidden;
+	text-align:center;
+}
+.fenlienewest .cont .piccont .listpic a.img{
+	height:72px;
+	padding:1px 0 1px 0;
+	border:#DDD solid 1px;
+	margin-top:5px;
+}
+.fenlienewest .cont .wordcont{
+	width:375px;
+	height:225px;
+	padding-top:2px;
+	overflow:hidden;
+	float:left;
+}
+.fenlienewest .cont .wordcont .list{
+	line-height:25px;
+	height:25px;
+	overflow:hidden;
+	padding-left:10px;
+}
+.fenlienewest .cont .wordcont .list a{
+	font-size:14px;
+}
+.fenlienewest .cont .wordcont .list a.f{
+	color:#3074C1;
+}
+/*
+*热门信息 
+*/
+.fenliehot{
+	border:#FFD29F solid 1px;
+}
+.fenliehot .head{
+	height:32px;
+	background:url(fhead1.gif) left top no-repeat;
+}
+.fenliehot .head .tag{
+	padding:8px 0 0 40px;
+	font-size:14px;
+	font-weight:bold;
+	color:#f60;
+}
+.fenliehot .cont{
+	padding:5px 10px 5px 10px;
+}
+.fenliehot .cont .listpw{
+	height:79px;
+}
+.fenliehot .cont .listpw td{
+	vertical-align:middle;
+}
+.fenliehot .cont .listpw td.img{
+	width:10%;	
+}
+.fenliehot .cont .listpw td.img a{
+	display:block;
+	border:#DDD solid 1px;
+	padding:1px;	
+}
+.fenliehot .cont .listpw td div{
+	padding-left:10px;
+	line-height:22px;
+	height:22px;
+	overflow:hidden;
+}
+.fenliehot .cont .listpw td div a{
+	color:#3074C1;
+}
+.fenliehot .cont .listpw td div a.sort{
+	color:#666;
+}
+/*
+*类目样式 
+*/
+.fenliesort .head{
+	height:30px;
+	background:url(fhead2.gif) right top no-repeat;
+}
+.fenliesort .head .tag{
+	width:100px;
+	height:30px;
+	padding-right:20px;
+	text-align:center;
+	overflow:hidden;
+	line-height:32px;
+	background:url(fhead2.gif) left top no-repeat;
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.fenliesort .head .more{
+	width:100px;
+	height:30px;
+	text-align:center;
+	line-height:25px;
+	background:url(fpost.gif) center top no-repeat;
+	float:right;
+}
+.fenliesort .head .more a{
+	color:#FFF;
+	font-weight:bold;
+}
+.fenliesort .cont{
+	border:#FFD29F solid 1px;
+	border-top:0;
+	padding:10px 0 10px 0;	
+	background:url(fcont.gif) left top repeat-x;
+}
+#FenlieShowSort{ 	
+	height:520px;
+	width:700px;
+	margin:auto;
+	overflow:auto;
+	overflow-x:hidden;
+	scrollbar-face-color: #FFFFFF;
+	scrollbar-shadow-color: #eee;
+	scrollbar-highlight-color: #eee;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #FFFFFF;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-arrow-color: #D2E5F4;
+}
+#FenlieShowSort .listsort{
+	width:170px;
+	height:265px;
+	overflow:hidden;
+	float:left;
+	text-align:center;
+}
+#FenlieShowSort .listsort .bigsort{
+	width:90%;
+	height:25px;
+	overflow:hidden;
+	line-height:27px;
+	border:#DDD solid 1px;
+	margin:10px auto 0 auto;
+	background:url(ficon1.gif) 10px 7px no-repeat;
+	text-align:left;
+}
+#FenlieShowSort .listsort .bigsort a{
+	padding-left:27px;
+	font-weight:bold;
+}
+#FenlieShowSort .listsort .bigsort a{
+	padding-left:27px;
+	font-weight:bold;
+}
+#FenlieShowSort .listsort .moresort{
+	width:90%;
+	height:215px;
+	overflow:hidden;
+	padding:5px 0 5px 0;
+	border:#E3EFFB solid 1px;
+	border-top:0;
+	text-align:left;
+	margin:0 auto;
+	background:url(fenlie_sortbg.gif) left top repeat-x;
+	color:#999;
+	line-height:22px;
+}
+#FenlieShowSort .listsort .moresort div{
+	height:22px;
+	padding:0 10px 0 10px;
+	overflow:hidden;
+}
+#FenlieShowSort .listsort .moresort a{
+	color:#3074C1;
+}
+/*
+*信息关注排行榜 
+*/
+.fenlietop{
+	border:#FFD29F solid 1px;
+	background:url(ftopbg.gif) left top repeat-x;
+}
+.fenlietop .head{
+	height:35px;
+	border-left:#FFF solid 1px;
+	border-right:#FFF solid 1px;
+	line-height:35px;
+	background:url(ficon2.gif) 10px 8px no-repeat;
+	padding-left:35px;
+	font-size:14px;
+	font-weight:bold;
+	color:#f60;
+}
+.fenlietop .cont{
+	padding:0 10px 5px 5px;
+}
+.fenlietop .cont div{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+	padding-left:25px;	
+}
+.fenlietop .cont div.list1{
+	background:url(fnum1.gif) 5px 2px no-repeat;
+}
+.fenlietop .cont div.list2{
+	background:url(fnum1.gif) 5px -20px no-repeat;
+}
+.fenlietop .cont div.list3{
+	background:url(fnum1.gif) 5px -44px no-repeat;
+}
+.fenlietop .cont div.list4{
+	background:url(fnum1.gif) 5px -68px no-repeat;
+}
+.fenlietop .cont div.list5{
+	background:url(fnum1.gif) 5px -91px no-repeat;
+}
+.fenlietop .cont div.list6{
+	background:url(fnum1.gif) 5px -114px no-repeat;
+}
+.fenlietop .cont div.list7{
+	background:url(fnum1.gif) 5px -137px no-repeat;
+}
+.fenlietop .cont div.list8{
+	background:url(fnum1.gif) 5px -160px no-repeat;
+}
+.fenlietop .cont div.list9{
+	background:url(fnum1.gif) 5px -183px no-repeat;
+}
+.fenlietop .cont div.list10{
+	background:url(fnum1.gif) 5px -206px no-repeat;
+}
+/*
+*赞助商 
+*/
+.fenliehot .cont .listad{
+	text-align:center;
+	padding:3px 0 7px 0;
+}
+/*
+*图文信息 
+*/
+.FenliePhoto{
+	border:#C8D8EA solid 1px;
+	border-top:0;
+	margin:10px auto 0 auto;
+}
+.FenliePhoto .head{
+	height:30px;
+	background:url(fhead3.gif) left top repeat-x;
+}
+.FenliePhoto .head .tag{
+	width:120px;
+	line-height:28px;
+	text-align:center;
+	background:url(ftag.gif) center top no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.FenliePhoto .cont{
+	padding:10px 0 0 0;
+	background:url(fcont.gif) left top repeat-x;
+}
+.FenliePhoto .cont .list_fpic{
+	width:122px;
+	height:130px;
+	text-align:center;
+	float:left;
+}
+.FenliePhoto .cont .list_fpic a{
+	display:block;
+	margin:0 auto;
+}
+.FenliePhoto .cont .list_fpic a.img{
+	width:100px;
+	height:75px;
+	border:#CCC solid 1px;
+	padding:1px;	
+}
+.FenliePhoto .cont .list_fpic a.title{
+	padding:5px 5px 0 5px;
+	line-height:18px;
+}
+/*
+*更多栏目内容 
+*/
+.MainContainer .BottomFoot{
+	height:5px;
+	background:url(fmcont.gif) right bottom no-repeat;
+}
+.MainContainer .BottomFoot table{
+	width:500px;
+	height:5px;
+	background:url(fmcont.gif) left bottom no-repeat;
+}
+.MainContainer .MiddleCont{
+	border:#C8D8EA solid 1px;
+	border-bottom:0;
+}
+.MainContainer .MiddleCont .moresort{
+	width:244px;
+	height:230px;
+	overflow:hidden;
+	float:left;
+	text-align:center;
+	z-index:1000;
+}
+.MainContainer .MiddleCont .moresort .TAG,.MainContainer .MiddleCont .moresort .title{
+	width:95%;
+	margin:auto;
+	text-align:left;
+	line-height:25px;
+}
+.MainContainer .MiddleCont .moresort .TAG{
+	height:40px;
+	line-height:40px;
+	background:url(ftag1.gif) 5px -1px no-repeat;
+}
+.MainContainer .MiddleCont .moresort .TAG a{
+	font-weight:bold;
+	padding-left:25px;
+	color:#1F3A87;
+	font-size:14px;
+}
+.MainContainer .MiddleCont .moresort .title div{
+	padding:0 5px 0 5px;
+	height:25px;
+	overflow:hidden;
+	color:#0059BF;
+}

@@ -1,0 +1,159 @@
+.showjobtable .side{
+	width:250px;
+	padding-right:10px;
+}
+/*
+*公司显示样式 
+*/
+.showjobtable .side .drag{
+	border:#C7D7E9 solid 1px;
+}
+.showjobtable .side .drag .head{
+	height:30px;
+	line-height:30px;
+	padding-left:15px;
+	font-size:14px;
+	font-weight:bold;
+	color:#1F3A87;
+	background:url(hrhead4.gif) left top repeat-x;
+}
+.showjobtable .side .drag .head1{
+	border-top:#C7D7E9 solid 1px;
+}
+.showjobtable .side .drag .company{
+	padding-bottom:15px;
+}
+.showjobtable .side .drag .company div{
+	float:left;
+	width:160px;
+}
+.showjobtable .side .drag .company .img{
+	width:80px;
+	text-align:center;
+	padding:10px 0 10px 0;
+}
+.showjobtable .side .drag .company .title{
+	padding-top:8px;
+	font-size:14px;
+	font-weight:bold;
+	line-height:20px;
+}
+.showjobtable .side .drag .company .renzheng{
+	padding-bottom:5px;
+	font-size:14px;
+	font-weight:bold;
+	color:#f60;
+}
+.showjobtable .side .drag .company .view_company{
+	background:url(hr_view_company.gif) no-repeat center;
+	cursor: hand;
+	height:33px;
+	clear:both;
+	margin-left:20px;
+}
+.showjobtable .side .drag .other{
+	padding:5px;
+}
+.showjobtable .side .drag .other .list{
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+	padding:0 5px 0 10px;
+	background:url(hicon.gif) 2px 8px no-repeat;
+}
+/*
+*类目样式 
+*/
+.hrsortcont .foot{
+	height:10px;
+	background:url(hrsort.gif) center bottom no-repeat;
+}
+.hrsortcont .head{
+	height:55px;
+	background:url(hrsort.gif) center top no-repeat;
+}
+.hrsortcont .head span{
+	display:none;
+}
+.hrsortcont .cont{
+	background:url(hrsortm.gif) center top repeat-y;
+}
+.hrsortcont .cont .big{
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	padding-left:40px;
+	background:url(hicon2.gif) 20px 11px no-repeat;
+	font-weight:bold;
+}
+.hrsortcont .cont .small{
+	padding:8px 10px 3px 25px;
+	background:url(sorttop.gif) center top no-repeat;
+	line-height:20px;
+}
+.hrsortcont .cont .small a{
+	color:#666;
+}
+/*
+*主要内容 
+*/
+.showjobtable .main .content .head{
+	height:35px;
+	background:url(hrhead2.gif) right top no-repeat;
+}
+.showjobtable .main .content .head div{
+	height:35px;
+	float:left;
+	background:url(hrhead2.gif) left top no-repeat;
+}
+.showjobtable .main .content .head div span{
+	display:block;
+	width:102px;
+	text-align:center;
+	line-height:35px;
+	background:url(hrover.gif) center top no-repeat;
+	font-weight:bold;
+	color:#FFF;
+	font-size:14px;
+}
+.showjobtable .main .content .cont{
+	border:#C8D8EA solid 1px;
+	border-top:0;
+	padding:10px;
+	height:318px;
+}
+.showjobtable .main .content .cont .title{
+	height:25px;
+	line-height:25px;
+}
+.showjobtable .main .content .cont .title span{
+	font-weight:bold;
+}
+.showjobtable .main .content .cont .title em{
+	color:#f60;
+	padding-right:15px;
+	font-style:normal;
+}
+.showjobtable .main .content .cont .base div{
+	width:300px;
+	height:25px;
+	line-height:25px;
+	float:left;
+}
+.showjobtable .main .content .cont .base div span{
+	color:blue;
+}
+.showjobtable .main .content .cont .morecont{
+	clear:both;
+	margin-top:5px;
+}
+.showjobtable .main .content .cont .morecont .h{
+	height:25px;
+	line-height:25px;
+	font-weight:bold;
+}
+.showjobtable .main .content .cont .morecont .c{
+	line-height:18px;
+	padding-left:10px;
+	color:#666;
+}

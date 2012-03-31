@@ -1,0 +1,379 @@
+/*
+*初始化样式
+*/
+body, form, ul, li, p, dl, dd, dt ,h,td,th,h3{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size:12px;
+	background:url(topbg.gif) repeat-x;
+}
+li,ul{
+	list-style: none;
+} 
+TD {
+	color: #333333;
+	VERTICAL-ALIGN: top;
+} 
+input,textarea{
+	border:1px solid #ccc;
+}
+a {
+	color:#333;
+}
+a:link {
+	color:#333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4E667B;
+}
+a:active {
+	text-decoration: none;
+}
+.wrap{
+	width:980px;
+	margin:auto;
+}
+.mt10{
+	margin-top:10px;
+}
+img{
+	border:0;
+}
+/*
+*顶部信息
+*/
+.TopContainer{
+	height:30px;
+	width:980px;
+	overflow:hidden;
+	margin:auto;
+	line-height:32px;
+	color:#666;
+}
+.TopContainer a:link,.TopContainer a:visited,.TopContainer a:hover{
+	color:#666;
+}
+.TopContainer .userinfo{
+	float:left;
+	height:30px;
+}
+.TopContainer .userinfo span{
+	display:block;
+	float:left;
+	padding-right:5px;
+}
+.TopContainer .userinfo em{
+	color:red;
+	font-style:normal;
+}
+.TopContainer .userinfo .input{
+	padding-top:4px;
+}
+.TopContainer .userinfo .input input{
+	width:100px;
+	height:15px;
+}
+.TopContainer .userinfo .sub{
+	padding:4px 10px 0 5px;
+}
+.TopContainer .userinfo .sub input{
+	border:0;
+}
+.TopContainer .userinfo .img{
+	padding:5px 0 0 5px;
+}
+.TopContainer .userinfo .sub input{
+	background:#FFF;
+}
+.TopContainer .siteinfo{
+	float:right;
+}
+.TopContainer .siteinfo span{
+	color:red;
+}
+/*
+*logo
+*/
+.Logo_Ad_Info{
+	width:980px;
+	height:60px;
+	overflow:hidden;
+	margin:10px auto;
+}
+.Logo_Ad_Info .logo{
+	margin-top:5px;
+	width:220px;
+	height:50px;
+	overflow:hidden;
+	float:left;
+	border-right:#E2E2E2 solid 1px;
+}
+.Logo_Ad_Info .changecity{
+	width:95px;
+	height:60px;
+	float:left;
+	background:url(citybg.gif) center 5px no-repeat;
+}
+.Logo_Ad_Info .changecity span{
+	display:block;
+	text-align:center;
+}
+.Logo_Ad_Info .changecity span.city{
+	padding-top:8px;
+	line-height:25px;
+	color:#F3650C;
+	font-size:16px;
+	font-weight:bold;
+}
+.Logo_Ad_Info .changecity span.change{
+	line-height:20px;
+}
+.Logo_Ad_Info .changecity span.change a{
+	color:#888;
+}
+.Logo_Ad_Info .ad{
+	width:470px;
+	height:60px;
+	float:left;
+}
+.Logo_Ad_Info .info{
+	width:180px;
+	height:55px;
+	border:#DDD solid 1px;
+	float:right;
+	padding-top:3px;
+	line-height:17px;
+	overflow:hidden;
+	background:#FAFAFA;
+}
+.Logo_Ad_Info .info a{
+	display:block;
+	width:75px;
+	height:17px;
+	padding-left:10px;
+	overflow:hidden;
+	float:left;
+}
+/*
+*主导航菜单
+*/
+#Mainmenu{
+	width:970px;
+	height:40px;
+	padding-left:10px;
+	overflow:hidden;
+	line-height:45px;
+	margin:auto;
+	background:url(menubg.gif) no-repeat;
+	position:relative;
+}
+#Mainmenu li{
+	float:left;
+	padding-right:12px;
+	background:url(spacing.gif) right 15px no-repeat;
+}
+#Mainmenu li span{
+	display:block;
+	padding-left:12px;
+}
+#Mainmenu li span a{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+#Mainmenu li.ck{
+	background:url(over1.gif) right top no-repeat;
+}
+#Mainmenu li.ck span{
+	background:url(over1.gif) left top no-repeat;
+}
+#Mainmenu li.ck span a{
+	color:#333;
+	background:url(over1.gif) center top no-repeat;
+	outline: none;
+}
+#Mainmenu li.ck span a.hidefocus::-moz-focus-inner{  
+	border:none; 
+}
+#Mainmenu li.up{
+	background:none;
+}
+#Mainmenu #MainPost{
+	position:absolute;
+	right:10px;
+	top:8px;	
+}
+#Mainmenu .post{
+	float:right;
+}
+/*
+*头部搜索
+*/
+#MainSearch{
+	width:980px;
+	height:40px;
+	background:url(searchbg.gif) no-repeat;
+	margin:8px auto 10px auto;
+}
+#MainSearch #searchtype{
+	width:102px;
+	position:relative;
+	float:left;
+	z-index:1000;
+}
+#MainSearch #searchtype #SelectShow{
+	height:33px;
+	overflow:hidden;
+	line-height:38px;
+	padding-left:55px;
+	padding-top:3px;
+	font-size:14px;
+	cursor:pointer;	
+}
+#MainSearch .click{
+	background:url(onsearch.gif) 44px 4px no-repeat;
+}
+#MainSearch #searchtype #ListType{
+	position:absolute;
+	width:59px;
+	background:url(onsearch.gif) center bottom no-repeat;
+	padding-bottom:2px;
+	left:44px;
+	z-index:1000;
+}
+#MainSearch #searchtype .hidden{
+	display:none;
+}
+#MainSearch #searchtype .show a{
+	display:block;
+	height:25px;
+	overflow:hidden;
+	line-height:28px;
+	padding-left:10px;
+	font-size:14px;
+	background:url(onsearch.gif) center -30px no-repeat;
+}
+#MainSearch #searchtype .show a:hover{
+	background:url(onsearch.gif) center -87px no-repeat;
+	text-decoration:none;
+	color:#00f;
+}
+#MainSearch #searchtype .show a.ck{
+	background:url(onsearch.gif) center -60px no-repeat;
+	color:red;
+}
+#MainSearch .keyword{
+	width:250px;
+	float:left;
+	padding:5px 2px 0 2px;
+}
+#MainSearch .keyword input{
+	width:250px;
+	height:30px;
+	overflow:hidden;
+	line-height:30px;
+	border:0;
+	background:none;
+	font-size:14px;
+	color:#666;
+}
+#MainSearch .subbutter{
+	wdith:67px;
+	float:left;
+	padding:5px 0 0 5px;
+}
+#MainSearch .subbutter input{
+	width:62px;
+	height:30px;
+	text-align:center;
+	overflow:hidden;
+	line-height:35px;
+	border:0;
+	background:none;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:bold;
+}	
+#MainSearch .hotsearch{
+	float:left;
+	padding:5px 10px 0 15px;
+	line-height:35px;
+}
+/*
+*页面地图
+*/
+#nav_guide{
+	width:978px;
+	height:25px;
+	line-height:28px;
+	overflow:hidden;
+	border:#EBEBEB solid 1px;
+	margin:0 auto 8px auto;
+	color:#666;
+}
+#nav_guide a:link,#nav_guide a:visited,#nav_guide a:hover{
+	color:#666;
+}
+#nav_guide .t1{
+	float:left;
+	padding:0 5px 0 30px;
+	background:url(home_icon.gif) 10px 7px no-repeat;
+}
+#nav_guide .t2{
+	float:left;
+}
+/*
+*copyright样式
+*/
+#copyright{
+	clear:both;
+	margin:10px auto 0 auto;
+	text-align:center;
+	width:980px;
+	line-height:20px;
+	padding:10px 0 15px 0;
+	color:#888;
+	background:url(fbg.gif) repeat-x;
+}
+/*********************************************************************
+**********************************************************************
+AJAX在线编辑DIV容器
+这个会员看不到.只是版主管理员才可以看到.这是后台风格
+一般不必修改了.修改了会员也看不到
+**********************************************************************
+*********************************************************************/
+#AjaxEditTable{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}
+#AjaxEditTable .head{
+	height: 21px;
+	background: #DBEAFF;
+	border-bottom:1px solid #BEDDFF;
+	padding:3px 5px 0 7px;
+}
+#AjaxEditTable .head a{
+	color:#FFF;
+}
+#AjaxEditTable .head span{
+	DISPLAY: block; 
+	FLOAT: right;
+}
+#AjaxEditTable .middle{
+	background:#FFF;
+	line-height:18px;
+	padding:5px;
+}
+#AjaxEditTable .middle input,#AjaxEditTable .middle textarea{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}

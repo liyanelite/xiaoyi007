@@ -1,0 +1,110 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/hr/listjob.css">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" class="jobtable">
+  <tr>
+  	<td> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="hrsorttable">
+        <tr>
+          <td class="head"><div class="TAG">职位分类</div></td>
+        </tr>
+        <tr>
+          <td class="middle">
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+$fcolor=$fid==$fkey?" style=\"color:red;\"":"";
+print <<<EOT
+-->
+			<div class="big"><a href="list.php?fid=$fkey"{$fcolor}>{$fvalue}</a></div>
+            <div class="small">
+<!--
+EOT;
+foreach($Fid_db[$fkey] AS $key=>$value){
+$color=$fid==$key?" style=\"color:red;\"":"";
+print <<<EOT
+-->
+              <a href="list.php?fid=$key"{$color}>{$value}</a> 
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </div>	
+<!--
+EOT;
+}print <<<EOT
+-->
+			<div class="h">热门职位</div>
+            <div class="c">
+<!--
+EOT;
+$array=list_hr_job('hot',$rows=10);
+foreach($array AS $rs){print <<<EOT
+-->
+				·<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a><br>
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </div>
+          </td>
+        </tr>
+      </table> 
+    </td>
+    <td width="75%" class="main" height="204" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">找工作</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="250" class="CC" valign="top"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="list_zh">
+              <tr class="hh"> 
+                <td>职位名称</td>
+ <td align="center">工作经验要求</td> <td align="center">学历要求</td> <td align="center">薪水待遇</td><!---->
+				
+                <td width="30%" align="center">企业名称</td>
+                <td width="12%" align="center">工作地点</td>
+                <td width="14%" align="center">月薪</td>
+              </tr>
+<!--
+EOT;
+$i=0;
+foreach($listdb AS $key=>$rs){
+$i++;
+$class=($i%2==1)?'aa':'bb';
+print <<<EOT
+-->
+              <tr class="lt $class"> 
+                <td class="t1"><a href="$rs[url]" target="$target" title='$rs[full_title]' style="color:$rs[titlecolor];"><b>$rs[title]</b></a></td>
+				 <td align="center">{$rs[wageyear]} </td> <td align="center">{$rs[schoo_age]} </td> <td align="center">{$rs[wage]} </td><!---->
+                <td align="center"><a href="$webdb[www_url]/home/?uid=$rs[uid]" target="_blank">$rs[company]</a></td>
+                <td align="center">$rs[workplace]</td>
+                <td align="center">$rs[wage]</td>
+              </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="page">
+              <tr>
+                <td align="center">$showpage</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

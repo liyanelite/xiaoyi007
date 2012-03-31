@@ -1,0 +1,317 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/hr/index.css">
+<div class="hrtopad">{$label[blue_hrad1]}</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable">
+  <tr>
+    <td class="SideTdL">
+    	<div class="memberserver">
+        	<div class="h1"><span>企业会员服务</span></div>
+            <div class="cont">
+            	<div><a href="$webdb[www_url]/member/?main=$Murl/member/post_choose.php" target="_blank">发布职位</a></div>
+                <div><a href="$webdb[www_url]/member/?main=$Murl/member/listjob.php?job=list" target="_blank">职位管理</a></div>
+                <div><a href="$webdb[www_url]/member/?main=$Murl/member/listapplyer.php?job=list" target="_blank">求职信</a></div>
+                <div><a href="listperson.php" target="_blank">找人才</a></div>
+            </div>
+            <div class="h2"><span>个人会员服务</span></div>
+            <div class="cont">
+            	<div><a href="$webdb[www_url]/member/?main=$Murl/member/join.php" target="_blank">更新简历</a></div>
+                <div><a href="joinshow.php?uid=$lfjuid" target="_blank">查看简历</a></div>
+                <div><a href="$webdb[www_url]/member/?main=$Murl/member/applyjob.php?job=list" target="_blank">申请的职位</a></div>
+                <div><br/></div>
+            </div>
+        </div>
+    </td>
+    <td class="SideTdC">
+    	<div class="centerhothr">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="hotin">
+                	{$label[blue_hrhotlist]}                
+                </td>
+              </tr>
+            </table>
+        </div>
+        <div class="centernewhr">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="newin">
+                	{$label[blue_hrnewlist]}                
+                </td>
+              </tr>
+            </table>
+        </div>
+    </td>
+    <td class="SideTdR">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="blue_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=blue_loginer&styletype=hr_login" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hradtable">
+  <tr>
+    <td>
+    	<div class="adcontL">
+        	{$label[blue_hrad2]}
+        </div>
+        <div class="adcontR">
+        	{$label[blue_hrad3]}
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hradtable">
+  <tr>
+    <td>
+    	<div class="adcont1">
+        	{$label[blue_hrad4]}
+        </div>
+        <div class="adcont2">
+        	{$label[blue_hrad5]}
+        </div>
+        <div class="adcont3">
+        	{$label[blue_hrad6]}
+        </div>
+        <div class="adcont4">
+        	{$label[blue_hrad7]}
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hradtable">
+  <tr>
+    <td>
+    	<div class="adcont1">
+        	{$label[blue_hrad8]}
+        </div>
+        <div class="adcont2">
+        	{$label[blue_hrad9]}
+        </div>
+        <div class="adcont3">
+        	{$label[blue_hrad10]}
+        </div>
+        <div class="adcont4">
+        	{$label[blue_hrad11]}
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable mt10">
+  <tr>
+    <td class="SideTdL">
+    	<div class="hrsortcont">
+        	<div class="head"><span class="TAG">职位分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+$fcolor=$fid==$fkey?' style=\"color:red;\"':'';
+print <<<EOT
+-->
+				<div class="big"><a href="list.php?fid=$fkey"{$fcolor}>{$fvalue}</a></div>
+            	<div class="small">
+<!--
+EOT;
+foreach($Fid_db[$fkey] AS $key=>$value){
+$color=$fid==$key?' style=\"color:red;\"':'';
+print <<<EOT
+-->
+              		<a href="list.php?fid=$key"{$color}>{$value}</a> 
+<!--
+EOT;
+}print <<<EOT
+--> 
+            	</div>	
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+            <div class="foot"></div>
+        </div> 
+        <div class="hotjobs">
+        	<div class="head"><span class="TAG">热门职位</span></div>
+            <div class="cont">
+            	{$label[blue_listjob]}            	
+            </div>
+        </div>            
+    </td>
+    <td class="MainR">
+       <div class="hrsearch">
+         <div class="searchin">  
+            <form name="form1" method="post" action="search.php?action=search" target="_blank">
+              <div class="title">搜索人才/职位</div>
+              <div class="word">找工作：</div> 
+              <div class="radio"><input type="radio" name="mid" value="1" checked></div>
+              <div class="word">找人才：</div> 
+              <div class="radio"><input type="radio" name="mid" value="2"></div>              
+              <div class="key">关键字：</div> 
+              <div class="input"><input type="text" name="keyword" id="s_input"></div>
+              <div class="butt"><input type="image" src="$webdb[www_url]/images/$STYLE/hr/hrsearch.gif"/></div>
+            </form>
+         </div>
+      </div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mainlist mt10">
+        <tr>
+          <td class="head">
+          	 <div onmouseover="ShowTab(1,1,3)" id="Span1">最新招聘</div>
+             <div onmouseover="ShowTab(2,1,3)" id="Span2">推荐招聘</div>
+             <div class="more"><br/></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="cont">
+          	 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab1">
+                <tr class="h"> 
+                  <td width="35%">职位名称</td>
+                  <td width="30%" align="center">企业名称</td>
+                  <td width="20%" align="center">地区</td>
+                  <td width="15%" align="center">月薪</td>
+                </tr>
+<!--
+EOT;
+$array = list_hr_job('new',12,true);
+foreach($array AS $key=>$rs){
+$class=$key%2==0?'aa':'bb';
+print <<<EOT
+--->
+              <tr class="lt $class"> 
+                <td class="td1"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank" >$rs[title]</a></td>
+                <td class="td2"><a href="$webdb[www_url]/home/?uid=$rs[uid]" target="_blank">$rs[company]</a></td>
+                <td class="td3">$rs[workplace]</td>
+                <td class="td4">$rs[wage]</td>
+              </tr>
+<!--
+EOT;
+}print <<<EOT
+--->
+              </table>
+          	 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab2">
+                <tr class="h"> 
+                  <td width="35%">职位名称</td>
+                  <td width="30%" align="center">企业名称</td>
+                  <td width="20%" align="center">地区</td>
+                  <td width="15%" align="center">月薪</td>
+                </tr>
+<!--
+EOT;
+$array = list_hr_job('com',12,true);
+foreach($array AS $key=>$rs){
+$class=$key%2==0?'aa':'bb';
+print <<<EOT
+--->
+              <tr class="lt $class"> 
+                <td class="td1"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank" >$rs[title]</a></td>
+                <td class="td2"><a href="$webdb[www_url]/home/?uid=$rs[uid]" target="_blank">$rs[company]</a></td>
+                <td class="td3">$rs[workplace]</td>
+                <td class="td4">$rs[wage]</td>
+              </tr>
+<!--
+EOT;
+}print <<<EOT
+--->
+              </table>
+<SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,3);</SCRIPT>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainTable mt10">
+  <tr>
+    <td class="SideTdL">
+       <div class="sideleftad">{$label[blue_hrad12]}</div>
+       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="othercont">
+        <tr> 
+          <td class="head">$label[hr_news1]</td>
+        </tr>
+        <tr> 
+          <td class="cont">$label[blue_hrnews]</td>
+        </tr>
+      </table>   
+    </td>
+    <td class="MainR">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mainlist mainlist1">
+        <tr>
+          <td class="head">
+          	 <div onmouseover="ShowTab(3,3,5)" id="Span3">最新求职</div>
+             <div onmouseover="ShowTab(4,3,5)" id="Span4">推荐求职</div>
+             <div class="more"><br/></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="cont">
+          	 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab3">
+              <tr class="h"> 
+                <td width="20%">姓名</td>
+                <td width="30%">所学专业</td>
+                <td width="15%">工作年限</td>
+                <td width="15%">性别</td>
+                <td width="20%">月薪要求</td>
+              </tr>
+<!--
+EOT;
+$array = list_hr_member('new',12);
+foreach($array AS $key=>$rs){
+$class=$key%2==0?'aa':'bb';
+$sexdisplay = $rs[sex] == "男" ? "sex1" : "sex2";
+print <<<EOT
+--->
+              <tr class="lt $class"> 
+                <td class="t1 $sexdisplay"><a href="joinshow.php?id=$rs[id]" target="_blank">$rs[truename]</a></td>
+                <td class="t2">$rs[speciality]</td>
+                <td class="t3">$rs[workyear]</td>
+                <td class="t4">$rs[sex]</td>
+                <td class="t5">$rs[wage]</td>
+              </tr>
+<!--
+EOT;
+}print <<<EOT
+--->
+            </table>
+          	 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab4">
+              <tr class="h"> 
+                <td width="20%">姓名</td>
+                <td width="30%">所学专业</td>
+                <td width="15%">工作年限</td>
+                <td width="15%">性别</td>
+                <td width="20%">月薪要求</td>
+              </tr>
+<!--
+EOT;
+$array = list_hr_member('com',12);
+foreach($array AS $key=>$rs){
+$class=$key%2==0?'aa':'bb';
+$sexdisplay = $rs[sex] == "男" ? "sex1" : "sex2";
+print <<<EOT
+--->
+              <tr class="lt $class"> 
+                <td class="t1 $sexdisplay"><a href="joinshow.php?id=$rs[id]" target="_blank">$rs[truename]</a></td>
+                <td class="t2">$rs[speciality]</td>
+                <td class="t3">$rs[workyear]</td>
+                <td class="t4">$rs[sex]</td>
+                <td class="t5">$rs[wage]</td>
+              </tr>
+<!--
+EOT;
+}print <<<EOT
+--->
+            </table>
+<SCRIPT LANGUAGE="JavaScript">ShowTab(3,3,5);</SCRIPT>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

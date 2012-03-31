@@ -1,0 +1,272 @@
+#mainTB .top1{
+	background:url(hh2.gif);
+	height:47px;
+}
+#mainTB .top1 .mainTB_L{
+	background:url(hh1.gif) left no-repeat;
+	height:37px;
+	width:375px;
+	float:left;
+	font-size:24px;
+	font-weight:bold;
+	color:#000;
+	padding:10px 0 0 10px;
+	font-family : ºÚÌå;
+}
+#mainTB .top1 .mainTB_R{
+	background:url(hh3.gif) right no-repeat;
+	height:30px;
+	width:409px;
+	float:right;
+	text-align:right;
+	padding:17px 10px 0 0;
+}
+
+#mainTB .top2,#mainTB .main{
+	border:1px solid #DADADA;
+}
+#mainTB .top2{
+	background:url(bh1.gif);
+	border-top:0px;
+	border-bottom:0px;
+}
+#mainTB .main{
+	border-top:0px;
+	padding:10px 10px 15px 15px;
+	font-size:14px;
+}
+
+#mainTB .top2 div{
+	float:left;
+	width:100px;
+	height:28px;
+	background:url(bk2.gif);
+	text-align:center;
+	padding-top:23px;
+	margin-left:5px;
+}
+#mainTB .top2 div.choose_mt{
+	background:url(bk1.gif);
+}
+#mainTB .top2 div a{
+	font-size:14px;
+}
+#mainTB .top2 div.choose_mt a{
+	color:#fff;
+	font-weight:bold;
+}
+.gaikuan_L{
+	width:450px;
+}
+.gaikuan_L .ii{
+	display:block;
+	border:1px solid #ddd;
+	padding:4px;
+	width:400px;
+	height:300px;
+	margin-bottom:5px;
+}
+.gaikuan_L .ii img{
+	width:400px;
+	height:300px;
+}
+
+.gaikuan_R .listtitle,.gaikuan_R .price{
+	font-size:14px;
+	line-height:27px;
+}
+.gaikuan_R .listtitle span{
+	color:#29804B;
+}
+.gaikuan_R .price,.gaikuan_R .tags{
+	color:#888;
+}
+.gaikuan_R .price span{
+	font-size:25px;
+	color:#FF5500;
+	font-family:ºÚÌå;
+	font-weight:bold;
+}
+.gaikuan_R{
+	border-top:1px dotted #ddd;
+}
+.gaikuan_R .ts div{
+	float:left;
+}
+
+.gaikuan_R .ts .ps{
+	width:135px;
+	height:48px;
+	background:url(kk1.gif) no-repeat;
+	padding:15px 0 0 60px;
+	margin-top:10px;
+}
+.gaikuan_R .ps a{
+	color:#994100;
+	font-weight:bold;
+	font-size:14px;
+}
+.gaikuan_R .ts .ww{
+	padding-top:25px;
+}
+.gaikuan_R .fot{
+	height:60px;
+	background:url(nn2.gif) no-repeat;
+	padding-left:60px;
+}
+.gaikuan_R .fot .aa{
+	color:#888;
+	margin-top:6px;
+}
+.gaikuan_R .fot .bb{
+	font-size:24px;
+	margin-top:4px;
+	color:#2D7001;
+	font-family:ºÚÌå;
+	font-weight:bold;
+}
+
+
+.loupan_t{
+	margin-top:15px;
+}
+.loupan_t .main{
+	border:1px solid #DADADA;
+	border-top:0px;
+	padding:8px;
+	font-size:14px;
+	line-height:25px;
+}
+.loupan_t .top{
+	background:url(ccbg.gif);
+}
+.loupan_t .top div{
+	float:left;
+}
+.loupan_t .top .L{
+	height:38px;
+	background:url(cb1.gif);
+	width:20px;
+}
+.loupan_t .top .CC{
+	height:25px;
+	background:url(fews3.gif);
+	color:#589640;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:13px;
+}
+.loupan_t .top .R{
+	width:14px;
+	height:38px;
+	background:url(wfd3.gif);
+}
+.loupan_t .top .RR{
+	float:right;
+	width:12px;
+	height:38px;
+	background:url(wfdsf2.gif);
+}
+#loupan3 .main{
+	padding:15px 0 15px 0;
+	line-height:100%;
+}
+#loupan3 .tb{
+	width:230px;
+	float:left;
+	border-right:1px dotted #ddd;
+	margin-left:10px;
+}
+#loupan3 .tb .tbL{
+	width:115px;
+}
+#loupan3 .tb .tbL a{
+	display:block;
+	border:1px solid #ddd;
+	width:100px;
+	height:75px;
+}
+#loupan3 .tb .tbL img{
+	border:3px solid #FFF;
+	width:100px;
+	height:75px;
+}
+#loupan3 .tb .tbR div{
+	line-height:22px;
+}
+#loupan3 .tb .tbR .a1 a{
+	color:#3074C1;
+}
+#loupan3 .tb .tbR .a2{
+	color:#999;
+}
+#loupan3 .tb .tbR .a3{
+	color:#FF5500;
+}
+
+#mm2 div{
+	line-height:25px;
+}
+#mm2 div span{
+	color:#2D7001;
+}
+
+#mm3 div{
+	text-align:center;
+	width:235px;
+	float:left;
+	margin-top:10px;
+}
+#mm3 div img{
+	width:200px;
+	height:150px;
+	border:3px solid #fff;
+}
+#mm3 div .ii{
+	display:block;
+	width:200px;
+	height:150px;
+	border:1px solid #ddd;
+	
+}
+
+
+.comment_form{
+	border-top:2px solid #589640;
+	margin-top:10px;
+}
+.comment_form td{
+	padding-top:5px;
+}
+.cclist_table .ii{
+	display:block;
+	width:50px;
+	height:50px;
+	border:1px solid #ddd;
+	padding:3px;
+	margin:auto;
+}
+
+.cclist_table{
+	border-top:1px solid #E2F7DF;
+}
+.cclist_table td{
+	padding-top:4px;
+}
+.cclist_table .info{
+	background:#F1FAEF;
+}
+.cclist_table .ii img{
+}
+.cclist_table .itd{
+	text-align:center;
+}
+.cclist_table .contents{
+	border-left:1px solid #E2F7DF;
+	padding:5px;
+	font-size:14px;
+}
+/****************/
+#mainTB,.loupan_t{
+	background:#FFF;
+}

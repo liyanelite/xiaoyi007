@@ -1,0 +1,99 @@
+<!--
+<?php 
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/hr/listperson.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="jobtable">
+  <tr> 
+    <td width="25%" class="side" height="204" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">相关信息</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="50" class="CC list_t" style="padding:5px;"> 
+		  &nbsp;$label[personglist]
+</td>
+        </tr>
+        <tr> 
+          <td  class="head2">热门职位</td>
+        </tr>
+        <tr> 
+          <td height="50" class="CC morejob">
+<div>
+<!--
+EOT;
+$array=list_hr_job('hot',$rows=10);
+foreach($array AS $rs){print <<<EOT
+-->
+·<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a><br>
+<!--
+EOT;
+}print <<<EOT
+-->    
+			  </div>
+		  
+		  </td>
+        </tr>
+      </table>
+    </td>
+    <td width="75%" class="main" height="204" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">找人才</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="250" class="CC" valign="top"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="list_zh">
+              <tr class="hh"> 
+                 <!--{template}-->
+                <td align="center">{title}</td>
+				 <!--{/template}-->
+                <td width="12%" align="center">更新日期</td>
+                <td width="14%" align="center">查看</td>
+              </tr>
+<!--
+EOT;
+$i=0;
+foreach($listdb AS $key=>$rs){
+$i++;
+$class=($i%2==1)?'aa':'bb';
+print <<<EOT
+-->
+              <tr class="lt $class"> 
+               
+                <!--{template}-->
+                <td align="center">{value}</td>
+				 <!--{/template}-->
+				
+                <td width="12%" align="center">$rs[posttime]</td>
+                <td width="14%" align="center"><a href="$Murl/joinshow.php?id=$rs[id]" target=_blank>查看</a></td>
+              </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="page">
+              <tr>
+                <td align="center">$showpage</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

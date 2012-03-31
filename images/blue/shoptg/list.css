@@ -1,0 +1,164 @@
+.MainTable{
+	clear:both;
+	margin-top:20px;
+}
+.MainTable .main{
+	width:740px;
+}
+/*
+*团购分类
+*/
+.shoptgsort{
+	background:url(stgsort.gif) left top no-repeat;
+	height:52px;
+	margin-bottom:15px;
+	line-height:52px;
+	padding-left:200px;
+	word-spacing:15px;
+}
+.shoptgsort a{
+	font-size:14px;
+}
+/*
+*团购列表
+*/
+.listcont{
+	width:720px;
+	background:url(stglbg.gif) center bottom no-repeat;
+}
+.listcont .head{
+	background:url(stglbg.gif) center top no-repeat;
+	border-bottom:#BCCDFF solid 1px;
+	height:60px;
+	line-height:60px;
+	padding:0 20px 0 20px;
+	font-size:24px;
+	font-weight:bold;
+}
+.listcont .cont{
+	background:url(stglbgm.gif) center top repeat-y;
+	padding:10px 0 5px 20px;
+}
+.listcont .page{
+	line-height:35px;
+}
+.listcont .page a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}
+.listtg{
+	width:340px;
+	height:250px;
+	overflow:hidden;
+	border-bottom:#DDD dotted 1px;
+	float:left;
+}
+.leftlist{
+	border-right:#DDD dotted 1px;
+}
+.listtg .d{
+	padding-top:10px;
+	line-height:20px;
+	font-weight:bold;
+}
+.rightlist .d{
+	padding-left:15px;
+}
+.listtg .t{
+	height:40px;
+	line-height:20px;
+	overflow:hidden;
+	font-size:14px;
+	color:#666;
+	margin-bottom:5px;
+}
+.listtg .t a{
+	font-size:14px;
+	color:#666;
+}
+.leftlist .t{
+	padding-right:15px;
+}
+.rightlist .t{
+	padding-left:15px;
+}
+.listtg .pic{
+	float:left;
+	padding:5px 15px 0 0;
+}
+.rightlist .pic{
+	padding:5px 15px 0 15px;
+}
+.listtg .info{
+	float:left;
+	padding:5px 0 0 0;
+	line-height:25px;
+	color:#999;
+}
+.listtg .info span,.listtg .info strike{
+	font-weight:bold;
+	color:#333;
+	font-size:14px;
+}
+.listtg .info .buy span{
+	font-size:20px;
+	color:red;
+}
+.listtg .info .s span{
+	font-size:16px;
+	color:red;
+}
+/*
+*团购步骤
+*/
+.aboutshoptg{
+	background:url(stgrbg.gif) center top no-repeat;
+	height:241px;
+	line-height:20px;
+}
+.aboutshoptg .head,.aboutshoptg .show1,.aboutshoptg .show2,.aboutshoptg .show3{
+	height:60px;
+	padding-left:80px;
+}
+.aboutshoptg .head span{
+	display:none;
+}
+.aboutshoptg .b{
+	padding-top:6px;
+	font-weight:bold;
+}
+/*
+*注意事项
+*/
+.notecontainer{
+	margin-top:10px;
+}
+.notecontainer .head{
+	background:url(stgcontr.gif) center top no-repeat;
+	height:40px;
+	line-height:40px;
+	padding:0 15px 0 20px;
+}
+.notecontainer .head .fl{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+.notecontainer .head .fr{
+	float:right;
+}
+.notecontainer .cont{
+	background:url(stgcontrm.gif) center top repeat-y;
+	padding:0 5px 0 5px;
+}
+.notecontainer .foot{
+	background:url(stgcontr.gif) center bottom no-repeat;
+}
+.notecontainer .list{
+	height:25px;
+	line-height:25px;
+	background:url(array.gif) 8px 11px no-repeat;
+	padding:0 5px 0 20px;
+	overflow:hidden;
+	border-bottom:#FBD686 dotted 1px;
+}

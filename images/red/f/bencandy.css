@@ -1,0 +1,527 @@
+img{
+	border:0;
+}
+.mt10{
+	margin-top:10px;
+}
+.MainContainer .MainL{
+	width:75%;
+	padding-right:10px;
+}
+.MainContainer .SideR{
+	width:25%;
+}
+/*
+*基本内容 
+*/
+#viewarticle .head{
+	height:35px;
+	background:url(fenlie_head.gif) left top no-repeat;
+	line-height:35px;
+	padding-left:5px;
+}
+#viewarticle .head div{
+	float:left;
+}
+#viewarticle .head .L{
+	padding-left:10px;
+	padding-right:15px;
+	background:url(fenlie_headl.gif) right top no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+#viewarticle .head .L span{
+	display:block;
+	background:url(fenlie_headc.gif) center top no-repeat;
+}
+#viewarticle .head .R{
+	float:right;
+	padding-right:15px;
+	background:url(fenlie_head.gif) right top no-repeat;
+}
+#viewarticle .cont{
+	border:#D6D6D6 solid 1px;
+	border-top:0;
+	background:#FFF;
+}
+#viewarticle .conttd{
+	padding:10px;
+}
+#viewarticle .conttd .baseinfo{
+	width:60%;
+	line-height:25px;
+	color:#999;
+	float:left;
+}
+#viewarticle .conttd .action{
+	line-height:25px;
+	float:right;
+}
+#viewarticle .conttd .showinfo{
+	width:40%;
+	line-height:20px;
+}
+#viewarticle .conttd .showinfo a{
+	color:#2754BB;
+}
+#viewarticle .conttd .infopic{
+	padding-left:200px;
+	padding-top:10px;
+	text-align:center;
+}
+#viewarticle .conttd .infopic a{
+	display:block;
+}
+#viewarticle .conttd .infopic a.pic{
+	width:120px;
+	height:90px;
+	border:#CCC solid 1px;
+	padding:1px;
+	margin:0 auto;
+}
+#viewarticle .conttd .infopic a.word{
+	padding-top:5px;
+}
+#viewarticle .conttd .moreaction{
+	text-align:center;
+	padding-top:20px;
+	word-spacing:15px;
+}
+#viewarticle .conttd .moreaction input{
+	width:100px;
+	padding-left:22px;
+	height:30px;
+	border:0;	
+	cursor:pointer;
+}
+#viewarticle .conttd .moreaction input.zb{
+	background:url(tuangou_butter.gif) center top no-repeat;
+}
+#viewarticle .conttd .moreaction input.tz{
+	background:url(tuangou_butter.gif) center -30px no-repeat;
+}
+#viewarticle .conttd .moreaction input.sc{
+	background:url(tuangou_butter.gif) center -60px no-repeat;
+}
+#viewarticle .conttd .moreinfo{
+	margin-top:10px;
+	background:#fafafa;
+	border-left:#008001 solid 3px;
+	padding:8px 0 3px 10px;
+	line-height:20px;
+}
+#viewarticle .conttd .moreinfo span{
+	font-weight:bold;
+}
+#viewarticle .conttd .Reminded{
+	margin-top:10px;
+	border:#FAD6C8 solid 1px;
+	background:#FFFFCC url(fenlie_icon1.gif) 25px 25px no-repeat;
+	font-size:14px;
+	padding:5px 10px 5px 80px;
+	line-height:20px;
+	color:#666;
+}
+#viewarticle .conttd .Reminded div{
+	font-weight:bold;
+	color:#FF5500;
+	line-height:30px;
+}
+/*
+*信息推广
+*/
+.mainaction .TopHead{
+	height:5px;
+	background:url(fenlie_login.gif) right top no-repeat;
+}
+.mainaction .TopHead table{
+	height:5px;
+	background:url(fenlie_login.gif) left top no-repeat;
+	width:50%;
+}
+.mainaction .BottomFoot{
+	height:5px;
+	background:url(fenlie_login.gif) right bottom no-repeat;
+}
+.mainaction .BottomFoot table{
+	height:5px;
+	background:url(fenlie_login.gif) left bottom no-repeat;
+	width:50%;
+}
+.mainaction .MiddleCont{
+	border-left:#FDD79D solid 1px;
+	border-right:#FDD79D solid 1px;
+	background:#FEF8E9;
+	padding:10px 0 5px 5px;
+}
+.mainaction .MiddleCont a{
+	display:block;
+	width:49%;
+	overflow:hidden;
+	height:35px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	background:url(fenlie_butter.gif) center top no-repeat;
+	color:#7F2703;
+	font-size:14px;
+	text-decoration:none;
+}
+.mainaction .MiddleCont a.post{
+	background:url(fenlie_butter1.gif) center top no-repeat;
+	font-weight:bold;
+}
+.mainaction .MiddleCont a.tg{
+	background:url(fenlie_butter2.gif) center top no-repeat;
+	font-weight:bold;
+	color:#FFF;
+}
+/*
+*发布人信息
+*/
+.userinfo .head,.sidecontainer .head{
+	height:35px;
+	background:url(fenlie_rboxbg.gif) right top no-repeat;
+	line-height:35px;
+}
+.userinfo .head span,.sidecontainer .head span{
+	float:left;
+	background:url(fenlie_rboxbg.gif) left top no-repeat;
+	padding-left:10px;
+	font-size:14px;
+	font-weight:bold;
+	color:#DE6014;
+}
+.userinfo .see,.sidecontainer .foot{
+	background:url(fenlie_rboxbg.gif) right bottom no-repeat;
+	padding-right:5px;
+}
+.userinfo .see a{
+	display:block;
+	background:url(fenlie_rboxbg.gif) left bottom no-repeat;
+	padding:3px 0 10px 20px;
+}
+.userinfo .img{
+	border-left:#FDD79D solid 1px;
+	width:10%;
+	padding:10px;
+	background:#FFF;
+}
+.userinfo .word{
+	border-right:#FDD79D solid 1px;
+	width:90%;
+	line-height:17px;
+	background:#FFF;
+}
+.userinfo .word span{
+	font-weight:bold;
+	color:#009;
+}
+/*
+*付费推广
+*/
+.sidecontainer .foot table{
+	background:url(fenlie_rboxbg.gif) left bottom no-repeat;
+	height:5px;
+}
+.sidecontainer .cont{
+	border-left:#FDD79D solid 1px;
+	border-right:#FDD79D solid 1px;
+	padding:5px;
+	background:#FFF;
+}
+.sidecontainer .cont #side_adinfo div{
+	line-height:22px;
+	overflow:hidden;
+	padding-left:8px;
+}
+/*
+*评论部分样式
+*/
+.commentTable{
+	margin-top:10px;
+	border:#CFBD8C solid 1px;	
+	background:#FFF;
+}
+.commentTable th{
+	height:31px;
+	background:url(tuangou_head1.gif) left bottom repeat-x;
+}
+.commentTable th span.L{
+	float:left;
+	background:url(tuangou_l1.gif) center bottom no-repeat;
+	padding:6px 50px 0 50px;
+	line-height:25px;
+	font-size:14px;
+}
+.commentTable th span.R{
+	float:right;
+	padding:6px 10px 0 0;
+	line-height:25px;
+	font-weight:normal;
+	color:green;
+}
+.commentTable .listcomment{
+	width:50%;
+	padding:10px;
+}
+.commentTable .addcomment{
+	width:50%;
+	padding:10px 10px 10px 0;
+}
+#comment{
+	border:#E5E5E5 solid 1px;
+	border-bottom:0;
+}
+#comment .no_comment{
+	text-align:center;
+	line-height:200px;
+	background:url(check_company.gif) 60px 70px no-repeat;
+	font-size:32px;
+	color:#CFBD8C;
+	border-bottom:#E5E5E5 solid 1px;
+}
+#comment .list_table{
+	border-bottom:#E5E5E5 solid 1px;
+}
+#comment .list_table .img{
+	width:15%;
+	text-align:center;
+	padding:10px 10px 5px 10px;
+}
+#comment .list_table .img a{
+	display:block;	
+}
+#comment .list_table .img a.p{
+	width:50px;
+	height:50px;
+	padding:5px;
+	overflow:hidden;
+	background:url(comment_hicon.gif) center top no-repeat;
+	margin-bottom:8px;
+}
+#comment .list_table .cont{
+	width:85%;
+	padding:10px 5px 5px 0;
+	line-heihgt:20px;
+	font-size:13px;
+}
+#comment .list_table .info{
+	height:25px;
+	background:#F8F8F8;
+	line-height:25px;
+}
+#comment .list_table .info .l{
+	float:left;
+	padding-left:10px;
+	color:#999;
+}
+#comment .list_table .info .l a{
+	padding-left:20px;
+	color:#666;
+}
+#comment .list_table .info .l .fl{
+	background:url(comment_fl.gif) left top no-repeat;
+}
+#comment .list_table .info .l .egg{
+	background:url(comment_egg.gif) left top no-repeat;
+}
+#comment .list_table .info .l em{
+	font-style:normal;
+	color:red;
+}
+#comment .list_table .info .r{
+	float:right;
+	padding-right:10px;
+	padding-top:2px;
+}
+#comment .page{
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	border-bottom:#E5E5E5 solid 1px;
+}
+#comment .page a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+	color:#999;
+}
+#comment .page a:hover{
+	border:blue solid 1px;
+	color:red;
+}
+.comment_form{
+	border:#E5DABC solid 1px;
+}
+.comment_form .head{
+	height:25px;
+	line-height:25px;
+	padding:5px 10px 0 10px;
+	background:url(tuangou_head2.gif) left bottom repeat-x;
+}
+.comment_form .head .L{
+	float:left;
+	padding-left:20px;
+	background:url(tuangou_icon2.gif) 2px 5px no-repeat;
+	font-size:14px;
+}
+.comment_form .head .R{
+	float:right;
+}
+.comment_form .left{
+	width:15%;
+	text-align:right;
+	padding:5px;
+}
+.comment_form .right{
+	padding-top:3px;
+}
+.comment_form  .right textarea{
+	width:350px;
+}
+#comment_submit{
+	margin-bottom:10px;
+}
+.comment_form  .cont{
+	padding:5px;
+}
+.comment_form  .cont .list{
+	padding-top:5px;
+	height:20px;
+	lint-height:20px;
+}
+.comment_form  .cont .list span{
+	display:block;
+	width:50px;
+	float:left;
+	text-align:right;
+	border-right:#CCC solid 1px;
+	padding-right:10px;
+	color:red;
+}
+.comment_form  .cont .list a{
+	float:left;
+	padding-left:8px;
+	color:#226395;
+}
+
+
+/************/
+#comment .content{
+	width:100%;
+	border-bottom:dotted 1px #ddd;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+#comment .content .word{
+	padding-left:5px;
+	height:50px;
+}
+#comment .content .img{
+	padding:0 1em 3px 0;
+	
+}
+#comment .content .info{
+	padding:2px 0 0 5px;
+	text-align:right;
+}
+#comment .img .p img{
+	width:50px;
+	height:50px;
+	padding:3px;
+}
+#comment .img .p{
+	display:block;
+	width:58px;
+	height:58px;
+	background:url(icobg.gif);
+}
+/**************点评显示样式***********************/
+#wydianping{
+	padding:8px;
+}
+#wydianping #comment{
+	border:0;
+	border-top:#F4EEDA solid 1px;
+}
+#comment .listdianping{
+	border:#F4EEDA solid 1px;
+	border-top:0;
+	background:#FCFCFB;
+}
+.listdianping .img,.listdianping .ly{
+	border-right:#F4EEDA solid 1px;
+	width:10%;
+	text-align:center;
+	padding:0 10px 5px 10px;
+}
+.listdianping .img a{
+	display:block;
+	margin:0 auto;
+}
+.listdianping .img a.p{
+	width:50px;
+	height:50px;
+	border:#CCC solid 1px;
+	padding:1px;
+	margin-top:8px;
+	margin-bottom:5px;
+	
+}
+.listdianping .cont{
+	padding:10px 10px 5px 10px;
+	line-height:20px;
+}
+.listdianping .cont .fen_show{
+	color:#888;
+}
+.listdianping .info{
+	vertical-align:middle;
+	text-align:right;
+	padding-right:10px;
+	color:#888;
+}
+.listdianping .info span{
+	color:red;
+}
+.listdianping .info em{
+	color:blue;
+	font-style:normal;
+}
+#posttbale{
+	margin-top:10px;
+	border-top:1px solid #CFBD8C;
+	background:#FAF7EF;
+}
+#posttbale td{
+	padding:10px 0 10px 0;
+}
+#posttbale dl{
+	clear:both;
+}
+#posttbale dl dt{
+	width:10%;
+	float:left;
+	text-align:right;
+	line-height:25px;
+	padding-right:15px;
+}
+#posttbale dl dd{
+	width:80%;
+	float:left;
+}
+
+
+#contents{
+	line-height:25px;
+	margin-top:15px;
+	border-top:1px dotted #ddd;
+}
+#titles{
+	clear:both;
+	font-size:14px;
+	color:#005BC2;
+	line-height:30px;
+	font-weight:bold;
+}

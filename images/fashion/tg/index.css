@@ -1,0 +1,503 @@
+/*
+*MainContainer1
+*/
+.MainContainer1{
+	height:260px;
+	overflow:hidden;
+	background:url(pointer.gif) left 259px repeat-x;
+	margin-bottom:10px;
+}
+.MainContainer1 .NewTg{
+	width:319px;
+	height:260px;
+	overflow:hidden;
+	background:url(pointer.gif) right top repeat-y;
+	float:left;
+	padding-right:1px;
+}
+.MainContainer1 .ConnanyAd{
+	width:340px;
+	height:260px;
+	overflow:hidden;
+	float:left;
+}
+.MainContainer1 .Recmmend{
+	width:319px;
+	height:260px;
+	overflow:hidden;
+	background:url(pointer.gif) left top repeat-y;
+	padding-left:1px;
+	float:left;
+}
+.MainContainer1 .head{
+	height:40px;
+	overflow:hidden;
+	background:url(pointer.gif) left 39px repeat-x;
+}
+.MainContainer1 .head .tag{
+	float:left;
+	padding:5px 0 0 15px;
+}
+.MainContainer1 .head .more{
+	float:right;
+	padding:5px 10px 0 0;
+}
+.MainContainer1 .NewTg .head .tag{
+	padding:5px 0 0 0;
+}
+.MainContainer1 .Recmmend .head .more{
+	float:right;
+	padding:5px 0 0 0;
+}
+/*
+*
+*/
+.MainContainer1 .NewTg .cont{
+	height:199px;
+	overflow:hidden;
+	padding:10px;
+	background:#FBFBFB url(pointer.gif) left top repeat-y;
+}
+.MainContainer1 .NewTg .cont .listpic{
+	height:195px;
+	width:290px;
+	margin:auto;
+	overflow:hidden;
+}
+.MainContainer1 .NewTg .cont .listpic .time{
+	height:20px;
+	line-height:20px;
+	font-weight:bold;
+}
+.MainContainer1 .NewTg .cont .listpic .c{
+	height:51px;
+	line-height:17px;
+	font-size:14px;
+	color:#666;
+	overflow:hidden;
+	margin-bottom:5px;
+}
+.MainContainer1 .NewTg .cont .listpic .img{
+	width:150px;
+	height:120px;
+	overflow:hidden;
+	float:left;
+	position:relative;
+	text-align:center;
+	background:#fafafa;
+}
+.MainContainer1 .NewTg .cont .listpic .img span{
+	display:block;
+	width:62px;
+	height:62px;
+	position:absolute;
+	z-index:1000;
+	bottom:2px;
+	right:2px;
+	background:url(tging.gif) no-repeat;
+}
+.MainContainer1 .NewTg .cont .listpic .word{
+	width:130px;
+	float:left;
+	padding-left:10px;
+	height:120px;
+	line-height:24px;
+	overflow:hidden;
+	color:#888;
+}
+.MainContainer1 .NewTg .cont .listpic .word div{
+	height:24px;
+	overflow:hidden;
+}
+.MainContainer1 .NewTg .cont .listpic .word div span{
+	color:#369;
+}
+.MainContainer1 .NewTg .cont .listpic .word div em{
+	color:#c00;
+	font-size:16px;
+	font-weight:bold;
+}
+/*
+*»ÃµÆÆ¬ÑùÊ½
+*/
+.ConnanyAd .SlideCont{
+	height:178px;
+	width:338px;
+	padding:1px;
+	overflow:hidden;
+	position:relative;
+}
+.slidePic { 
+	width:338px; 
+	overflow:hidden;
+}
+.slidePic li {
+	display:none;
+}
+.slidePic li.cur { 
+	display:block; 
+	width:338px;
+	height:178px;
+	overflow:hidden;
+}
+.slideTxt {
+	cursor:pointer; 
+	height:30px;	
+	position:absolute; 
+	right:10px; 
+	bottom:5px;
+}
+.slideTxt li { 
+	float:left; 
+	height:30px; 
+	width:30px;
+	line-height:28px;
+	overflow:hidden; 
+	text-align:center; 
+	background:url(numbg0.gif) center top no-repeat;
+	color:#CCD5E6
+}
+.slideTxt li a.hidefocus{ 
+	outline: none; 
+}
+.slideTxt li a.hidefocus::-moz-focus-inner{  
+	border:none; 
+}
+.slideTxt li a:link,.slideTxt li a:visited,.slideTxt li a:hover{
+	color:#CCD5E6;
+	font-size:14px;
+	text-decoration:none;
+}
+.slideTxt .cur { 
+	background:url(numbg1.gif) center top no-repeat;	
+}
+.slideTxt .cur a:link,.slideTxt .cur a:visited,.slideTxt .cur a:hover{
+	color:#FFF;
+	font-weight:bold;
+}
+.ConnanyAd .tgaction{
+	height:30px;
+	overflow:hidden;
+	background:url(atcbg.gif) center top no-repeat;
+	text-align:center;
+	word-spacing:30px;
+	padding-top:9px;
+}
+/*
+*
+*/
+.MainContainer1 .Recmmend .cont{
+	height:199px;
+	overflow:hidden;
+	padding:10px;
+	background:#FBFBFB url(pointer.gif) right top repeat-y;
+}
+.MainContainer1 .Recmmend .cont .listpic{
+	width:149px;
+	height:95px;
+	overflow:hidden;
+	float:left;
+	padding-top:5px;
+}
+.MainContainer1 .Recmmend .cont .listpic div{
+	width:120px;
+	margin:auto;
+	text-align:center;
+}
+.MainContainer1 .Recmmend .cont .listpic div.img{
+	border:#DDD solid 1px;
+	background:#FFF;
+	padding:2px;
+}
+.MainContainer1 .Recmmend .cont .listpic div.img a{
+	display:block;
+	width:120px;
+	height:60px;
+	overflow:hidden;
+	background:#fafafa;
+}
+.MainContainer1 .Recmmend .cont .listpic div.t{
+	height:20px;
+	line-height:20px;
+	padding-top:6px;
+	overflow:hidden;
+}
+/*
+*
+*/
+.HotTgCont .head{
+	height:46px;
+	border:#d6d6d6 solid 1px;
+	background:url(head1.gif) repeat-x;
+}
+.HotTgCont .head .tag{
+	float:left;
+	padding:8px 0 0 10px;
+}
+.HotTgCont .head .more{
+	float:right;
+	height:46px;
+}
+.HotTgCont .head .more a{
+	display:block;
+	height:40px;
+	line-height:40px;
+	padding:6px 15px 0 15px;
+	float:left;
+	background:url(dotted.gif) left top repeat-y;
+	font-size:18px;
+	font-weight:bold;
+	color:#777;
+}
+.HotTgCont .cont{
+	border:#e9e9e9 solid 1px;
+	border-top:0;
+	border-bottom:0;
+	height:480px;
+	padding:5px;
+	overflow:hidden;
+}
+.HotTgCont .cont .listtg{
+	width:50%;
+	height:107px;
+	padding-top:13px;
+	overflow:hidden;
+	float:left;
+	background:url(topbg.gif) center top no-repeat;
+}
+.HotTgCont .cont .listtg1,.HotTgCont .cont .listtg2{
+	background:none;
+}
+.HotTgCont .cont .listtg .img{
+	float:left;
+	padding-left:10px;
+}
+.HotTgCont .cont .listtg .img span{
+	display:block;
+	border:#DDD solid 1px;
+	padding:2px;
+}
+.HotTgCont .cont .listtg .img span a{
+	display:block;
+	width:120px;
+	height:90px;
+	overflow:hidden;
+	text-align:center;
+	background:#fafafa;
+}
+.HotTgCont .cont .listtg .word{
+	float:left;
+	width:180px;
+	height:95px;
+	overflow:hidden;
+	padding:0 8px 0 12px;
+}
+.HotTgCont .cont .listtg .word .t{
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+}
+.HotTgCont .cont .listtg .word .t a{
+	font-size:14px;
+	font-weight:bold;
+	color:#D00000;
+}
+.HotTgCont .cont .listtg .word .c{
+	height:66px;
+	line-height:22px;
+	overflow:hidden;
+	padding-top:8px;
+	color:#666;
+	text-indent:20px;
+}
+.HotTgCont .cont .listtg .info{
+	float:left;
+	width:135px;
+	height:94px;
+	overflow:hidden;
+	border:#E6EFF4 solid 1px;
+}
+.HotTgCont .cont .listtg .info div{
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	padding:0 10px 0 10px;
+}
+.HotTgCont .cont .listtg .info div span{
+	color:#369;
+}
+.HotTgCont .cont .listtg .info .join{
+	background:#FBFDFF;
+	padding-top:5px;
+	text-align:center;
+	margin-bottom:3px;
+}
+.HotTgCont .cont .listtg .info .join a{
+	font-weight:bold;
+	color:#369;
+}
+/*
+*
+*/
+.AboutTgCont{
+	background:url(dotted.gif) 660px top repeat-y;
+	height:200px;
+	overflow:hidden;
+}
+.AboutTgCont .StatusTg{
+	width:660px;
+	height:200px;
+	float:left;
+	overflow:hidden;
+}
+.AboutTgCont .head{
+	border:#d6d6d6 solid 1px;
+	background:url(head1.gif) repeat-x;
+	height:46px;
+	overflow:hidden;
+}
+.AboutTgCont .head .tag{
+	padding:10px 0 0 15px;
+}
+.AboutTgCont .cont{
+	border:#E9E9E9 solid 1px;
+	border-top:0;
+	height:131px;
+	padding:10px;
+	overflow:hidden;
+}
+.AboutTgCont .StatusTg .head{	
+	border-right:0;	
+}
+.AboutTgCont .StatusTg .cont{
+	border-right:0;	
+}
+.AboutTgCont .StatusTg .cont .list{
+	height:26px;
+	line-height:26px;
+	overflow:hidden;
+	padding-left:20px;
+	background:url(array.gif) 5px 9px no-repeat;
+}
+.AboutTgCont .StatusTg .cont .list div{
+	float:left;
+}
+.AboutTgCont .StatusTg .cont .list span{
+	color:#0000FF;
+}
+.AboutTgCont .StatusTg .cont .list a{
+	color:#d00000;
+}
+.AboutTgCont .StatusTg .cont .list em{
+	color:#999;
+	float:right;
+	padding-right:5px;
+}
+.AboutTgCont .NoteTg{
+	width:320px;
+	height:200px;
+	float:left;
+	overflow:hidden;
+}
+.AboutTgCont .NoteTg .head{
+	border-left:0;
+}
+.AboutTgCont .NoteTg .head .tag{
+	background:url(dotted.gif) left top repeat-y;
+	height:36px;
+}
+.AboutTgCont .NoteTg .cont{
+	border-left:0;
+}
+.AboutTgCont .NoteTg .cont .listb{
+	height:26px;
+	line-height:26px;
+	overflow:hidden;
+	padding-left:15px;
+	background:url(pointer1.gif) 5px 11px no-repeat;
+}
+.AboutTgCont .NoteTg .cont .listb a{
+	color:#666;
+}
+/*
+*
+*/
+.ChangeShow{
+	margin-top:10px;
+	border:#eaeaea solid 1px;
+	height:150px;
+	overflow:hidden;
+	background:#FBFBFB;
+}
+.ChangeShow .head{
+	width:60px;
+	height:150px;
+	float:left;
+	background:url(dotted.gif) right top repeat-y;
+	overflow:hidden;
+}
+.ChangeShow .head .tag{
+	padding:15px 0 0 10px;
+}
+.ChangeShow .cont{
+	width:918px;
+	height:150px;
+	float:left;
+	position:relative;
+	overflow:hidden;
+}
+#showup,#showdown{
+	width:15px;
+	height:30px;
+	position:absolute;
+	z-index:1000;
+	top:50px;
+	background:url(array1.gif) no-repeat;
+	overflow:hidden;
+}
+#showup{
+	left:12px;
+}
+#showdown{
+	right:12px;
+	background:url(array1.gif) right top no-repeat;
+}
+#showup a,#showdown a{
+	display:block;
+	width:15px;
+	height:30px;
+}
+.ChangeShow .cont ul{
+	width:858px;
+	height:130px;
+	padding:20px 0 0 30px;
+	overflow:hidden;
+}
+.ChangeShow .cont ul li{
+	width:143px;
+	height:130px;
+	overflow:hidden;
+	float:left;
+}
+.ChangeShow .cont ul li div{
+	width:120px;
+	text-align:center;
+	margin:auto;
+}
+.ChangeShow .cont ul li div.img{
+	border:#DDD solid 1px;
+	padding:2px;
+}
+.ChangeShow .cont ul li div.img a{
+	display:block;
+	width:120px;
+	height:90px;
+	overflow:hidden;
+	background:#fafafa;
+}
+.ChangeShow .cont ul li div.t{
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	padding-top:8px;
+}

@@ -1,0 +1,97 @@
+.MainContainer .bhead{
+	border:#BFDDFD solid 1px;
+	border-right:0;
+	background:url(chead3.gif) left top repeat-x;
+}
+.MainContainer .bhead .tag{
+	font-size:14px;
+	font-weight:bold;
+	padding:9px 0 0 15px;
+}
+.MainContainer .shead{
+	width:200px;
+}
+.MainContainer .shead .tag{
+	height:35px;
+	overflow:hidden;
+	line-height:40px;
+	background:url(chead2.gif) center top no-repeat;
+	padding-left:30px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.MainContainer .bimg{
+	width:220px;
+	padding:20px 15px 20px 20px;
+	border-left:#DDD solid 1px;
+}
+.MainContainer .bimg a{
+	display:block;
+	border:#DDD solid 1px;
+	padding:1px;
+}
+.MainContainer .binfo{
+	padding:20px 15px 10px 0;
+}
+.MainContainer .binfo table{
+	border-top:#DDD dotted 1px;
+	border-bottom:#DDD dotted 1px;
+}
+.MainContainer .binfo table div{
+	line-height:25px;
+	font-size:14px;
+}
+.MainContainer .binfo table div span{
+	color:#E95200;
+}
+.MainContainer .binfo table div.title{
+	padding-top:5px;
+	color:#E95200;
+	font-weight:bold;
+}
+.MainContainer .binfo .moreaction{
+	padding-top:15px;
+	text-align:center;
+	word-spacing:10px;
+}
+.MainContainer .uinfo{
+	border-left:#DDD solid 1px;
+	border-right:#DDD solid 1px;
+	background:#F8F8F8;
+	padding-top:10px;
+}
+.MainContainer .uinfo div.list{
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	background:url(bottom.gif) center 29px no-repeat;
+	padding-left:15px;
+}
+.MainContainer .uinfo div.list span{
+	color:#E95200;
+}
+.MainContainer .uinfo .join{
+	padding:15px 0 10px 0;
+	text-align:center;
+}
+.MainContainer .contenttd{
+	border:#DDD solid 1px;
+	padding:10px;
+}
+.MainContainer .contenttd .content{
+	background:url(contbg.gif) left 12px repeat-x;
+}
+.MainContainer .contenttd .content .head{
+	width:90px;
+	height:24px;
+	overflow:hidden;
+	text-align:center;
+	line-height:30px;
+	background:url(cbutter.gif) center top no-repeat;
+	font-weight:bold;
+}
+.MainContainer .contenttd .content .cont{
+	padding:10px;
+	line-height:20px;
+}

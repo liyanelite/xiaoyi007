@@ -1,0 +1,12 @@
+<?php
+$webdb['Info_webOpen']='1';
+$webdb['sort_layout']='1,5#3,8,7#2,4,6#';
+$webdb['module_close']='0';
+$webdb['gg_map_api']='ABQIAAAAlNgPp05cAGeYiuhUaYZaQxT2hWcVQgqOjltVi_oi0-IXnv8sfRRB0xK-_hJ6X9fvCiWkheAw1gnL8Q';
+$webdb['vipselfdomain']='';
+$webdb['vipselfdomaincannot']='';
+$webdb['creat_home_money']='0';
+$webdb['module_pre']='hy_';
+$webdb['Index_listsortnum']='3';
+$webdb['module_id']='16';
+$webdb['Info_webname']='»ÆÒ³Ä£¿é';

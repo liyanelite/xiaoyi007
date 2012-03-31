@@ -1,0 +1,160 @@
+body,td,th {
+	font-size: 12px;
+}
+td{
+	vertical-align:top
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000;
+}
+a:active {
+	text-decoration: none;
+	color: #000;
+}
+.tiyu_tabel{
+	width:960px;
+	margin:auto;
+	margin-bottom:8px;
+}
+.tiyu_tabel .tiyu_logo img{
+	float:left;
+	padding-right:10px;
+}
+.tiyu_tabel .word{
+	float:left;
+	padding-top:10px;
+}	
+.tiyu_tabel  .word_right{
+	text-align:right;
+	padding-top:10px;
+
+}
+.tiyu_top{
+	margin-top:10px;
+	padding:0;
+}
+.tiyu_bk{
+	border:1px solid #B9C6D9;
+}
+.tiyu_top2{
+	padding-top:10px;
+	margin:0;
+}
+/**************×ó±ß********************/
+.tiyu_tabel .tiyu_index_left1{
+	width:320px;
+}
+.tiyu_tabel .tiyu_index_left1 .left1_tabel{
+	width:310px;
+}
+.tiyu_tabel .tiyu_index_left1 .left1_tabel .img{
+	width:310px;
+	text-align:center;
+	padding:1px;
+}
+/****************ÖÐ¼ä******************/
+.tiyu_tabel .tiyu_index_center{
+	width:390px;
+}
+.tiyu_tabel .tiyu_index_center .center_tabel{
+	width:380px;
+}
+.tiyu_tabel .tiyu_index_center .center_tabel .head_word{
+	 text-align:center;
+	 background:url(xuxian.gif) repeat-x bottom;
+	 padding:5px 0 5px 0;
+}
+.tiyu_tabel .tiyu_index_center .center_tabel .head_word a{
+	 font-size:20px; 
+}
+ .content_list{
+	 width:96%;
+	 margin:auto;
+	 padding:0px 0 9px 0 ;
+	 font-size:14px;
+	 clear:both;
+}
+ .content_list span{
+	float:left;
+}
+ .content_list font{
+	float:right;
+	color:#ccc; 
+	font-size:12px;
+}
+/****************ÓÒ±ß******************/
+.tiyu_tabel .tiyu_index_righ1{
+	width:250px;
+}
+.tiyu_tabel .tiyu_index_righ1 .right1_tabel{
+	width:100%;
+}
+.tiyu_tabel .tiyu_index_righ1 .right1_tabel .right_content1{
+	margin-bottom:10px;
+	line-height:150%;
+}
+.tiyu_tabel .tiyu_index_righ1 .right1_tabel .right_content1 a{
+	color:#002277;
+}
+.tiyu_tabel .tiyu_index_righ1 #vote_title{
+	background:#ccc;
+	padding:5px;
+	font-weight:bold;
+}
+.tiyu_tabel .tiyu_index_righ1 .vote_cont span{
+	float:left;
+	width:230px;
+	margin-top:13px;
+}
+.navbgs{
+	background:url(tiyu_mubg.gif) repeat-x;
+	height:28px;
+	border-bottom:1px solid #B9C6D9;
+}
+.navbgs .right_word{
+	float:left;
+	background:url(tiyu_leftwordbg.gif) no-repeat 10px 5px;
+	padding:5px 0 0 23px;
+	font-weight:bold;
+	font-size:14px;
+	color:#002277;
+}
+.navbgs .more{
+	float:right;
+	padding:6px 10px 0 23px;
+	color:#002277;
+}
+.navbgs .more a{
+	color:#002277;
+}
+.tiyu_tabel .tiyu_index_left2{
+	width:485px;
+}
+.tiyu_tabel .left2_tabel{
+	width:475px;
+}
+.tiyu_tabel .tiyu_index_right2{
+	width:475px;
+}
+.photo_list{
+	line-height:250%;
+	float:left;
+	text-align:center;
+	width:160px;
+	margin-right:25px;
+}

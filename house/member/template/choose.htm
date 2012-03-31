@@ -1,0 +1,43 @@
+<!--
+<?php
+print <<<EOT
+-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td height="100" valign="top" class="Main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" >
+        <tr> 
+          <td class="head">管理信息</td>
+        </tr>
+        <tr> 
+          <td class="middle"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="3" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word'>
+              <tr align="center" class="head_in"> 
+                <td width="32%">类别 </td>
+                <td>管理</td>
+              </tr>
+              <!--
+EOT;
+foreach($Fid_db[name] AS $key=>$name){
+if($key==6)continue;
+print <<<EOT
+-->
+              <tr class='trA' onmouseover="this.className='trB'" onmouseout="this.className='trA'"> 
+                <td  align="center" width="32%"><a href="../post.php?fid=$key" target="_blank">$name</a></td>
+                <td align="center"><a href="?job=list&fid=$key">管理</a></td>
+              </tr>
+              <!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+          </td>
+        </tr><tr><td class="foot"></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

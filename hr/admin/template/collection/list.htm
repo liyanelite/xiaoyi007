@@ -1,0 +1,75 @@
+<!--
+<?php
+print <<<EOT
+-->
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+  <form name="form_work" method="post" action="?lfj=$lfj&dirname=$dirname&file=collection&action=del">
+    <tr align="center" class="head"> 
+      <td width="14%" >姓名</td>
+      <td width="23%" >公司名称</td>
+      <td width="13%">性别</td>
+      <td width="14%" >年龄</td>
+      <td width="14%" >工作年限</td>
+      <!---->
+      <td width="11%">收藏日期</td>
+      <td width="11%">简历 / 删除</td>
+    </tr>
+    <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$sex = array("不限","男","女");
+print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF"> 
+      <td align="left" width="14%"> 
+        <input type="checkbox" name="iddb[]" value="$rs[meid]">
+        <a href="$Murl/joinshow.php?id=$rs[id]" target="_blank">{$rs[truename]}</a> 
+      </td>
+      <td align="center" width="23%"><a href="$webdb[www_url]/home/?uid=$rs[memberuid]" target="_blank">$rs[companyname]</a></td>
+      <td align="center" width="13%">$rs[sex]</td>
+      <td align="center" width="14%">{$rs[age]} 岁</td>
+      <td align="center" width="14%">{$rs[workyear]} </td>
+      <!---->
+      <td align="center" width="11%">$rs[posttime]</td>
+      <td align="center" width="11%"><a href="$Murl/joinshow.php?id=$rs[id]" target=_blank>查看</a> 
+        / <a href="?lfj=$lfj&dirname=$dirname&file=collection&iddb[]={$rs[meid]}&action=del">删除</a></td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td colspan="15"> {$showpage}</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td colspan="15"> <a href="#" onClick="CheckAll('all')">全选</a>/<a href="#" onClick='CheckAll()'>反选</a> 
+        <input type="button" name="Submit3" value="删除" onclick="postdo('delete')">
+        <input type="hidden" name="jobs" value="0">
+      </td>
+    </tr>
+  </form>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function postdo(va){
+	document.form_work.jobs.value=va
+	document.form_work.submit();
+}
+function CheckAll(va){
+	form=document.form_work
+	for (var i=0;i<form.elements.length;i++){
+		var e = form.elements[i];
+		if(va=='all'){
+			e.checked = true;
+		}else{
+			e.checked == true ? e.checked = false : e.checked = true;
+		}
+	}
+}
+//-->
+</SCRIPT>
+<!--
+EOT;
+?>
+-->
+ 

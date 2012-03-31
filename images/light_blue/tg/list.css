@@ -1,0 +1,139 @@
+.MainContainer .side{
+	width:240px;
+	padding-right:10px;
+}
+/*
+*类目样式
+*/
+.sortcontainer{
+	background:url(gsortbg.gif) center bottom no-repeat;
+	padding-bottom:5px;
+}
+.sortcontainer .head{
+	background:url(gsortbg.gif) center top;
+	height:40px;
+}
+.sortcontainer .head span{
+	display:block;
+	float:left;
+	padding:8px 0 0 50px;
+	line-height:30px;
+	font-size:16px;
+	font-weight:bold;
+	color:#E85736;
+}
+.sortcontainer .cont{
+	background:url(gsortm.gif) center top repeat-y;
+	padding:5px 0 2px 0;
+}
+.sortcontainer .cont .listsort{	
+	background:url(bisort1.gif) center top no-repeat;
+}
+.sortcontainer .cont .sort1{	
+	background:url(bisort2.gif) center top no-repeat;
+}
+.sortcontainer .cont .listsort a{
+	display:block;
+	padding:8px 0 5px 20px;
+	text-decoration:none;
+}
+.sortcontainer .cont .sort1 a{
+	color:#E85736;
+}
+
+.sidecontainer{
+	border:#DDD solid 1px;
+}
+.sidecontainer .head{
+	height:32px;
+	padding:0 5px 0 5px;
+}
+.sidecontainer .head .tag{
+	padding:4px 5px 0 25px;
+	line-height:28px;
+	border-bottom:#DDD solid 1px;
+	background:url(tgicon1.gif) 8px 12px no-repeat;
+	font-size:14px;
+	font-weight:bold;
+}
+.sidecontainer .cont{
+	padding:10px;
+	line-height:25px;
+}
+.sidecontainer .cont .list{
+	padding-left:10px;
+	height:25px;
+	background:url(tgicon.gif) 2px 11px no-repeat;
+}
+
+.dragcontainer .head{
+	height:35px;
+	background:url(tghead3.gif) right top no-repeat;
+}
+.dragcontainer .head .tag{
+	line-height:35px;
+	float:left;
+	background:url(tgtag1.gif) left top no-repeat;
+	padding-left:20px;
+}
+.dragcontainer .head .tag span{
+	display:block;
+	background:url(tgtag1.gif) right top no-repeat;
+	padding-right:30px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.dragcontainer .head .more{
+	float:right;
+	padding:5px 10px 0 0;
+}
+.dragcontainer .cont{
+	border:#d9d9d9 solid 1px;
+	border-top:0;
+	padding:5px 10px 10px 10px;
+}
+.listtable{
+	border-bottom:#DDD dotted 1px;
+}
+.listtable .pic{
+	width:120px;
+	padding:10px 10px 10px 0;
+}
+.listtable .pic a{
+	display:block;
+	border:#DDD solid 1px;
+	padding:1px;
+}
+.listtable .word{
+	height:80px;
+}
+.listtable .word .title{
+	padding-top:5px;
+	line-height:30px;
+	font-weight:bold;
+	font-size:14px;
+}
+.listtable .word .title a{
+	color:#DE4900;
+}
+.listtable .word .describ{
+	line-height:20px;
+	text-indent:20px;
+}
+.listtable .info .l{
+	float:left;
+	line-height:30px;
+	color:#888;
+}
+.listtable .info .r{
+	float:right;
+}
+.showpage{
+	line-height:30px;
+	text-align:center;
+}
+.showpage a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}

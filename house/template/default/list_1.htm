@@ -1,0 +1,262 @@
+<!--
+<?php
+$priceColordb["c$price1$price2"]='red';
+$orderColordb["$ordertype"]='red';
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/house/list_sell.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="top_searchs">
+  <tr>
+    <td class="top"><div class="L">{$fidDB[name]}房源分类检索</div><div class="R"></div></td>
+  </tr>
+  <tr>
+    <td class="main" height="100">
+	
+	 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="zone_street_menu">
+        <!--
+EOT;
+if($city_id){
+$url=get_info_url('',$fid,$city_id,'','',$TempSearch_array);
+print <<<EOT
+-->
+        <tr> 
+          <td class="zone" id="zone_td"> <span id="zone_span_0"><A HREF="$url">{$city_DB[name][$city_id]}</A></span> 
+            <!--
+EOT;
+foreach($zone_DB[name] AS $key=>$value){
+$url=get_info_url('',$fid,$city_id,$key,'',$TempSearch_array);
+print <<<EOT
+-->
+            <span class="choose" id="zone_span_$key"><A HREF="$url">$value</A></span> 
+            <!--
+EOT;
+}
+print <<<EOT
+-->
+          </td>
+        </tr>
+        <!--
+EOT;
+if($street_DB[$zone_id]){
+print <<<EOT
+-->
+        <tr> 
+          <td class="street" id="street_td"> 
+            <!--
+EOT;
+foreach($street_DB[$zone_id] AS $key=>$value){
+$url=get_info_url('',$fid,$city_id,$zone_id,$key,$TempSearch_array);
+print <<<EOT
+-->
+            <A id="street_a_$key" HREF="$url">$value</A> 
+            <!--
+EOT;
+}
+print <<<EOT
+-->
+          </td>
+        </tr>
+        <!--
+EOT;
+}}
+print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function zone_menu(zone_id){
+	obj=document.getElementById("zone_td").getElementsByTagName("span");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	document.getElementById("zone_span_"+zone_id).className='choose';
+}
+zone_menu("$zone_id");
+function street_menu(street_id){
+	obj=document.getElementById("street_td").getElementsByTagName("a");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	if(document.getElementById("street_a_"+street_id)!=null){
+		document.getElementById("street_a_"+street_id).className='choose';
+	}
+}
+street_menu("$street_id");
+//-->
+</SCRIPT>
+      </table>
+	  <div class="listsearch"> 
+	  
+	  <div><span class='t'>性质：</span><span class='f'><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('room_type'=>"$room_type",));
+print <<<EOT
+--><A HREF='$url' {$search_fieldDB[sortid][0]}>不限</A> <!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('room_type'=>"$room_type",'sortid'=>'1'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[sortid]['1']}>中介</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('room_type'=>"$room_type",'sortid'=>'2'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[sortid]['2']}>个人</A></span></div><div><span class='t'>室内布局：</span><span class='f'><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",));
+print <<<EOT
+--><A HREF='$url' {$search_fieldDB[room_type][0]}>不限</A> <!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",'room_type'=>'两室一厅'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[room_type]['两室一厅']}>两室一厅</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",'room_type'=>'两室两厅'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[room_type]['两室两厅']}>两室两厅</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",'room_type'=>'三室一厅'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[room_type]['三室一厅']}>三室一厅</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",'room_type'=>'三室两厅'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[room_type]['三室两厅']}>三室两厅</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",'room_type'=>'一室一厅'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[room_type]['一室一厅']}>一室一厅</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",'room_type'=>'一居室'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[room_type]['一居室']}>一居室</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",'room_type'=>'三室以上'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[room_type]['三室以上']}>三室以上</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>"$sortid",'room_type'=>'别墅'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[room_type]['别墅']}>别墅</A></span></div><!---->
+	  
+         
+         
+		 </div>
+	  </td>
+  </tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="listMain">
+  <tr>
+    <td valign="top" class="L">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="maintb">
+        <tr>
+          <td class="top"><div class="EL"></div>
+<!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array());
+print <<<EOT
+-->
+		    <div class="s2" id="mt1" onmouseover="chooosem('1')"><a href="$url">全部房源</a></div>
+			<!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>'2'));
+print <<<EOT
+-->
+		    <div class="s1" id="mt2" onmouseover="chooosem('2')"><a href="$url">个人房源</a></div> <!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('sortid'=>'1'));
+print <<<EOT
+--> 
+		    <div class="s1" id="mt3" onmouseover="chooosem('3')"><a href="$url">中介房源</a></div>       
+		  <div class="ER"></div>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function chooosem(t){
+	for(var i=1;i<4;i++){
+		document.getElementById('mt'+i).className='s1';
+	}
+	document.getElementById('mt'+t).className='s2';
+}
+//-->
+</SCRIPT>
+		  
+		  </td>
+        </tr>
+        <tr>
+          <td class="main" height="150" valign="top"> 
+            <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$icon=$key%2==0?'aa':'bb';
+print <<<EOT
+-->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ltb">
+              <tr>
+                <td width="16%" align="left" class="ii"><a href="$rs[url]" title='$rs[full_title]' target="_blank"><img src="$rs[picurl]" onLoad="makesmallpic(this,80,60);" width="80" height="60" onError="this.src='$webdb[www_url]/images/default/nopic.jpg'"/></a></td>
+                <td width="41%" class="tt"><a href="$rs[url]" class="wd" target="_blank" title='$rs[full_title]' style="color:$rs[titlecolor];">$rs[title]</a> 
+                  <br>
+                  <span class='p'>关注度:<em>{$rs[hits]}</em> 次</span><span class='name'> 
+                  发布者:{$rs[username]}</span><span class='time '> 时间:{$rs[times]}</span><br>
+                  
+                  性质:{$rs[sortid]}  
+                  <!---->
+                </td>
+                <td width="13%" align="center">$rs[room_type]</td>
+                <td width="11%" align="center"><span class="cc">$rs[acreage]</span>{$module_DB[$rs[mid]][field][acreage][form_units]}</td>
+                <td width="12%" align="center"><span class="cc">$rs[price]</span>{$module_DB[$rs[mid]][field][price][form_units]}</td>
+                <td width="7%" align="center" class="icon"><img src="$webdb[www_url]/images/yellow/house/u_{$icon}.gif"></td>
+              </tr>
+            </table>
+            <!--
+EOT;
+}print <<<EOT
+-->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center">$showpage</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="R SideR" height="300" valign="top" style="width:250px;padding-left:10px;">
+	
+	
+	 
+      <div class="UserInfo"> 
+        <div class="butter"> <a href="$city_url/post.php?fid=$fid" class="post" target="_blank">免费发布信息</a> 
+          <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/homepage_ctrl.php?atn=info" class="tg" target="_blank">管理店铺</a> 
+          <a href="$webdb[www_url]/member/?main=$Murl/member/list.php" target="_blank">修改删除信息</a> 
+          <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/renzheng.php" target="_blank">认证企业</a> </div>
+        <SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="fenlie_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=fenlie_loginer&styletype=fenlieindex" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+      </div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="NoticeTable mt10">
+        <tr> 
+          <td class="head"><span>公告</span></td>
+          <td class="cont"> 
+            <div class="list">个人发布房源信息会有限制</div>
+            <div class="list">中介发布房源信息不受限制</div>
+          </td>
+        </tr>
+      </table>
+       <div class="sidecontainer mt10"> 
+        <div class="head"><span>赞助商</span></div>
+        <div class="cont"> 
+          <div class="list_rad"><a href="#" target="_blank"><img src="$webdb[www_url]/images/yellow/fenlie_adr1.gif" width="220" height="60"/></a></div>
+          <div class="list_rad"><a href="#" target="_blank"><img src="$webdb[www_url]/images/yellow/fenlie_adr2.gif" width="220" height="60"/></a></div>
+          <div class="list_rad"><a href="#" target="_blank"><img src="$webdb[www_url]/images/yellow/fenlie_adr3.gif" width="220" height="60"/></a></div>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+ 
+<!--
+EOT;
+?>
+-->

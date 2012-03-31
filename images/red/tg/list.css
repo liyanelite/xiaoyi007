@@ -1,0 +1,134 @@
+img{
+	border:0;
+}
+.MainContainer .SideL{
+	width:25%;
+	padding-right:10px;
+}
+.MainContainer .MainR{
+	width:75%;
+}
+.sortcontainer .head{
+	background:url(tuangou_lhead.gif) right bottom;
+	height:38px;
+}
+.sortcontainer .head span{
+	display:block;
+	float:left;
+	background:url(tuangou_lhead.gif) left bottom no-repeat;
+	padding:8px 50px 0 30px;
+	line-height:30px;
+	font-size:14px;
+	font-weight:bold;
+}
+.sortcontainer .cont{
+	border-left:#FDCB7F solid 1px;
+	border-right:#FDCB7F solid 1px;
+	background:#FFF;
+}
+.sortcontainer .cont .listsort{
+	border-bottom:#FDCB7F solid 1px;	
+	background:url(tuangou_array.gif) 200px 10px no-repeat;
+}
+.sortcontainer .cont .listsort a{
+	display:block;
+	padding:8px 0 5px 20px;
+	text-decoration:none;
+}
+.sidecontainer{
+	border:#DDD solid 1px;
+	margin-top:10px;
+	padding:0 5px 0 5px;	
+	background:#FFF;
+}
+.sidecontainer .head{
+	height:30px;
+	background:url(tuangou_icon1.gif) 8px 8px no-repeat;
+	border-bottom:#DDD solid 1px;
+}
+.sidecontainer .head span{
+	float:left;
+	padding:8px 0 0 25px;
+	font-size:14px;
+	font-weight:bold;
+}
+.sidecontainer .cont{
+	padding:5px;
+}
+.sidecontainer .cont .list{
+	padding-left:20px;
+	background:url(index_icon1.gif) 5px 9px no-repeat;
+	line-height:22px;
+}
+.dragcontainer{
+	border:#DDD solid 1px;
+	background:#FFF;
+}
+.dragcontainer .head{
+	background:url(nhead0.gif) left bottom repeat-x;
+	height:30px;
+	padding:5px 10px 0 10px;
+	line-height:30px;
+}
+.dragcontainer .head .L{
+	float:left;
+	font-size:14px;
+}
+.dragcontainer .head .R{
+	float:right;
+}
+.dragcontainer .cont{
+	padding:10px;	
+}
+.listtable{
+	background:url(dotted.gif) left bottom repeat-x;
+}
+.listtable .pic{
+	width:15%;
+	padding:10px 10px 10px 0;
+}
+.listtable .pic a{
+	display:block;
+	width:120px;
+	height:90px;
+	border:#DDD solid 1px;
+	padding:2px;
+}
+.listtable .word{
+	width:85%;
+	height:70px;
+}
+.listtable .word .title{
+	padding-top:5px;
+	line-height:30px;
+}
+.listtable .word .title a{
+	color:#DE4900;
+	font-size:14px;
+	font-weight:bold;
+}
+.listtable .word .describ{
+	color:#666;
+	line-height:20px;
+}
+.listtable .info{
+	width:85%;
+	height:30px;
+	line-height:30px;
+}
+.listtable .info span{
+	float:left;
+	color:#999;
+}
+.listtable .info span.r{
+	float:right;
+}
+.MainContainer .MainR .page{
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.MainContainer .MainR .page a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}

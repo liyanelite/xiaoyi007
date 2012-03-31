@@ -1,0 +1,119 @@
+<!--
+<?php
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/gift/list.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+    	<div class="dragcontainer">
+        	<div class="head">
+            	<span class="L">$fidDB[name]</span>
+                <span class="R"><a href="#">最新礼品</a></span> 
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont">
+              <tr>
+                <td class="incont">
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$target=$rs[target]?'_blank':'_self';
+$rs[title]=get_word($rs[title],30);
+print <<<EOT
+-->
+            <table width="100%" cellspacing="0" cellpadding="0" class="ListTable">
+              <tr> 
+                  <td class="img"> <a href="bencandy.php?fid=$rs[fid]&id=$rs[id]"><img src="$rs[picurl]" onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="120" height="90" border="0" /></a> 
+                  </td>
+                <td class="word">
+                	<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a><br/>
+                     
+                    <strike>市场价:{$rs[mart_price]}元</strike> <span>所需积分:<b>{$rs[money]}</b>个</span><br/>
+                    关注度:{$rs[hits]} 发布日期:{$rs[posttime]} 所属分类:{$fidDB[name]} <br/>
+					
+                 市场价格：{$rs[mart_price]} 元
+                  <!---->
+                </td>
+                  <td class="see"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank"><img src="$webdb[www_url]/images/yellow/gift_see.gif" border="0"/></a></td>
+              </tr>
+            </table>
+<!--
+EOT;
+}if($showpage){print <<<EOT
+-->
+                   <div class="page">$showpage</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+                </td>
+              </tr>
+            </table>
+        </div>
+    </td>
+  	<td class="SideR">
+    	<div class="sortcontainer">
+        	<div class="head"><span>礼品分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+$color=$fid==$fkey?'red':'';
+print <<<EOT
+-->
+                <div class="listsort"><a href="list.php?fid=$fkey" style="color:$color;">{$fvalue}</a></div>			
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </div>
+        </div>
+        <div class="sidecontainer mt10">
+        	<div class="head"><span>礼品申请信息</span></div>
+            <div class="cont">
+<!--
+EOT;
+$array=list_apply(8);
+foreach($array AS $rs){
+print <<<EOT
+-->
+			  
+          <div class="list"><span>$rs[username]</span>于<em>$rs[posttime]</em>申请了<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+			  
+            </div>
+            <div class="cont">
+<!--
+EOT;
+$array=list_gift(3);
+foreach($array AS $rs){
+print <<<EOT
+-->
+          <div class="lista"> <a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" class="img" target="_blank"><img src="$rs[picurl]" onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="75" height="75" border="0"></a> 
+            <a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" class="title" target="_blank">$rs[title]</a> 
+            <span class="price">原价{$rs[mart_price]}元</span> <span class="zf">需{$rs[money]}{$webdb[MoneyName]}</span> 
+            <a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" class="goto" target="_blank">去看看</a> 
+          </div>	
+                
+<!--
+EOT;
+}
+print <<<EOT
+-->
+		
+		
+                </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

@@ -1,0 +1,171 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/hr/showjob.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="jobtable">
+  <tr> 
+    <td width="25%" class="side" height="204" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">招聘单位</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="50" class="CC"> 
+		  
+            <div class="top compnaytype$companydb[renzheng]" title="{$renzhengDB[$companydb[renzheng]]}"><b>$companydb[title]</b><br>
+              <a href="$webdb[www_url]/home/?uid=$rsdb[uid]" target="_blank"><font color="#CC6600"><b><font color="#FF6400">{$renzhengDB[$companydb[renzheng]]}</font></b></font></a></div>
+			  
+			<div class="view_company" onclick="window.open('$webdb[www_url]/home/?uid=$rsdb[uid]')"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td  class="head2">其它职位</td>
+        </tr>
+        <tr> 
+          <td height="50" class="CC morejob">
+		    <div>
+<!--
+EOT;
+$array=list_hr_job($rsdb[uid],10);
+foreach($array AS $rs){print <<<EOT
+-->
+			·<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a><br>
+<!--
+EOT;
+}print <<<EOT
+-->
+			  </div>
+		  </td>
+        </tr>
+      </table>
+    </td>
+    <td width="75%" class="main" height="204" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">招聘信息</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="250" class="CC" valign="top">
+		    <div class="title"> <b>招聘职位：</b><font color="#FF6A00">$rsdb[title]</font> 
+
+			　　　发布日期：<a editurl='$Murl/job.php?job=bencandy&fid=$fid&id=$id&act=do'>{$rsdb[posttime]}</a>
+            </div>
+		  <div class="base">
+		      <div>职位名称：<font color="#0000FF">{$rsdb[title]}</font></div>
+<!--
+EOT;
+if($rsdb['workplace']){print <<<EOT
+--> 
+<div>工作城市：<font color="#0000FF">{$rsdb[workplace]} </font></div>      
+<!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['nums']){print <<<EOT
+--> 
+<div>招聘人数：<font color="#0000FF">{$rsdb[nums]} </font></div>      
+<!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['wageyear']){print <<<EOT
+--> 
+<div>工作经验要求：<font color="#0000FF">{$rsdb[wageyear]} </font></div>      
+<!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['asksex']){print <<<EOT
+--> 
+<div>性别要求：<font color="#0000FF">{$rsdb[asksex]} </font></div>      
+<!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['schoo_age']){print <<<EOT
+--> 
+<div>学历要求：<font color="#0000FF">{$rsdb[schoo_age]} </font></div>      
+<!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['wage']){print <<<EOT
+--> 
+<div>薪水待遇：<font color="#0000FF">{$rsdb[wage]} </font></div>      
+<!--
+EOT;
+}print <<<EOT
+--><!---->
+		      
+		     
+			 
+		  
+		  </div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="btable">
+  <tr>
+    <td class="h3">
+<div class="TAG2">【职位描述】</div>
+	</td>
+  </tr>
+  <tr>
+                <td class="c"><table width="100%" cellspacing="0" cellpadding="0" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word' align="center">
+              <tr> 
+                <td>$rsdb[content]</td>
+              </tr>
+            </table></td>
+  </tr>
+</table>
+		  <div class="appli" onclick="window.open('apply.php?job=post&id=$id')"></div>
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="btable">
+  <tr>
+    <td class="h3">
+<div class="TAG2">【公司介绍】</div>
+	</td>
+  </tr>
+  <tr>
+                <td class="c"><table width="100%" cellspacing="0" cellpadding="0" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word' align="center">
+              <tr> 
+                <td>{$companydb[content]}</td>
+              </tr>
+            </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="btable">
+  <tr>
+    <td class="h3">
+<div class="TAG2">【联系方式】</div>
+	</td>
+  </tr>
+  <tr>
+                <td class="c">邮箱:{$companydb[qy_contact_email]}<br>
+                  电话:{$companydb[qy_contact_tel]} <br>
+                  传真:{$companydb[qy_contact_fax]}<br>
+                  QQ:{$companydb[qq]} <br>
+                  网址:{$companydb[qy_website]}<br>
+                  地址:{$companydb[qy_regplace]} </td>
+  </tr>
+</table><div class="foot_do"></div>
+		  </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

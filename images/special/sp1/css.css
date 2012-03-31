@@ -1,0 +1,280 @@
+body,td,th {
+	font-size: 12px;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:link {
+	color: 0;
+	text-decoration: none;
+	color: #333333;
+}
+
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+a {
+	font-size: 12px;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #333333;
+}
+.top{
+	margin-top:8px;
+}
+
+.xinwen{
+	width:950px; 
+	margin:auto;
+}
+.xw_bk{
+	border:1px solid #E3E3E3;
+	background:url(xw1.gif) repeat-x;
+	padding:3px 0px 2px 2px; 
+}
+.xw_daohang{
+	text-align:right; 
+	padding:5px;
+}
+
+.xw_lor{
+	border:1px solid #E4E9EF;
+}
+.xw_huand{
+	text-align:center; 
+	padding-top:5px;
+}
+.Lzi{
+	width:300px; 
+	background:#CCCCCC; 
+	margin:auto; 
+	text-align:center; 
+	padding-top:3px; 
+	padding-bottom:3px; 
+	margin-bottom:5px; 
+	font-weight:bold;
+}
+.XINWEN_AE{
+	border:1px solid #AEC6DD;
+}
+.TD_XW3{
+	background:url(xw3.gif) repeat-x; 
+	height:25px;
+}
+.SPAN_XW5{
+	float:left; 
+	padding:6px 0px 0px 20px; 
+	font-size:14px; 
+	background:url(xw5.gif) no-repeat 9px 8px;
+}
+.GENG{
+	float:right; 
+	padding:8px 10px 0px 0px;
+}
+.XINWEN_AE .SHIPIN{
+	text-align:center; 
+	padding-top:8px; 
+	padding-bottom:7px;
+}
+.BJ_XW6{
+	background:url(xw6.gif) repeat-x; 
+	padding-top:16px; 
+	margin:0px;
+}
+.BJ_XW6 .BJ_ljie{
+	width:95%; 
+	margin:auto; 
+	padding:0px 0px 8px 0px;
+}
+.BJ_XW6 .BJ_ljie a{
+	color:#013979;
+	font-size:14px;
+	
+}
+
+.BJ_XW6 .TEX_center{
+	text-indent:20px; 
+	width:92%; 
+	margin:auto; 
+	line-height:20px; 
+	padding-bottom:5px; 
+	margin-bottom:5px; 
+	color:#333333;
+}
+.BJ_XW6 .TEX_center a{
+	color:#333333;
+	font-size:13px;
+}
+.BJ_XW6 .BIAOTI{
+	border-bottom:1px dotted #B5B5B5; 
+	width:97%; 
+	margin:auto; 
+	text-align:center; 
+	padding-bottom:12px;
+	margin-bottom:10px;
+	color:#CC2E2F;
+	font-weight:bold;
+}
+.BJ_XW6 .BIAOTI a{
+	font-family:"ºÚÌå";
+	color:#CC2E2F;
+	font-size:20px;
+}
+
+.TDOM{
+	padding-top:13px; 
+	padding-bottom:5px;
+}
+
+.TDOM .Lianjie{
+	width:95%; 
+	margin:auto; 
+	color:#013979; 
+	font-size:14px; 
+	padding-bottom:7px;
+}
+
+.TDOM .Lianjie a{
+	color:#013979; 
+	font-size:14px; 
+}
+.xw7{
+	background:url(xw7.gif) repeat-x; 
+	height:25px;
+}
+
+.xw7 .xw10{
+	float:left; 
+	background:url(xw10.gif) no-repeat 0px 0px; 
+	padding:5px 0px 5px 27px;
+}
+.xw7 .xw10 a{
+	color:#265C8A; 
+	font-size:14PX;
+}
+
+.xw11{
+	background:url(xw11.gif) repeat-x; 
+	height:13px; 
+	width:90px; 
+	float:left; 
+	margin-left:10px; 
+	margin-top:7px;
+}
+
+.photo_list{
+	line-height:250%;
+	float:left;
+	text-align:center;
+	width:160px;
+	margin-right:18px;
+}
+
+.right_content1{
+	margin-bottom:10px;
+	line-height:23px;
+}
+.right_content1 a{
+	color:#6E2A37;
+}
+.XWbj{
+	background:#F9F9F9;
+}
+.PABO{
+	 padding-top:10px; padding-bottom:5px;
+}
+.LGAO2{
+	line-height:23px;
+}
+
+.LGAO2 .xwzi{
+	text-indent:20px;
+} 
+
+.PABOING{
+	padding-top:10px; padding-bottom:10px;
+}
+
+.Cor3 a{
+	color:#013979; font-size:13px; text-decoration: underline;
+}
+.Cor3 a:link {
+	text-decoration: underline;
+	font-size:13px;
+}
+.Cor3 a:hover {
+	text-decoration: underline;
+	color:#013979;
+}
+.Cor3 a:active {
+	text-decoration: underline;
+	color:#013979;
+}
+
+.Cor3 a:visited {
+	text-decoration: underline;
+	color:#013979;
+}
+.PABOING .TEXT{
+	text-indent:20px;
+	color:#6A6A6A;
+}
+.PABOING .TEXT a:link{
+	text-decoration: none;
+	color:#6A6A6A;
+}
+.TANGBIAOT{
+	width:95%; margin:auto; padding:10px 0px 0px 0px; line-height:20px;
+}
+
+.BAODAO{
+	width:95%; margin:auto; line-height:18px; padding-top:10px; padding-bottom:9px;
+}
+
+.BAODAO div {
+	text-indent:2em;
+	color:#666;
+	margin-bottom:7px;
+}
+.BAODAO .t{
+	padding-left:4px;
+	font-weight:bold;
+	
+}
+.LGAO2 .xwzi{
+	line-height:18px;
+}
+
+.Tbiaoti a{
+	font-size:14px;
+	color:#013979;
+	font-weight:bold;
+}
+
+
+#comment .content{
+ 
+	border:dotted 1px #ddd;
+	margin-bottom:10px;
+}
+#comment .content .word{
+	border-bottom:solid 1px #ddd;
+	padding-left:5px;
+	height:50px;
+}
+#comment .content .img{
+	border-right:dotted 1px #ddd;
+	padding:1em;
+}
+#comment .content .info{
+	padding:2px 0 0 5px;
+}

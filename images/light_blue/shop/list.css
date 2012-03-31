@@ -1,0 +1,145 @@
+.MainContainer .side{
+	width:250px;
+	padding-left:10px;
+}
+/*
+*栏目显示
+*/
+.showsort{
+	border:#d9d9d9 solid 1px;
+}
+.showsort .sorttd{
+	border:#ddd solid 1px;
+	padding:10px;
+	line-height:20px;
+}
+.showsort .sorttd .head{	
+	padding-left:20px;
+	background:url(sicon3.gif) 5px 5px no-repeat;
+	font-weight:bold;
+}
+.showsort .sorttd .cont{
+	padding-left:20px;
+	margin-top:5px;
+	word-spacing:10px;
+}
+/*
+*列表样式
+*/
+.conttable{
+	margin-top:10px;
+}
+.conttable .head{
+	height:35px;
+	line-height:35px;
+	background:url(shead7.gif) left top no-repeat;
+	padding-left:15px;
+}
+.conttable .head .TAG{
+	float:left;
+	background:url(stag.gif) left top no-repeat;
+	padding-left:20px;
+}
+.conttable .head .TAG span{
+	display:block;
+	background:url(stag.gif) right top no-repeat;
+	padding-right:20px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.conttable .head .more{
+	float:right;
+	background:url(shead7.gif) right top no-repeat;
+	width:100px;
+}
+.conttable .cont{
+	border:#d9d9d9 solid 1px;
+	border-top:0;
+	padding-bottom:5px;
+}
+.listtable .td1{
+	width:150px;
+	text-align:center;
+}
+.listtable .td3,.listtable .td4{
+	width:90px;
+	text-align:center;
+	vertical-align:middle;
+}
+.listtable .h td{
+	line-height:30px;
+	border-bottom:#d9d9d9 dotted 1px;
+}
+.listtable .c td{
+	border-bottom:#ddd dotted 1px;
+}
+.listtable .c .td1{
+	padding:10px 0 10px 0;
+}
+.listtable .c .td2{
+	line-height:20px;
+	color:#666;
+}
+.listtable .c .td2 span{
+	color:green;
+}
+.listtable .c .td1 a{
+	display:block;
+	width:124px;
+	border:#DDD solid 1px;
+	padding:2px 0 2px 0;
+	text-align:center;
+	margin:auto;
+}
+.listtable .title{
+	padding-top:5px;
+	line-height:25px;
+}
+.listtable .title a{
+	color:#00349A;
+	font-size:14px;
+	font-weight:bold;
+}
+.listtable .price{
+	font-weight:bold;
+	color:#f60;
+}
+.listtable .page td{
+	line-height:30px;
+	text-align:center;
+}
+.listtable .page td a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}
+/*
+*热门产品
+*/
+.sidetable{
+	border:#d9d9d9 solid 1px;
+	background:url(newsbg.gif) left top repeat-x;
+}
+.sidetable .head{
+	height:30px;
+	border-left:#FFF solid 1px;
+	border-right:#FFF solid 1px;
+	padding:0 3px 0 3px;
+}
+.sidetable .head .TAG{
+	padding:5px 0 0 10px;
+	line-height:25px;
+	border-bottom:#d9d9d9 solid 1px;
+	font-size:14px;
+	font-weight:bold;
+}
+.sidetable .cont{
+	padding:10px;
+	line-height:22px;
+}
+.sidetable .cont .list{
+	height:22px;
+	overflow:hidden;
+	padding-left:12px;
+	background:url(sicon2.gif) 2px 9px no-repeat;
+}

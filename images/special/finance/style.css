@@ -1,0 +1,497 @@
+/*****************************************************************
+******************************************************************
+以下为所有风格通用样式
+margin: 0;padding: 0;设置外边距,内边距空隙都为0
+font-size: 12px;为字体大小.一般表格内的,不受他控制
+li,ul设置list-style: none;主要是取消默认的小圆点.不太好看
+******************************************************************
+*****************************************************************/
+
+body, form, ul, li, p, dl, dd, dt ,h,td,th,h3{
+	margin:0px;
+	padding: 0;
+	font-size:12px;
+	
+	
+}
+li,ul{
+	list-style: none;
+	
+}
+ 
+
+ body{
+    background:url(finance_background.jpg) center repeat-y;
+	width:997px;
+	margin:auto;
+	
+ }
+/******************************************
+TD中的color: #333333;为没有超级链接的字体颜色
+VERTICAL-ALIGN: top;表格里的内容居顶
+text-align:left;表格里的内容居左
+*******************************************/
+
+TD {
+	color: #2B2B2B;
+	VERTICAL-ALIGN: top;
+}
+
+/******************************************
+border:1px solid #ccc; 表单边框为1个像素的实线,
+要为虚线改solid为dotted,要换颜色改#ccc
+可以自定义背景颜色
+background:#eee;
+*******************************************/
+
+input,textarea{
+	border:1px solid #ccc;
+}
+
+/******************************************
+网页整体宽度
+******************************************/
+.wrap{
+	width:990px;
+	margin:auto;
+}
+
+/******************************************
+font-size: 12px;超级链接字体大小
+color:字体颜色
+text-decoration: none;没有下画线.要有下画线.改none为underline
+a 为统一超级链接,
+a:link没有点击过的超级链接样式
+a:visited 被点击过的超级链接样式
+a:hover 鼠标指向时的超级链接样式
+a:active 被用户激活(在鼠标点击与释放之间发生的事件)时的样式.少用
+*******************************************/
+
+a {
+	font-size: 12px;
+}
+a:link {
+	color: #333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4E667B;
+}
+a:active {
+	text-decoration: none;
+}
+
+#header{
+	width:990px;
+}
+
+/************************************************************************************
+头部开始
+**************************************************************************************/
+.finance_logo{
+float:left;widt:105px;height:31px;margin-right:7px;
+}
+.head_muen{
+	widht:100%;float:left;padding-top:13px;
+}
+.banner{
+width:960px;
+}
+.zhuanti_muen{
+ width:950px;height:35px;background:url(finance_muenbg.jpg) repeat-x;
+ line-height:35px;color:#FFFFFF;padding-left:10px;
+}
+
+.zhuanti_muen a{
+        color:#ffffff;
+}
+
+.zhuanti_muen a:visited {
+	text-decoration: none;
+	 color:#ffffff;
+}
+
+.zhuanti_muen a:hover {
+	text-decoration: underline;
+	color:#BA2636;
+}
+
+.finance_hd{
+margin-left:10px;margin-right:5px;border:#DCDDDD 1px solid;
+}
+.boxl{
+margin-left:10px;margin-top:15px;margin-right:5px;
+}
+
+.box1_top{
+background:url(box_headbg.jpg) repeat-x;border:#B1C1CE 1px solid;height:25px;
+}
+
+.box1_xiaotu{
+width:13px;float:left;margin-top:5px;margin-left:7px;
+}
+
+.box1_bt{
+width:200px;
+float:left;
+margin-top:5px;
+margin-left:7px;
+font-weight:bold;
+
+background:url(finance_1.jpg) left no-repeat;
+line-height:15px;
+padding-left:18px;
+}
+
+.al{
+float:left;border:#CCCCCC 1px solid;width:70px;
+}
+
+.sm{
+float:left;margin-left:5px;line-height:23px;width:200px;
+}
+
+.al1{
+width:95%;
+margin:7px;
+line-height:23px;
+border-bottom:#ccc 1px dotted;
+
+}
+
+.diao_bt{
+	width:100%;line-height:30px;
+}
+.diao_bt a{
+font-size:18px;
+font-family: "黑体";
+}
+.yy{
+width:100%;color:#727171;line-height:21px;text-indent:20px;
+}
+
+.yy a{
+    color:#BA2636;
+}
+
+.yy a:visited{
+text-decoration: none;
+	color:#BA2636;
+}
+
+.bao{
+line-height:23px;font-size:13px;padding-top:7px;
+}
+
+.bao a{
+      font-size:14px;
+}
+
+.box_m{
+margin-left:15px;margin-top:15px;
+}
+
+.box_m .box_m_head{
+background:url(finace_mbg.jpg) center bottom no-repeat;height:30px;
+}
+
+
+.box_m .box_m_head .box_m_bt{
+width:100px;float:left;margin-top:7px;
+font-weight:bold;font-size:15px;
+background:url(finance_1.jpg) left no-repeat;
+line-height:18px;
+padding-left:18px;
+margin-left:3px;
+}
+.ttitle a{
+	float:left;
+}
+.ttitle span{
+	float:right;
+}
+.ttitle p{
+	clear:both;
+}
+
+
+.box_m .box_m_by{
+
+       line-height:25px;
+       padding-bottom:7px;
+       padding-top:7px;
+}
+
+.box_m .box_m_by a{
+       font-size:14px;
+}
+.box_r{
+margin-left:15px;border:#DCDDDD 1px solid;
+}
+
+.box_r .finance_hd1{
+border-bottom:#B1C1CE 1px solid; border-top:#D9E1E9 1px solid;background:url(box_headbg.jpg) repeat-x;height:25px;
+width:230px;
+}
+
+.tongji{
+margin:7px;margin-bottom:0px;border:#DCDDDD 1px solid;
+}
+
+.boxr_by{
+margin:13px;background:#ffffff;line-height:25px;
+}
+
+.finance_box2{
+margin-top:10px;
+}
+
+.finance_box2_h{
+background:url(bigbox_bg.jpg) repeat-x;height:27px;
+}
+
+
+
+.box2_bt{
+float:left;margin-left:7px;color:#FFFFFF;font-weight:bold;font-size:14px;background:url(finance_1.jpg) center left no-repeat;
+padding-left:20px;line-height:27px;
+}
+
+.box2_fan{
+text-align:right;padding-right:10px;padding-top:7px;
+}
+
+.box2_fan a{
+    color:#ffffff;
+}
+
+
+
+.box2_fan a:visited {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.ren{
+width:355px;background:#F5F5F5;float:left;margin-left:10px;margin-top:15px;padding:10px
+}
+
+.ren1{
+      float:left;
+      width:550px;
+	  margin-left:10px;
+	  margin-top:15px;
+}
+
+.ren_h{
+height:38px;border-bottom:#E8E8E8 1px solid;
+}
+
+.ren_h .at{
+float:left;margin-top:12px;
+}
+
+.ren_h .ab{
+float:left;margin-top:10px;font-size:19px;padding-left:10px;
+}
+.ren_h .ab a{
+font-family: "黑体";font-size:18px;
+}
+.ren_by{
+width:550px;padding-top:12px;line-height:23px;font-size:14px;color:#000000;text-indent:20px;
+}
+
+.box2_nei{
+margin-left:7px;margin-top:20px;
+}
+
+.box2_nei_head{
+background:#EFEFEF;height:25px;
+}
+
+.box2_nei_head .b{
+float:left;
+}
+
+.box2_nei_head .b2{
+float:left;font-weight:bold;
+background:url(diy_5.jpg) center left no-repeat;
+line-height:25px;
+padding-left:30px;
+}
+
+.abc{
+margin-left:10px;
+}
+
+.abc .abc_h{
+line-height:25px;background:#EFEFEF;width:50%;text-align:center;font-weight:bold;
+}
+
+.abc .abc_by{
+width:100%;line-height:23px;padding-left:5px;color:#727171;text-indent:20px;
+}
+
+.abc2{
+margin-left:10px;
+}
+
+.abc2 .abc2_h{
+line-height:25px;background:#EFEFEF;width:50%;text-align:center;font-weight:bold;
+}
+.abc2 .abc2_by{
+width:100%;line-height:23px;padding-left:5px;color:#727171; text-indent:20px;
+}
+
+.abc3{
+margin-top:20px;border:#CCCCCC 1px solid;margin-left:5px;
+}
+
+.abc3 .abc3_td{
+border-right:#CCCCCC 1px solid;
+}
+
+.abc3_tabel{
+margin:7px;border:#87AECF 1px solid;
+}
+
+.abc3_tabel_by{
+padding-left:10px;padding-top:20px;line-height:25px;
+}
+
+.abc4{
+border-bottom:#AFAFB0 1px dotted;margin-top:10px;margin-left:10px;
+}
+.abc4 .abc4_bt{
+height:35px;line-height:35px;font-weight:bold;font-size:19px;
+}
+
+.abc4 .abc4_by{
+line-height:23px;padding-bottom:7px;color:#727171;font-size:12px;text-indent:20px;padding-top:5px;
+}
+
+.abc4_x{
+line-height:25px;padding:7px;padding-left:0px;
+}
+
+.abc4_x a{
+font-size:14px;
+}
+
+.abd{
+border-right:#AFAFB0 1px dotted;line-height:30px;
+}
+
+.abd div{
+width:90%;
+}
+
+.abd a{
+     font-size:14px;
+}
+
+.weibo{
+margin-top:20px;height:300px;background:url(weibo.jpg) repeat-x;border:#D6D6D6 1px solid;
+}
+
+.weibo_bottom{
+margin-top:25px;height:49px;border:#CCCCCC 1px solid;
+}
+
+.weibo_bottom .tr{
+float:left;margin:10px;
+}
+
+.weibo_bottom .tr1{
+float:left;margin-top:10px;margin-left:10px;
+background:url(finace6.jpg) left no-repeat;
+height:27px;
+line-height:27px;
+width:250px;
+padding-left:117px;
+}
+
+.emil{
+text-align:center;color:#4D4D4D;line-height:30px;border-bottom:#4D4D4D 1px solid;
+}
+
+.finance_foot{
+text-align:center;color:#4D4D4D;line-height:25px;font-size:14px;
+}
+
+.tupian{
+border:#E4E4E4 1px solid;width:160px;
+}
+
+.z{
+float:left;
+background:url(diy_4.jpg) left no-repeat;
+height:18px;
+padding-left:20px;
+padding-top:5px;
+}
+
+.z1{
+float:left;
+background:url(diy_3.jpg) left no-repeat;
+height:18px;
+padding-left:20px;
+padding-top:5px;
+margin-left:10px;
+}
+
+.z2{
+float:left;
+background:url(diy_2.jpg) left no-repeat;
+height:18px;
+padding-left:20px;
+padding-top:5px;
+margin-left:10px;
+}
+
+.z3{
+float:left;
+background:url(diy_1.jpg) left no-repeat;
+height:18px;
+padding-left:20px;
+padding-top:5px;
+margin-left:10px;
+}
+
+
+.ctts div{
+	margin-bottom:15px;
+}
+.ctts div{
+	line-height:21px;
+}
+
+
+#commenttable{
+	padding:15px;
+	
+}
+
+
+#comment .content{
+	 
+	border:dotted 1px #ddd;
+	margin-bottom:10px;
+}
+#comment .content .word{
+	border-bottom:solid 1px #ddd;
+	padding-left:5px;
+	height:50px;
+}
+#comment .content .img{
+	border-right:dotted 1px #ddd;
+	padding:1em;
+}
+#comment .content .info{
+	padding:2px 0 0 5px;
+}

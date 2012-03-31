@@ -1,0 +1,89 @@
+.MainContainer .side{
+	width:280px;
+	padding-left:10px;
+}
+/*
+*左边样式
+*/
+.MainContainer .dragTable{
+	border:#DBDBDB solid 1px;
+}
+.MainContainer .dragTable .head{
+	height:30px;
+	background:url(nestbg.gif) left bottom repeat-x;
+	line-height:30px;
+}
+.MainContainer .dragTable .head .TAG{
+	float:left;
+	padding-left:25px;
+	background:url(narray.gif) 8px 11px no-repeat;
+	font-size:14px;
+	font-weight:bold;
+}
+.MainContainer .dragTable .cont{
+	padding:10px;
+}
+.MainContainer .main .dragTable {
+	width:340px;
+	float:left;
+}
+.MainContainer .main .righttable{
+	float:right;
+}
+.MainContainer .main .dragTable .cont .sorttitle{
+	height:220px;
+	overflow:hidden;
+}
+.MainContainer .main .dragTable .more{
+	float:right;
+	padding-right:10px;
+}
+.MainContainer .main .dragTable .list{
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+	border-bottom:#DDD dotted 1px;
+	padding:0 5px 0 15px;
+	background:url(nicon.gif) 3px 9px no-repeat;
+}
+
+.MainContainer .main .dragTable .list a{
+	float:left;
+}
+.MainContainer .main .dragTable .list span{
+	float:right;
+	color:#777;
+}
+.MainContainer .main .dragTable .page{
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	padding-bottom:5px;
+}
+.MainContainer .main .dragTable .page a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}
+/*
+*右边样式
+*/
+.MainContainer .side .listsort{
+	height:25px;
+	line-height:25px;
+	voerflow:hidden;
+	padding-left:25px;
+	background:url(nicon1.gif) 5px 7px no-repeat;
+}
+.MainContainer .side .listsort a{
+	font-weight:bold;
+	color:#00349A;
+}
+.MainContainer .side .list{
+	height:22px;
+	line-height:22px;
+	padding-left:15px;
+	background:url(nd0.gif) 3px 9px no-repeat;
+}
+#sonSortName .head{
+	display:none;
+}

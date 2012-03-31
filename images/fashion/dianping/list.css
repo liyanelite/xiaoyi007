@@ -1,0 +1,302 @@
+/*
+*
+*/
+.Mainl{
+	width:720px;
+	float:left;
+}
+.Sider{
+	width:250px;
+	float:right;
+}
+.tag{
+	font-size:14px;
+	font-weight:bold;
+}
+.floatl{
+	float:left;
+}
+.floatr{
+	float:right;
+}
+/*
+*
+*/
+.ShowThisSort{
+	border:#FFC882 solid 1px;
+	background:#FFFAEF;
+	padding:10px 15px 10px 15px;
+	line-height:20px;
+	word-spacing:10px;
+}
+.ShowThisSort a{
+	color:#777;
+}
+/*
+*街道选择 
+*/
+#zone_street_menu{
+	margin-top:10px;
+}
+#zone_street_menu .zone{
+	height:25px;
+	line-height:25px;
+	background:url(fenlie_stree.gif) left bottom repeat-x;
+	padding-left:10px;
+}
+#zone_street_menu .zone span{
+	display:block;
+	float:left;
+	padding-left:5px;
+}
+#zone_street_menu .zone span a{
+	display:block;
+	width:25px;
+	height:25px;
+	overflow:hidden;
+	padding-right:5px;
+}
+#zone_street_menu .zone span.choose{
+	background:url(choose.gif) left bottom no-repeat;
+}
+#zone_street_menu .zone span.choose a{
+	background:url(choose.gif) right bottom no-repeat;
+}
+#zone_street_menu .street{
+	background:#FFF2E1;
+	padding:5px;
+	line-height:20px;
+}
+#zone_street_menu .street .choose{
+	color:red;
+}
+/*
+*
+*/
+.listsearch{
+	padding:8px 0 0 10px;
+}
+.listsearch div{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+}
+/*
+*
+*/
+.ShowListCont{
+	margin-top:10px;
+	padding-bottom:3px;
+	background:url(contbg5.gif) center bottom no-repeat;
+}
+.ShowListCont .head{
+	height:31px;
+	overflow:hidden;
+	background:url(head1.gif) repeat-x;
+}
+.ShowListCont .head .tag{
+	float:left;
+	height:31px;
+	background:url(contbg6.gif) left top no-repeat;
+}
+.ShowListCont .head .tag span{
+	float:left;
+	line-height:28px;
+	padding:3px 0 0 30px;
+	background:url(array1.gif) 10px 10px no-repeat;
+}
+.ShowListCont .head .more{
+	float:right;
+	height:25px;
+	background:url(contbg6.gif) right top no-repeat;
+	padding:6px 10px 0 0;
+}
+.ShowListCont .cont{
+	background:url(contm1.gif) repeat-y;
+}
+.ShowListCont .cont .listdianping{
+	height:105px;
+	overflow:hidden;
+	padding:20px 15px 20px 15px;
+	background:url(pointer.gif) left 144px repeat-x; 
+}
+.ShowListCont .cont .listdianping .img{
+	float:left;
+	border:#DDD solid 1px;
+	width:120px;
+	height:100px;
+	overflow:hidden;
+}
+.ShowListCont .cont .listdianping .img a{
+	display:block;
+	width:150px;
+	height:100px;
+	text-align:center;
+	overflow:hidden;
+	margin-left:-15px;
+}
+.ShowListCont .cont .listdianping .word{
+	float:left;
+	width:400px;
+	height:100px;
+	padding-left:15px;
+	overflow:hidden;
+}
+.ShowListCont .cont .listdianping .word .t{
+	height:25px;
+	overflow:hidden;
+	line-height:25px;
+}
+.ShowListCont .cont .listdianping .word .t a{
+	font-size:14px;
+	font-weight:bold;
+	color:#04d;
+}
+.ShowListCont .cont .listdianping .word .t span{
+	display:block;
+	width:25px;
+	text-align:center;
+	background:url(numbg2.gif) center 5px no-repeat;
+	float:left;
+	color:#FFF;
+	font-weight:bold;
+}
+.ShowListCont .cont .listdianping .word .c{
+	height:60px;
+	overflow:hidden;
+	line-height:20px;
+	padding-top:5px;
+	color:#666;
+	text-indent:20px;
+}
+.ShowListCont .cont .listdianping .info{
+	float:right;
+	width:140px;
+	height:80px;
+	overflow:hidden;
+	line-height:20px;
+	padding-top:10px;
+	color:#777;
+}
+.ShowListCont .cont .listdianping .info span{
+	color:#369;
+}
+.ShowListCont .cont .listdianping .info em{
+	color:#f60;
+	font-size:14px;
+	font-weight:bold;
+	padding-right:5px;
+}
+.ShowListCont .cont .page{
+	text-align:center;
+	line-height:30px;
+	padding-top:5px;
+}
+.ShowListCont .cont .page a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+	color:#999;
+}
+/*
+*用户登录样式 
+*/
+.UserInfo{
+	border:#FDD79D solid 1px;
+	border-top:0;
+	background:url(userbg.gif);
+	height:169px;
+	overflow:hidden;
+}
+.UserInfo .butter{
+	height:82px;
+	padding-top:12px;
+}
+.UserInfo .butter div{
+	height:36px;
+	text-align:center;
+	word-spacing:5px;
+}
+.UserInfo table.login td{
+	width:50%;
+	text-align:center;
+	height:33px;
+	vertical-align:middle;
+}
+.UserInfo table.login td.radio,.UserInfo table.login td.submit{
+	text-align:left;
+}
+.UserInfo .input input{
+	width:100px;
+}
+.UserInfo .img{
+	width:15%;
+	height:70px;
+	vertical-align:middle;
+	padding:0 20px 0 20px;
+}
+.UserInfo .word{
+	padding-top:5px;
+}
+.UserInfo .word .name{
+	line-height:20px;
+	color:blue;
+	font-weight:bold;
+}
+.UserInfo .word .day{
+	padding-top:5px;
+	color:green;
+}
+/*
+*
+*/
+.NoteCont{
+	margin:10px auto;
+	height:50px;
+	background:url(notebg.gif) no-repeat;
+	overflow:hidden;
+}
+.NoteCont div{
+	height:19px;
+	line-height:19px;
+	padding:5px 10px 0 40px;
+	overflow:hidden;
+}
+.NoteCont div span{
+	color:red;
+}
+/*
+*
+*/
+.sidecont1{
+	margin-bottom:10px;
+	padding-bottom:3px;
+	background:url(contbg6.gif) center bottom no-repeat;
+}
+.sidecont1 .head{
+	height:31px;
+	overflow:hidden;
+	background:url(contbg6.gif) center top no-repeat;
+	line-height:35px;
+	overflow:hidden;
+}
+.sidecont1 .head .tag{
+	padding-left:35px;
+	background:url(array1.gif) 10px 10px no-repeat;
+}
+.sidecont1 .cont{
+	padding:10px;
+	background:url(contm2.gif) center top repeat-y;
+}
+.sidecont1 .cont .list{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+	color:#888;
+}
+.sidecont1 .cont .list_rad{
+	width:230px;
+	overflow:hidden;
+	text-align:center;
+	padding:5px 0 5px 0;
+}
+

@@ -1,0 +1,872 @@
+.head{
+	height:36px;
+	overflow:hidden;
+	line-height:40px;
+}
+.tag{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:15px;
+}
+.more{
+	float:right;
+	padding-right:10px;
+}
+.Main{
+	width:730px;
+	float:left;
+}
+.Side{
+	width:240px;
+	float:right;
+}
+.SideL{
+	width:300px;
+	float:left;
+}
+.SideC{
+	width:420px;
+	float:left;
+	padding-left:10px;
+}
+/*
+*通栏广告
+*/
+.bannerad{
+	width:980px;
+	overflow:hidden;
+	text-align:center;
+	margin-bottom:10px;
+}
+/*
+*首页第一栏
+*/
+.MainContainer1{
+	height:460px;
+	overflow:hidden;
+	margin-top:10px;
+}
+/*
+*首页轮换图片
+*/
+#ifocus{
+	border:#D7D7D7 solid 1px;
+	height:308px;
+	width:333px;
+	overflow:hidden;
+	float:left;
+}
+#ifocus_pic{
+	overflow:hidden;
+	width:320px;
+	height:240px;
+	margin:5px auto 0 auto;	
+	position:relative;
+}
+#ifocus_piclist{
+	position:absolute;
+	left:0;
+	top:0;
+}
+#ifocus_piclist li{
+	width:320px;
+	height:240px;
+	overflow:hidden;
+}
+#ifocus_piclist li a{
+	display:block;
+	height:240px;
+	overflow:hidden;
+}
+#ifocus_opdiv {
+	background: #666; 
+	filter: alpha(opacity=50); 
+	position:absolute;
+	left:0;
+	bottom:0;
+	opacity: 0.5; 
+	moz-opacity: 0.5;
+	width:320px;
+	height:35px;
+}
+#ifocus_tx {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:320px;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+}
+#ifocus_tx A {
+	color: #fff
+}
+#ifocus_tx a:hover {
+	color: #f27900
+}
+#ifocus_tx .normal {
+	display: none
+}
+#ifocus_btn{
+	margin:6px auto 0 auto;
+	height:60px;
+	overflow:hidden;
+}
+#ifocus_btn li {
+	FILTER: alpha(opacity=80);
+	 WIDTH: 82px;
+	 HEIGHT: 50px;
+	 CURSOR: pointer;  
+	 opacity: 0.5;
+	  moz-opacity: 0.5;
+	  float:left;
+	  text-align:center;
+	  padding-top:4px;
+	  BACKGROUND: url(outbg.gif) center top no-repeat; 
+}
+#ifocus_btn .current {
+	BACKGROUND: url(overbg.gif) center top no-repeat; 
+	FILTER: alpha(opacity=100); 
+	opacity: 1; 
+	moz-opacity: 1
+}
+/*
+*首页HOT
+*/
+.HotArtical{
+	border:#D7D7D7 solid 1px;
+	height:300px;
+	width:363px;
+	padding:8px 10px 0 10px;
+	overflow:hidden;
+	float:right;
+	background:url(hot.gif) no-repeat;
+	margin-bottom:10px;
+}
+.HotArtical .lista{
+	background:url(point.gif) left bottom repeat-x;
+	padding-bottom:5px;
+	margin:5px 0 8px 0;
+}
+.HotArtical .lista .t{
+	height:25px;
+	overflow:hidden;
+	text-align:center;
+	line-height:25px;
+	font-size:14px;
+	font-weight:bold;	
+}
+.HotArtical .lista .t a{
+	color:#EE3E0F;
+}
+.HotArtical .lista .c{
+	height:40px;
+	line-height:20px;
+	overflow:hidden;
+	color:#666;
+	text-indent:25px;
+}
+.HotArtical .listb{
+	height:26px;
+	line-height:26px;
+	overflow:hidden;
+	font-size:14px;
+}
+.HotArtical .listb a.f{
+	color:#888;
+}
+/*
+*分类信息内容
+*/
+.FenlieCont{
+	clear:both;
+	border:#D7D7D7 solid 1px;
+	height:138px;
+	overflow:hidden;
+}
+.FenlieCont .head{
+	width:85px;
+	height:138px;
+	float:left;
+	overflow:hidden;
+}
+.FenlieCont .head div{
+	height:34px;
+	width:85px;
+	overflow:hidden;
+	border-bottom:#D7D7D7 solid 1px;
+	padding:0;
+	line-height:38px;
+	text-align:center;
+	font-size:14px;
+	color:#666;
+	background:url(head1.gif) right repeat-y;
+	cursor:pointer;
+}
+.FenlieCont .head div.tag{
+	cursor:auto;
+	color:#333;
+}
+.FenlieCont .head div.choose{
+	background:none;
+}
+.FenlieCont .cont{
+	width:630px;
+	height:120px;
+	padding:10px 0 0 10px;
+	overflow:hidden;
+	float:left;
+}
+.FenlieCont .cont .list{
+	width:310px;
+	height:24px;
+	overflow:hidden;
+	float:left;
+	line-height:24px;
+	padding-right:4px;
+}
+.FenlieCont .cont .list a.f{
+	color:#888;
+	padding-right:5px;
+}
+/*
+*便发服务
+*/	
+.sidecont .head{
+	background:url(head2.gif) right top no-repeat;
+}
+.sidecont .head .tag{
+	background:url(head2.gif) left top no-repeat;
+}
+.sidecont .cont{
+	border:#DEDEDE solid 1px;
+	border-top:0;
+	padding:10px;
+}
+.bmserver .cont{
+	height:113px;
+	overflow:hidden;
+}	
+.bmserver .cont a:link,.bmserver .cont a:visited,.bmserver .cont a:hover{
+	display:block;
+	width:71px;
+	height:20px;
+	padding-top:36px;
+	overflow:hidden;
+	text-align:center;
+	line-height:20px;
+	float:left;
+	color:#3366CC;
+	text-decoration:none;
+}
+.bmserver .cont a.a1{
+	background:url(icon5.gif) left 5px no-repeat;
+}
+.bmserver .cont a.a2{
+	background:url(icon5.gif) -70px 5px no-repeat;
+}
+.bmserver .cont a.a3{
+	background:url(icon5.gif) -140px 5px no-repeat;
+}
+.bmserver .cont a.a4{
+	background:url(icon5.gif) -200px 5px no-repeat;
+}
+.bmserver .cont a.a5{
+	background:url(icon5.gif) -270px 5px no-repeat;
+}
+.bmserver .cont a.a6{
+	background:url(icon5.gif) -350px 5px no-repeat;
+}
+/*
+*便民服务下的广告
+*/
+.sideradcont{
+	margin-top:10px;
+	background:url(siderbg.gif) no-repeat;
+	padding-top:10px;
+}
+.sideradcont .cont{
+	background:url(siderbg.gif) center bottom no-repeat;
+	height:270px;
+	overflow:hidden;
+	padding:0 10px 0 10px;
+}
+.sideradcont .cont .word div{
+	height:21px;
+	line-height:21px;
+	overflow:hidden;
+	padding-left:5px;
+}
+.sideradcont .cont .img{
+	height:60px;
+	width:220px;
+	overflow:hidden;
+	text-align:center;
+	margin:5px auto 5px auto;
+}
+/*
+*页中广告
+*/
+.MainAdCont{
+	height:90px;
+	overflow:hidden;
+	margin-top:10px;
+}
+/*
+*首页第一栏
+*/
+.MainContainer2{
+	height:270px;
+	overflow:hidden;
+	margin-top:10px;
+}
+/*
+*房产信息
+*/
+.housecont .head div{
+	float:left;
+	padding:0 15px 0 15px;
+	border-right:#DEDEDE solid 1px;
+	font-size:14px;
+	color:#666;
+	cursor:pointer;
+}
+.housecont .head div.tag{
+	cursor:auto;
+	color:#333;
+}
+.housecont .head div.more{
+	cursor:auto;
+	border-right:0;
+	float:right;
+	font-size:12px;
+}
+.housecont .head div.choose{
+	background:url(over2.gif) repeat-x;
+}
+.housecont .cont{
+	height:213px;
+	overflow:hidden;
+}
+.housecont .cont .listpic{
+	width:101px;
+	height:106px;
+	float:left;
+}
+.housecont .cont .listpic dt{
+	width:85px;
+	height:60px;
+	overflow:hidden;
+	margin:auto;
+}
+.housecont .cont .listpic dd{
+	width:85px;
+	margin:auto;
+}
+.housecont .cont .listpic dd div{
+	height:16px;
+	line-height:16px;
+	overflow:hidden;
+	text-align:center;
+}
+.housecont .cont .listpic dd .t{
+	padding-top:5px;
+}
+.housecont .cont .listpic dd .p{
+	color:#f60;
+	font-weight:bold;
+}
+/*
+*经纪人信息
+*/
+.Agentcont .cont{
+	height:213px;
+	overflow:hidden;
+}
+.Agentcont .cont .listpic{
+	height:95px;
+	padding-top:10px;
+	width:220px;
+	background:url(point.gif) left 102px repeat-x;
+	overflow:hidden;
+}
+.Agentcont .cont .listpic dt{
+	width:60px;
+	border:#DDD solid 1px;
+	padding:1px;
+	float:left;
+}
+.Agentcont .cont .listpic dt a{
+	display:block;
+	width:60px;
+	height:80px;
+	overflow:hidden;
+	text-align:center;
+}
+.Agentcont .cont .listpic dd{
+	width:140px;
+	padding-left:10px;
+	float:left;
+	line-height:20px;
+}
+.Agentcont .cont .listpic dd div{
+	height:20px;
+	overflow:hidden;
+	color:#666;
+}
+.Agentcont .cont .listpic dd div.t a{
+	font-size:14px;
+	font-weight:bold;
+	color:#3366CC;
+}
+.Agentcont .cont .listpic dd div.go a{
+	color:#3366CC;
+}
+/*
+*黄页信息
+*/
+.housecont .cont .listcompany{
+	width:141px;
+	height:100px;
+	padding-top:5px;
+	float:left;
+}
+.housecont .cont .listcompany div{
+	width:120px;
+	margin:auto;
+}
+.housecont .cont .listcompany div.img{
+	border:#DDD solid 1px;
+}
+.housecont .cont .listcompany div.img a{
+	display:block;
+	width:120px;
+	height:70px;
+	overflow:hidden;
+}
+.housecont .cont .listcompany div.t{
+	height:20px;
+	line-height:20px;
+	padding-top:5px;
+	overflow:hidden;
+	text-align:center;
+}
+.housecont .cont .listcompany div.t a{
+	color:#3366CC;
+}
+/*
+*优惠券
+*/
+.Couponcont .head{
+	background:url(head2.gif) no-repeat;
+}
+.Couponcont .head .tag{
+	padding-left:30px;
+	background:url(icon2.gif) 1px top no-repeat;
+}
+.Couponcont .head .more{
+	background:url(head2.gif) right top no-repeat;
+}
+.Couponcont .cont{
+	height:213px;
+	overflow:hidden;
+}
+.Couponcont .cont .listcoupon{
+	height:65px;
+	padding-top:5px;
+	overflow:hidden;
+	background:url(point.gif) left 68px repeat-x;
+}
+.Couponcont .cont .listcoupon .num{
+	width:25px;
+	line-height:18px;
+	text-align:center;
+	float:left;
+	background:url(icon1.gif) center 2px no-repeat;
+	color:#FFF;
+}
+.Couponcont .cont .listcoupon .img{
+	width:85px;
+	border:#DDD solid 1px;
+	padding:1px;
+	float:left;
+}
+.Couponcont .cont .listcoupon .img a{
+	display:block;
+	width:85px;
+	height:55px;
+	overflow:hidden;
+}
+.Couponcont .cont .listcoupon .c{
+	width:95px;
+	float:left;
+	padding-left:5px;
+	line-height:18px;
+}
+.Couponcont .cont .listcoupon .c div{
+	height:18px;
+	overflow:hidden;
+}
+.Couponcont .cont .listcoupon .c a{
+	color:#36c;
+}
+/*
+*首页第三栏
+*/
+.MainContainer3{
+	height:250px;
+	overflow:hidden;
+	margin-top:10px;
+}
+.msidecont .head{
+	background:url(head2.gif) right top no-repeat;
+}
+.msidecont .head .tag{
+	background:url(tag.gif) left top no-repeat;
+}
+.msidecont .head .tag span{
+	display:block;
+	background:url(tag.gif) right top no-repeat;
+	padding-right:20px;
+}
+.msidecont .cont{
+	border:#dedede solid 1px;
+	border-top:0;
+	padding:10px;
+}
+.Shoptgcont .cont{
+	padding:0;
+	height:213px;
+	overflow:hidden;
+}
+.showtging{
+	background:url(tging.gif) 5px 15px no-repeat;
+	padding:15px 0 0 20px;
+}
+.showtging dt{
+	height:95px;
+	overflow:hidden;
+}
+.showtging dt .p{
+	width:145px;
+	height:100px;
+	float:left;
+}
+.showtging dt .p span{
+	display:block;
+	line-height:40px;
+	text-align:right;
+	padding-right:15px;
+	color:#FFF;
+	font-size:14px;
+}
+.showtging dt .p h3{
+	padding:0;
+	margin:0;
+	line-height:40px;
+	text-align:right;
+	padding-right:15px;
+	font-size:26px;
+	color:#FFF;
+}
+.showtging dt .img{
+	width:120px;
+	height:90px;
+	overflow:hidden;
+	float:left;
+	padding-left:3px;
+}
+.showtging dd{
+	height:110px;
+	overflow:hidden;
+}
+.showtging dd .act{
+	width:100px;
+	height:130px;
+	float:left;
+}
+.showtging dd .act h3{
+	line-height:50px;
+	text-align:center;
+	font-size:20px;
+	color:#FF2A00;
+}
+.showtging dd .act span{
+	display:block;
+	text-align:center;
+	background:url(butter.gif) center top no-repeat;
+	line-height:30px;
+}
+.showtging dd .act span a{
+	color:#FFF;
+}
+.showtging dd .act span a:hover{
+	text-decoration:none;
+}
+.showtging dd .word{
+	width:170px;
+	float:left;
+}
+.showtging dd .word div{
+	height:25px;
+	overflow:hidden;
+	line-height:25px;
+	font-size:14px;
+	font-weight:bold;
+}
+.showtging dd .word p{
+	padding:0;
+	margin:0;
+	height:72px;
+	overflow:hidden;
+	line-height:18px;
+	color:#666;
+}
+/*
+*团购信息
+*/
+.Tgcont .head div{
+	float:left;
+	padding:0 15px 0 15px;
+	border-right:#DEDEDE solid 1px;
+	font-size:14px;
+	color:#666;
+	cursor:pointer;
+}
+.Tgcont .head div.tag{
+	cursor:auto;
+	color:#333;
+}
+.Tgcont .head div.more{
+	cursor:auto;
+	border-right:0;
+	float:right;
+	font-size:12px;
+	padding:0 10px 0 0;
+}
+.Tgcont .head div.choose{
+	background:url(over2.gif) repeat-x;
+}
+.Tgcont .cont,.Topshop .cont{
+	height:193px;
+	overflow:hidden;
+}
+.Tgcont .cont .listtg{
+	width:132px;
+	height:180px;
+	padding-top:10px;
+	float:left;
+}
+.Tgcont .cont .listtg div{
+	width:120px;
+	margin:auto;
+}
+.Tgcont .cont .listtg div.img{
+	border:#DDD solid 1px;
+}
+.Tgcont .cont .listtg div.img a{
+	display:block;
+	width:120px;
+	height:90px;
+	overflow:hidden;
+}
+.Tgcont .cont .listtg div.t{
+	padding-top:8px;
+	height:20px;
+	overflow:hidden;
+	line-height:20px;
+}	
+.Tgcont .cont .listtg div.t a{
+	color:#36c;
+}
+.Tgcont .cont .listtg div.m{
+	height:20px;
+	overflow:hidden;
+	line-height:20px;
+	color:#666;
+}
+.Tgcont .cont .listtg div.m a{
+	color:#f60;
+}
+/*
+*热卖排行
+*/
+.Topshop .cont .list{
+	height:24px;
+	overflow:hidden;
+	line-height:24px;
+	padding-left:25px;
+}
+.Topshop .cont .list1{
+	background:url(num.gif) left 2px no-repeat;
+}
+.Topshop .cont .list2{
+	background:url(num.gif) left -22px no-repeat;
+}
+.Topshop .cont .list3{
+	background:url(num.gif) left -45px no-repeat;
+}
+.Topshop .cont .list4{
+	background:url(num.gif) left -68px no-repeat;
+}
+.Topshop .cont .list5{
+	background:url(num.gif) left -91px no-repeat;
+}
+.Topshop .cont .list6{
+	background:url(num.gif) left -114px no-repeat;
+}
+.Topshop .cont .list7{
+	background:url(num.gif) left -137px no-repeat;
+}
+.Topshop .cont .list8{
+	background:url(num.gif) left -160px no-repeat;
+}
+/*
+*精英人才
+*/
+.Hrcont1 .cont,.Hrcont2 .cont{
+	height:193px;
+	overflow:hidden;
+}
+.hrlist{
+	height:24px;
+	overflow:hidden;
+	line-height:24px;
+	padding-left:10px;
+	background:url(icon3.gif) left 8px no-repeat;
+	color:#777;
+}
+.hrlist a{
+	color:#36c;
+}
+.hrlist span{
+	color:#f60;
+}
+.Hrcont2 .cont .lad{
+	width:90px;
+	height:193px;
+	overflow:hidden;
+	float:left;
+}
+.Hrcont2 .cont .lad a{
+	display:block;
+	padding-bottom:6px;
+}
+.Hrcont2 .cont .rword{
+	width:300px;
+	height:193px;
+	padding-left:5px;
+	overflow:hidden;
+	float:left;
+}
+.Hrcont3{
+	padding-top:10px;
+	background:url(siderbg.gif) center top no-repeat;
+}
+.Hrcont3 .cont{
+	height:120px;
+	overflow:hidden;
+	background:url(siderbg.gif) center bottom no-repeat;
+	padding:0 10px 0 10px;
+}
+.Hrcont3 .cont .img{
+	text-align:center;
+}
+.Hrcont3 .cont .word{
+	padding:5px 0 0 5px;
+	line-height:22px;
+	height:44px;
+	overflow:hidden;
+}
+.Hrcont4,.Hrcont5{
+	height:54px;
+	background:url(hr1.gif) no-repeat;
+	margin-top:6px;
+	padding-left:60px;
+	line-height:20px;
+}
+.Hrcont5{
+	background:url(hr2.gif) no-repeat;
+}
+.Hrcont4 dl dt,.Hrcont5 dl dt{
+	padding-top:8px;
+}
+.Hrcont4 dl dt a,.Hrcont5 dl dt a{
+	font-size:16px;
+	font-weight:bold;
+	color:#FD9700;
+}
+.Hrcont4 dl dd a,.Hrcont5 dl dd a{
+	color:#666;
+}
+.Hrcont5 dl dt a{
+	color:#31B142;
+}
+/*
+*首页第四栏
+*/
+.MainContainer4{
+	height:150px;
+	overflow:hidden;
+	margin-top:10px;
+}
+.BmTelphone .head .more{
+	color:#777;
+}
+.BmTelphone .cont,.ServerCenter .cont{
+	height:93px;
+	overflow:hidden;
+}
+.BmTelphone .cont{
+	background:url(telbg.gif) 235px 8px no-repeat;
+}
+.BmTelphone .cont .list{
+	width:220px;
+	height:24px;
+	line-height:24px;
+	overflow:hidden;
+	float:left;
+	padding:0 6px 0 10px;
+	color:#444;
+}
+.BmTelphone .cont .list a{
+	color:#FE872B;
+	font-weight:bold;
+}
+.ServerCenter .cont{
+	line-height:24px;
+	color:#444;
+}
+.ServerCenter .cont .tel{
+	padding-left:35px;
+	background:url(icon7.gif) left 3px no-repeat;
+}
+.ServerCenter .cont .qq{
+	padding-left:35px;
+	background:url(icon7.gif) left -20px no-repeat;
+}
+.ServerCenter .cont .qq a{
+	color:#3074C1;
+}
+.ServerCenter .cont .qq1{
+	padding-left:35px;
+	background:url(icon7.gif) left -43px no-repeat;
+}
+/*
+*友情链接
+*/
+#FrendLink{
+	margin-top:10px;
+}
+#FrendLink .head .tag{
+	padding-right:200px;
+}
+#FrendLink .cont {
+	line-height:20px;
+}
+#FrendLink .cont .piclink{
+	border-bottom:#DDD solid 1px;
+	padding-bottom:5px;
+	margin-bottom:5px;
+}

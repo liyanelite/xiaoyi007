@@ -1,0 +1,279 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/house/list_zhongjie.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="top_searchs">
+  <tr>
+    <td class="top"><div class="L">{$fidDB[name]}房源分类检索</div><div class="R"></div></td>
+  </tr>
+  <tr>
+    <td class="main" height="100">
+	
+	 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="zone_street_menu">
+        <!--
+EOT;
+if($city_id){
+$url=get_info_url('',$fid,$city_id,'','',$TempSearch_array);
+print <<<EOT
+-->
+        <tr> 
+          <td class="zone" id="zone_td"> <span id="zone_span_0"><A HREF="$url">{$city_DB[name][$city_id]}</A></span> 
+            <!--
+EOT;
+foreach($zone_DB[name] AS $key=>$value){
+$url=get_info_url('',$fid,$city_id,$key,'',$TempSearch_array);
+print <<<EOT
+-->
+            <span class="choose" id="zone_span_$key"><A HREF="$url">$value</A></span> 
+            <!--
+EOT;
+}
+print <<<EOT
+-->
+          </td>
+        </tr>
+        <!--
+EOT;
+if($street_DB[$zone_id]){
+print <<<EOT
+-->
+        <tr> 
+          <td class="street" id="street_td"> 
+            <!--
+EOT;
+foreach($street_DB[$zone_id] AS $key=>$value){
+$url=get_info_url('',$fid,$city_id,$zone_id,$key,$TempSearch_array);
+print <<<EOT
+-->
+            <A id="street_a_$key" HREF="$url">$value</A> 
+            <!--
+EOT;
+}
+print <<<EOT
+-->
+          </td>
+        </tr>
+        <!--
+EOT;
+}}
+print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function zone_menu(zone_id){
+	obj=document.getElementById("zone_td").getElementsByTagName("span");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	document.getElementById("zone_span_"+zone_id).className='choose';
+}
+zone_menu("$zone_id");
+function street_menu(street_id){
+	obj=document.getElementById("street_td").getElementsByTagName("a");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	if(document.getElementById("street_a_"+street_id)!=null){
+		document.getElementById("street_a_"+street_id).className='choose';
+	}
+}
+street_menu("$street_id");
+//-->
+</SCRIPT>
+      </table>
+	  <div class="listsearch"> 
+	  
+	  <div><span class='t'>所属门店：</span><span class='f'><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('my_234'=>"$my_234",));
+print <<<EOT
+--><A HREF='$url' {$search_fieldDB[store][0]}>不限</A> <!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('my_234'=>"$my_234",'store'=>'满堂红'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[store]['满堂红']}>满堂红</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('my_234'=>"$my_234",'store'=>'美之居'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[store]['美之居']}>美之居</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('my_234'=>"$my_234",'store'=>'中原地产'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[store]['中原地产']}>中原地产</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('my_234'=>"$my_234",'store'=>'我爱我家'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[store]['我爱我家']}>我爱我家</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('my_234'=>"$my_234",'store'=>'其它'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[store]['其它']}>其它</A></span></div><div><span class='t'>从业经验：</span><span class='f'><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('store'=>"$store",));
+print <<<EOT
+--><A HREF='$url' {$search_fieldDB[my_234][0]}>不限</A> <!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('store'=>"$store",'my_234'=>'一年'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[my_234]['一年']}>一年</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('store'=>"$store",'my_234'=>'两年'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[my_234]['两年']}>两年</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('store'=>"$store",'my_234'=>'三年'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[my_234]['三年']}>三年</A><!--
+EOT;
+$url=get_info_url('',$fid,$city_id,$zone_id,$street_id,array('store'=>"$store",'my_234'=>'四年以上'));
+print <<<EOT
+--> <A HREF='$url' {$search_fieldDB[my_234]['四年以上']}>四年以上</A></span></div><!---->
+	  
+         
+         
+		 </div>
+	  </td>
+  </tr>
+</table>
+
+
+
+ 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="main_tb">
+  <tr>
+    <td  class="LL" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" id="s_tops">
+        <tr>
+          <td class="tops">
+		  
+		  
+		  筛选：<a class='tp' href="list.php?fid=$fid">出租房源</a> <a  class='tp' href="list.php?fid=$fid&type=sell">出售房源</a></td>
+        </tr>
+      </table>
+	  
+	  <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$rs[face]=tempdir($rs[face]);
+$info=get_zhongjie_info($rs[uid]);
+print <<<EOT
+-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragtb">
+        <tr> 
+          <td width="27%" valign="top" align="center" class="iitd"> <a class="ii" href="$rs[url]" target="_blank"><img onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" src="$rs[face]" border="0"></a> 
+            <a href="$rs[url]" target="_blank">$rs[title]</a></td>
+          <td width="73%" height="150" valign="top" class="mtd">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="btb">
+              <tr>
+                <td class="ttp"><div class="dL">我发布的房源</div>
+                  <div class="dR"><a href="$rs[url]" target="_blank">更多</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mmp">
+				
+<!--
+EOT;
+$array = Get_Info($rs[uid],5,36,($type=='sell'?2:1));
+foreach($array AS $_rs){
+print <<<EOT
+-->
+				  <div><a href="$_rs[url]" target="_blank">$_rs[title]</a></div>
+ <!--
+EOT;
+}print <<<EOT
+-->
+				 
+				</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="2" class="a2">
+		    <div class="ta">级别：<font color="#FF6600">{$ltitle[$info[groupid]]}</font> </div>
+            <div class="tb">注册日期： $info[regdate]</div>
+		  </td>
+        </tr>
+        <tr> 
+          <td colspan="2" class="a3">
+		    <div class="ta">手机：<font color="#FF6600"><b>$rs[mobphone]</b></font> </div>
+            <div class="tb">所属门店：<font color="#000000">$rs[store]</font></div>
+		   </td>
+        </tr>
+        <tr> 
+          <td colspan="2" class="a2">
+		    <div class="ta fu">服务区域：<font color="#3074C1">$rs[fuwu_zone]</font></div>
+            <div class="tb goin"><a href="$rs[url]" target="_blank">进入店铺</a></div>
+		  </td>
+        </tr>
+      </table>
+	  
+ <!--
+EOT;
+}print <<<EOT
+-->
+	  
+	  <div class="page">$showpage</div>
+	  
+	  
+	  </td>
+    <td style="width:220px;" class="RR" height="300" valign="top">
+	
+	 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="Rtop">
+	<div class="a1">加盟中介“三步曲”</div>
+	<div class="a2">注册成为本站会员</div>
+	<div class="a3">填写相关资料申请成为中介</div>
+	<div class="a4">开通中介相关功能</div>
+	<div class="a5" onclick="window.open('$webdb[www_url]/do/reg.php');"> </div>
+	</td>
+  </tr>
+</table>
+
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Rmtb">
+        <tr>
+          <td class="top"><div>推荐经纪人</div></td>
+        </tr>
+        <tr>
+          <td class="main" height="150" valign="top">
+		  <!--
+EOT;
+$array = Get_Info('level',4,20,6);
+foreach($array AS $rs){
+$rs[face]=tempdir($rs[face]);
+print <<<EOT
+-->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Rdrag">
+              <tr>
+                <td valign="top" align="center" width="40%" class="tii">
+				<a class="ii" href="$rs[url]" target="_blank"><img onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" src="$rs[face]" border="0"></a>                   
+				  </td>
+                <td height="100" valign="top" width="60%" class="mii">
+				
+				<div class="name"><a href="$rs[url]" target="_blank">$rs[title]</a></div>
+				<div class="about">
+				$rs[store]<br>
+				服务：$rs[fuwu_zone]<br>
+				电话：$rs[mobphone]
+				</div>
+				  <div class="goin"><a href="$rs[url]" target="_blank">进入我的店铺</a></div>
+				</td>
+              </tr>
+            </table><!--
+EOT;
+}print <<<EOT
+-->
+          </td>
+        </tr>
+      </table>
+	  
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

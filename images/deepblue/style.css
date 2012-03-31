@@ -1,0 +1,341 @@
+/*
+*初始化样式
+*/
+body, form, ul, li, p, dl, dd, dt ,h,td,th,h3{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size:12px;
+	background:url(bg.gif) repeat-x;
+}
+li,ul{
+	list-style: none;
+} 
+TD {
+	color: #333333;
+	VERTICAL-ALIGN: top;
+} 
+input,textarea{
+	border:1px solid #ccc;
+}
+a {
+	color:#333;
+}
+a:link {
+	color:#333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4E667B;
+}
+a:active {
+	text-decoration: none;
+}
+.wrap{
+	width:980px;
+	margin:auto;
+	padding:5px 0 0 0;
+}
+.mt10{
+	margin-top:10px;
+}
+img{
+	border:0;
+}
+/*
+*顶部信息
+*/
+.TopContainer{
+	height:33px;
+	width:980px;
+	overflow:hidden;
+	margin:auto;
+	line-height:35px;
+	background:url(icon1.gif) left 10px no-repeat;
+}
+.TopContainer .top_login{
+	float:left;
+	padding-left:35px;
+	width:600px;
+	height:33px;
+	overflow:hidden;
+}
+.TopContainer .top_login span{
+	display:block;
+	float:left;
+}
+.TopContainer .top_login em{
+	color:red;
+	font-style:normal;
+}
+.TopContainer .top_login .input{
+	padding:7px 5px 0 3px;
+}
+.TopContainer .top_login .input input{
+	width:105px;
+	height:20px;
+	border:0;
+	background:url(input.gif) no-repeat;
+}
+.TopContainer .top_login .sub{
+	padding:7px 8px 0 3px;
+}
+.TopContainer .top_login .sub input{
+	border:0;
+}
+.TopContainer .top_login .img{
+	padding:8px 10px 0 0;
+}
+.TopContainer .Time{
+	float:right;
+	padding-right:10px;
+}
+/*
+*顶部导航
+*/
+.TopMenu{
+	width:980px;
+	height:45px;
+	padding-top:11px;
+	margin:auto;
+	background:url(meuna.gif) center top no-repeat;
+}
+.TopMenu ul{
+	height:35px;
+	overflow:hidden;
+	float:left;
+	border-left:#DDD dotted 1px;
+	padding:0 12px 0 12px;
+	word-spacing:6px;
+}
+.TopMenu ul li{
+	line-height:18px;
+}
+/*
+*logo&搜索
+*/
+.LogoInfo{
+	width:980px;
+	height:85px;
+	margin:10px auto;
+	overflow:hidden;
+}
+.LogoInfo .Leftcont{
+	width:770px;
+	height:85px;
+	overflow:hidden;
+	float:left;
+}
+.LogoInfo .Leftcont .logo{
+	width:220px;
+	height:65px;
+	overflow:hidden;
+	float:left;
+}
+.LogoInfo .changecity{
+	width:90px;
+	height:50px;
+	overflow:hidden;
+	margin-top:5px;
+	border-left:#DDD solid 1px;
+	float:left;
+}
+.LogoInfo .changecity span{
+	display:block;
+	line-height:25px;
+	text-align:center;
+}
+.LogoInfo .changecity span.city{
+	background:url(cityname.gif) center top no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+	margin-bottom:5px;
+}
+.LogoInfo .Leftcont .search{
+	width:450px;
+	height:65px;
+	overflow:hidden;
+	background:url(searchbg.gif) left 21px no-repeat;
+	float:left;
+}
+.LogoInfo .Leftcont .search .searchtype{
+	height:25px;
+	line-height:25px;
+	background:url(out1.gif) left 8px repeat-x;
+}
+.LogoInfo .Leftcont .search .searchtype a{
+	display:block;
+	width:55px;
+	height:25px;
+	text-align:center;
+	float:left;
+}
+.LogoInfo .Leftcont .search .searchtype a.choose{
+	background:url(over1.gif) center 2px no-repeat;
+	font-weight:bold;
+}
+.LogoInfo .Leftcont .search .searchinput{
+	height:35px;
+}
+.LogoInfo .Leftcont .search .searchinput span{
+	display:block;
+	float:left;
+	padding:2px 0 0 10px;
+}
+.LogoInfo .Leftcont .search .searchinput .input input{
+	width:340px;
+	height:22px;
+	line-height:22px;
+}
+.LogoInfo .Leftcont .search .searchinput .submit input{
+	border:0;
+}
+.LogoInfo .Leftcont .moreinfo{
+	clear:both;
+	height:20px;
+	background:url(iconnote.gif) 5px 3px no-repeat;
+	padding-left:30px;
+}
+.LogoInfo .Leftcont .moreinfo #demo{
+	width:250px;
+	float:left;
+	line-height:20px;
+	height:20px;
+	overflow:hidden;
+}
+.LogoInfo .Leftcont .moreinfo #demo span{
+	color:#888;
+	padding-left:5px;
+}
+.LogoInfo .Leftcont .moreinfo .hottz{
+	width:300px;
+	height:20px;
+	line-height:20px;
+	float:left;
+	padding-left:10px;
+	color:#666;
+}
+.LogoInfo .Leftcont .moreinfo a{
+	color:#3C57C4;
+}
+.LogoInfo .Leftcont .moreinfo .weather{
+	width:160px;
+	height:20px;
+	overflow:hidden;
+	float:left;
+}
+.LogoInfo .topadcont{
+	float:right;
+	width:200px;
+	overflow:hidden;
+}
+/*
+*主导航样式
+*/
+#Mainmenu{
+	width:980px;
+	height:40px;
+	overflow:hidden;
+	margin:auto;
+	background:url(menub.gif);
+}
+#Mainmenu li{
+	height:40px;
+	padding:0 8px 0 7px;
+	float:left;
+	background:url(spac1.gif) right 8px no-repeat;
+}
+#Mainmenu li a{
+	display:block;
+	padding-left:7px;
+}
+#Mainmenu li a span{
+	display:block;
+	padding:8px 7px 0 0;
+	line-height:26px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+#Mainmenu li a.ck{
+	background:url(over2.gif) left 7px no-repeat;
+}
+#Mainmenu li a.ck span{
+	background:url(over2.gif) right 7px no-repeat;
+	color:#333;
+}
+#Mainmenu li a:hover{
+	text-decoration:none;
+}
+/*
+*nav_guide样式
+*/
+#nav_guide{
+	height:30px;
+	margin:0 auto 8px auto;
+	background:url(guidebg.gif) right -1px no-repeat ;
+}
+#nav_guide div{
+	float:left;
+	padding:2px 5px 0 5px;
+	line-height:28px;
+}
+#nav_guide .t1{
+	background:url(guidebg.gif) left -1px no-repeat ;
+	padding-left:28px;
+	color:#FF6A00;
+}
+/*
+*copyright样式
+*/
+#copyright{
+	clear:both;
+	margin:10px auto 0 auto;
+	text-align:center;
+	border:1px solid #E8E8E8;
+	background:url(copyright.gif) repeat-x;
+	width:980px;
+	line-height:20px;
+	padding:10px 0 15px 0;
+	color:#666;
+}
+/*********************************************************************
+**********************************************************************
+AJAX在线编辑DIV容器
+这个会员看不到.只是版主管理员才可以看到.这是后台风格
+一般不必修改了.修改了会员也看不到
+**********************************************************************
+*********************************************************************/
+#AjaxEditTable{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}
+#AjaxEditTable .head{
+	height: 21px;
+	background: #DBEAFF;
+	border-bottom:1px solid #BEDDFF;
+	padding:3px 5px 0 7px;
+}
+#AjaxEditTable .head a{
+	color:#FFF;
+}
+#AjaxEditTable .head span{
+	DISPLAY: block; 
+	FLOAT: right;
+}
+#AjaxEditTable .middle{
+	background:#FFF;
+	line-height:18px;
+	padding:5px;
+}
+#AjaxEditTable .middle input,#AjaxEditTable .middle textarea{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}

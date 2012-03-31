@@ -1,0 +1,298 @@
+/*
+*
+*/
+.MainAdCont{
+	height:111px;
+	overflow:hidden;
+	margin-bottom:15px;
+}
+.MainAdCont .ad1{
+	float:left;
+	width:272px;
+	overflow:hidden;
+}
+.MainAdCont .ad2{
+	float:left;
+	width:398px;
+	text-align:center;
+	overflow:hidden;
+}
+.MainAdCont .ad3{
+	float:left;
+	width:310px;
+	overflow:hidden;
+}
+/*
+*
+*/
+.MainL{
+	with:720px;
+	float:left;
+}
+.SideR{
+	width:240px;
+	float:right;
+}
+/*
+*
+*/
+.ListTg{
+	width:716px;
+	border:#31B6D6 solid 2px;
+	position:relative;
+	margin-bottom:15px;
+	padding-bottom:15px;
+}
+.ListTg .num{
+	width:81px;
+	height:81px;
+	overflow:hidden;
+	position:absolute;
+	background:url(num.gif) no-repeat;
+	left:-5px;
+	top:-6px;
+	z-index:1000;
+}
+.ListTg .num span{
+	display:block;
+	width:45px;
+	height:50px;
+	text-align:center;
+	line-height:48px;
+	font-size:18px;
+	font-weight:bold;
+	color:#FF6900;
+	font-style:italic;
+	float:left;
+	padding-left:0 !important;
+	padding-left:2px;
+}
+.ListTg .about{
+	width:640px;
+	margin:auto;
+	padding:30px 0 20px 0;
+	line-height:30px;
+	font-size:24px;
+	font-weight:bold;
+	color:red;
+}	
+.ListTg dl{
+	width:685px;
+	height:370px;
+	margin:auto;
+	position:relative;
+}
+.ListTg dl dt{
+	width:215px;
+	height:370px;
+	float:left;
+}
+.ListTg dl dt .Atc{
+	height:98px;
+	width:287px;
+	position:absolute;
+	z-index:1000;
+	top:0;
+	left:-72px;
+	background:url(atcbg.gif) no-repeat;
+}
+.ListTg dl dt .Atc .price{
+	float:left;
+	width:95px;
+	height:85px;
+	padding-left:55px;
+	line-height:85px;
+	overflow:hidden;
+	font-size:28px;
+	font-weight:bold;
+	color:#FFF;
+}
+.ListTg dl dt .Atc .cg{
+	float:left;
+	padding-top:15px;
+}
+.ListTg dl dt .Offer{
+	height:55px;
+	overflow:hidden;
+	border:#319A9C solid 1px;
+	background:#DEFBF7;
+	padding-top:98px;
+}
+.ListTg dl dt .Offer div{
+	width:70px;
+	height:55px;
+	float:left;
+	text-align:center;
+}
+.ListTg dl dt .Offer div span{
+	display:block;
+	line-height:20px;
+	padding:0 5px 0 5px;
+	height:20px;
+	overflow:hidden;
+}
+.ListTg dl dt .Offer div em{
+	display:block;
+	line-height:30px;
+	padding:0 5px 0 5px;
+	height:30px;
+	overflow:hidden;
+	font-size:16px;
+	font-weight:bold;
+	font-style:normal;
+}
+.ListTg dl dt .timeover{
+	height:55px;
+	overflow:hidden;
+	border:#31B6D6 solid 1px;
+	background:#E7F3FF;
+	margin:10px auto;
+}
+.ListTg dl dt .timeover .pic{
+	float:left;
+	width:70px;
+	padding-top:4px;
+	text-align:center;
+}
+.ListTg dl dt .timeover .word{
+	float:left;
+	width:130px;
+	height:40px;
+	overflow:hidden;
+	padding-top:8px;
+	line-height:20px;
+}
+.ListTg dl dt .timeover p{
+	text-align:center;
+	padding-top:15px;
+}
+.ListTg dl dt .Status{
+	height:136px;
+	overflow:hidden;
+	border:#31B6D6 solid 1px;
+	background:#E7F3FF;
+}
+.ListTg dl dt .Status .now{
+	padding-top:10px;
+}
+.ListTg dl dt .Status .now div{
+	height:23px;
+	line-height:23px;
+	text-align:center;
+	overflow:hidden;
+}
+.ListTg dl dt .Status .now div.n1{
+	font-size:16px;
+	font-weight:bold;
+}
+.ListTg dl dt .Status .now div span{
+	color:#D00;
+}
+.ListTg dl dt .red{
+	height:40px;
+	padding:5px 0 0 15px;
+	line-height:20px;
+	font-size:14px;
+	font-weight:bold;
+}
+.ListTg dl dt .red img{
+	float:left;
+	margin-right:8px;
+	margin-top:3px;
+}
+.ListTg dl dt .m{
+	height:20px;
+	padding:5px 10px 0 15px;
+	line-height:20px;
+	color:#666;
+}
+/*
+*
+*/
+.ListTg dl dd{
+	width:450px;
+	height:370px;
+	padding-left:20px;
+	float:left;
+	overflow:hidden;
+}
+.ListTg dl dd .img{
+	width:448px;
+	height:290px;
+	overflow:hidden;
+	border:#31B6D6 solid 1px;	
+}
+.ListTg dl dd .img a{
+	display:block;
+	background:#fafafa;
+	text-align:center;
+	width:500px;
+	height:300px;
+	overflow:hidden;
+	margin-top:-5px;
+	margin-left:-26px;
+}
+.ListTg dl dd .title{
+	margin-top:10px;
+	height:30px;
+	line-height:30px;
+	background:url(tbg.gif) no-repeat;
+	padding:0 35px 0 35px;
+	overflow:hidden;
+}
+.ListTg dl dd .Address{
+	margin-top:10px;
+	height:25px;
+	line-height:25px;
+	background:#efefef;
+	padding:0 15px 0 15px;
+	overflow:hidden;
+}
+.ListTg dl dd .Address span{
+	font-weight:bold;
+}
+
+/*
+*
+*/
+.ShowSorts,.NoteCont{
+	margin-bottom:15px;
+	border:#31B6D6 solid 2px;
+	background:#F8FDFF;
+}
+.ShowSorts .head,.NoteCont .head{
+	height:35px;
+	overflow:hidden;
+	line-height:38px;
+	padding:0 10px 0 15px;
+}
+.ShowSorts .head .tag,.NoteCont .head .tag{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+.NoteCont .head .more{
+	float:right;
+}	
+.ShowSorts .cont,.NoteCont .cont{
+	padding:2px;
+}
+.ShowSorts .cont .list{
+	height:35px;
+	overflow:hidden;
+	line-height:38px;
+	padding:0 15px 0 15px;
+	background:url(dotted.gif) repeat-x;
+}
+.NoteCont .cont .list{
+	height:30px;
+	overflow:hidden;
+	line-height:33px;
+	padding:0 15px 0 10px;
+	background:url(dotted.gif) repeat-x;
+}
+.NoteCont .cont .list a{
+	float:left;
+	padding-left:10px;
+	background:url(array.gif) left 14px no-repeat;
+}

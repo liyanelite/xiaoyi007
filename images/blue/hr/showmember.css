@@ -1,0 +1,208 @@
+.showmember .side{
+	width:250px;
+	padding-left:10px;
+}
+.showmember .content .head{
+	height:32px;
+	background:url(head3.gif) right top no-repeat;
+}
+.showmember .content .head div{
+	float:right;
+	width:110px;
+	line-height:32px;
+	font-size:14px;
+}
+.showmember .content .head div a{
+	font-size:14px;
+}
+.showmember .content .head div.TAG{
+	float:left;
+	background:url(head3.gif) left top no-repeat;
+	text-align:center;
+	font-weight:bold;
+	color:#FFF;
+}
+.showmember .content .head div.t1{
+	padding-left:20px;
+	background:url(member_a2.gif) left 8px no-repeat;
+}
+.showmember .content .head div.t2{
+	padding-left:20px;
+	background:url(member_a1.gif) left 8px no-repeat;
+}
+.showmember .content .cont{
+	border:#FDDCB7 solid 1px;
+	border-top:0;
+	padding:10px;
+}
+.showmember .content .mhead{
+	height:18px;
+	overflow:hidden;
+	background:url(member_scbg.gif) left bottom repeat-x;
+	clear:both;
+}
+.showmember .content .mhead .TG{
+	width:120px;
+	height:18px;
+	overflow:hidden;
+	line-height:25px;
+	background:url(member_tg.gif) center top no-repeat;
+	text-align:center;
+	font-weight:bold;
+}
+.showmember .content .mcont{
+	border:#FF821E solid 1px;
+	border-top:0;
+}
+.showmember .content .mcont .photo{
+	width:200px;
+	float:left;
+	text-align:center;
+	padding:30px 0 20px 0;
+}
+.showmember .content .mcont .photo div{
+	width:125px;
+	border:#DDD solid 1px;
+	text-align:center;
+	padding:2px 0 2px 0;
+	margin:auto;
+}
+.showmember .content .mcont .mores{
+	width:400px;
+	float:left;
+	padding:20px 0 10px 0;
+}
+.showmember .content .mcont .mores div{
+	width:195px;
+	float:left;
+	line-height:25px;
+}
+.showmember .content .mcont .mores div.lin{
+	clear:both;
+	width:350px;
+}
+.showmember .content .mcont .mc{
+	padding:10px;
+	line-height:20px;
+}
+/**/
+.notologin{
+	border:#FFCB99 solid 1px;
+	background:#FFF8EE;
+	margin:auto;
+}
+.notologin .word{
+	padding:10px 10px 0 20px;
+	line-height:30px;
+}
+.notologin .word span{
+	padding:0 10px 0 0;
+	float:left;
+	font-size:14px;
+}
+.notologin .word input{
+	width:75px;
+	height:30px;
+	border:0;
+	background:url(buy_butter.gif) center top no-repeat;
+	cursor:pointer;
+}
+.notologin .note{
+	padding:25px 5px 15px 20px;
+	background:url(room_dotted.gif) left 10px repeat-x;	
+}
+.notologin .note span{
+	padding-left:18px;
+	padding-top:2px;
+	background:url(buy_note.gif) left top no-repeat;
+	color:blue;
+}
+.print_member{
+	background:url(print_member.gif) no-repeat center;
+	height:29px;
+	margin:20px;
+	cursor: hand;
+}
+.showmember .side .memberinfo,.showmember .side .drag{
+	border:#FDDCB7 solid 1px;
+}
+.showmember .side .memberinfo .head,.showmember .side .drag .head{
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	background:#FFF8E8;
+	border-bottom:#FDDCB7 solid 1px;
+	font-size:14px;
+	font-weight:bold;
+}
+/*
+*个人基本信息
+*/
+.showmember img{
+	border:0;	
+}
+.baseinfo{
+	padding:1px;background:#FFF;
+	background:#FFF;	
+}
+.baseinfo .name{
+	padding:10px;
+	border-bottom:#efefef solid 1px;
+	height:50px;
+	line-height:25px;
+	font-size:20px;
+	font-weight:bold;
+}
+.baseinfo .name span{
+	font-size:16px;
+	color:#ff6400;
+}
+.baseinfo .name img{
+	float:left;
+	margin-right:20px;
+	margin-left:10px;
+}
+.baseinfo .list{
+	border-bottom:#efefef solid 1px;
+	line-height:30px;
+	padding-left:15px;
+	word-spacing:15px;
+}
+.baseinfo .list em{
+	color:#1B4C7A;
+	font-style:normal;
+}
+.baseinfo .list span{
+	color:red;
+}
+.baseinfo .add_hr{
+	padding:10px;
+	text-align:center;
+}
+/*
+*推荐人才
+*/
+.renchai_tz{
+	padding:5px;
+	background:#FFF;
+}
+.renchai_tz table td{
+	line-height:30px;
+}
+.renchai_tz table td.l{
+	width:60%;
+}
+.renchai_tz table td.l span{
+	float:left;
+	padding-left:25px;
+}
+.renchai_tz table .h td{
+	font-weight:bold;
+	border-bottom:#dfdfdf solid 1px;
+}
+.renchai_tz table .c a{
+	display:block;
+	background:url(hr_array.gif) 5px 11px no-repeat;
+	padding-left:25px;
+}
+

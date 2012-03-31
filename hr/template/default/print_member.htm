@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+<?php
+print <<<EOT
+--> 
+<head>
+<title>$titleDB[title]</title>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+body{
+	background:#fff;
+}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" onload="window.print();">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--//目的是为了做风格方便
+document.write('<div class="wrap">');
+//-->
+</SCRIPT>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/hr_showmember.css">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" class="showmember">
+  <tr>
+    <td width="70%" valign="top" style="padding-right:10px;" class="main">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr>
+          <td class="head"><div class="t3">&nbsp;</div><div class="TAG">&nbsp;</div><div class="tbg"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="CC" height="200" valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sm">
+              <tr>
+                <td class="sh3 sh4"><div class="TG">基本信息</div></td>
+              </tr>
+              <tr>
+                <td class="sc3 scc" height="100">
+                  <div class="photo"><a href="$rsdb[facephoto]" target="_blank"><img src="$rsdb[facephoto]" onerror="this.src='$webdb[www_url]/images/default/noface.gif'" border="0" width="120"></a></div>				
+                    <div class="mores"> 
+                        
+                    <div><b>姓名:</b>{$rsdb[truename]}</div>
+                        
+                    <div><b>性别:</b> {$rsdb[sex]}</div>
+                        
+                    <div><b>年龄:</b> {$rsdb[age]}</div>
+                        
+                    <div><b>身高:</b> {$rsdb[height]}</div>
+                        
+                    <div><b>学历:</b> {$rsdb[school_age]} </div>
+                        
+                    <div><b>专业:</b> {$rsdb[speciality]} </div>
+                        
+                    <div><b>毕业学校:</b> {$rsdb[alma_mater]}</div>
+                        
+                    <div><b>毕业年份:</b> {$rsdb[graduate_time]} </div>
+                        
+                    <div><b>工作年限:</b> {$rsdb[workyear]} </div>
+                      <div><b>到岗日期:</b> {$rsdb[worktime]}</div>
+					  
+					  <div class="lin"><b>技能特长:</b> {$rsdb[skill]}</div>
+					  <div class="lin"><b>体育爱好:</b> {$rsdb[interest]}</div>
+                        </div>
+                </td>
+              </tr>
+			   <tr>
+                <td class="sh3"><div class="TG">教育背景</div></td>
+              </tr>
+              <tr>
+                <td class="sc3" height="100">{$rsdb[education]}</td>
+              </tr>
+			   <tr>
+                <td class="sh3"><div class="TG">工作经验</div></td>
+              </tr>
+              <tr>
+                <td class="sc3" height="100">{$rsdb[work]} </td>
+              </tr>
+			  <tr>
+                <td class="sh3"><div class="TG">自我评价</div></td>
+              </tr>
+              <tr>
+                <td class="sc3" height="100">{$rsdb[introduce]} </td>
+              </tr>
+			  <tr>
+                <td class="sh3"><div class="TG">联系方式</div></td>
+              </tr>
+              <tr>
+                <td class="sc3 sc4" height="100" valign="top">
+				
+				  <div><b>手机号码:</b> {$rsdb[mobphone]} </div>
+				  <div><b>QQ号码:</b> {$rsdb[qq]} </div>
+				  <div><b>常用邮箱:</b> {$rsdb[email]}</div>
+				  <div><b>MSN帐号:</b> {$rsdb[msn]}</div>
+				  <div><b>当前居住地:</b> {$rsdb[lifeplace]} </div>
+				</td>
+              </tr>
+			  
+            </table> 
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td width="30%" height="500" valign="top" class="side">&nbsp; </td>
+  </tr>
+</table>
+
+<!--
+EOT;
+?>
+-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--//目的是为了做风格方便
+document.write('</div>');
+//-->
+</SCRIPT>
+</body>
+</html>

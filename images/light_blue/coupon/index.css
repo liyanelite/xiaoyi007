@@ -1,0 +1,288 @@
+img{
+	border:0;
+}
+.mt10{
+	margin-top:10px;
+}
+/*
+*第一栏
+*/
+.MainContainer .MainR{
+	width:650px;
+	padding-left:10px;
+}
+div.SlideContainer{
+	width:650px;
+	height:190px;
+	overflow:hidden;
+}
+.SideContainer .heada{
+	height:36px;
+	background:url(chotbg.gif) right top no-repeat;
+	line-height:36px;
+}
+.SideContainer .heada .L{
+	float:left;
+	background:url(chotbg.gif) left top no-repeat;
+	padding:0 0 0 30px;	
+	font-size:14px;
+	font-weight:bold;
+}
+.SideContainer .heada .R{
+	float:right;
+	padding:0 10px 0 0;
+}
+.SideContainer .cont{
+	background:#FAFAFB;
+	border:#DDD solid 1px;
+	border-top:0;
+	padding:10px;
+}
+table.hotcoupon{
+	border-right:#DDD solid 1px;
+	border-bottom:#DDD solid 1px;
+}
+table.hotcoupon .td1,table.hotcoupon .td2,table.hotcoupon .td3,table.hotcoupon .td4{
+	background:url(ctdbg.gif) left top no-repeat;
+	height:66px;
+	width:50%;
+}
+table.hotcoupon .title{
+	height:30px;
+	padding-left:35px;
+	overflow:hidden;
+}
+table.hotcoupon .title a{
+	float:left;
+	padding-top:5px;
+	line-height:25px;
+}
+table.hotcoupon .td1 .title{
+	background:url(cnum.gif) 2px 2px no-repeat;
+}
+table.hotcoupon .td2 .title{
+	background:url(cnum.gif) 2px -28px no-repeat;
+}
+table.hotcoupon .td3 .title{
+	background:url(cnum.gif) 2px -58px no-repeat;
+}
+table.hotcoupon .td4 .title{
+	background:url(cnum.gif) 2px -88px no-repeat;
+}
+table.hotcoupon .title a{
+	color:#f60;
+	font-size:14px;
+}
+table.hotcoupon .price{
+	width:70px;
+	padding-right:5px;
+	height:30px;
+	overflow:hidden;
+	float:left;
+	line-height:30px;
+	text-align:center;
+	font-size:24px;
+	font-weight:bold;
+	color:#B01600;
+}
+table.hotcoupon .yh,table.hotcoupon .mart{
+	width:60px;
+	height:15px;
+	float:left;
+	line-height:15px;
+	overflow:hidden;
+}
+table.hotcoupon .mart strike{
+	color:#999;
+}
+table.hotcoupon .yh span{
+	color:#AF9E56;
+}
+/*
+*第二栏
+*/
+.MainContainer .MainL{
+	padding-right:10px;
+}
+.MainContainer .SideR{
+	width:240px;
+}
+.dragcontainer .head{
+	height:45px;
+	line-height:45px;
+	background:url(chead.gif) right top no-repeat;
+}
+.dragcontainer .head .L{
+	width:140px;
+	height:45px;
+	text-align:center;
+	background:url(chead.gif) left top no-repeat;
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+.dragcontainer .head .R{
+	float:right;
+	padding-right:10px;
+	padding-top:10px;
+}
+.dragcontainer .head .R span{
+	display:block;
+	width:115px;
+	text-align:center;
+	line-height:30px;
+	background:url(cout.gif) center top no-repeat;
+	float:left;
+	cursor:pointer;
+}
+.dragcontainer .head .R span.choose{
+	background:url(cover.gif) center top no-repeat;
+	color:#1E3986;
+}
+.dragcontainer .head .R a{
+	font-size:14px;
+	padding-left:25px;
+	background:url(gift_array.gif) 12px 5px no-repeat;
+}
+.dragcontainer .cont{
+	border:#EBEBEB solid 1px;
+	border-top:0;
+}
+.dragcontainer .cont td{
+	padding:0 10px 10px 10px;
+}
+.dragcontainer .cont .listcoupon{
+	margin-top:10px;
+	width:100%;
+	border:#EBEBEB  dotted 1px;
+	height:120px;
+	overflow:hidden;
+	background:url(cbg.gif) right top no-repeat;
+}
+.dragcontainer .cont .listcoupon .img{
+	float:left;
+	width:150px;
+}
+.dragcontainer .cont .listcoupon .img a{
+	display:block;
+	width:125px;
+	border:#DDD solid 1px;
+	margin:10px auto 0 auto;
+	text-align:center;
+	padding:2px 0 2px 0;
+}
+.dragcontainer .cont .listcoupon .word{
+	float:left;
+	width:400px;
+	line-height:25px;
+	padding-top:5px;
+}
+.dragcontainer .cont .listcoupon .word .t{
+	height:25px;
+	overflow:hidden;
+}
+.dragcontainer .cont .listcoupon .word .t a{
+	color:#1E3986;
+	font-weight:bold;
+	font-size:14px;
+}
+.dragcontainer .cont .listcoupon .word strike,.dragcontainer .cont .listcoupon .word .d{
+	color:#999;
+}
+.dragcontainer .cont .listcoupon .see{
+	float:right;
+	width:110px;
+	padding-top:40px;
+}
+.dragcontainer .cont .listcoupon .see a{
+	display:block;
+	width:70px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	background:url(csee.gif) center top no-repeat;
+	color:#888;
+	text-decoration:none;
+}
+/*
+*类目样式
+*/
+.sortcontainer .foot{
+	background:url(csortbg.gif) center bottom no-repeat;
+	height:5px;
+}
+.sortcontainer .head{
+	background:url(csortbg.gif) center top no-repeat;
+	height:40px;
+}
+.sortcontainer .head span{
+	display:none;
+}
+.sortcontainer .cont{
+	background:url(csortm.gif) center top repeat-y;
+	padding-top:3px;
+	clear:both;
+}
+.sortcontainer .cont .bigsort{	
+	background:url(bisort1.gif) center top no-repeat;
+	height:30px;
+	line-height:30px;
+	padding-left:20px;
+}
+.sortcontainer .cont .sort2{
+	background:url(bisort2.gif) center top no-repeat;
+}
+.sortcontainer .cont .sort2 a{
+	color:#EA5300;
+}
+.sortcontainer .cont .bigsort a{	
+	font-size:14px;
+}
+.sortcontainer .cont .sort{
+	padding:5px 10px 5px 15px;
+	line-height:20px;
+	color:#999;
+}
+.sortcontainer .cont .sort a{
+	color:#999;
+}
+/*
+*积分换礼品信息
+*/
+.sidecontainer{
+	border:#DDD solid 1px;
+}
+.sidecontainer .head{
+	height:30px;
+	background:url(tuangou_icon1.gif) 12px 12px no-repeat;
+	padding:0 5px 0 5px;	
+}
+.sidecontainer .head span{
+	display:block;
+	padding:5px 0 0 25px;
+	line-height:25px;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:#DDD solid 1px;
+}
+.sidecontainer .cont{
+	padding:5px 10px 10px 10px;
+}
+.sidecontainer .cont .list{
+	padding-top:8px;
+	line-height:18px;
+}
+.sidecontainer .cont .list span{
+	color:blue;
+	padding-right:5px;
+}
+.sidecontainer .cont .list em{
+	color:#999;
+	padding-right:5px;
+	padding-left:5px;
+	font-style:normal;
+}
+.sidecontainer .cont .list a{
+	color:#746B12;
+	padding-left:5px;
+}

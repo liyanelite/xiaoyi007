@@ -1,0 +1,214 @@
+<!--
+<?php
+foreach($module_db AS $key=>$value){
+    $module_select.="<span onClick=\"selectmodule('$key',this)\">$value</span>";
+}
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/house/house.css">
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/yellow/house/sliding.js"></SCRIPT>
+<div class="searchcontainer">
+	<div class="sidead fl">{$label[house_ad1]}</div>
+    <div class="search fl">
+    <form name="form_searchpage" method="post" action="search.php" onsubmit="return checksearch(this);">
+    	<div class="selectmodule" id="selectmodule">$module_select</div>
+        <div class="selectcont">
+            <div class="selectcontin">
+                <div id="showselect" class="unselect" onClick="displaymore()">类 型</div>
+                <div id="listselecta" style="display:none;">
+                    <a href="javascript:;" onClick="changstyle(title,'标题',this)">标 题</a>
+                    <a href="javascript:;" onClick="changstyle('mobphone','手机号码',this)">手机号码</a>
+                    <a href="javascript:;" onClick="changstyle('username','发布者',this)">发布者</a>
+                </div>
+            </div>
+            <br/>
+        </div>
+        <div class="keyword">
+            <input type="text" name="keyword" id="keyword">
+        </div>
+        <div class="search_sub">
+            <input name="" type="image" src="$webdb[www_url]/images/yellow/house/searchsub.gif" />
+        </div>
+        <input type="hidden" name="mid" value="" id="mid_search">
+        <input type="hidden" name="type" value="" id="type_search">
+        <input type="hidden" name="action" value="search">
+    </form>
+<script language="javascript">
+	function checksearch(obj){
+		if(document.getElementById("keyword").value==''){
+			alert('关键字不能为空!');
+			return false;
+		}
+	}
+	function displaymore(){
+		document.getElementById("listselecta").style.display="block";
+		document.getElementById("showselect").className="onclick";
+	}
+	function hiddendiva(words,sel){
+		document.getElementById(words).style.display="none";
+		document.getElementById(sel).className="unselect";
+	}
+   function selectmodule(mid,obj){
+		document.getElementById('mid_search').value=mid;		
+		var alinks=document.getElementById('selectmodule').getElementsByTagName('span');
+		for(var i=0;i<alinks.length;i++){
+			alinks[i].className='';
+		}								
+		obj.className='ck';
+   }
+   function changstyle(type,word,obj){
+		document.getElementById('type_search').value=type;
+		document.getElementById('showselect').innerHTML = word;
+		document.getElementById("showselect").className="unselect";
+		document.getElementById("listselecta").style.display="none";		
+		var alinks=document.getElementById('listselecta').getElementsByTagName('a');
+		for(var i=0;i<alinks.length;i++){
+			alinks[i].className='';
+		}								
+		obj.className='ck';
+   }
+</script>
+    </div>
+    <div class="sidead fr">{$label[house_ad2]}</div>
+</div>
+<div class="arrowbanner" onmouseover="hiddendiva('listselecta','showselect')">
+	{$label[house_ad3]}
+</div>
+<div class="MainContainer">
+	<div class="sidel">
+    	<div class="memberaction">
+        	<div class="head"><div class="tag">{$label[house_head1]}</div></div>
+            <div class="cont">
+            	{$label[house_sort1]}            	          
+            </div>
+        </div>
+        <div class="changeinfo">
+        	<div class="head">{$label[house_head2]}</div>
+            <div class="cont">
+            	<div class="h">
+                	{$label[house_heads2]}                	
+                </div>
+                <div id="Tab1">{$label[house_st1]}</div>
+                <div id="Tab2">{$label[house_st2]}</div>
+                <div id="Tab3">{$label[house_st3]}</div>
+                <SCRIPT LANGUAGE="JavaScript">ShowTab(2,1,4);</SCRIPT>
+            </div>            
+        </div>
+    </div>
+    <div class="mainr">    
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contenttable">
+          <tr>
+            <td class="housenews">
+            	<div class="head">{$label[house_head3]}</div>
+                <div class="cont">
+                	{$label[house_title1]}
+                </div>
+            </td>
+            <td class="moreinf">
+            	<div class="slidecont">
+                	{$label[house_slide]}
+                </div>
+                <div class="head">{$label[house_head4]}</div>
+                <div class="cont">
+                	{$label[house_title2]}
+                </div>
+            </td>
+          </tr>
+        </table>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="arrowbanner mt10">
+	{$label[house_ad4]}
+</div>
+<div class="MainContainer">
+	<div class="sidel">
+    	<div class="hothouse">
+        	<div class="head"><div class="tag">{$label[house_head5]}</div></div>
+            <div class="cont">
+            	<div class="c">
+            	{$label[house_title3]}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainr"> 
+    	<div class="sidecont">
+        	<div class="head">
+            	{$label[house_head6]}
+            </div>
+            <div class="cont">
+            	{$label[house_title4]}
+            </div>
+        </div>
+        <div class="sidecont sidecont1 mt10">
+        	<div class="head">
+            	{$label[house_head7]}
+            </div>
+            <div class="cont">
+            	{$label[house_title5]}
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div> 
+<div class="MainContainer mt10">
+	<div class="sidel">
+    	<div class="abouthouse">
+        	<div class="head">{$label[house_head8]}</div>
+            <div class="cont">
+            	{$label[house_title7]}
+            </div>
+        </div>
+    </div>
+    <div class="mainr"> 
+    	<div class="sidecont tzhousecont">
+        	<div class="head">
+            	{$label[house_head9]}
+            </div>
+            <div class="cont">
+            	{$label[house_title8]}
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div> 
+<div class="MainContainer mt10">
+	<div class="sidel">
+    	{$label[house_ad5]}
+    </div>
+    <div class="mainr"> 
+    	{$label[house_ad6]}
+    </div>
+    <div class="clear"></div>
+</div>  
+<div class="MainContainer mt10" style="height:302px;">
+	<div class="sidel">
+    	<div class="tophouse">
+        	<div class="head">
+            	{$label[house_head10]}
+            </div>
+            <div class="cont">
+            	<div id="Tab5">{$label[house_st5]}</div>
+                <div id="Tab6">{$label[house_st6]}</div>
+                <SCRIPT LANGUAGE="JavaScript">ShowTab(5,5,7);</SCRIPT>
+            </div>
+        </div>
+    </div>
+    <div class="mainr"> 
+    	<div class="mencont">
+        	<div class="head">
+            	{$label[house_head11]}
+            </div>
+            <div class="cont">
+            	<div id="Tab7">{$label[house_st7]}</div>
+                <div id="Tab8">{$label[house_st8]}</div>
+                <SCRIPT LANGUAGE="JavaScript">ShowTab(7,7,9);</SCRIPT>
+            </div>
+        </div>
+    </div>
+</div>   
+<!--
+EOT;
+?>
+-->

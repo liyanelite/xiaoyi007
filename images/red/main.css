@@ -1,0 +1,508 @@
+.MainContain{
+	clear:both;
+	margin:10px auto 0 auto;
+}
+.MainContain .SideR{
+	width:260px;
+}
+.MainContain .SideC{
+	width:420px;
+	padding:0 10px 0 10px;
+}
+.MainContain .MainL{
+	padding-right:10px;
+}
+/*
+*幻灯片
+*/
+.MainContain .SideC .slidecontainer{
+	width:420px;
+	height:190px;
+	overflow:hidden;
+}
+/*
+*本地资讯
+*/
+.SideBox1{
+	clear:both;
+	border:#E2E6EA solid 1px;
+}
+.SideBox1 .head{
+	height:30px;
+	padding:0 10px 0 10px;
+	line-height:30px;
+	background:#FFF url(headbg1.gif) left bottom repeat-x;
+}
+.SideBox1 .head .fl{
+	float:left;
+	font-weight:bold;
+}
+.SideBox1 .head .fr{
+	float:right;
+}
+.SideBox1 .head .fr a{
+	color:#666;
+}
+.SideBox1 .cont{
+	background:#fff;
+}
+.img_title {
+	padding:10px 0 5px 0;
+}
+.img_title .list{
+	width:95%;
+	height:23px;
+	overflow:hidden;
+	margin:auto;
+	line-height:23px;
+}
+.img_title .list .p,.img_title .list .c{
+	display:none;
+}
+.img_title .list .f a{
+	color:#f60;
+}
+.img_title .l1{
+	height:68px;
+	line-height:20px;
+	border-bottom:#DDD dotted 1px;
+	margin-bottom:5px;
+}
+.img_title .l1 span{
+	display:block;
+	float:left;
+}
+.img_title .l1 span.p{
+	display:block;
+	border:#ddd solid 1px;
+	padding:1px;
+}
+.img_title .l1 span.p a{
+	display:block;
+	width:70px;
+	height:55px;
+	overflow:hidden;
+}
+.img_title .l1 span.f{
+	display:none;
+}
+.img_title .l1 span.t{
+	height:20px;
+	width:180px;
+	padding-left:15px;
+	overflow:hidden;
+}
+.img_title .l1 span.t a{
+	color:#993300;
+	font-weight:bold;
+}
+.img_title .l1 span.c{
+	display:block;
+	height:40px;
+	width:180px;
+	overflow:hidden;
+	padding-left:15px;
+	color:#999;
+	text-indent:20px;
+}
+/*
+*网站公告
+*/
+.notecont{
+	clear:both;
+	border:#E2E6EA solid 1px;
+}
+.notecont .webinfo{
+	border:#FFF solid 1px;
+	height:45px;
+	padding-top:5px;
+}
+#siteinfo {
+	width:40px;
+	margin-top:5px;
+}
+#siteinfo div{
+	width:100px;
+	height:20px;
+	padding-left:15px;
+	line-height:20px;
+	float:left;	
+}
+.notecont .notebox{
+	border-top:#E2E6EA solid 1px;
+}
+.notecont .notebox .head{
+	height:30px;
+	padding:0 10px 0 10px;
+	line-height:30px;
+	background:#FFF url(headbg1.gif) left bottom repeat-x;
+}
+.notecont .notebox .head .fl{
+	float:left;
+	font-weight:bold;
+}
+.notecont .notebox .head .fr{
+	float:right;
+}
+.notecont .notebox .head .fr a{
+	color:#666;
+}
+.notecont .notebox .cont{
+	color:#999;
+	background:#FFF;
+	padding:8px 0 5px 0;
+}
+.notecont .notebox .cont .listnote{
+	height:23px;
+	padding:0 8px 0 15px;
+	line-height:23px;
+	overflow:hidden;
+}
+.notecont .notebox .cont .listnote a{
+	float:left;
+}
+.notecont .notebox .cont .listnote span{
+	float:right;
+}
+/*
+*分类信息
+*/
+.maincont{
+	clear:both;
+}
+.maincont a{
+	color:#444;
+}
+.maincont .head{
+	height:41px;
+	overflow:hidden;
+	background:url(mainhead.gif) left top no-repeat;
+	border-collapse:collapse;
+}
+.maincont .head span{
+	display:block;
+	float:left;
+}
+.maincont .head span.more{
+	float:right;
+	padding:6px 15px 0 0;
+	line-height:35px;
+	background:url(mainhead.gif) right top no-repeat;
+}
+.maincont .head span.tag{
+	width:115px;
+	padding-right:30px;
+	text-align:center;
+	line-height:41px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+	background:url(tag1.gif) left top no-repeat;
+}
+.maincont .head span.choos{
+	width:100px;
+	text-align:center;
+	padding-top:6px;
+	line-height:35px;
+	background:url(mchoose.gif) center 5px no-repeat;
+}
+.maincont .head span.choos a{
+	font-size:14px;
+	font-weight:bold;
+}
+.maincont .head span.other{
+	padding:6px 0 0 5px;
+	line-height:35px;
+	color:#999;
+}
+.maincont .head span.other a{
+	font-size:14px;
+}
+.maincont .cont{
+	border:#E2E6EA solid 1px;
+	border-top:0;
+	background:#FFF;
+}
+.maincont .fenliecont{
+	padding:5px 0 5px 0;
+}
+.maincont .fenliecont .listfenlie{
+	width:340px;
+	height:25px;
+	line-height:25px;
+	padding-left:15px;
+	overflow:hidden;
+	float:left;
+	color:#aaa;
+}
+.maincont .fenliecont .listfenlie a.f{
+	color:#777;
+}
+.sidetable{
+	border:#E2E6EA solid 1px;
+	background:#FFF;
+}
+.sidetable .head{
+	border:#fff solid 1px;
+	height:30px;
+	padding:0 10px 0 10px;
+	background:url(shead.gif) left top repeat-x;
+}
+.sidetable .head .tag{
+	font-weight:bold;
+	padding-top:5px;
+	line-height:25px;
+	float:left;
+}
+.sidetable .head .more{
+	float:right;
+	padding-top:5px;
+	line-height:25px;
+}
+.sidetable .cont .list{
+	height:23px;
+	line-height:23px;
+	padding:0 10px 0 10px;
+	overflow:hidden;
+}
+.sidetable .cont .fenlieimg{
+	width:95%;
+	margin:3px auto 0 auto;
+	border-top:#DDD dotted 1px;
+	text-align:center;
+	padding:8px 0 5px 0;
+}
+/*
+*商家店铺
+*/
+.maincont .head span.tag2{
+	background:url(tag2.gif) left top no-repeat;
+}
+.maincont .hycont{
+	padding-top:15px;
+}
+.maincont .hycont .listpic{
+	width:179px;
+	height:110px;
+	overflow:hidden;
+	float:left;
+}
+.maincont .hycont .listpic a{
+	display:block;
+	text-align:center;
+}
+.maincont .hycont .listpic a.img{
+	width:140px;
+	margin:auto;
+	border:#DDD solid 1px;
+	padding:5px 0 5px 0;
+}
+.maincont .hycont .listpic a.t{
+	width:140px;
+	height:30px;
+	margin:auto;
+	line-height:30px;
+	overflow:hidden;
+}
+.sidetable .hothy{
+	padding-bottom:3px;
+}
+.hyadcont{
+	margin-top:10px;
+	width:100%;
+	overflow:hidden;
+}
+
+.Banner_Ad{
+	clear:both;
+	margin:10px auto 0 auto;
+}
+/*
+*团购活动
+*/
+.maincont .tgcont{
+	padding:10px;
+}
+.maincont .tgcont .listtg{
+	width:349px;
+	height:120px;
+	border-bottom:#DDD dotted 1px;
+	float:left;
+	overflow:hidden;
+}
+.maincont .tgcont .listtg .img{
+	width:122px;
+	border:#DDD solid 1px;
+	text-align:center;
+	padding:1px 0 1px 0;
+	margin-top:10px;
+	float:left;
+}
+.maincont .tgcont .listtg .word{
+	width:210px;
+	padding:5px 0 0 10px;
+	float:left;
+	line-height:25px;
+}
+.maincont .tgcont .listtg .word .t{
+	height:25px;
+	padding-right:5px;
+	overflow:hidden;
+}
+.maincont .tgcont .listtg .word .t a{
+	font-weight:bold;
+	color:#c30;
+}
+.hottgcont .lista{
+	height:23px;
+	line-height:23px;
+	padding:0 10px 0 10px;
+	overflow:hidden;
+}
+.hottgcont .lista a.f{
+	color:#666;
+	padding-right:5px;
+}
+.hottgcont .tztgcont .h{
+	width:97%;
+	margin:5px auto 0 auto;
+	border-top:#DDD dotted 1px;
+	height:30px;
+}
+.hottgcont .tztgcont .h a{
+	display:block;
+	padding:5px 0 0 10px;
+	line-height:25px;
+	font-weight:bold;
+	font-size:14px;
+}
+.hottgcont .tztgcont .c{
+	padding-bottom:3px;
+}
+/*
+*商家产品
+*/
+.maincont .shopcont{
+	padding-top:15px;
+}
+.maincont .shopcont .listshop{
+	width:143px;
+	height:140px;
+	overflow:hidden;
+	float:left;
+}
+.maincont .shopcont .listshop a{
+	display:block;
+	text-align:center;
+}
+.maincont .shopcont .listshop a.img{
+	width:102px;
+	border:#DDD solid 1px;
+	padding:1px 0 1px 0;
+	margin:auto;
+}
+.maincont .shopcont .listshop a.t{
+	width:120px;
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	margin:auto;
+}
+.maincont .shopcont .listshop div{
+	width:120px;
+	height:15px;
+	line-height:15px;
+	overflow:hidden;
+	margin:auto;
+	text-align:center;
+}
+.maincont .shopcont .listshop div span{
+	color:#c30;
+}
+/*
+*优惠券
+*/
+.couponcont {
+	padding-bottom:8px;
+}
+.couponcont .listcoupon{
+	width:96%;
+	height:48px;
+	margin:auto;
+	border-bottom:#DDD dotted 1px;
+}
+.couponcont .listcoupon div{
+	height:18px;
+	line-height:18px;
+	padding-right:5px;
+	overflow:hidden;
+	padding-left:50px;
+}
+.couponcont .listcoupon div.t{
+	padding-top:6px;
+}
+.couponcont .listcoupon div.t a{
+	color:#406ABE;
+}
+.couponcont .list1{
+	background:url(num1.gif) 3px 6px no-repeat;
+}
+.couponcont .list2{
+	background:url(num2.gif) 3px 6px no-repeat;
+}
+.couponcont .list3{
+	background:url(num3.gif) 3px 6px no-repeat;
+}
+.couponcont .list4{
+	background:url(num4.gif) 3px 6px no-repeat;
+}
+.couponcont .list5{
+	background:url(num5.gif) 3px 6px no-repeat;
+}
+.couponcont .list6{
+	background:url(num6.gif) 3px 6px no-repeat;
+}
+/*
+*友情链接
+*/
+.FrendLink{
+	clear:both;
+	margin-top:10px;
+}
+.FrendLink .head{
+	height:35px;
+	background:url(headbg2.gif) center top no-repeat;
+	padding:0 10px 0 10px;
+}
+.FrendLink .head span{
+	display:block;
+	float:left;
+}
+.FrendLink .head span.tag{
+	width:180px;
+	background:url(frendlinktag.gif) center top no-repeat;
+	text-align:center;
+	padding-top:5px;
+	line-height:30px;
+	font-size:14px;
+	font-weight:bold;
+}
+.FrendLink .head span.more{
+	float:right;
+	padding-top:7px;
+	line-height:28px;
+	word-spacing:10px;
+}
+.FrendLink .head span.more a{
+	color:#666;
+}
+.FrendLink .cont{
+	border:#DBDBDB solid 1px;
+	border-top:0;
+	padding:10px;
+	background:#FFF;
+}
+.FrendLink .cont .wordlink{
+	padding-top:5px;
+	line-height:20px;
+}

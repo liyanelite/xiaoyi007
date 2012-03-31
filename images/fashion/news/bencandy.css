@@ -1,0 +1,143 @@
+.MainContainer .side{
+	width:280px;
+	padding-left:10px;
+}
+/*
+*评论列表
+*/
+.MainContainer .coment{
+	margin-top:5px;
+	border:#DDD dotted 1px;
+}
+.MainContainer .coment .img{
+	width:60px;	
+	padding:5px;
+	border-right:#DDD dotted 1px;
+}
+.MainContainer .coment .img a{
+	display:block;
+	border:#DDD solid 1px;
+	padding:1px;
+}
+.MainContainer .coment .conta{
+	border-bottom:#DDD dotted 1px;
+	padding:3px 5px 2px 10px;
+	line-height:18px;
+	height:45px;
+}
+.MainContainer .coment .infoa{
+	line-height:25px;
+	padding-left:10px;
+}
+.MainContainer .comtentpage{
+	line-height:30px;
+	text-align:center;	
+}
+.MainContainer .comtentpage a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}
+/*
+*左边样式
+*/
+.MainContainer .dragTable{
+	border:#DBDBDB solid 1px;
+}
+.MainContainer .dragTable .head{
+	height:30px;
+	background:url(nestbg.gif) left bottom repeat-x;
+	line-height:30px;
+}
+.MainContainer .dragTable .head .TAG{
+	float:left;
+	padding-left:25px;
+	background:url(narray.gif) 8px 11px no-repeat;
+	font-size:14px;
+	font-weight:bold;
+}
+.MainContainer .dragTable .cont{
+	padding:10px;
+}
+.MainContainer .main .dragTable .cont{
+	height:380px;
+}
+.MainContainer .main .action{
+	text-align:right;
+	line-height:25px;
+}
+.MainContainer .main .title{
+	line-height:25px;
+	font-size:14px;
+	font-weight:bold;
+	color:#c00;
+	text-align:center;
+}
+.MainContainer .main .info{
+	line-height:25px;
+	text-align:center;
+	border-bottom:#DDD solid 1px;
+	color:#777;
+}
+.MainContainer .main .content{
+	margin:10px auto;
+	line-height:22px;
+	font-size:14px;
+	color:#555;
+}
+.MainContainer .main .daction{
+	line-height:25px;
+	text-align:right;
+}
+.MainContainer .main .page{
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	padding-bottom:5px;
+}
+.MainContainer .main .page a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}
+.MainContainer .main .up,.MainContainer .main .down{
+	width:50%;
+	line-height:30px;
+}
+.MainContainer .main .down{
+	text-align:right;
+}
+.MainContainer .main .tdL{
+	width:80px;
+	line-height:25px;
+	text-align:right;
+	padding-right:10px;
+}
+.MainContainer .main .tdR{
+	padding-top:5px;
+}
+#comment{
+	width:98%;
+	margin:auto;
+}
+/*
+*右边样式
+*/
+.MainContainer .side .listsort{
+	height:25px;
+	line-height:25px;
+	voerflow:hidden;
+	padding-left:25px;
+	background:url(nicon1.gif) 5px 7px no-repeat;
+}
+.MainContainer .side .listsort a{
+	font-weight:bold;
+	color:#00349A;
+}
+.MainContainer .side .list{
+	height:22px;
+	line-height:22px;
+	padding-left:15px;
+	background:url(nd0.gif) 3px 9px no-repeat;
+}
+#sonSortName .head{
+	display:none;
+}

@@ -1,0 +1,580 @@
+/*
+*TopNewsCont
+*/
+.TopNewsCont{
+	height:60px;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+.TopNewsCont .listpic{
+	width:326px;
+	height:60px;
+	overflow:hidden;
+	float:left;
+}
+.TopNewsCont .listpic .img{
+	border:#DDD solid 1px;
+	padding:2px;
+	float:left;
+}
+.TopNewsCont .listpic .img a{
+	display:block;
+	width:105px;
+	height:50px;
+	overflow:hidden;
+}
+.TopNewsCont .listpic .word{
+	width:200px;
+	float:left;
+	padding-left:10px;
+	height:55px;
+	overflow:hidden;
+	line-height:19px;
+	color:#777;
+}
+.TopNewsCont .listpic .word .t{
+	height:19px;
+	overflow:hidden;
+}
+.TopNewsCont .listpic .word .t a{
+	font-weight:bold;
+	color:#369;
+}
+.TopNewsCont .listpic .word .c{
+	height:38px;
+	overflow:hidden;
+}
+/*
+*资讯导航
+*/
+.NewsMenu{
+	height:66px;
+	overflow:hidden;
+	background:url(newsmenu.gif) no-repeat;
+	margin-bottom:10px;
+	padding-left:180px;
+}
+.NewsMenu dl{
+	width:180px;
+	height:40px;
+	overflow:hidden;
+	padding:15px 10px 0 10px;
+	float:left;
+}
+.NewsMenu dl dt,.NewsMenu dl dd{
+	width:60px;
+	height:20px;
+	overflow:hidden;
+	text-align:center;
+	line-height:20px;
+	float:left;
+}
+.NewsMenu dl dt{
+	font-weight:bold;
+}
+/*
+*
+*/
+.SideL{
+	width:320px;
+	float:left;
+	background:url(point1.gif) right top repeat-y;
+}
+.SideC{
+	width:340px;
+	float:left;	
+}
+.SideR{
+	width:320px;
+	float:right;
+	background:url(point1.gif) left top repeat-y;
+}
+/*
+*第一栏
+*/
+.MainContainer1{
+	height:370px;
+	overflow:hidden;
+	margin-bottom:10px;
+	background:url(point1.gif) left bottom repeat-x;
+}
+.sidecont1 .head{
+	height:40px;
+	overflow:hidden;
+	background:url(point1.gif) left bottom repeat-x;
+}
+.sidecont1 .head .tag{
+	float:left;
+	padding:8px 0 0 2px;
+}
+.sidecont1 .todaytz{
+	height:310px;
+	overflow:hidden;
+	padding:10px;
+	background:url(point1.gif) left top repeat-y;
+}
+.sidecont1 .todaytz .listpic{
+	height:75px;
+	overflow:hidden;
+	border-bottom:#DBE7E7 dotted 1px;
+	margin-bottom:8px;
+	padding-left:5px;
+	padding-top:5px;
+}
+.sidecont1 .todaytz .listpic .img{
+	width:80px;
+	height:60px;
+	overflow:hidden;
+	float:left;
+}
+.sidecont1 .todaytz .listpic .word{
+	float:left;
+	width:200px;
+	padding-left:10px;
+	line-height:20px;
+}
+.sidecont1 .todaytz .listpic .word .t{
+	height:20px;
+	overflow:hidden;
+	font-weight:bold;
+}
+.sidecont1 .todaytz .listpic .word .m{
+	height:40px;
+	overflow:hidden;
+	color:#888;
+}
+.sidecont1 .todaytz .list{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+	padding-left:18px;
+	background:url(point2.gif) 5px 10px no-repeat;
+}
+.sidecont1 .todaytz .list5{
+	border-top:#DBE7E7 dotted 1px;
+	margin-top:7px;
+	padding-top:8px;
+	background:url(point2.gif) 5px 18px no-repeat;
+}
+.sidecont1 .todaytz .list a{
+	font-size:14px;
+	color:#535353;
+}
+.sidecont1 .focusnews{
+	height:302px;
+	overflow:hidden;
+	padding:15px 10px 10px 10px;
+	background:#F8F8F8;
+	border:#FFF solid 1px;
+}
+/*
+*幻灯片样式
+*/
+.slidescont { 
+	height:200px; 
+	width:310px; 
+	position:relative;
+	overflow:hidden;
+	margin:auto;
+}
+.slidePic { 
+	width:310px; 
+	overflow:hidden;
+}
+.slidePic li {
+	display:none;
+}
+.slidePic li.cur { 
+	display:block; 
+}
+.slideTxt {
+	cursor:pointer; 
+	height:30px;	
+	position:absolute; 
+	right:5px; 
+	bottom:0px;
+}
+.slideTxt li { 
+	float:left; 
+	height:25px; 
+	width:25px;
+	line-height:25px;
+	overflow:hidden; 
+	text-align:center; 
+	background:url(numbg0.gif) center 2px no-repeat;
+}
+.slideTxt li a.hidefocus{ 
+	outline: none; 
+}
+.slideTxt li a.hidefocus::-moz-focus-inner{  
+	border:none; 
+}
+.slideTxt li a:link,.slideTxt li a:visited,.slideTxt li a:hover{
+	color:#FF7300;
+	text-decoration:none;
+}
+.slideTxt .cur { 
+	background:url(numbg1.gif) center top no-repeat;	
+}
+.slideTxt .cur a:link,.slideTxt .cur a:visited,.slideTxt .cur a:hover{
+	color:#FFF;
+	font-weight:bold;
+}
+.sidecont1 .focusnews .headlines{
+	height:90px;
+	overflow:hidden;
+	margin-top:10px;
+	background:url(tag4.gif) 3px 5px no-repeat;
+	padding-left:50px;
+}
+.sidecont1 .focusnews .headlines .t{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+	font-weight:bold;
+}
+.sidecont1 .focusnews .headlines .t a{
+	font-size:14px;
+}
+.sidecont1 .focusnews .headlines .c{
+	height:60px;
+	overflow:hidden;
+	line-height:20px;
+	color:#5C5C5C;
+	text-indent:20px;
+}
+.sidecont1 .hotnews{
+	height:310px;
+	overflow:hidden;
+	padding:10px;
+	background:url(point1.gif) right top repeat-y;
+}
+.sidecont1 .hotnews .cca{
+	padding-top:5px;
+}
+.sidecont1 .hotnews .cca .listpic{
+	height:75px;
+	overflow:hidden;
+	border-bottom:#DBE7E7 dotted 1px;
+	margin-bottom:12px;
+}
+.sidecont1 .hotnews .cca .listpic .num{
+	width:30px;
+	height:20px;
+	padding-top:1px;
+	float:left;
+	text-align:center;
+	background:url(numbg2.gif) center -59px no-repeat;
+	color:#FFF;
+	font-size:10px;
+}
+.sidecont1 .hotnews .cca .listpic .num2{
+	background:url(numbg2.gif) center -32px no-repeat;
+}
+.sidecont1 .hotnews .cca .listpic .img{
+	width:80px;
+	height:60px;
+	overflow:hidden;
+	float:left;
+}
+.sidecont1 .hotnews .cca .listpic .word{
+	width:180px;
+	height:60px;
+	overflow:hidden;
+	padding-left:10px;
+	float:left;
+	line-height:20px;
+}
+.sidecont1 .hotnews .cca .listpic .word .t{
+	height:20px;
+	margin-bottom:5px;
+	overflow:hidden;
+	font-weight:bold;
+}
+.sidecont1 .hotnews .cca .listpic .word .m{
+	height:40px;
+	color:#888;	
+}
+.sidecont1 .hotnews .ccb div{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+}
+.sidecont1 .hotnews .ccb div span{
+	display:block;
+	width:30px;
+	text-align:center;
+	float:left;
+	background:url(numbg2.gif) center 5px no-repeat;
+	font-size:10px;
+}
+.sidecont1 .hotnews .ccb div.list1 span{
+	background:url(numbg2.gif) center -26px no-repeat;
+	color:#FFF;
+}
+.sidecont1 .hotnews .ccb div a{
+	float:left;
+	color:#3E3E3E;
+	font-size:14px;
+}
+/*
+*横幅广告
+*/
+.MainBanner{
+	width:980px;
+	text-align:center;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+/*
+*第二栏
+*/
+.MainContainer2{
+	height:190px;
+	overflow:hidden;
+	margin-bottom:10px;
+	border:#eaeaea solid 5px;
+}
+.MainContainer2 .head{
+	height:50px;
+	overflow:hidden;
+	background:url(head1.gif) left 17px repeat-x;
+}
+.MainContainer2 .head .tag{
+	float:left;
+	padding: 10px 5px 10px 5px;
+	background:#FFF;
+}
+.MainContainer2 .head .more{
+	float:right;
+	padding:10px 10px 5px 10px;
+	line-height:30px;
+	background:#FFF;
+}
+.MainContainer2 .cont{
+	height:130px;
+	overflow:hidden;
+	position:relative;
+}
+#showup,#showdown{
+	width:15px;
+	height:30px;
+	position:absolute;
+	z-index:1000;
+	top:30px;	
+}
+#showup{
+	left:15px;
+}
+#showdown{
+	right:15px;
+}
+.MainContainer2 .cont .up{
+	background:url(arrayl.gif);
+	cursor:pointer;
+}
+.MainContainer2 .cont .up0{
+	background:url(arrayl0.gif);
+}
+.MainContainer2 .cont .down{
+	background:url(arrayr.gif);
+	cursor:pointer;
+}
+.MainContainer2 .cont .down0{
+	background:url(arrayr0.gif);
+}
+#ShowList{
+	width:900px;
+	height:130px;
+	padding-left:35px;
+	overflow:hidden;
+}
+#ShowList li{
+	width:150px;
+	height:125px;
+	overflow:hidden;
+	float:left;
+	background:url(picbg.gif) center top no-repeat;
+	padding-top:4px;
+}
+#ShowList li div{
+	width:120px;
+	margin:auto;
+	overflow:hidden;
+	text-align:center;
+}
+#ShowList li div.img{
+	height:90px;
+	background:#EFEFEF;
+}
+#ShowList li div.t{
+	height:20px;
+	line-height:20px;
+	padding-top:10px;
+}
+#ShowList li div.t a{
+	color:#369;
+	text-decoration:underline;
+}
+/*
+*第三栏
+*/
+.MainContainer3{
+	height:340px;
+	overflow:hidden;
+	margin-bottom:10px;
+	background:url(point1.gif) left bottom repeat-x;
+}
+.sidecont1 .Holiday{
+	height:280px;
+	overflow:hidden;
+	padding:10px;
+	background:url(point1.gif) left top repeat-y;
+}
+.sidecont1 .head1{
+	height:41px;
+	overflow:hidden;
+	background:url(point1.gif) left 39px repeat-x;
+}
+.sidecont1 .head1 div{	
+	float:left;
+	height:41px;
+	padding-left:8px;
+	background:url(out1.gif) left 18px no-repeat;
+	cursor:pointer;
+}
+.sidecont1 .head1 div.begin,.sidecont1 .head1 div.next{
+	background:none;
+}
+.sidecont1 .head1 div.choose{
+	background:url(over1.gif) left 6px no-repeat;
+}
+.sidecont1 .head1 div span{
+	float:left;
+	padding:6px 8px 0 0;
+	line-height:35px;
+}
+.sidecont1 .head1 div.choose span{
+	background:url(over1.gif) right 6px no-repeat;
+}
+.sidecont1 .couponcont{
+	height:277px;
+	overflow:hidden;
+	padding:10px;
+	background:#F8F8F8;
+	border:#FFF solid 1px;
+	border-top:0;
+}
+.sidecont1 .community{
+	height:280px;
+	overflow:hidden;
+	padding:10px;
+	background:url(point1.gif) right top repeat-y;
+}
+.sidecont1 .lista,.sidecont1 .cc1{
+	height:145px;
+	overflow:hidden;
+	border-bottom:#DBE7E7 dotted 1px;
+	margin-bottom:9px;
+	padding-left:5px;
+}
+.sidecont1 .lista .t{
+	height:30px;
+	overflow:hidden;
+	line-height:30px;
+}
+.sidecont1 .lista .img{
+	float:left;
+	border:#DDD solid 1px;
+	padding:1px;
+}
+.sidecont1 .lista .c{
+	width:160px;
+	float:left;
+	padding-left:10px;
+	height:100px;
+	line-height:20px;
+	overflow:hidden;
+	color:#777;
+	text-indent:20px;
+}
+.sidecont1 .lista .img a{
+	display:block;
+	width:120px;
+	height:90px;
+	overflow:hidden;
+}
+.sidecont1 .lista .t a{
+	font-size:14px;
+	font-weight:bold;
+}
+.sidecont1 .listb{
+	height:25px;
+	overflow:hidden;
+	line-height:25px;
+	padding-left:15px;
+	background:url(point2.gif) 5px 11px no-repeat;
+}
+.sidecont1 .listb a{
+	font-size:14px;
+}
+.sidecont1 .listb a.f{
+	color:#888;
+	padding-right:3px;
+}
+.sidecont1 .listc{
+	width:152px;
+	height:125px;
+	overflow:hidden;
+	float:left;
+	padding-top:10px;
+}
+.sidecont1 .listc div{
+	width:120px;
+	margin:auto;
+	text-align:center;
+}
+.sidecont1 .listc div.img{
+	border:#ddd solid 1px;
+	padding:2px;
+}
+.sidecont1 .listc div.img a{
+	display:block;
+	width:120px;
+	height:90px;
+	overflow:hidden;
+}
+.sidecont1 .listc div.t{
+	height:20px;
+	line-height:20px;
+	padding-top:8px;
+}
+.sidecont1 .listd{
+	height:28px;
+	overflow:hidden;
+	line-height:28px;
+}
+.sidecont1 .listd span{
+	display:block;
+	width:20px;
+	text-align:center;
+	float:left;
+	background:url(numbg3.gif) center 8px no-repeat;
+	font-size:10px;
+	color:#FFF;
+}
+.sidecont1 .listd a{
+	float:left;
+	font-size:14px;
+	padding-left:3px;
+}
+.sidecont1 .listd em{
+	float:right;
+	font-style:normal;
+	color:#888;
+	padding-right:5px;
+}
+.bottomdiv{
+	clear:both;
+	border-bottom:#EAEAEA solid 5px;
+}

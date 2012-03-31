@@ -1,0 +1,172 @@
+.MainContainer .side{
+	width:240px;
+	padding-right:10px;
+}
+/*
+*类目样式
+*/
+.sortcontainer{
+	margin-top:5px;
+}
+.sortcontainer .foot{
+	background:url(csortbg.gif) center bottom no-repeat;
+	height:5px;
+}
+.sortcontainer .head{
+	background:url(csortbg.gif) center top no-repeat;
+	height:40px;
+}
+.sortcontainer .head span{
+	display:none;
+}
+.sortcontainer .cont{
+	background:url(csortm.gif) center top repeat-y;
+	padding-top:3px;
+	clear:both;
+}
+.sortcontainer .cont .bigsort{	
+	background:url(bisort1.gif) center top no-repeat;
+	height:30px;
+	line-height:30px;
+	padding-left:20px;
+}
+.sortcontainer .cont .sort2{
+	background:url(bisort2.gif) center top no-repeat;
+}
+.sortcontainer .cont .sort2 a{
+	color:#EA5300;
+}
+.sortcontainer .cont .bigsort a{	
+	font-size:14px;
+}
+.sortcontainer .cont .sort{
+	padding:5px 10px 5px 15px;
+	line-height:20px;
+	color:#999;
+}
+.sortcontainer .cont .sort a{
+	color:#999;
+}
+/*
+*积分换礼品信息
+*/
+.sidecontainer{
+	border:#DDD solid 1px;
+}
+.sidecontainer .head{
+	height:30px;
+	background:url(tuangou_icon1.gif) 12px 12px no-repeat;
+	padding:0 5px 0 5px;	
+}
+.sidecontainer .head span{
+	display:block;
+	padding:5px 0 0 25px;
+	line-height:25px;
+	font-size:14px;
+	font-weight:bold;
+	border-bottom:#DDD solid 1px;
+}
+.sidecontainer .cont{
+	padding:5px 10px 10px 10px;
+}
+.sidecontainer .cont .list{
+	padding-top:8px;
+	line-height:18px;
+}
+.sidecontainer .cont .list span{
+	color:blue;
+	padding-right:5px;
+}
+.sidecontainer .cont .list em{
+	color:#999;
+	padding-right:5px;
+	padding-left:5px;
+	font-style:normal;
+}
+.sidecontainer .cont .list a{
+	color:#746B12;
+	padding-left:5px;
+}
+
+.dragcontainer .head{
+	height:39px;
+	background:url(chead1.gif) left top no-repeat;
+	padding-left:10px;
+}
+.dragcontainer .head .tag{
+	float:left;
+	height:39px;
+	background:url(ctg.gif) left top no-repeat;
+	padding-left:30px;
+}
+.dragcontainer .head .tag span{
+	display:block;
+	line-height:39px;
+	background:url(ctg.gif) right top no-repeat;
+	padding-right:30px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.dragcontainer .head .more{
+	float:right;
+	width:370px;
+	height:39px;
+	overflow:hidden;
+	background:url(chead1.gif) right top no-repeat;
+}
+.dragcontainer .head .more a{
+	display:block;
+	width:120px;
+	text-align:center;
+	float:left;
+	padding-top:10px;
+	line-height:28px;
+	background:url(cout.gif) center 10px no-repeat;
+}
+.dragcontainer .head .more a:hover,.dragcontainer .head .more a.ch{
+	background:url(cover.gif) center 10px no-repeat;
+	color:#1E3986;
+	text-decoration:none;
+}
+.dragcontainer .cont{
+	border:#FFD09D solid 1px;
+	border-top:0;
+	padding:5px 10px 10px 10px;
+}
+.dragcontainer .listtable{
+	border-bottom:#DDD dotted 1px;
+}
+.dragcontainer .listtable .img{
+	width:120px;
+	padding:10px 10px 10px 0;
+}
+.dragcontainer .listtable .img a{
+	display:block;
+	border:#DDD solid 1px;
+	padding:1px;
+}
+.dragcontainer .listtable .goto{
+	width:100px;
+	text-align:center;
+	vertical-align:middle;
+}
+.dragcontainer .listtable .word{
+	line-height:20px;
+}
+.dragcontainer .listtable .word .t{
+	padding-top:5px;
+	line-height:30px;	
+}
+.dragcontainer .listtable .word .t a{
+	font-size:14px;
+	font-weight:bold;
+	color:#DE4900;
+}
+.showpage{
+	line-height:30px;
+}
+.showpage a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}

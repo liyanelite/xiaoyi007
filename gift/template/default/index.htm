@@ -1,0 +1,82 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/gift_index.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr>
+  	<td class="SideL">
+    	<div class="SideContainer">
+            <div class="heada"><span class="L">礼品兑换流程</span></div>
+            <div class="cont">
+            	$label[gift_news]
+            </div>
+            <div class="zf">
+            	<div class="h"><span>获取积分 兑换礼品</span></div>
+            	<div class="c"><a href="$webdb[www_url]/do/jf.php" target="_blank"><img src="$webdb[www_url]/images/yellow/gift_zf.gif"/></a></div>
+            </div>
+        </div>
+    </td> 
+    <td class="MainR">
+    	<div class="SlideContainer">$label[gift_rollpic]</div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MainL">
+    	<div class="dragcontainer">
+        	<div class="head">
+            	<span class="L">礼品兑换</span>
+                <span class="R"><a href="listall.php?ordertype=id">最新礼品</a><a href="listall.php?ordertype=hits">热门礼品</a><a href="listall.php?ordertype=levelstime">推荐礼品</a></span> 
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cont">
+              <tr>
+                <td>$label[gift_pic1]</td>
+              </tr>
+            </table>
+        </div>
+    </td>
+  	<td class="SideR">
+    	<div class="sortcontainer">
+        	<div class="head"><span>商品分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $key=>$name){
+$url=get_info_url('',$key,$city_id);
+print <<<EOT
+-->
+                <div class="listsort"><a href="$url">$name</a></div>			
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </div>
+        </div>
+        <div class="sidecontainer mt10">
+        	<div class="head"><span>积分换礼品信息</span></div>
+            <div class="cont">
+<!--
+EOT;
+$array=list_apply(5);
+foreach($array AS $rs){
+print <<<EOT
+-->
+			  
+          <div class="list"><span>$rs[username]</span>于<em>$rs[posttime]</em>申请了<a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></div>
+<!--
+EOT;
+}
+print <<<EOT
+--></div>
+            <div class="cont">$label[gift_left1]</div>
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

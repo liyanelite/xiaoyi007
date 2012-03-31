@@ -1,0 +1,428 @@
+.mt10{
+	margin-top:10px;
+}
+/*
+*头部广告
+*/
+.hrtopad{
+	clear:both;
+	text-align:center;
+	margin-bottom:8px;
+}
+/*
+*大表格样式
+*/
+.MainTable .SideTdL{
+	width:250px;
+}
+.MainTable .SideTdC{
+	padding:0 10px 0 10px;
+}
+.MainTable .SideTdR{
+	width:210px;
+}
+.MainTable .MainR{
+	padding-left:10px;
+}
+/*
+*会员服务
+*/
+.memberserver{
+	height:220px;
+	overflow:hidden;
+	background:url(memberbg.gif) center top no-repeat;
+}
+.memberserver .h1,.memberserver .h2{
+	height:35px;
+	line-height:35px;
+	padding-left:30px;
+	font-size:14px;
+	font-weight:bold;
+}
+.memberserver .h1{
+	color:#E95200;
+}
+.memberserver .cont{
+	height:75px;
+	padding-left:10px;
+}
+.memberserver .cont div{
+	width:115px;
+	height:32px;
+	float:left;
+	background:url(hbutter.gif) center 3px no-repeat;
+}
+.memberserver .cont div a{
+	display:block;
+	padding:11px 0 0 30px;
+	text-decoration:none;
+}
+/*
+*热门人才
+*/
+.centerhothr,.centernewhr{
+	padding-left:5px;
+	background:url(hotbg.gif) left top no-repeat;
+}
+.centerhothr .hotin,.centernewhr .newin{
+	padding:18px 10px 5px 5px;
+	background:url(hotbg.gif) right top no-repeat;
+}
+.centerhothr .hotin .list,.centernewhr .newin .list{
+	width:50%;
+	height:21px;
+	line-height:21px;
+	overflow:hidden;
+	float:left;
+	background:url(hicon.gif) 12px 9px no-repeat;
+}
+.centerhothr .hotin .list a,.centernewhr .newin .list a{
+	display:block;
+	float:left;
+}
+.centerhothr .hotin .list a.t,.centernewhr .newin .list a.t{
+	padding:0 5px 0 20px;
+}
+.centerhothr .hotin .list a.sort,.centernewhr .newin .list a.sort{
+	color:#f60
+}
+/*
+*最新人才
+*/
+.centernewhr{
+	background:url(newbg.gif) left top no-repeat;
+}
+.centernewhr .newin{
+	background:url(newbg.gif) right top no-repeat;
+}
+/*
+*用户登录
+*/
+.Logincont{
+	height:220px;
+	background:url(loginbg.gif) center top no-repeat;
+}
+.Logincont .head{
+	height:45px;
+	line-height:35px;
+	padding-left:50px;
+	font-size:14px;
+	font-weight:bold;
+}
+.Logincont dl{
+	height:35px;
+	clear:both;
+	overflow:hidden;
+	line-height:35px;
+}
+.Logincont dl dt{
+	width:60px;
+	float:left;
+	text-align:right;
+	padding-right:5px;
+}
+.Logincont dl dd{
+	width:120px;
+	float:left;
+}
+.Logincont dl dd.input{
+	padding-top:5px;
+}
+.Logincont dl .input input{
+	width:100px;
+}
+.Logincont .login{
+	float:left;
+	padding:8px 10px 0 60px;
+}
+.Logincont .word{
+	float:left;
+}
+.Logincont .word a{
+	color:#999;
+}
+.Logincont .reg{
+	text-align:center;
+	margin-top:5px;
+}
+.Logincont .img,.Logincont .name,.Logincont .info{
+	text-align:center;
+	line-height:20px;
+}
+.Logincont .img a{
+	display:block;
+	width:104px;
+	border:#DDD solid 1px;
+	margin:auto;
+	text-align:center;
+	padding:2px 0 2px 0;
+}
+.Logincont .info a{
+	color:blue;
+}
+/*
+*中间广告
+*/
+.hradtable{
+	margin-top:10px;
+}
+.hradtable .adcontL{
+	width:485px;
+	overflow:hidden;
+	float:left;
+}
+.hradtable .adcontR{
+	width:485px;
+	float:right;
+	overflow:hidden;
+}
+.hradtable .adcont1,.hradtable .adcont2,.hradtable .adcont3,.hradtable .adcont4{
+	width:240px;
+	overflow:hidden;
+	float:left;
+	margin-right:6px;
+}
+.hradtable .adcont4{
+	float:right;
+	margin-right:0;
+}
+/*
+*类目样式 
+*/
+.hrsortcont .foot{
+	height:10px;
+	background:url(hrsort.gif) center bottom no-repeat;
+}
+.hrsortcont .head{
+	height:55px;
+	background:url(hrsort.gif) center top no-repeat;
+}
+.hrsortcont .head span{
+	display:none;
+}
+.hrsortcont .cont{
+	background:url(hrsortm.gif) center top repeat-y;
+}
+.hrsortcont .cont .big{
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	padding-left:40px;
+	background:url(hicon2.gif) 20px 11px no-repeat;
+	font-weight:bold;
+}
+.hrsortcont .cont .small{
+	padding:8px 10px 3px 25px;
+	background:url(sorttop.gif) center top no-repeat;
+	line-height:20px;
+}
+.hrsortcont .cont .small a{
+	color:#666;
+}
+/*
+*热门职位 
+*/
+.hotjobs{
+	margin-top:10px;
+	border:#FFD29F solid 1px;
+}
+.hotjobs .head{
+	height:35px;
+	background:url(hrhead1.gif) left top repeat-x;
+}
+.hotjobs .head .TAG{
+	float:left;
+	padding:5px 0 0 30px;
+	background:url(hr_hot.gif) left top no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	color:#FF7F0F;
+	line-height:30px;
+}
+.hotjobs .cont {
+	padding-bottom:10px;
+}
+.hotjobs .cont .list{
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+	padding:0 10px 0 25px;
+	background:url(hicon.gif) 15px 9px no-repeat;
+}
+.hotjobs .cont .list a{
+	color:#2575B8;
+}
+/*
+*人才搜索 
+*/
+.hrsearch{
+	padding-left:15px;
+	height:55px;
+	background:url(hrsearchbg.gif) left top no-repeat;
+}
+.hrsearch .searchin{
+	padding-right:10px;
+	height:55px;
+	overflow:hidden;
+	background:url(hrsearchbg.gif) right top no-repeat;
+	line-height:55px;
+}
+.hrsearch .searchin div{
+	float:left;
+}
+.hrsearch .searchin .title{
+	font-weight:bold;
+	padding:0 20px 0 5px;
+	background:url(hrspacing.gif) right 7px no-repeat;
+}
+.hrsearch .searchin .word{
+	padding-left:10px;
+}
+.hrsearch .searchin .radio{
+	padding-top:16px;
+}
+.hrsearch .searchin .radio input{
+	border:0;
+}
+.hrsearch .searchin .key{
+	padding:0 5px 0 25px;
+	background:url(hrspacing.gif) left 7px no-repeat;
+}
+.hrsearch .searchin .input{
+	padding:15px 15px 0 0;	
+}
+.hrsearch .searchin .input input{
+	width:250px;
+	height:18px;
+}
+.hrsearch .searchin .butt{
+	padding-top:10px;	
+}
+.hrsearch .searchin .butt input{
+	border:0;	
+}
+/*
+*职位最新/推荐
+*/
+.mainlist .head{
+	height:35px;
+	background:url(hrhead2.gif) left top no-repeat;
+}
+.mainlist .head div{
+	width:102px;
+	text-align:center;
+	line-height:35px;
+	float:left;
+	background:url(hrout.gif) right top no-repeat;
+	color:#1F3A87;
+	font-size:14px;
+}
+.mainlist .head div.choose{
+	background:url(hrover.gif) center top no-repeat;
+	font-weight:bold;
+	color:#FFF;
+}
+.mainlist .head .more{
+	float:right;
+	background:url(hrhead2.gif) right top no-repeat;
+}
+.mainlist .cont{
+	border:#C8D8EA solid 1px;
+	border-top:0;
+	padding:10px;
+	height:318px;
+}
+.mainlist .cont table td{
+	line-height:25px;
+	text-align:center;
+	border-right:#FFF solid 1px;
+}
+.mainlist .cont table .h td{
+	background:#F3F3F3;
+	font-weight:bold;
+}
+.mainlist .cont table .bb td{
+	background:#F3F3F3;
+}
+.mainlist .cont table td.td1,.mainlist .cont table td.td2,.mainlist .cont table td.t1{
+	padding:0 8px 0 8px;
+	text-align:left;
+}
+.mainlist .cont table td.td2 a{
+	color:#f60;
+	display:block;
+	height:25px;
+	overflow:hidden;
+}
+.mainlist .cont table td.t1 a{
+	display:block;
+	height:25px;
+	padding-left:20px;
+	overflow:hidden;
+}
+.mainlist .cont table td.sex1 a{
+	background:url(sex1.gif) 1px 5px no-repeat;
+}
+.mainlist .cont table td.sex2 a{
+	background:url(sex2.gif) 1px 5px no-repeat;
+}
+/*
+*
+*/
+.sideleftad{
+	border:1px solid #ccc;
+	text-align:center;
+	padding:2px 0 2px 0;
+}
+.othercont{
+	margin-top:10px;
+	border:#C7D7E9 solid 1px;
+}
+.othercont .head{
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	font-size:14px;
+	font-weight:bold;
+	color:#1F3A87;
+	background:url(hrhead4.gif) left top repeat-x;
+}
+.othercont .cont{
+	padding:5px;
+}
+.othercont .cont div{
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+}
+.othercont .cont div span,.othercont .cont div a{
+	display:block;
+	float:left;
+}
+.othercont .cont div span{
+	width:25px;
+	text-align:center;
+	color:#FFF;
+	background:url(numbg0.gif) center 4px no-repeat;
+}
+.othercont .cont div.list1 span,.othercont .cont div.list2 span,.othercont .cont div.list3 span{
+	background:url(numbg1.gif) center 4px no-repeat;
+}
+.mainlist1 .head{
+	background:url(hrhead3.gif) left top no-repeat;
+}
+.mainlist1 .head div{
+	background:url(hrout1.gif) right top no-repeat;
+	color:#EA5300;
+}
+.mainlist1 .head div.choose{
+	background:url(hrover1.gif) center top no-repeat;
+}
+.mainlist1 .head .more{
+	background:url(hrhead3.gif) right top no-repeat;
+}
+.mainlist1 .cont{
+	border:#FFD29F solid 1px;
+	border-top:0;
+}
+

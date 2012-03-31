@@ -1,0 +1,120 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/hr/showjob.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="showjobtable">
+  <tr> 
+    <td class="side">
+       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr>
+          <td class="head"><div class="TAG">招聘单位</div></td>
+        </tr>
+        <tr>
+          <td class="company">
+          	<div class="img"><img src="$webdb[www_url]/images/$STYLE/hr/renzheng{$companydb[renzheng]}.gif"></div>
+            <div class="title">$companydb[title]</div>
+            <div class="renzheng">{$renzhengDB[$companydb[renzheng]]}</div>
+            <div class="view_company" onclick="window.open('$webdb[www_url]/home/?uid=$rsdb[uid]')"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="head head1"><div class="TAG">其它职位</div></td>
+        </tr>
+        <tr>
+          <td class="other">
+<!--
+EOT;
+$array=list_hr_job($rsdb[uid],10);
+foreach($array AS $rs){print <<<EOT
+-->
+			<div class="list"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+          </td>
+        </tr>
+      </table>
+      <div class="hrsortcont mt10">
+        	<div class="head"><span class="TAG">职位分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+$fcolor=$fid==$fkey?' style=\"color:red;\"':'';
+print <<<EOT
+-->
+				<div class="big"><a href="list.php?fid=$fkey"{$fcolor}>{$fvalue}</a></div>
+            	<div class="small">
+<!--
+EOT;
+foreach($Fid_db[$fkey] AS $key=>$value){
+$color=$fid==$key?' style=\"color:red;\"':'';
+print <<<EOT
+-->
+              		<a href="list.php?fid=$key"{$color}>{$value}</a> 
+<!--
+EOT;
+}print <<<EOT
+--> 
+            	</div>	
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+            <div class="foot"></div>
+        </div>
+    </td>
+    <td class="main">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="content">
+          <tr>
+            <td class="head"><div class="TAG"><span>招聘信息</span></div></td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<div class="title">
+                	<span>招聘职位：</span><em>$rsdb[title]</em>  
+                	发布日期：<a editurl='$Murl/job.php?job=bencandy&fid=$fid&id=$id&act=do'>{$rsdb[posttime]}</a>
+            	</div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="base">
+                  <tr>
+                    <td>
+					<div>职位名称：<span>{$rsdb[title]}</span></div>
+<!--{template}--> 
+					<div>{title}：<span>{value}</span></div>      
+<!--{/template}-->
+                    </td>
+                  </tr>
+                </table>
+                <div class="morecont">
+                	<div class="h">【职位描述】</div>
+                    <div class="c">$rsdb[content]</div>
+                </div>
+                <div class="morecont">
+                	<div class="h">【公司介绍】</div>
+                    <div class="c">{$companydb[content]}</div>
+                </div>
+                <div class="morecont">
+                	<div class="h">【联系方式】</div>
+                    <div class="c">
+                      邮箱:{$companydb[qy_contact_email]}<br>
+                      电话:{$companydb[qy_contact_tel]} <br>
+                      传真:{$companydb[qy_contact_fax]}<br>
+
+                      QQ:{$companydb[qq]} <br>
+                      网址:{$companydb[qy_website]}<br>
+                      地址:{$companydb[qy_regplace]}
+                    </div>
+                </div>
+            </td>
+          </tr>
+        </table>	
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

@@ -1,0 +1,314 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/house/show_zhongjie.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="zhongjie">
+  <tr> 
+    <td colspan="2" class="top">
+      <div class="title">$rsdb[title]</div>
+      <SCRIPT LANGUAGE="JavaScript">
+<!--
+function chooosem(t){
+	for(var i=1;i<6;i++){
+		document.getElementById('mt'+i).className='s2';
+	}
+	document.getElementById('mt'+t).className='s1';
+	for(var i=1;i<6;i++){
+		document.getElementById('mts'+i).style.display='none';
+	}
+	document.getElementById('mts'+t).style.display='';
+}
+//-->
+</SCRIPT>
+      <div class="s1" id="mt1" onmouseover="chooosem('1')">出租房源</div>
+      <div class="s2" id="mt2" onmouseover="chooosem('2')">出售房源</div>
+      <div class="s2" id="mt3" onmouseover="chooosem('3')">客户评价</div>
+      <div class="s2" id="mt4" onmouseover="chooosem('4')">相关图片</div>
+      <div class="s2" id="mt5" onmouseover="chooosem('5')">自我介绍</div>
+	  <div class="ppost">
+	  
+<a href="$city_url/post.php?fid=$fid&city_id=$city_id&zone_id=$zone_id&street_id=$street_id">申请</a>
+<a href="$city_url/post.php?job=edit&fid=$fid&id=$id">修改</a> 
+<a href="$city_url/post.php?action=del&fid=$fid&id=$id" onclick="return confirm('你确认要注销吗?');">注销</a>
+	  
+	  </div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="22%" height="200" valign="top" class="LL"> 
+      <div class="ii"> <a class="im" href="$webdb[www_url]/member/homepage.php?uid=$rsdb[uid]"  onClick="if($rsdb[uid]==0)return false;" target="_blank"><img src="$rsdb[face]" onError="this.src='$webdb[www_url]/images/default/noface.gif'" width="80" height="80" border="0"></a> 
+        <a href="$city_url/job.php?job=userinfo&uid=$rsdb[uid]"  onClick="if($rsdb[uid]==0)return false;" target="_blank"><span>$userdb[username]</span></a></div>
+      <div class="yzs"><span>认证：</span> 
+        <!--
+EOT;
+if($userdb[grouptype]==1){
+print <<<EOT
+-->
+        <img src="$webdb[www_url]/member/images/company_icon.gif" alt="企业会员"> 
+        <!--
+EOT;
+}
+print <<<EOT
+-->
+        <!--
+EOT;
+if($userdb[idcard_yz]==1){
+print <<<EOT
+-->
+        <img src="$webdb[www_url]/images/default/yz/idcard_1.gif" alt="身份认证会员"> 
+        <!--
+EOT;
+}else{
+print <<<EOT
+-->
+        <img src="$webdb[www_url]/images/default/yz/idcard_0.gif" alt="身份还未认证"> 
+        <!--
+EOT;
+}
+print <<<EOT
+-->
+        <!--
+EOT;
+if($userdb[email_yz]==1){
+print <<<EOT
+-->
+        <img src="$webdb[www_url]/images/default/yz/email_1.gif" alt="邮箱认证会员"> 
+        <!--
+EOT;
+}else{
+print <<<EOT
+-->
+        <img src="$webdb[www_url]/images/default/yz/email_0.gif" alt="邮箱还未认证"> 
+        <!--
+EOT;
+}
+print <<<EOT
+-->
+        <!--
+EOT;
+if($userdb[mob_yz]==1){
+print <<<EOT
+-->
+        <img src="$webdb[www_url]/images/default/yz/mob_1.gif" alt="手机认证会员"> 
+        <!--
+EOT;
+}else{
+print <<<EOT
+-->
+        <img src="$webdb[www_url]/images/default/yz/mob_0.gif" alt="手机还未认证"> 
+        <!--
+EOT;
+}
+print <<<EOT
+-->
+      </div>
+      <div class="tt"><span>级别：</span>$userdb[level]</div>
+      <div class="tt"><span>地区：</span>{$rsdb[showarea]}</div>
+      <div class="tt"><span>登记日期：</span>{$rsdb[posttime]}</div>
+      <div class="tt"><span>电话号码:</span>$rsdb[telephone]</div>
+      <div class="tt"><span>手机号码:</span>$rsdb[_mobphone]</div>
+      <div class="tt"><span>QQ　号码:</span><a href="tencent://message/?uin=$rsdb[_oicq]&Site=$webdb[Info_webname]&Menu=yes">$rsdb[oicq]</a></div>
+      <div class="tt"><span>邮箱帐号:</span>$rsdb[email]</div>
+      <!--
+EOT;
+if($rsdb['fuwu_zone']){print <<<EOT
+-->
+      <div class="tt"><span>服务区域：</span>{$rsdb[fuwu_zone]}</div>
+      <!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['store']){print <<<EOT
+-->
+      <div class="tt"><span>所属门店：</span>{$rsdb[store]}</div>
+      <!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['my_234']){print <<<EOT
+-->
+      <div class="tt"><span>从业经验：</span>{$rsdb[my_234]}</div>
+      <!--
+EOT;
+}print <<<EOT
+--><!---->
+      <div class="tt"><span>标签：</span>{$rsdb[keywords]}</div>
+      <div class="tt p1"><span>注册：</span>$userdb[regdate]</div>
+      <div class="tt p2"><span>离线：</span>$userdb[lastvist]</div>
+      <div class="hits">关注度：<span>$rsdb[hits]</span></div>
+    </td>
+    <td width="78%" valign="top" class="RR"> 
+      <div id="mts1" style="d"> 
+        <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#dddddd" class="Ltb">
+          <tr bgcolor="#FFFFFF"> 
+            <td width="17%">图 片</td>
+            <td width="44%">标 题</td>
+            <td width="14%">面 积</td>
+            <td width="13%">格 局</td>
+            <td width="12%">售 价</td>
+          </tr>
+        </table>
+        <!--
+EOT;
+$array = Get_Info($rsdb[uid],10,40,1);
+foreach($array AS $rs){
+$time=date("m-d",$rs[full_time]);
+print <<<EOT
+-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="Lftb">
+          <tr bgcolor="#FFFFFF"> 
+            <td width="17%" class="ii"><a href="$rs[url]" target="_blank"><img src="$rs[picurl]" border="0" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'"></a> 
+            </td>
+            <td width="44%" class="tt"><a href="$rs[url]" target="_blank">$rs[title]</a></td>
+            <td width="14%"><span class="cc">$rs[acreage]</span>{$module_DB[$rs[mid]][field][acreage][form_units]}</td>
+            <td width="13%">$rs[room_type]</td>
+            <td width="12%"><span class="cc">$rs[price]</span>{$module_DB[$rs[mid]][field][price][form_units]}</td>
+          </tr>
+        </table>
+        <!--
+EOT;
+}print <<<EOT
+-->
+      </div>
+      <div id="mts2" style="display:none;"> 
+        <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#dddddd" class="Ltb">
+          <tr bgcolor="#FFFFFF"> 
+            <td width="17%">图 片</td>
+            <td width="44%">标 题</td>
+            <td width="14%">面 积</td>
+            <td width="13%">格 局</td>
+            <td width="12%">售 价</td>
+          </tr>
+        </table>
+        <!--
+EOT;
+$array = Get_Info($rsdb[uid],10,40,2);
+foreach($array AS $rs){
+$time=date("m-d",$rs[full_time]);
+print <<<EOT
+-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="Lftb">
+          <tr bgcolor="#FFFFFF"> 
+            <td width="17%" class="ii"><a href="$rs[url]" target="_blank"><img src="$rs[picurl]" border="0" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'"></a> 
+            </td>
+            <td width="44%" class="tt"><a href="$rs[url]" target="_blank">$rs[title]</a></td>
+            <td width="14%"><span class="cc">$rs[acreage]</span>{$module_DB[$rs[mid]][field][acreage][form_units]}</td>
+            <td width="13%">$rs[room_type]</td>
+            <td width="12%"><span class="cc">$rs[price]</span>{$module_DB[$rs[mid]][field][price][form_units]}</td>
+          </tr>
+        </table>
+        <!--
+EOT;
+}print <<<EOT
+-->
+      </div>
+      <div id="mts3" style="display:none;"> 
+        <div id="comment"></div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="comment_form">
+          <!--
+EOT;
+if($lfjid){$none='none';}
+print <<<EOT
+-->
+          <tr style="display:$none;"> 
+            <td class="left" width="10%">称呼:</td>
+            <td class="right" width="90%"> 
+              <input type="text" name="textfield2" id="comment_username" value="$lfjid">
+            </td>
+          </tr>
+          <!--
+EOT;
+if($webdb[Info_GroupCommentYzImg]&&in_array($groupdb['gid'],explode(",",$webdb[Info_GroupCommentYzImg]))){
+$webdb[yzImgComment]=1;
+print <<<EOT
+-->
+          <tr> 
+            <td class="left" width="10%">验证码:</td>
+            <td class="right" width="90%"> 
+              <input id="yzImgNum" type="text" name="yzimg" size="8" onFocus="commentyzimg()">
+              <SCRIPT LANGUAGE="JavaScript">
+<!--
+function commentyzimg(){
+	if(/yzimg\.php/.test($("#yz_Img")[0].src)==false){
+		$("#yz_Img").show();
+		$("#yz_Img")[0].src='$webdb[www_url]/do/yzimg.php?'+Math.random();
+	}
+	
+}
+
+document.write('<img border="0" id="yz_Img" name="imageField" onclick="this.src=this.src+Math.random();" src="" style="display:none;">');
+//-->
+</SCRIPT>
+            </td>
+          </tr>
+          <!--
+EOT;
+}
+print <<<EOT
+-->
+          <tr> 
+            <td class="left" width="10%">内容:</td>
+            <td class="right" width="90%"> 
+              <textarea name="textfield" rows="8" id="comment_content" onKeyDown="quickpost(event)" cols="80"></textarea>
+            </td>
+          </tr>
+          <tr> 
+            <td class="left" width="10%"> 
+              <script language="JavaScript">
+<!--
+
+getcomment("$city_url/job.php?job=comment_ajax&fid=$fid&id=$id");
+cnt = 0;
+function quickpost(event)
+{
+	if((event.ctrlKey && event.keyCode == 13)||(event.altKey && event.keyCode == 83))
+	{
+		cnt++;
+		if (cnt==1){
+			post_comment();
+		}else{
+			alert('内容正在提交...');
+		}
+	}	
+}
+
+function post_comment(){
+	postcomment('$city_url/job.php?job=comment_ajax&action=post&fid=$fid&id=$id','$webdb[yzImgComment]');
+	if(document.getElementById("yz_Img")!=null){
+		//document.getElementById("yz_Img").src="$webdb[www_url]/do/yzimg.php?"+Math.random();;
+		$("#yz_Img")[0].src='';
+		$("#yz_Img").hide();
+	}
+}
+//-->
+</script>
+            </td>
+            <td class="right" width="90%"> 
+              <input type="button" id="comment_submit" name="Submit" value="提交" onClick="post_comment();">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="mts4" style="display:none;"> 
+        <!--
+EOT;
+foreach($picdb AS $key=>$rs){print <<<EOT
+-->
+        <div><a class="ii" href="$rs[imgurl]" target="_blank"><img src="$rs[picurl]" width="134" height="95" alt="$rs[name]" border="0" /></a> 
+          <a href="$rs[imgurl]" target="_blank">$rs[name]</a></div>
+        <!--
+EOT;
+}print <<<EOT
+-->
+      </div>
+      <div id="mts5" style="display:none;">$rsdb[content] </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

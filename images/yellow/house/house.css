@@ -1,0 +1,689 @@
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.mt10{
+	margin-top:10px;
+}
+.head{
+	height:30px;
+	overflow:hidden;
+	line-height:35px;
+}
+.tag{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:15px;
+}
+.more{
+	float:right;
+	padding-right:10px;
+}
+.clear{
+	clear:both;
+}
+/*
+*房产首页第一栏
+*/
+.searchcontainer{
+	height:100px;
+	overflow:hidden;
+}
+.searchcontainer .sidead{
+	width:185px;
+	height:79px;
+	overflow:hidden;
+	text-align:center;
+	background:#F3F9EE;
+	border:#DCDCDC solid 1px;
+	padding:5px 0 5px 0;
+}
+.searchcontainer .search{
+	width:590px;
+	height:91px;
+	overflow:hidden;
+	margin-left:8px;
+	background:url(searchbg.gif) center 30px no-repeat;
+}
+/*搜索*/
+.selectmodule{
+	height:31px;
+	overflow:hidden;
+	line-height:35px;
+	padding-left:45px;
+	background:url(icon1.gif) left top no-repeat;
+	position:relative;
+}
+.selectmodule span{
+	display:block;
+	width:105px;
+	padding-left:4px;
+	text-align:center;
+	height:31px;
+	float:left;
+	background:url(icon2.gif) right top no-repeat;	
+	font-size:14px;
+	font-weight:bold;
+	color:#236A00;
+	cursor:pointer;
+}
+.selectmodule span.ck{
+	color:red;	
+}
+.selectcont{
+	width:100px;
+	padding:16px 0 0 13px;
+	float:left;
+}
+.selectcont .selectcontin{
+	position:absolute;
+	width:100px;
+	z-index:1000;
+}
+#showselect{
+	height:33px;
+	overflow:hidden;
+	line-height:38px;
+	padding-left:15px;
+	font-size:14px;
+	color:#666;
+	cursor:pointer;
+}
+.selectcontin .unselect{
+	background:url(seltecttype.gif) center top no-repeat;
+}
+.selectcontin .onclick{
+	background:url(seltecttype.gif) center -33px no-repeat;
+}
+#listselecta{
+	width:100px;
+	background:url(seltecttype.gif) center bottom no-repeat;
+	padding-bottom:3px;
+}
+#listselecta a{
+	display:block;
+	height:28px;
+	overflow:hidden;
+	line-height:32px;
+	padding-left:15px;
+	font-size:14px;
+	background:url(seltecttype.gif) center -132px no-repeat;
+}
+#listselecta a.ck{
+	background:url(seltecttype.gif) center -66px no-repeat;
+	color:red;
+}
+#listselecta a:hover{
+	background:url(seltecttype.gif) center -66px no-repeat;
+	color:#FFF;
+	text-decoration:none;
+}
+.searchcontainer .keyword{
+	float:left;
+	height:33px;
+	padding-top:16px;
+	width:300px;
+	background:url(keyword.gif) right 16px no-repeat;
+}
+.searchcontainer .keyword input{
+	border:0;
+	background:none;
+	height:30px;
+	line-height:30px;
+	width:280px;
+	padding-left:10px;
+	font-size:14px;
+	color:#666;
+}
+.searchcontainer .search_sub{
+	float:left;
+	padding:16px 0 0 20px;
+}
+.searchcontainer .search_sub input{
+	border:0;
+}
+/*
+*横幅广告
+*/
+.arrowbanner{
+	width:100%;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+/*
+*房产首页第二栏
+*/
+/*左边*/
+.MainContainer .sidel{
+	width:240px;
+	float:left;
+}
+.MainContainer .mainr{
+	width:730px;
+	float:right;
+}
+.memberaction .head{
+	height:40px;
+	overflow:hidden;
+	line-height:50px;
+	background:url(head1.gif) right top no-repeat;
+}
+.memberaction .head .tag{
+	background:url(head1.gif) left top no-repeat;
+	padding-left:25px;
+}
+.memberaction .cont{
+	border:#B2CF98 solid 1px;
+	border-top:0;
+	padding:5px;
+	height:100px;
+}
+.memberaction .cont div{
+	width:50%;
+	height:28px;
+	padding:3px 0 2px 0;
+	float:left;
+	background:url(but1.gif) center 2px no-repeat;
+}
+.memberaction .cont div.ck1{
+	background:url(but2.gif) center 2px no-repeat;
+}
+.memberaction .cont div.ck2{
+	background:url(but3.gif) center 2px no-repeat;
+}
+.memberaction .cont div a{
+	display:block;
+	padding:7px 0 0 22px;
+}
+.memberaction .cont div a:hover{
+	text-decoration:none;
+}
+.changeinfo{
+	margin-top:10px;
+	border:#DDD solid 1px;
+}
+.changeinfo .head{
+	background:url(head2.gif) right top no-repeat;
+	height:38px;
+	color:#DE4900;
+}
+.changeinfo .cont{
+	padding:1px 1px 10px 1px;
+}
+.changeinfo .cont .h{
+	height:20px;
+	overflow:hidden;
+	line-height:25px;
+	background:url(head3.gif) left top repeat-x;
+	padding-left:10px;
+	margin-bottom:8px;
+}
+.changeinfo .cont .h div{
+	width:70px;
+	height:20px;
+	text-align:center;
+	background:url(out1.gif) center top no-repeat;
+	float:left;
+	color:#777;
+	cursor:pointer;
+}
+.changeinfo .cont .h div.choose{
+	background:url(over1.gif) center top no-repeat;
+	color:#DE4900;
+}
+.changeinfo .cont .list{
+	height:20px;
+	overflow:hidden;
+	line-height:23px;
+	padding:0 10px 0 15px;
+	color:#777;
+}
+.changeinfo .cont .list a{
+	padding-left:6px;
+}
+/*右边*/
+.contenttable{
+	border:#DDD solid 1px;
+}
+.contenttable .moreinf{
+	border-left:#DDD solid 1px;
+	width:290px;
+}
+.contenttable .housenews{
+	padding:0 5px 0 5px;
+}
+.contenttable .housenews .head{
+	padding:0 5px 0 5px;
+	border-bottom:#B2CF98 solid 1px;
+}
+.contenttable .housenews .head .tag{
+	padding-left:5px;
+}
+.contenttable .housenews .cont{
+	padding:5px;
+}
+.contenttable .housenews .cont div{
+	height:25px;
+	overflow:hidden;
+	padding-left:10px;
+	line-height:25px;
+	background:url(point1.gif) left 10px no-repeat;
+}
+.contenttable .housenews .cont div span{
+	display:none;
+}
+.contenttable .housenews .cont div a{
+	float:left;
+	font-size:14px;
+}
+.contenttable .housenews .cont div a.f{
+	color:#3074C1;
+	padding-right:5px;
+}
+.contenttable .housenews .cont div a.t{
+	text-decoration:underline;
+}
+.contenttable .housenews .cont div em{
+	float:right;
+	font-style:normal;
+	color:#888;
+	padding-right:5px;
+}
+.contenttable .housenews .cont div.list1{
+	height:80px;
+	border-bottom:#DDD dotted 1px;
+	background:none;
+	margin-bottom:5px;
+}
+.contenttable .housenews .cont div.list1 a.f,.contenttable .housenews .cont div.list1 em{
+	display:none;
+}
+.contenttable .housenews .cont div.list1 a.t{
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	color:#C00;
+	line-height:30px;
+	text-decoration:none;
+}
+.contenttable .housenews .cont div.list1 span{
+	display:block;
+	text-indent:25px;
+	line-height:20px;
+	color:#666;
+}
+.contenttable .housenews .cont div.list5{
+	border-bottom:#DDD dotted 1px;
+	padding-bottom:5px ;
+	margin-bottom:5px;
+}
+.contenttable .moreinf .slidecont{
+	width:270px;
+	height:170px;
+	overflow:hidden;
+	padding:10px 0 10px 0;
+	margin:auto;
+}
+.contenttable .moreinf .head{
+	background:url(head4.gif) left top repeat-x;
+}
+.contenttable .moreinf .cont{
+	padding:8px;
+	line-height:20px;
+}
+.contenttable .moreinf .cont .list{
+	height:20px;
+	overflow:hidden;
+	padding-left:15px;
+	background:url(point1.gif) 5px 8px no-repeat;
+}
+.contenttable .moreinf .cont .list a{
+	float:left;
+}
+.contenttable .moreinf .cont .list span{
+	float:right;
+	color:#888;
+}
+/*
+*房产首页第三栏
+*/
+.hothouse .head{
+	height:31px;
+	background:url(head5.gif) right top no-repeat;
+}
+.hothouse .head .tag{
+	background:url(head5.gif) left top no-repeat;
+	padding-left:40px;
+}
+.hothouse .cont{
+	border:#DDD solid 1px;
+	border-top:0;
+	background:#EEE;
+	padding:0 5px 5px 5px;
+}
+.hothouse .cont .c{
+	padding:15px 10px 15px 10px;
+	background:#FFF;
+	line-height:26px;
+	height:400px;
+	overflow:hidden;	
+}
+.hothouse .cont .list{
+	height:26px;
+	overflow:hidden;
+}
+.hothouse .cont .list a,.hothouse .cont .list span{
+	display:block;
+	float:left;
+}
+.hothouse .cont .list a{
+	width:50%;
+	font-size:14px;
+	font-weight:bold;
+	color:#3074C1;
+}
+.hothouse .cont .list span.city{
+	width:20%;
+	color:#777;
+}
+.hothouse .cont .list span.price{
+	width:30%;
+	color:#999;
+}
+.hothouse .cont .list span.price em{
+	color:#f60;
+	font-style:normal;
+}
+.sidecont{
+	border:#DDD solid 1px;
+	height:226px;
+	overflow:hidden;
+}
+.sidecont .head{
+	height:31px;
+	background:url(head6.gif) left top repeat-x;
+}
+.sidecont .head .tag{
+	margin-left:10px;
+	background:url(tag1.gif) left 4px no-repeat;
+	padding-left:15px;
+	line-height:31px;
+}
+.sidecont .head .tag span{
+	display:block;
+	background:url(tag1.gif) right 4px no-repeat;
+	padding-right:15px;
+	color:#FFF;
+}
+.sidecont .head .more {
+	height:31px;
+}
+.sidecont .head .more a{
+	padding-left:20px;
+	background:url(icon3.gif) 9px 4px no-repeat;
+	font-size:14px;
+}	
+.sidecont .head .more a.post{
+	background:none;
+	font-size:12px;
+	color:#999;
+}
+.sidecont .cont{
+	height:170px;
+	padding:10px 0 0 10px;
+}
+.sidecont .cont .listpic{
+	width:142px;
+	height:170px;
+	background:url(picbg1.gif) center top no-repeat;
+	float:left;
+}
+.sidecont .cont .listpic div{
+	width:100px;
+	height:20px;
+	overflow:hidden;
+	line-height:25px;
+	margin:auto;
+	color:#666;
+}
+.sidecont .cont .listpic div a{
+	color:#3074C1;
+}
+.sidecont .cont .listpic div.img{
+	margin-top:23px;
+	height:75px;
+	margin-bottom:3px;
+}
+.sidecont .cont .listpic div.price{
+	font-size:14px;
+	color:#f60;
+}
+.sidecont1 .head .tag{
+	background:url(tag2.gif) left 4px no-repeat;
+}
+.sidecont1 .head .tag span{
+	background:url(tag2.gif) right 4px no-repeat;
+}
+.sidecont1 .cont .listpic{
+	background:url(picbg2.gif) center top no-repeat;
+}
+/*
+*房产首页第四栏
+*/
+.abouthouse{
+	border:#DDD solid 1px;
+}
+.abouthouse .head{
+	background:url(head8.gif) right 1px no-repeat;
+}
+.abouthouse .cont{
+	padding:10px;
+}
+.abouthouse .cont table{
+	border-bottom:#DDD dotted 1px;
+	margin-bottom:8px;
+}
+.abouthouse .cont table .img{
+	width:70px;
+	padding:4px 10px 12px 0;
+}
+.abouthouse .cont table .img div{
+	width:70px;
+	border:#DDD solid 1px;
+	padding:0;
+}
+.abouthouse .cont table .img div a{
+	display:block;
+	height:55px;
+	overflow:hidden;
+}
+.abouthouse .cont table .word{
+	line-height:20px;
+	color:#888;
+	padding-top:3px;
+}
+.abouthouse .cont table .word h3{
+	height:20px;
+	font-size:12px;
+	overflow:hidden;
+}
+.abouthouse .cont table .word div a{
+	color:#f60;
+}
+.abouthouse .cont .list{
+	height:23px;
+	line-height:23px;
+	padding-left:15px;
+	background:url(point1.gif) 5px 9px no-repeat;
+}
+.abouthouse .cont .list a{
+	float:left;
+	color:#666;
+}
+.abouthouse .cont .list span{
+	float:right;
+	color:#999;
+	padding-right:5px;
+}
+.tzhousecont{
+	height:270px;
+}
+.tzhousecont .cont{
+	padding:5px 0 0 3px;
+}
+.tzhousecont .cont .listtz{
+	width:225px;
+	height:65px;
+	overflow:hidden;
+	padding:9px 0 0 12px;
+	float:left;
+}
+.tzhousecont .cont .listtz dl{
+	border:#DDD solid 1px;
+	height:63px;
+}
+.tzhousecont .cont .listtz dl dt{
+	float:left;
+	width:86px;
+	padding-top:5px;
+}
+.tzhousecont .cont .listtz dl dt div{
+	width:70px;
+	border:#aaa solid 1px;
+	height:50px;
+	overflow:hidden;
+	margin:auto;
+}
+.tzhousecont .cont .listtz dl dd{
+	float:left;
+	width:130px;
+	padding-top:5px;
+	line-height:18px;
+	color:#888;
+}
+.tzhousecont .cont .listtz dl dd h3,.tzhousecont .cont .listtz dl dd div{
+	height:18px;
+	font-size:13px;
+	overflow:hidden;
+	padding:0 5px 0 5px;
+}
+
+/*
+*房产首页第五栏
+*/
+.tophouse,.mencont{
+	border:#DDD solid 1px;
+	height:300px;
+}
+.tophouse .head,.mencont .head{
+	background:url(head7.gif) left top repeat-x;
+}
+#Span5,#Span6,#Span7,#Span8{
+	width:119px;
+	float:left;
+	float:left;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+}
+#Span5{
+	width:118px;
+	border-right:#DDD solid 1px;
+}
+.mencont .head .choose{
+	background:url(over2.gif) right top no-repeat;
+}
+.tophouse .head .choose{
+	background:url(over2.gif) left top no-repeat;
+}
+.tophouse .cont{
+	padding:5px 10px 0 10px;
+}
+.tophouse .cont .listpic{
+	border-bottom:#DDD dotted 1px;
+}
+.tophouse .cont .listpic .img{
+	width:50px;
+	padding:5px 10px 5px 0;
+}
+.tophouse .cont .listpic .img div{
+	width:50px;
+	border:#DDD solid 1px;
+	overflow:hidden;
+	padding:1px;
+}
+.tophouse .cont .listpic .img div a{
+	display:block;
+	width:50px;
+	overflow:hidden;
+}
+.tophouse .cont .listpic .word{
+	line-height:23px;
+	padding-top:3px;
+	color:#888;
+}
+.tophouse .cont .listpic .word div{
+	height:23px;
+	overflow:hidden;
+}	
+.tophouse .cont .listpic .word div a{
+	color:#3074C1;
+}
+.tophouse .cont .listpic .word div span{
+	color:#f60;
+}
+.mencont .cont{
+	height:270px;
+	padding-left:3px;
+}
+.mencont .cont .listpic{
+	width:33%;
+	float:left;
+}
+.mencont .cont .listpic .img{
+	width:80px;
+	padding:15px 10px 0 15px;
+}
+.mencont .cont .listpic .img div{
+	width:80px;
+	border:#DDD solid 1px;
+	padding:1px;
+}
+.mencont .cont .listpic .img div a{
+	width:80px;
+	overflow:hidden;
+	display:block;
+	text-align:center;
+}
+.mencont .cont .listpic .word{
+	padding-top:15px;
+	line-height:23px;
+	color:#888;
+}	
+.mencont .cont .listpic .word div{
+	height:23px;
+	overflow:hidden;
+}
+.mencont .cont .listpic .word div a{
+	color:#236A00;
+	font-size:14px;
+	font-weight:bold;
+}
+.mencont .cont .listpic .word div.goto{
+	background:url(goto.gif) left top no-repeat;
+	padding-left:10px;
+	margin-top:5px;
+}
+.mencont .cont .listpic .word div.goto a{
+	font-size:12px;
+	font-weight:normal;
+	color:#000;
+}
+/**********************/
+.searchcontainer .sidead,.memberaction,.changeinfo,.contenttable,.sidecont,.abouthouse,.tophouse,.mencont{
+	background:#FFF;
+}

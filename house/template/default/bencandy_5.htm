@@ -1,0 +1,418 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/house/show_xiaoqu.css">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="mainTB">
+  <tr>
+    <td class="top1">
+	
+	<div class="mainTB_L">$rsdb[title]</div>
+	
+	 
+	
+	  <div class="mainTB_R">关注度:<font color="#FFFFFF">$rsdb[hits]</font>人次</div>
+	
+	</td>
+  </tr>
+  <tr>
+    <td class="top2" id="lps">
+	
+	<SCRIPT LANGUAGE="JavaScript">
+<!--
+function chooose_tb(obj,pid){
+	oo=document.getElementById('lps').getElementsByTagName("DIV");
+	for(var i=0;i<oo.length;i++){
+		if(oo[i]==obj){
+			oo[i].className='choose_mt';
+		}else{
+			oo[i].className='';
+		}
+	}
+	for(var i=1;i<7;i++){
+		document.getElementById('mm'+i).style.display="none";
+	}
+	document.getElementById('mm'+pid).style.display="";
+}
+//-->
+</SCRIPT>
+            <div class="choose_mt" onmouseover="chooose_tb(this,'1')"><a href="javascript::">房屋概述</a></div>
+            <div onmouseover="chooose_tb(this,'2')"><a href="javascript::">详细参数</a></div>
+            <div onmouseover="chooose_tb(this,'3')"><a href="javascript::">图片展示</a></div>
+			<div onmouseover="chooose_tb(this,'4')"><a href="javascript::">网友评价</a></div>
+			<div onmouseover="chooose_tb(this,'5')"><a href="javascript::">地图位置</a></div>
+			<div onmouseover="chooose_tb(this,'6')"><a href="javascript::">楼盘视频</a></div>
+			</td>
+  </tr>
+  <tr>
+    <td class="main" height="250" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="gaikuan" id="mm1">
+        <tr>
+          <td class="gaikuan_L" align="center"> 		  
+          <a href="$city_url/job.php?job=show_img&fid=$fid&id=$id" class="ii" target="_blank">
+				 <img src='$rsdb[picurl]' onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="120" height="90"/>
+				 </a>
+								
+            <a class="word" href="$city_url/job.php?job=show_img&fid=$fid&id=$id" target="_blank"> 
+            <img src="$webdb[www_url]/images/default/img_ico.gif" border="0">{$rsdb[picnum]}图</a> 
+          </td>
+          <td class="gaikuan_R">
+		  <div class="listtitle"><span>类型：</span>$rsdb[roomtype]</div>
+		   <div class="listtitle"><span>开发商：</span>$rsdb[seller]</div>
+		   <div class="listtitle"><span>地址：</span>$rsdb[address]</div>
+		   <div class="listtitle"><span>开盘时间：</span>$rsdb[star_sell]</div>
+		   <div class="listtitle"><span>登记时间：</span>$rsdb[posttime]</div>
+		   <div class="listtitle"><span>所在地区：</span>{$rsdb[showarea]}</div>
+		   
+		   <div class="price">楼盘均价：<span>$rsdb[price]</span>{$module_DB[$rsdb[mid]][field][price][form_units]}</div>
+		    <div class="ts"><div class="ps"><a href="list.php?city_id=$city_id&fid=2&xiaoqu_id=$id" target="_blank">查看出售房源</a></div>
+			
+			<div class="ww">			
+			      <a href="$city_url/post.php?fid=$fid&city_id=$city_id&zone_id=$zone_id&street_id=$street_id">登记</a> 
+			      <a href="$city_url/post.php?job=edit&fid=$fid&id=$id">修改</a> 
+                  <a href="$city_url/post.php?action=del&fid=$fid&id=$id">删除</a> 
+			</div>
+				
+				</div>
+			<div style="clear:both;"></div>
+			 <div class="fot"> <div class="aa">有意者请咨询售楼部电话（工作时间09:00-18:00）</div> <div class="bb">$rsdb[my_208]</div> </div>
+			 
+            <div class="tags">标签：$rsdb[keywords]</div>
+		  </td>
+        </tr>
+      </table>
+<div id="mm2" style="display:none;">
+	  
+<!--
+EOT;
+if($rsdb['seller']){print <<<EOT
+--><div><span>开发商：</span>{$rsdb[seller]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['address']){print <<<EOT
+--><div><span>地址：</span>{$rsdb[address]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['star_sell']){print <<<EOT
+--><div><span>开盘时间：</span>{$rsdb[star_sell]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['price']){print <<<EOT
+--><div><span>楼盘均价：</span>{$rsdb[price]} {$module_DB[$rsdb[mid]][field][price][form_units]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['bus']){print <<<EOT
+--><div><span>周边交通：</span>{$rsdb[bus]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['out_peitao']){print <<<EOT
+--><div><span>周边配套：</span>{$rsdb[out_peitao]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['in_peitao']){print <<<EOT
+--><div><span>小区配套：</span>{$rsdb[in_peitao]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['house_num']){print <<<EOT
+--><div><span>楼盘形态与栋数：</span>{$rsdb[house_num]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['total_area']){print <<<EOT
+--><div><span>总占地面积：</span>{$rsdb[total_area]} {$module_DB[$rsdb[mid]][field][total_area][form_units]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['room_area']){print <<<EOT
+--><div><span>总建筑面积：</span>{$rsdb[room_area]} {$module_DB[$rsdb[mid]][field][room_area][form_units]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['roomtype']){print <<<EOT
+--><div><span>楼盘类型：</span>{$rsdb[roomtype]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['fitment']){print <<<EOT
+--><div><span>装修情况：</span>{$rsdb[fitment]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['my_134']){print <<<EOT
+--><div><span>物业公司：</span>{$rsdb[my_134]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['my_523']){print <<<EOT
+--><div><span>物业管理费：</span>{$rsdb[my_523]} {$module_DB[$rsdb[mid]][field][my_523][form_units]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['my_755']){print <<<EOT
+--><div><span>绿化率：</span>{$rsdb[my_755]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['my_898']){print <<<EOT
+--><div><span>车位数：</span>{$rsdb[my_898]} {$module_DB[$rsdb[mid]][field][my_898][form_units]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['my_208']){print <<<EOT
+--><div><span>售楼电话：</span>{$rsdb[my_208]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['sell_address']){print <<<EOT
+--><div><span>售楼处地址：</span>{$rsdb[sell_address]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['zone_area']){print <<<EOT
+--><div><span>区域：</span>{$rsdb[zone_area]}</div><!--
+EOT;
+}print <<<EOT
+--><!--
+EOT;
+if($rsdb['my_432']){print <<<EOT
+--><div><span>销售状态：</span>{$rsdb[my_432]}</div><!--
+EOT;
+}print <<<EOT
+--><!---->
+	  
+</div>
+
+<div id="mm3" style="display:none;">
+
+<!--
+EOT;
+
+foreach($picdb AS $rs){print <<<EOT
+-->
+	<div><a class="ii" href="$rs[imgurl]" target="_blank"><img src="$rs[picurl]" width="134" height="95" alt="$rs[name]" border="0" /></a> 
+      <a href="$rs[imgurl]" target="_blank">$rs[name]</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+
+</div>
+
+<div id="mm4" style="display:none;"><div id="comment"></div><table width="100%" border="0" cellspacing="0" cellpadding="0" class="comment_form">
+                  <tr>
+                    
+                <td colspan="2" class="head"><span class="L">添加留言</span><span class="R"><a href="$webdb[www_url]/member/?main=$Murl/member/comment.php?job=mylist" target="_blank">我的留言</a></span></td>
+                  </tr>
+<!--
+EOT;
+if($lfjid){$none='none';}
+print <<<EOT
+-->
+                  <tr style="display:$none;">
+                    <td class="left">称呼:</td>
+                    <td class="right"><input type="text" name="textfield2" id="comment_username" value="$lfjid"></td>
+                  </tr>
+<!--
+EOT;
+if($webdb[Info_GroupCommentYzImg]&&in_array($groupdb['gid'],explode(",",$webdb[Info_GroupCommentYzImg]))){
+$webdb[yzImgComment]=1;
+print <<<EOT
+-->
+				  <tr>
+                    <td class="left">验证码:</td>
+                    <td class="right">
+                        <input id="yzImgNum" type="text" name="yzimg" size="8" onFocus="commentyzimg()">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function commentyzimg(){
+	if(/yzimg\.php/.test($("#yz_Img")[0].src)==false){
+		$("#yz_Img").show();
+		$("#yz_Img")[0].src='$webdb[www_url]/do/yzimg.php?'+Math.random();
+	}
+	
+}
+
+document.write('<img border="0" id="yz_Img" name="imageField" onclick="this.src=this.src+Math.random();" src="" style="display:none;">');
+//-->
+</SCRIPT>
+                    </td>
+                  </tr>
+<!--
+EOT;
+}
+print <<<EOT
+--> 
+				  <tr>
+                    <td class="left">内容:</td>
+                    <td class="right">
+              <textarea name="textfield" rows="8" id="comment_content" onKeyDown="quickpost(event)" cols="100"></textarea>
+            </td>
+                  </tr>
+                  <tr>
+                    <td class="left">
+<script language="JavaScript">
+<!--
+
+getcomment("$city_url/job.php?job=comment_ajax&fid=$fid&id=$id");
+cnt = 0;
+function quickpost(event)
+{
+	if((event.ctrlKey && event.keyCode == 13)||(event.altKey && event.keyCode == 83))
+	{
+		cnt++;
+		if (cnt==1){
+			post_comment();
+		}else{
+			alert('内容正在提交...');
+		}
+	}	
+}
+
+function post_comment(){
+	postcomment('$city_url/job.php?job=comment_ajax&action=post&fid=$fid&id=$id','$webdb[yzImgComment]');
+	if(document.getElementById("yz_Img")!=null){
+		//document.getElementById("yz_Img").src="$webdb[www_url]/do/yzimg.php?"+Math.random();;
+		$("#yz_Img")[0].src='';
+		$("#yz_Img").hide();
+	}
+}
+//-->
+</script>
+                    </td>
+                    <td class="right"><input type="button" id="comment_submit" name="Submit" value="提交" onClick="post_comment();"></td>
+                  </tr>
+                </table>
+                
+</div>
+
+<div id="mm5" style="display:none;"><!--
+EOT;
+if($rsdb[maps]){
+if($webdb[if_GGmap]){print <<<EOT
+-->
+            <iframe src="$webdb[www_url]/hy/job.php?job=show_ggmaps&position=$rsdb[maps]&title=$rsdb[title]"  width="100%" height="400" scrolling="no" frameborder="0" ></iframe>
+            <!--
+EOT;
+}else{
+$detail=explode(",",$rsdb[maps]);
+print <<<EOT
+-->
+           <script language="javascript" src="http://api.51ditu.com/js/maps.js"></script>
+            <div id="maps" style="position:relative; width:950px; height:400px; border:black solid 1px;"> 
+              <div align="center" style="margin:12px;"><a href="http://api.51ditu.com/docs/mapsapi/help.html" target="_blank" style="color:#D01E14;font-weight:bolder;font-size:12px;">看不到地图请点这里</a></div>
+            </div>
+            <script language="javascript">
+	var maps = new LTMaps( "maps" );
+	var c = new LTSmallMapControl();
+	maps.addControl(c);
+	var point = new LTPoint( $detail[0] , $detail[1] );
+	maps.centerAndZoom ( point , 2 );
+	var marker = new LTMarker( point );
+	maps.addOverLay( marker );
+	var text = new LTMapText( marker );
+	text.setLabel( "目标所在位置" ); 
+	maps.addOverLay( text ); 
+</script>
+            <!--
+EOT;
+}
+}else{print <<<EOT
+-->
+用户没有标注地图!!
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+      <div id="mm6" style="display:none;text-align:center;"> 
+	  
+ <!--
+EOT;
+if($rsdb[videourl]){print <<<EOT
+-->
+<embed src="$rsdb[videourl]" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>
+<!--
+EOT;
+}print <<<EOT
+-->
+
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="loupan2" class="loupan_t">
+  <tr>
+    <td class="top"><div class="L"></div><div class="CC">楼盘介绍</div><div class="R"></div><div class="RR"></div></td>
+  </tr>
+  <tr>
+    <td class="main" height="100" valign="top">&nbsp;$rsdb[content]</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="loupan3" class="loupan_t">
+  <tr>
+    <td class="top"><div class="L"></div><div class="CC">热门楼盘</div><div class="R"></div><div class="RR"></div></td>
+  </tr>
+  <tr>
+    <td class="main" height="50" valign="top">
+	
+<!--
+EOT;
+$array = Get_Info('new',3,30,$fid);
+foreach($array AS $rs){
+$time=date("m-d",$rs[full_time]);
+print <<<EOT
+-->
+                 
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tb">
+  <tr>
+          <td class="tbL"> <a href="$rs[url]" target="_blank"><img src="$rs[picurl]"  border="0"></a></td>
+          <td valign="top" class="tbR">
+		    <div class="a1"><a href="$rs[url]" target="_blank">$rs[title]</a></div> 
+		   <div class="a2">$rs[seller]</div>
+		  <div class="a3">$rs[price]{$module_DB[$rs[mid]][field][price][form_units]}</div>
+		  </td>
+  </tr>
+</table>
+	
+<!--
+EOT;
+}print <<<EOT
+-->
+	</td>
+  </tr>
+</table>
+
+<!--
+EOT;
+?>
+-->

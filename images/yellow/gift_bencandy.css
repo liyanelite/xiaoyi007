@@ -1,0 +1,111 @@
+img{
+	border:0;
+}
+.mt10{
+	margin-top:10px;
+}
+.MainContainer{
+	border:#ddd solid 1px;
+}
+.MainContainer .toptitle{
+	background:url(gift_head1.gif) left bottom repeat-x;
+	height:32px;
+	line-height:32px;
+	font-size:14px;
+	color:#29804B;
+}
+.MainContainer .baseinfo .left{
+	width:20%;
+	text-align:center;
+	padding-bottom:5px;
+}
+.MainContainer .baseinfo .left a{
+	display:block;
+	width:220px;
+	height:165px;
+	overflow:hidden;
+	border:#E6EAED solid 1px;
+	padding:1px;
+	margin:10px auto 10px 20px;
+}
+.MainContainer .baseinfo .center{
+	width:50%;
+	padding:15px 15px 0 15px;
+}
+.MainContainer .baseinfo .center .listinfo{
+	height:100px;
+	border-top:#ddd dotted 1px;
+	border-bottom:#ddd dotted 1px;
+}
+.MainContainer .baseinfo .center .listinfo td{
+	padding:10px 0 5px 0;
+}
+.MainContainer .baseinfo .center .listinfo div{
+	height:25px;
+	line-height:25px;
+	font-size:14px;
+}
+.MainContainer .baseinfo .center .listinfo div span{
+	color:#29804B;
+}
+.MainContainer .baseinfo .center .listinfo div strike{
+	color:blue;
+}
+.MainContainer .baseinfo .center .moreaction{
+	text-align:center;
+	padding:10px 0 5px 0;
+}
+.MainContainer .baseinfo .right{
+	width:25%;
+	border-left:#ddd solid 1px;
+	padding-top:10px;
+}
+.MainContainer .baseinfo .right .list{
+	height:25px;
+	line-height:25px;
+	padding-left:20px;
+	background:url(brand_bbg.gif) center bottom no-repeat;
+}
+.MainContainer .baseinfo .right .list span{
+	font-weight:bold;
+	color:#DE4900;
+}
+.MainContainer .baseinfo .right .list a{
+	font-weight:bold;
+	padding-left:5px;
+}
+.MainContainer .baseinfo .right .join{
+	text-align:center;
+	padding-top:10px;	
+}
+.MainContainer .baseinfo .right .join a{
+	display:block;
+	width:135px;
+	line-height:35px;
+	margin:0 auto;
+	background:url(sell_becandy_submint.gif) center top no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+	text-decoration:none;
+}
+.MainContainer .ContentTd{
+	border-top:#ddd solid 1px;
+	padding:20px;
+}
+.MainContainer .ContentTd .content{
+	background:url(gift_bg6.gif) left 10px repeat-x;
+}
+.MainContainer .ContentTd .content .head{
+	background:url(gift_butt3.gif) left top no-repeat;
+	line-height:28px;
+	padding:0 50px 0 20px;
+	font-weight:bold;
+	color:#29804B;
+}
+.MainContainer .ContentTd .content .cont{
+	padding:5px;
+	line-height:18px;
+	width:100%;
+	overflow:hidden;
+}

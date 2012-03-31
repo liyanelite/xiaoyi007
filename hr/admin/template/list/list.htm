@@ -1,0 +1,77 @@
+<!--
+<?php
+print <<<EOT
+-->
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tablewidth">
+  <form name="form_work" method="post" action="index.php?lfj=$lfj&dirname=$dirname&file=$file&job=work">
+    <tr align="center" class="head"> 
+      <td>职位名称</td>
+      <td>公司名称</td>
+      <td>发布者</td>
+      <td>发布日期 </td>
+      <!---->
+      <td >分类</td>
+      <td style="width:50px;">浏览</td>
+      <td style="width:80px;">应聘人数</td>
+	  <td style="width:50px;">推荐</td>
+      <td style="width:120px;">查看/修改/删除</td>
+    </tr>
+    <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF"> 
+      <td align="left"> 
+        <input type="checkbox" name="listdb[{$rs[id]}]" value="$rs[title]">
+        $rs[title] ({$city_DB[name][$rs[city_id]]})</td>
+      <td align="center"> {$rs[company]} </td>
+      <td align="center">{$rs[username]} </td>
+      <td align="center">$rs[posttime] </td>
+      <!---->
+      <td align="center">$rs[fname]</td>
+      <td align="center">$rs[hits]</td>
+      <td align="center">{$rs[joinnum]}</td>
+	  <td align="center">{$rs[ifcom]}</td>
+      <td align="center"><a href="../$dirname/bencandy.php?fid=$rs[fid]&id=$rs[id]" target=_blank>查看</a> 
+        / <a href="../$dirname/member/post.php?job=edit&fid=$rs[fid]&id=$rs[id]" target=_blank>修改</a> 
+        / <a href="index.php?lfj=$lfj&dirname=$dirname&file=$file&action=work&jobs=delete&id=$rs[id]&fid=$rs[fid]" >删除</a></td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td colspan="15"> {$showpage}</td>
+    </tr>
+    <tr bgcolor="#FFFFFF" align="center"> 
+      <td colspan="15"> <a href="#" onClick="CheckAll('all')">全选</a>/<a href="#" onClick='CheckAll()'>反选</a> 
+        <input type="button" name="Submit3" value="删除" onclick="postdo('delete')">
+        <input type="hidden" name="jobs" value="0">
+      </td>
+    </tr>
+  </form>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function postdo(va){
+	document.form_work.jobs.value=va
+	document.form_work.submit();
+}
+function CheckAll(va){
+	form=document.form_work
+	for (var i=0;i<form.elements.length;i++){
+		var e = form.elements[i];
+		if(va=='all'){
+			e.checked = true;
+		}else{
+			e.checked == true ? e.checked = false : e.checked = true;
+		}
+	}
+}
+//-->
+</SCRIPT>
+<!--
+EOT;
+?>
+-->

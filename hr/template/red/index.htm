@@ -1,0 +1,296 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/hr/index.css">
+<div class="had">$label[hr_adbr]</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="jobtable">
+  <tr> 
+    <td width="26%" class="side" height="204" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="hrsorttable">
+        <tr>
+          <td class="head"><div class="TAG">职位分类</div></td>
+        </tr>
+        <tr>
+          <td class="middle">
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+$fcolor=$fid==$fkey?' style=\"color:red;\"':'';
+print <<<EOT
+-->
+			<div class="big"><a href="list.php?fid=$fkey"{$fcolor}>{$fvalue}</a></div>
+            <div class="small">
+<!--
+EOT;
+foreach($Fid_db[$fkey] AS $key=>$value){
+$color=$fid==$key?' style=\"color:red;\"':'';
+print <<<EOT
+-->
+              <a href="list.php?fid=$key"{$color}>{$value}</a> 
+<!--
+EOT;
+}print <<<EOT
+--> 
+            </div>	
+<!--
+EOT;
+}print <<<EOT
+-->
+			<div class="h">$label[hr_news3]</div>
+            <div class="c">
+            	$label[hr_nrws4]
+            </div>
+          </td>
+        </tr>
+      </table> 
+      <div class="side_ad1">$label[hr_aod1]</div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag2">
+        <tr> 
+          <td class="head">$label[hr_news1]</td>
+        </tr>
+        <tr> 
+          <td height="50" class="CC">$label[hr_news2]</td>
+        </tr>
+      </table>
+    </td>
+    <td width="74%" class="main" height="204" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" id="top_from">
+        <tr> 
+          <td width="60%" style="padding-right:10px;"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="head">
+                  <div id="TT1" class="TAG1" onmouseover="chose_titletype('1')">推荐职位</div>
+                  <div id="TT2" class="TAG2" onmouseover="chose_titletype('2')">推荐人才</div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="CB"> 
+<div id="show_job">			
+<!--
+EOT;
+$array = list_hr_job('com',5,true);
+foreach($array AS $rs){print <<<EOT
+--->
+                  <div class="lt"> <span class="t1"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank">$rs[title]</a></span> 
+                    <span class="t3"><a href="$webdb[www_url]/home/?uid=$rs[uid]" target="_blank">$rs[company]</a></span><span class="t2">$rs[workplace]</span> 
+                  </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+
+<div id="show_member" style="display:none;">			
+<!--
+EOT;
+$array = list_hr_member('com',5);
+foreach($array AS $rs){print <<<EOT
+--->
+                    <div class="lt"> <span class="t1"><a href="joinshow.php?id=$rs[id]" target="_blank">$rs[truename]</a></span> 
+                      <span class="t5">$rs[speciality]</span><span class="t2">$rs[school_age]</span> 
+					  <span class="t4">$rs[alma_mater]</span>
+                    </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+</div>
+
+                </td>
+              </tr>
+            </table>
+            <SCRIPT LANGUAGE="JavaScript">
+<!--
+function chose_titletype(a){
+	if(a=='1'){
+		document.getElementById("TT1").className='TAG1';
+		document.getElementById("TT2").className='TAG2';
+		document.getElementById("show_job").style.display='';
+		document.getElementById("show_member").style.display='none';
+	}else if(a=='2'){
+		document.getElementById("TT1").className='TAG3';
+		document.getElementById("TT2").className='TAG4';
+		document.getElementById("show_job").style.display='none';
+		document.getElementById("show_member").style.display='';
+	}
+}
+//-->
+</SCRIPT>
+          </td>
+          <td width="40%"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="head">
+                  <div id="BB1" class="TAG1" onmouseover="chose_Type('1')">企业服务</div>
+                  <div id="BB2" class="TAG2" onmouseover="chose_Type('2')">个人服务</div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="CB"> 
+                  <div id="compayn_form" class="tb_f"> 
+                    <div><a href="$webdb[www_url]/member/?main=$Murl/member/post_choose.php" target="_blank">发布职位</a></div>
+                    <div><a href="$webdb[www_url]/member/?main=$Murl/member/listjob.php?job=list" target="_blank">职位管理</a></div>
+                    <div><a href="$webdb[www_url]/member/?main=$Murl/member/listapplyer.php?job=list" target="_blank">求职信</a></div>
+                    <div><a href="listperson.php" target="_blank">找人才</a></div>
+                  </div>
+				  <div id="member_form" class="tb_f" style="display:none;"> 
+                    <div><a href="$webdb[www_url]/member/?main=$Murl/member/join.php" target="_blank">更新简历</a></div>
+					<div><a href="joinshow.php?uid=$lfjuid" target="_blank">查看简历</a></div>
+                    <div><a href="$webdb[www_url]/member/?main=$Murl/member/applyjob.php?job=list" target="_blank">申请的职位</a></div>
+                     
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <SCRIPT LANGUAGE="JavaScript">
+<!--
+function chose_Type(a){
+	if(a=='1'){
+		document.getElementById("BB1").className='TAG1';
+		document.getElementById("BB2").className='TAG2';
+		document.getElementById("compayn_form").style.display='';
+		document.getElementById("member_form").style.display='none';
+	}else if(a=='2'){
+		document.getElementById("BB1").className='TAG3';
+		document.getElementById("BB2").className='TAG4';
+		document.getElementById("compayn_form").style.display='none';
+		document.getElementById("member_form").style.display='';
+	}
+}
+//-->
+</SCRIPT>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="search_job">
+        <tr> 
+          <td> 
+            <form name="form1" method="post" action="search.php?action=search" target="_blank">
+              <div class="title">搜索人才/职位</div>
+              <div class="type">找工作： 
+                <input type="radio" name="mid" value="1" checked>
+                找人才： 
+                <input type="radio" name="mid" value="2">
+              </div>
+              <div class="butt">关键字： 
+                <input type="text" name="keyword" id="s_input">
+                <input type="submit" name="Submit" value="搜索">
+              </div>
+            </form>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragcity">
+        <tr> 
+          <td class="head"> 地区招聘 </td>
+        </tr>
+        <tr> 
+          <td height="50" class="CC"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="8" id="hr_ad">
+              <tr>
+                <td>$label[hr_ad_1]</td>
+                <td align="center">$label[hr_ad_4]</td>
+                <td align="right">$label[hr_ad_7]</td>
+  </tr>
+  <tr>
+                <td>$label[hr_ad_2]</td>
+                <td align="center">$label[hr_ad_5]</td>
+                <td align="right">$label[hr_ad_8]</td>
+  </tr>
+  <tr>
+                <td>$label[hr_ad_3]</td>
+                <td align="center">$label[hr_ad_6]</td>
+                <td align="right">$label[hr_ad_9]</td>
+  </tr>
+</table>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">最新职位</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="150" class="CC" valign="top"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="list_zh">
+              <tr class="hh"> 
+                <td width="37%">职位名称</td>
+                <td width="32%" align="center">企业名称</td>
+                <td width="19%" align="center">地区</td>
+                <td width="12%" align="center">月薪</td>
+              </tr>
+              <!--
+EOT;
+$array = list_hr_job('new',6,true);
+foreach($array AS $key=>$rs){
+$class=$key%2==0?'aa':'bb';
+print <<<EOT
+--->
+              <tr class="lt $class"> 
+                <td width="37%" class="t1"><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target="_blank" ><b>$rs[title]</b></a></td>
+                <td width="32%" align="center"><a href="$webdb[www_url]/home/?uid=$rs[uid]" target="_blank">$rs[company]</a></td>
+                <td width="19%" align="center">$rs[workplace]</td>
+                <td width="12%" align="center">$rs[wage]</td>
+              </tr>
+              <!--
+EOT;
+}print <<<EOT
+--->
+            </table>
+          </td>
+        </tr>
+      </table>
+      <div class="hr_main_linead">$label[hr_k2]</div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">最新人才</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="150" class="CC" valign="top"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="list_zh">
+              <tr class="hh"> 
+                <td width="15%">姓名</td>
+                <td width="35%" align="center">所学专业</td>
+                <td width="14%" align="center">工作年限</td>
+                <td width="14%" align="center">性别</td>
+                <td width="22%" align="center">月薪要求</td>
+              </tr>
+              <!--
+EOT;
+$array = list_hr_member('new',6);
+foreach($array AS $key=>$rs){
+$class=$key%2==0?'aa':'bb';
+print <<<EOT
+--->
+              <tr class="lt $class"> 
+                <td width="15%" class="t1"><a href="joinshow.php?id=$rs[id]" target="_blank"><b>$rs[truename]</b></a></td>
+                <td width="35%" align="center">$rs[speciality]</td>
+                <td width="14%" align="center">$rs[workyear]</td>
+                <td width="14%" align="center">$rs[sex]</td>
+                <td width="22%" align="center">$rs[wage]</td>
+              </tr>
+              <!--
+EOT;
+}print <<<EOT
+--->
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

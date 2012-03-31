@@ -1,0 +1,298 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/hy/index.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer">
+  <tr>    
+    <td class="side1">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="newcont">
+          <tr>
+            <td class="head"><span>$label[hy_19]</span></td>
+          </tr>
+          <tr>
+            <td class="cont">            
+                $label[hy_8]
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="side2">
+    	<div class="slide">$label[hy_1]</div>
+        <div class="adcontainer">
+        	<div class="ad1">$label[hy_2]</div>
+            <div class="ad2">$label[hy_3]</div>
+        </div>
+    </td>
+    <td class="side3">
+    	<div class="centertoday">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="todaycont">
+          <tr>
+            <td class="cont">
+            	$label[hy_11]                 
+            </td>
+          </tr>
+        </table>
+        </div>
+    </td>
+    <td class="side4 sidebgtd">
+    	<div class="gotocompany"><a href="$webdb[www_url]/home/" target="_blank">进入我的店铺</a></div>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="buttercont">
+          <tr>
+            <td>
+            	<div class="but1"><span><a href="$webdb[www_url]/do/reg.php" target="_blank">免费注册</a></span></div>
+                <div class="but2"><span><a href="$webdb[www_url]/member/?main=$webdb[www_url]/member/money.php?job=list" target="_blank">积分充值</a></span></div>
+                <div class="but3"><span><a href="$webdb[www_url]/member/?main=$Murl/member/homepage_ctrl.php?atn=postnews" target="_blank">发布新闻</a></span></div>
+                <div class="but4"><span><a href="$webdb[www_url]/member/?main=$Murl/member/post_company.php" target="_blank">登记店铺</a></span></div>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Notice">
+          <tr>
+            <td class="head"><span>$label[hy_21]</span></td>
+          </tr>
+          <tr>
+            <td class="cont">$label[blue_hynoticetitle]</td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>    
+    <td class="Maintd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="levelcompany">
+          <tr>
+            <td class="head">
+            	<div onmouseover="ShowTab(1,1,4)" id="Span1">最新商家</div>
+                <div onmouseover="ShowTab(2,1,4)" id="Span2">热门商家</div>
+                <div onmouseover="ShowTab(3,1,4)" id="Span3">推荐商家</div>
+                <div class="more"><a href="listall.php" target="_blank">更多商家</a></div>
+            </td>
+          </tr>
+          <tr id="Tab1">
+            <td class="cont"> 
+                 $label[hy_7]
+            </td>
+          </tr>
+          <tr id="Tab2">
+            <td class="cont"> 
+                 $label[blue_hylistpic1]
+            </td>
+          </tr>
+          <tr id="Tab3">
+            <td class="cont"> 
+                 $label[blue_hylistpic2]
+            </td>
+          </tr>
+        </table>
+<SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,4);</SCRIPT>
+    </td>
+    <td class="Sidetd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hotdianping">
+          <tr>
+            <td class="head"><span>$label[hy_20]</span></td>
+          </tr>
+          <tr>
+            <td class="cont">            	
+                $label[hy_10]			   
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>    
+    <td class="Maintd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="companysort">
+          <tr>
+            <td class="head">
+            	<div class="tag">商家分类</div>
+                <div class="more">
+                	<a href="$webdb[www_url]/member/?main=$Murl/member/post_company.php" target="_blank">登记商家&gt;&gt;</a>
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" id="ShowSortTable" onmouseout="HiddenTdBg(this)">
+<!--
+EOT;
+$newarray = array_flip($Fid_db[0]);
+$array = array_chunk($newarray,3);
+$j = 0;
+foreach($array AS $ar){
+$j++;
+$trdisplaybg = $j%2 == 0 ? "class = 'havebg'" : "";
+print <<<EOT
+-->
+              <tr $trdisplaybg>
+<!--
+EOT;
+$i = 0;
+foreach($ar AS $fup){
+$i++;
+print <<<EOT
+-->
+			  
+                <td onmouseover="ShowTdBg(this)">				
+				<div class="big_name"><a href="list.php?fid=$fup">{$Fid_db['name'][$fup]}</a></div>
+				<div class="smll_name">
+<!--
+EOT;
+$y = 0;
+foreach($Fid_db[$fup] AS $fid=>$name){
+$y++;
+$listnum = $webdb[Index_listsortnum]?$webdb[Index_listsortnum]:20;
+if($y>$listnum)break;
+$name = get_word($name,8);
+print <<<EOT
+-->
+				<a href="list.php?fid=$fid">{$name}</a> | 
+<!--
+EOT;
+}print <<<EOT
+-->
+					<a href="list.php?fid=$fup" class="more">更多..</a>
+				</div>
+				</td>
+<!--
+EOT;
+}if($i<3){
+for($a=$i;$a<4;$a++){
+print <<<EOT
+-->
+				<td onmouseover="ShowTdBg(this)"><br/></td>
+<!--
+EOT;
+}}
+print <<<EOT
+-->
+              </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function ShowTdBg(TheTd){
+	obj=document.getElementById("ShowSortTable").getElementsByTagName("td");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	TheTd.className='choose';
+}
+function HiddenTdBg(TheTable){
+	obj=TheTable.getElementsByTagName("td");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+}
+//-->
+</SCRIPT>
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="Sidetd">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hotsort">
+          <tr>
+            <td class="head"><span> $label[hy_31]</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+            {$label[blue_hyhotsort]}
+            </td>
+          </tr>
+        </table>
+        <div class="hyrightad mt10">{$label[blue_hyrightad]}</div>
+    </td>
+  </tr>
+</table> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>    
+    <td class="Sidetdl">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="memberdt">
+          <tr>
+            <td class="head">
+            	<span class="FL">$label[hy_26]</span>
+                <span class="FR"><em></em></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">                
+				$label[hy_25]
+				
+            </td>
+          </tr>
+        </table>
+		<div class="servercenter">$label[hy_18]
+        
+        </div>
+    </td>
+    <td class="Sidetdc">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="membercomment">
+          <tr>
+            <td class="head">
+            	<span class="FL">会员点评</span>
+                <span class="FR"><a href="#" target="_blank">更多...</a></span>
+            </td>
+          </tr>
+          <tr>            
+          <td class="cont" valign="top" style="padding-top:13px;padding-bottom:13px;">  
+<!--
+EOT;
+$array = get_dianping(4,70);
+foreach($array AS $rs){print <<<EOT
+-->
+		  
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="listtable">
+                  <tr>
+                    <td class="word">
+                    	<div class="t"><a href="$webdb[www_url]/member/homepage.php?uid=$rs[uid]" target="_blank" class="m">$rs[username]</a>在{$rs[posttime]}点评了<a href="$webdb[www_url]/home/?uid=$rs[id]" target="_blank" class="b">$rs[title]</a></div>
+                        <div class="dp">$rs[fen]</div>                        
+                        <div class="c">$rs[content]</div>
+                    </td>
+                    <td class="img"><a href="$webdb[www_url]/member/homepage.php?uid=$rs[uid]" target="_blank"><img onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'" src="$rs[icon]" width="45" height="45"/></a></td>
+                  </tr>
+                </table>
+<!--
+EOT;
+}print <<<EOT
+-->
+          </td>
+          </tr>
+        </table>
+    </td>
+    <td class="Sidetdr">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidetable">
+          <tr>
+            <td class="head"><span class="FL">$label[hy_22]</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<div class="img">$label[hy_5]</div>
+				$label[hy_16]
+                
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sidetable mt10">
+          <tr>
+            <td class="head"><span class="FL">$label[hy_23]</span></td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<div class="img">$label[hy_6]</div>$label[hy_17]
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

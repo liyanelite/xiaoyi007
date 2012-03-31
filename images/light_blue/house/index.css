@@ -1,0 +1,30 @@
+.house_top_R{
+	width:210px;
+	height:43px;
+	background:url(h-2.gif);
+	float:right;
+}
+
+.houseM_top_R{
+	float:right;
+	width:210px;
+	height:200px;
+	border-left:1px solid #DDDDDD;
+}
+#house_top{
+	background:#ccc;
+}
+
+#houseM_top{
+	clear:both;
+	border-top:1px solid #DDDDDD;
+}
+
+.house_top_L{
+	float:left;
+	background:#eee;
+}
+.houseM_top_L{
+	float:left;
+	background:#eee;
+}

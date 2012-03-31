@@ -1,0 +1,262 @@
+img{
+	border:0;
+}
+.mt10{
+	margin-top:10px;
+}
+.MainContainer .MainL{
+	width:72%;
+	padding-right:10px;
+}
+.MainContainer .MainL .SideL{
+	width:40%;
+	padding-right:10px;
+}
+.MainContainer .MainL .SideC{
+	width:60%;
+}
+.MainContainer .SideR{
+	width:28%;
+}
+/*
+*第一栏样式
+*/
+.SideContainer{
+	border:#DDD solid 1px;
+	background:#EEE url(tuangou_bg.gif) left top repeat-x;
+	padding:0 5px 5px 5px;
+}
+.SideContainer .head{
+	height:30px;
+	border-bottom:#DDD solid 1px;
+}
+.SideContainer .L{
+	float:left;
+	background:url(tuangou_icon.gif) 8px 9px no-repeat;
+	padding:8px 0 3px 25px;
+	font-size:14px;
+	font-weight:bold;
+}
+.SideContainer .cont{
+	background:#FFF;
+	padding:10px;
+}
+.SideContainer .cont .list{
+	height:25px;
+	line-height:25px;	
+	background:url(index_icon1.gif) left 10px no-repeat;
+	padding-left:10px;
+}
+.SideContainer .cont .list a{
+	float:left;	
+}
+.SideContainer .cont .list span{
+	float:right;	
+	color:#DE4900;
+}
+.SlideContainer{
+	width:420px;
+	height:182px;
+	overflow:hidden;
+}
+.MainContainer .MainL .mt10{
+	padding-top:5px;
+}
+.SideContainer .heada{
+	height:30px;
+	border:#FFF solid 1px;
+	border-bottom:0;
+	background:#FFF url(tuangou_bg1.gif) left top repeat-x;
+}
+.SideContainer .contpic{
+	background:#FFF;
+	height:130px;
+	overflow:hidden;
+}
+.SideContainer .contpic .listpic{
+	width:136px;
+	height:130px;
+	overflow:hidden;
+	float:left;
+	text-align:center;
+}
+.SideContainer .contpic .listpic a{
+	display:block;
+}
+.SideContainer .contpic .listpic a.img{
+	width:120px;
+	height:90px;
+	border:#CCC solid 1px;
+	padding:2px;
+	margin:0 auto 10px auto;
+}
+.SideContainer .tzhead{
+	background:url(tuangou_bg2.gif) center top no-repeat;	
+}
+.SideContainer .tzcont{
+	background:#FFF;
+	height:140px;
+	padding-top:10px;
+	overflow:hidden;	
+}
+.SideContainer .tzcont .listtz{
+	width:50%;
+	height:70px;
+	overflow:hidden;
+	float:left;
+	text-align:center;
+}
+.SideContainer .tzcont .listtz a{
+	display:block;
+}
+.SideContainer .tzcont .listtz img{
+	margin:4px 0 4px 0;
+	height:55px;
+	width:110px;
+}
+/*
+*第二栏样式
+*/
+.MiddleButter{
+	background:url(tuangou_bg4.gif) right bottom no-repeat;
+	margin-bottom:5px;
+}
+.MiddleButter .MainL{
+	background:url(tuangou_bg4.gif) left bottom no-repeat;
+	height:38px;
+}
+.MiddleButter .MainL div{
+	height:30px;
+	padding-top:5px;
+	overflow:hidden;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+.MiddleButter .MainL .buta{
+	background:url(tuangou_but1.gif) center bottom no-repeat;
+	width:115px;
+	margin-right:2px;
+	color:#FFF;
+}
+.MiddleButter .MainL .bigsort{
+	background:url(tuangou_but2.gif) center bottom no-repeat;
+	width:82px;
+}
+.MiddleButter .MainL .bigsort a{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#666;
+}
+.MiddleButter .SideR{
+	background:url(tuangou_bg5.gif) right 5px no-repeat;
+	padding-right:5px;
+}
+.MiddleButter .SideR .ActionDiv{
+	height:30px;
+	padding-top:5px;
+	line-height:30px;
+	background:url(tuangou_bg5.gif) left bottom no-repeat;
+}
+.MiddleButter .SideR .ActionDiv a,.MiddleButter .SideR .ActionDiv span{
+	display:block;
+	float:left;
+	width:49%;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#B75200;
+}
+.tablelist{
+	background:url(room_dotted.gif) left bottom repeat-x;
+	margin-top:5px;
+}
+.tablelist .img,.tablelist .info{
+	width:20%;
+}
+.tablelist .word{
+	width:60%;
+	color:#666;
+	line-height:20px;
+}
+.tablelist .img a{
+	display:block;
+	width:120px;
+	height:90px;
+	border:#CCC solid 1px;
+	padding:2px;
+	margin-bottom:10px;
+	margin-top:5px;
+}
+.tablelist .word a{
+	display:block;
+	color:#DE4900;
+	font-size:14px;
+	font-weight:bold;
+	line-height:35px;
+}
+.tablelist .info div{
+	border:#FFDB84 solid 1px;
+	margin-left:10px;
+	padding-bottom:5px;
+}
+.tablelist .info div a,.tablelist .info div span{
+	display:block;	
+}
+.tablelist .info div a{
+	background:#FFF9E6;	
+	font-size:14px;
+	font-weight:bold;
+	color:#CC6600;
+	text-align:center;
+	line-height:25px;
+}
+.tablelist .info div span{
+	padding:5px 0 3px 5px;
+}
+.tablelist .info div span em{
+	color:#CC6600;
+	font-style:normal;
+}
+.MainContainer .RightCont{
+	border:#DDD solid 1px;
+}
+.MainContainer .RightCont .head{
+	height:30px;
+	background:url(tuangou_icon1.gif) 8px 8px no-repeat;
+	margin-left:5px;
+	margin-right:5px;
+	border-bottom:#DDD solid 1px;
+}
+.MainContainer .RightCont .head .L{
+	float:left;
+	padding:8px 0 0 25px;
+	font-size:14px;
+	font-weight:bold;
+}
+.MainContainer .RightCont .cont1{
+	border-bottom:#DDD solid 1px;
+	padding:10px 10px 0 10px;
+}
+.MainContainer .RightCont .cont1 .lista{
+	padding-bottom:10px;
+	line-height:20px;
+}
+.MainContainer .RightCont .cont1 .lista span{
+	color:blue;
+}
+.MainContainer .RightCont .cont1 .lista a{
+	color:#CC6600;
+}
+.MainContainer .RightCont .cont2{
+	padding:10px;
+}
+.MainContainer .RightCont .cont2 .listb{
+	padding-left:20px;
+	background:url(index_icon1.gif) 5px 9px no-repeat;
+	line-height:22px;
+}

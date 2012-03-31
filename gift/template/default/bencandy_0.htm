@@ -1,0 +1,69 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/gift_bencandy.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer">
+  <tr> 
+    <th class="toptitle">{$rsdb[title]}</th>
+  </tr>
+  <tr> 
+    <td>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="baseinfo">
+          <tr>
+            
+          <td class="left"> <a href="$rsdb[picurl]" class="picurl" target="_blank"><img src='$rsdb[picurl]' onError="this.src='$webdb[www_url]/images/default/nopic.jpg'" width="220" border="0" ></a> 
+          </td>
+            <td class="center">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listinfo">
+                  <tr>
+                    <td>
+                    	<div><span>市场价格：</span><strike>￥$rsdb[mart_price]</strike></div>
+                		
+                  <div><span>所需{$webdb[MoneyName]}：</span><b><font color="#FF0000">{$rsdb[money]} 
+                    </font></b>{$webdb[MoneyDW]}</div>
+                        
+                  <div><span>关注度：</span>{$rsdb[hits]}次</div>
+
+<!--{template}-->
+                  <b>{title}：</b>{value}<br>
+                  <!--{/template}-->
+				  
+                    </td>
+                  </tr>
+                </table>            	
+				
+            <div class="moreaction"> <a href="$webdb[www_url]/member/?main=$Murl/member/join.php?fid=$fid&cid=$id" target="_blank"><img src="$webdb[www_url]/images/yellow/gift_gotodh.gif" border="0"></a> 
+            </div>
+            </td>
+            <td class="right">
+            	<div class="list">已申请人数:<span>{$rsdb[totaluser]}</span>人</div>
+                
+            <div class="list">&nbsp;&nbsp;发布时间:<a editurl='$Murl/job.php?job=bencandy&fid=$fid&id=$id&act=do'>{$rsdb[posttime]}</a></div>
+                
+            <div class="list">&nbsp;&nbsp;&nbsp;&nbsp;发布者:<span>{$rsdb[username]}</span></div>
+                <div class="list">&nbsp;&nbsp;关注度:<span>{$rsdb[hits]}</span>人次</div>
+                
+            <div class="list">&gt;&gt;<a href="$webdb[www_url]/member/?main=$Murl/member/joinlist.php?cid=$id" target="_blank">查看已申请人数</a></div>
+                
+            <div class="join"> <a href="$webdb[www_url]/member/?main=$Murl/member/post.php?fid=$fid" target="_blank">发 
+              布</a> </div>
+            </td>
+          </tr>
+        </table>        
+    </td>
+  </tr>
+  <tr> 
+    <td class="ContentTd">
+    	<div class="content">
+        	<div class="head">详情介绍</div>
+            <div class="cont">{$rsdb[content]}</div>
+        </div>
+    </td>
+  </tr>
+</table>
+
+<!--
+EOT;
+?>
+-->

@@ -1,0 +1,9 @@
+<?php
+
+return array(
+	'name'=>'ÈË²ÅÄ£¿é',
+	'pre'=>'hr_',
+	'setup'=>1,
+);
+
+?>

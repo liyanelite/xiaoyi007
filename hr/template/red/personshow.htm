@@ -1,0 +1,183 @@
+ <!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/hr/showmember.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="showmember">
+  <tr> 
+    <td width="70%" valign="top" style="padding-right:10px;" class="main"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head">
+            <div class="t3">&nbsp;</div>
+            <div class="TAG">&nbsp;</div>
+            <div class="tbg"></div>
+            <div class="t1"><a href="print_member.php?id=$id">打印简历</a></div>
+            <div class="t2"><a href="fav_member.php?uid=$id">加入收藏</a></div>
+          </td>
+        </tr>
+        <tr> 
+          <td class="CC" height="200" valign="top"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sm">
+              <tr> 
+                <td class="sh3 sh4">
+                  <div class="TG">基本信息</div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="sc3 scc" height="100"> 
+                  <div class="photo"><a href="#"><img src="$rsdb[facephoto]" onerror="this.src='$webdb[www_url]/images/default/noface.gif'" border="0" width="120"></a></div>
+                  <div class="mores"> 
+<!--{template}--> 
+ 
+  <div><b>{title}:</b>{value}</div>         
+<!--{/template}-->
+
+                  
+                    <div class="lin"><b>期望待遇:</b> {$rsdb[wage]}</div>
+                    <div class="lin"><b>期望岗位:</b> {$rsdb[hope_job]}</div>
+                    <div class="lin"><b>技能特长:</b> {$rsdb[skill]}</div>
+                    <div class="lin"><b>体育爱好:</b> {$rsdb[interest]}</div>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="sh3">
+                  <div class="TG">教育背景</div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="sc3" height="100"> {$rsdb[education]}</td>
+              </tr>
+              <tr> 
+                <td class="sh3">
+                  <div class="TG">工作经验</div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="sc3" height="100"> {$rsdb[work]} </td>
+              </tr>
+              <tr> 
+                <td class="sh3">
+                  <div class="TG">自我评价</div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="sc3" height="100"> {$rsdb[introduce]}</td>
+              </tr>
+              <tr> 
+                <td class="sh3">
+                  <div class="TG">联系方式</div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="sc3 sc4" height="100" valign="top"> 
+                  <!--
+EOT;
+if($lfjid){print <<<EOT
+-->
+                  <div><b>手机号码:</b> {$rsdb[mobphone]}</div>
+                  <div><b>QQ号码:</b> {$rsdb[qq]}</div>
+                  <div><b>常用邮箱:</b> {$rsdb[email]}</div>
+                  <div><b>MSN帐号:</b> {$rsdb[msn]}</div>
+                  <div><b>当前居住地:</b> {$rsdb[lifeplace]}</div>
+                  <!--
+EOT;
+}else{print <<<EOT
+-->
+                  <table width="50%" border="0" align="center" cellpadding="0" cellspacing="0" class="notologin">
+                    <tr> 
+                      <td class="word"> <span>还不是会员,立即</span> 
+                        <input type="button" value="免费注册" class="post_bt" onClick="window.location.href='$webdb[www_url]/do/reg.php';">
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td class="word"> <span>已经是会员,马上</span> 
+                        <input type="button" value=" 登 录 " class="post_bt" onClick="window.location.href='$webdb[www_url]/do/login.php';">
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td class="note"><span>要先登录后才能查看联系方式!</span></td>
+                    </tr>
+                  </table>
+                  <!--
+EOT;
+}print <<<EOT
+-->
+                </td>
+              </tr>
+            </table>
+            <div class="print_member" onclick="window.location.href='print_member.php?id=$id'"></div>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td width="30%" height="500" valign="top" class="side"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head">
+            <div class="TAG">会员资料</div>
+            <div class="more"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td class="CC baseinfo"> 
+            <div class="name"> <img src="$webdb[www_url]/images/yellow/company_renzheng1.gif"> 
+              $rsdb[truename]<br/>
+              <span style="color:#0066FF;">认证会员</span> </div>
+            <div class="list"><em>更新时间</em> $rsdb[posttime]</div>
+            <div class="list"><em>发布者ID</em> $rsdb[username]</div>
+            <div class="list"><em>浏览量</em> <span>$rsdb[hits]</span>次</div>
+            <div class="list"><em>所在分类</em> </div>
+            <div class="list">已有<span>$fav_num</span>家单位把本简历加入人才库</div>
+            <!--
+EOT;
+if($lfjuid==$rsdb[uid]||$web_admin){print <<<EOT
+-->
+            <div class="list"><a href="$webdb[www_url]/member/?main=$Murl/member/join.php" target="_blank"><font color="#0000FF">[修改一下]</font></a></div>
+            <!--
+EOT;
+}print <<<EOT
+-->
+            <div class="add_hr"><a href="fav_member.php?uid=$rsdb[uid]"><img src="$webdb[www_url]/images/yellow/hr_add_hr.gif" border="0"></a></div>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="TAG">最新人才</div>
+            <div class="more"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td class="CC renchai_tz"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr class="h"> 
+                <td class="l"><span>姓名</span></td>
+                <td class="r">期望职位</td>
+              </tr>
+              <!--
+EOT;
+$array=list_hr_member('new',10);
+foreach($array AS $rs){print <<<EOT
+-->
+              <tr class="c"> 
+                <td><a href="#">{$rs[truename]}({$rs[sex]})</a></td>
+                <td>$rs[hope_job]</td>
+              </tr>
+              <!--
+EOT;
+}print <<<EOT
+-->
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

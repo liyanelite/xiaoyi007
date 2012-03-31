@@ -1,0 +1,68 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/hr_listjob.css">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" class="jobtable">
+  <tr> 
+    <td width="25%" class="side" height="204" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">请选择一个分类</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="50" class="CC list_t"> 
+		  
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+$color=$fid==$fkey?'red':'';
+print <<<EOT
+-->
+            <div class="big"><a href="list.php?fid=$fkey&cityid=$cityid" style="color:$color;">{$fvalue}</a> </div>
+			<div class="small">
+<!--
+EOT;
+foreach($Fid_db[$fkey] AS $key=>$value){
+$color=$fid==$key?'red':'';
+print <<<EOT
+-->
+			<a href="list.php?fid=$key&cityid=$cityid" style="color:$color;">{$value}</a>  
+<!--
+EOT;
+}print <<<EOT
+-->
+			</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+          </td>
+        </tr>
+     
+      </table>
+    </td>
+       <td width="75%" class="main" height="204" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="drag">
+        <tr> 
+          <td class="head"> 
+            <div class="LL"></div>
+            <div class="TAG">{$city_DB[name][$cityid]}</div>
+            <div class="RR"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="250" class="CC" valign="top"> <b>你在左边选择一个分类</b> </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

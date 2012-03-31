@@ -1,0 +1,478 @@
+img{
+	border:0;
+}
+.mt10{
+	margin-top:10px;
+}
+/*
+*头部广告
+*/
+.TopAdContainer{
+	width:980px;
+	height:75px;
+	overflow:hidden;
+	margin:0 auto;
+}
+.TopAdContainer .TopAdL{
+	width:485px;
+	height:65px;
+	overflow:hidden;
+	float:left;
+}
+.TopAdContainer .TopAdR{
+	width:485px;
+	height:65px;
+	overflow:hidden;
+	float:right;
+}
+/*
+*第一栏样式
+*/
+.MainContainer{
+	width:980px;
+	clear:both;
+}
+.MainContainer .MainL{
+	width:720px;
+	padding-right:10px;
+}
+.MainContainer .SideR{
+	width:250px;
+}
+.MainContainer .MainL .SideL{
+	width:30%;
+	padding-right:10px;
+}
+.MainContainer .MainL .SideC{
+	width:70%;
+}
+/*
+*行业快讯
+*/
+.MainContainer .NewsCont{
+	border:#CCC solid 1px;
+	background:url(sell_sbg1.gif) left bottom repeat-x;
+}
+.NewsCont .head{
+	height:30px;
+	line-height:30px;
+	background:url(menubg.gif) left bottom repeat-x;
+}
+.NewsCont .head span{
+	float:left;
+	background:url(sell_snew.gif) left top no-repeat;
+	padding-left:25px;
+	font-weight:bold;
+	font-size:14px;
+	color:#545454;
+}
+.NewsCont .cont{
+	padding:5px;
+}
+.NewsCont .cont .list{
+	line-height:20px;
+	padding-left:25px;
+	background:url(sell_array.gif) 5px 4px no-repeat;
+}
+/*
+*第一栏中间标题
+*/
+.CenterNews{
+	border:#DDD solid 1px;
+	height:160px;
+	background:url(buyad_bg.gif) right repeat-y;
+}
+.CenterNews td{
+	padding-top:8px;
+}
+.CenterNews #adinfo div{
+	width:45%;
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	float:left;
+	padding-left:10px;
+}
+
+/*
+*用户登录样式 
+*/
+.UserInfo{
+	background:url(fenlie_login.gif) center top no-repeat;
+	height:160px;
+}
+.UserInfo .butter{
+	height:75px;
+	padding-top:10px;
+}
+.UserInfo .butter a{
+	display:block;
+	width:49%;
+	overflow:hidden;
+	height:35px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	background:url(fenlie_butter.gif) center top no-repeat;
+	color:#7F2703;
+	font-size:14px;
+}
+.UserInfo .butter a.post{
+	background:url(fenlie_butter1.gif) center top no-repeat;
+	font-weight:bold;
+}
+.UserInfo .butter a.tg{
+	background:url(fenlie_butter2.gif) center top no-repeat;
+	font-weight:bold;
+	color:#FFF;
+}
+.UserInfo table{
+	background:url(fenlie_login_line.gif) center top no-repeat;
+	margin-top:5px;
+}
+.UserInfo table td.input,.UserInfo table td.submit{
+	padding-top:10px;
+}
+.UserInfo table td.radio{
+	padding-top:15px;
+	padding-left:10px;
+}
+.UserInfo .input{
+	width:50%;
+	text-align:center;
+	
+}
+.UserInfo .input input{
+	width:100px;
+}
+.UserInfo .radio input{
+	border:0;
+}
+.UserInfo .submit input{
+	width:50px;
+	border:0;
+	height:25px;
+	line-height:25px;
+	background:url(fenlie_submit2.gif) center top no-repeat;
+	cursor:pointer;	
+}
+.UserInfo .submit input.login{
+	background:url(fenlie_submit1.gif) center top no-repeat;
+	color:#FF4E00;
+}
+.UserInfo .img{
+	width:15%;
+	height:70px;
+	vertical-align:middle;
+	padding:0 20px 0 20px;
+}
+.UserInfo .word{
+	padding-top:5px;
+}
+.UserInfo .word .name{
+	line-height:20px;
+	color:blue;
+	font-weight:bold;
+}
+.UserInfo .word .day{
+	padding-top:5px;
+	color:green;
+}
+/*
+*同城供应 
+*/
+.sellallday{
+	background:url(fenlie_houre24.gif) right top no-repeat;
+	height:50px;
+}
+.sellallday td{
+	vertical-align:middle;
+}
+.sellallday td.head{
+	width:80px;
+	padding-left:10px;
+	color:#CC0000;
+	font-weight:bold;
+	background:url(fenlie_houre24.gif) left top no-repeat;
+}
+.sellallday td.cont{
+	background:url(room_dotted.gif) left 24px repeat-x;
+}
+.sellallday td.cont .list{
+	width:33%;
+	height:25px;
+	overflow:hidden;
+	line-height:25px;
+	float:left;
+}
+.sellallday td.cont .list a{
+	padding-left:10px;
+}
+.sellallday td.right{
+	width:10px;
+}
+/*
+*公告 
+*/
+.NoticeTable{
+	background:url(fenlie_notice.gif) left top no-repeat;
+	height:50px;
+}
+.NoticeTable td{
+	vertical-align:middle;
+}
+.NoticeTable td.head{
+	width:30px;
+}
+.NoticeTable td.head span{
+	display:none;
+}
+.NoticeTable td.cont{
+	padding-right:10px;
+}
+.NoticeTable td.cont .list{
+	line-height:25px;
+	height:25px;
+	overflow:hidden;
+	padding-left:20px;
+	background:url(index_icon1.gif) 10px 12px no-repeat;
+}
+/*
+*类目样式 
+*/
+#FenlieSort{ 	
+	height:520px;
+	padding:3px 0 5px 0;
+	width:100%;
+	border:#DDD solid 1px;
+	overflow:auto;
+	overflow-x:hidden;
+	scrollbar-face-color: #FFFFFF;
+	scrollbar-shadow-color: #eee;
+	scrollbar-highlight-color: #eee;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #FFFFFF;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-arrow-color: #D2E5F4;
+}
+#FenlieSort .listsort{
+	width:175px;
+	height:265px;
+	overflow:hidden;
+	float:left;
+	text-align:center;
+}
+#FenlieSort .listsort .bigsort{
+	width:90%;
+	height:25px;
+	overflow:hidden;
+	line-height:27px;
+	border:#DDD solid 1px;
+	margin:10px auto 0 auto;
+	background:url(tuangou_icon.gif) 10px 7px no-repeat;
+	text-align:left;
+}
+#FenlieSort .listsort .bigsort a{
+	padding-left:27px;
+	font-weight:bold;
+}
+#FenlieSort .listsort .bigsort a{
+	padding-left:27px;
+	font-weight:bold;
+}
+#FenlieSort .listsort .moresort{
+	width:90%;
+	height:215px;
+	overflow:hidden;
+	padding:5px 0 5px 0;
+	border:#E3EFFB solid 1px;
+	border-top:0;
+	text-align:left;
+	margin:0 auto;
+	background:url(fenlie_sortbg.gif) left top repeat-x;
+	color:#999;
+	line-height:22px;
+}
+#FenlieSort .listsort .moresort div{
+	height:22px;
+	padding:0 10px 0 10px;
+	overflow:hidden;
+}
+#FenlieSort .listsort .moresort a{
+	color:#002CAD;
+}
+/*
+*活动专区 
+*/
+.sidecontainer{
+	padding-bottom:5px;
+	background:url(fenlie_rboxbg.gif) center bottom no-repeat;
+}
+.sidecontainer .head{
+	height:32px;
+	background:url(fenlie_rboxbg.gif) center top no-repeat;
+}
+.sidecontainer .head span{
+	float:left;
+	padding:10px 0 0 15px;
+	font-size:14px;
+	font-weight:bold;
+	color:#DE6014;
+}
+.sidecontainer .cont{
+	border-left:#FDD79D solid 1px;
+	border-right:#FDD79D solid 1px;
+	background:#FFF;
+	padding:0 10px 5px 10px;
+}
+.sidecontainer .cont .listp_title td{
+	padding-top:10px;
+}
+.sidecontainer .cont .listp_title td.img{
+	width:15%;
+	padding-right:5px;
+}
+.sidecontainer .cont .listp_title td.img a{
+	display:block;
+	border:#CCC solid 1px;
+	padding:1px;
+}
+.sidecontainer .cont .listp_title td.word a,.sidecontainer .cont .listp_title td.word span{
+	display:block;
+	line-height:20px;
+}
+.sidecontainer .cont .listp_title td.word a{
+	color:#1D50A1;
+}
+.sidecontainer .cont .listp_title td.word a.sort{
+	color:#666;
+}
+.sidecontainer .cont .list_rad{
+	text-align:center;
+	padding-top:10px;
+}
+/*
+*中部广告 
+*/
+.MiddleAdContainer{
+	margin-top:10px;
+	height:100px;
+}
+.MiddleAdContainer .MiddleAdL{
+	float:left;
+	width:720px;
+	height:90px;
+	overflow:hidden;
+}
+.MiddleAdContainer .MiddleAdR{
+	float:right;
+	width:250px;
+	height:90px;
+	overflow:hidden;
+}
+/*
+*供应信息分类 
+*/
+.MainContainer .MainHead{
+	height:35px;
+	background:url(brand_heada.gif) right top no-repeat;
+	line-height:35px;
+}
+.MainContainer .MainHead span{
+	display:block;
+	float:left;
+}
+.MainContainer .MainHead span.L{
+	width:110px;
+	padding-right:300px;
+	background:url(brand_heada.gif) left top no-repeat;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.MainContainer .MainHead span.R{
+	float:right;
+	padding-right:15px;
+}
+.MainContainer .MainCont{
+	border:#D6D6D6 solid 1px;
+	border-top:0;
+	padding:10px 0 0 0;
+}
+.MainContainer .MainCont .list_fpic{
+	width:122px;
+	height:130px;
+	text-align:center;
+	float:left;
+}
+.MainContainer .MainCont .list_fpic a{
+	display:block;
+	margin:0 auto;
+}
+.MainContainer .MainCont .list_fpic a.img{
+	width:100px;
+	height:75px;
+	border:#CCC solid 1px;
+	padding:1px;	
+}
+.MainContainer .MainCont .list_fpic a.title{
+	padding:5px 5px 0 5px;
+	line-height:18px;
+}
+/*
+*更多栏目内容 
+*/
+.MainContainer .TopHead{
+	height:5px;
+	background:url(fenlie_coner.gif) right top no-repeat;
+}
+.MainContainer .TopHead table{
+	width:500px;
+	height:5px;
+	background:url(fenlie_coner.gif) left top no-repeat;
+}
+.MainContainer .BottomFoot{
+	height:5px;
+	background:url(fenlie_coner.gif) right bottom no-repeat;
+}
+.MainContainer .BottomFoot table{
+	width:500px;
+	height:5px;
+	background:url(fenlie_coner.gif) left bottom no-repeat;
+}
+.MainContainer .MiddleCont{
+	border-left:#DDD solid 1px;
+	border-right:#DDD solid 1px;
+}
+.MainContainer .MiddleCont .moresort{
+	width:244px;
+	height:230px;
+	overflow:hidden;
+	float:left;
+	text-align:center;
+}
+.MainContainer .MiddleCont .moresort .TAG,.MainContainer .MiddleCont .moresort .title{
+	width:95%;
+	margin:auto;
+	text-align:left;
+	line-height:25px;
+}
+.MainContainer .MiddleCont .moresort .TAG{
+	margin-top:5px;
+	height:25px;
+	background:#efefef;
+	border-bottom:#CCC solid 1px;
+}
+.MainContainer .MiddleCont .moresort .TAG a{
+	font-weight:bold;
+	padding-left:10px;
+}
+.MainContainer .MiddleCont .moresort .title{
+	background:url(fenlie_sortbga.gif) left top repeat-x;
+}
+.MainContainer .MiddleCont .moresort .title div{
+	padding:0 5px 0 5px;
+	height:25px;
+	overflow:hidden;
+}

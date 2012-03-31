@@ -1,0 +1,263 @@
+/*
+*
+*/
+.ShowSorts{
+	height:150px;
+	overflow:hidden;
+	border:#DCDCDC solid 1px;
+	border-bottom:#DCDCDC solid 2px;
+}
+.ShowSorts .head{
+	height:150px;
+	width:61px;
+	background:#FCFCFC;
+	overflow:hidden;
+	float:left;
+	border-right:#DCDCDC solid 1px;
+}
+.ShowSorts .head .tag{
+	padding:18px 0 0 12px;
+}
+.ShowSorts .cont{
+	width:916px;
+	height:150px;
+	overflow:hidden;
+	float:left;
+}
+.ShowSorts .cont dl{
+	width:229px;
+	height:150px;
+	overflow:hidden;
+	float:left;
+	background:url(dotted.gif) left top repeat-y;
+}
+.ShowSorts .cont dl.dl1{
+	background:none;
+}
+.ShowSorts .cont dl dt{
+	height:35px;
+	line-height:35px;
+	padding:15px 15px 0 50px;
+	overflow:hidden;
+}
+.ShowSorts .cont dl dt a{
+	font-size:14px;
+	font-weight:bold;
+	color:#FF924E;
+}
+.ShowSorts .cont dl.dl1 dt{
+	background:url(icon1.gif) 10px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl2 dt{
+	background:url(icon2.gif) 10px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl3 dt{
+	background:url(icon3.gif) 10px 15px no-repeat;
+}
+.ShowSorts .cont dl.dl4 dt{
+	background:url(icon4.gif) 10px 15px no-repeat;
+}
+.ShowSorts .cont dl dd{
+	padding:0 15px 0 30px;
+	line-height:20px;
+	color:#999;
+	height:80px;
+	overflow:hidden;
+}
+/*
+*
+*/
+.MainBanner{
+	width:980px;
+	overflow:hidden;
+	text-align:center;
+	margin:15px auto;
+}
+/*
+*
+*/
+.MainContainer2 .head{
+	border:#DCDCDC solid 1px;
+	height:46px;
+	overflow:hidden;
+	background:url(head1.gif) repeat-x;
+}
+.MainContainer2 .head .tag{
+	padding:10px 0 0 15px;
+	float:left;
+}
+.MainContainer2 .head .more{
+	float:right;
+	height:46px;
+}
+.MainContainer2 .head .more a{
+	display:block;
+	height:40px;
+	line-height:40px;
+	padding:6px 15px 0 15px;
+	float:left;
+	background:url(dotted.gif) left top repeat-y;
+	font-size:16px;
+	font-weight:bold;
+	color:#777;
+}
+.MainContainer2 .cont{
+	border:#EBEBEB solid 1px;
+	border-top:0;
+}
+/*
+*
+*/
+.MainCont{
+	width:725px;
+	float:left;
+}
+.MainCont .cont{
+	padding:5px 15px 15px 15px;
+}
+.MainCont .cont .listpic{
+	width:665px;
+	height:96px;
+	padding:30px 15px 15px 15px;
+	overflow:hidden;
+	background:url(coubg.gif) center 15px no-repeat;
+	margin:auto;
+}
+.MainCont .cont .listpic .img{
+	border:#DDD solid 1px;
+	padding:2px;
+	float:left;
+}
+.MainCont .cont .listpic .img a{
+	display:block;
+	width:120px;
+	height:90px;
+	overflow:hidden;
+}
+.MainCont .cont .listpic .word{
+	width:400px;
+	height:96px;
+	float:left;
+	padding-left:15px;
+	overflow:hidden;
+	line-height:23px;
+}
+.MainCont .cont .listpic .word div{
+	height:23px;
+	overflow:hidden;
+}
+.MainCont .cont .listpic .word div.t a{
+	font-size:14px;
+	font-weight:bold;
+	color:#369;
+}
+.MainCont .cont .listpic .word div.m{
+	color:#888;
+}
+.MainCont .cont .listpic .word div.p strike{
+	color:#888;
+}
+.MainCont .cont .listpic .other{
+	width:120px;
+	float:left;
+	padding-top:15px;
+}
+.MainCont .cont .listpic .other .to{
+	height:25px;
+	overflow:hidden;
+	line-height:28px;
+	text-align:center;
+	background:url(butbg.gif) center top no-repeat;
+}
+.MainCont .cont .listpic .other .to a{
+	color:#ED5104;
+}
+.MainCont .cont .listpic .other .hits{
+	padding-top:20px;
+	text-align:center;
+	color:#999;
+}
+/*
+*
+*/
+.SideR{
+	width:240px;
+	float:right;
+}
+.HotCoupon .cont {
+	padding-bottom:15px;
+}
+.HotCoupon .cont .listhot{
+	width:210px;
+	height:66px;
+	padding-top:15px;
+	margin:auto;
+	overflow:hidden;
+	background:url(listbg.gif) center 15px no-repeat;
+	position:relative;
+}
+.HotCoupon .cont .listhot .num{
+	padding:3px 0 0 3px;
+	position:absolute;
+	color:#FFF;
+	font-style:oblique;
+	font-weight:bold;
+}
+.HotCoupon .cont .listhot .t{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+	padding:5px 10px 0 35px;
+}
+.HotCoupon .cont .listhot .t a{
+	color:#FC7000;
+	font-size:14px;
+}
+.HotCoupon .cont .listhot .np{
+	width:70px;
+	height:30px;
+	overflow:hidden;
+	float:left;
+	line-height:30px;
+	text-align:right;
+	padding:0 10px 0 10px;
+	color:#CC2000;
+	font-size:20px;
+	font-weight:bold;
+}
+.HotCoupon .cont .listhot .cou,.HotCoupon .cont .listhot .lp{
+	width:90px;
+	height:16px;
+	line-height:16px;
+	float:left;
+	overflow:hidden;
+}
+.HotCoupon .cont .listhot .cou span{
+	color:green;
+	font-weight:bold;
+}
+.HotCoupon .cont .listhot .lp strike{
+	color:#999;
+}
+/*
+*
+*/
+.NewsCoupon{
+	margin-top:15px;
+}
+.NewsCoupon .cont{
+	padding:5px 15px 15px 15px;
+}
+.NewsCoupon .cont .list{
+	padding-top:8px;
+	line-height:18px;
+}
+.NewsCoupon .cont .list span{
+	color:blue;
+}
+.NewsCoupon .cont .list em{
+	color:#999;
+}
+.NewsCoupon .cont .list a{
+	color:#EA5300;
+}

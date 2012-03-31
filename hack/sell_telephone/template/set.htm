@@ -1,0 +1,47 @@
+<!--
+<?php
+print <<<EOT
+-->
+<table width='100%' cellspacing='1' cellpadding='3' class="tablewidth">
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=set">
+    <tr  class="head"> 
+      <td colspan='3'> 
+        <div align='center'><b><font color="#FFFFFF">电话广告参数设置</font></b></div>
+      </td>
+    </tr>
+     
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>广告个数上限:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input  class=mmcinb  type='text' size='5' value='$webdb[MAX_sell_telephone]' name='webdbs[MAX_sell_telephone]'>
+        个</td>
+    </tr>
+     <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>每天费用:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input  class=mmcinb  type='text' size='5' value='$webdb[money_sell_telephone]' name='webdbs[money_sell_telephone]'>
+        {$webdb[MoneyDW]}</td>
+    </tr><tr> 
+      <td width='28%' bgcolor='#FFFFFF'>广告标题字数上限:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input  class=mmcinb  type='text' size='5' value='$webdb[sell_telephone_titleNUM]' name='webdbs[sell_telephone_titleNUM]'>不能大于25
+        个</td>
+    </tr><tr> 
+      <td width='28%' bgcolor='#FFFFFF'>电话号码字数上限:</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input  class=mmcinb  type='text' size='5' value='$webdb[sell_telephone_telNUM]' name='webdbs[sell_telephone_telNUM]'>不能大于20
+        个</td>
+    </tr>
+    <tr> 
+      <td width='28%' bgcolor='#FFFFFF'>&nbsp;</td>
+      <td colspan='2' bgcolor='#FFFFFF'> 
+        <input  class=mmcinb  type='submit' name='w' value='保存设置'>
+      </td>
+    </tr>
+     
+  </form>
+</table>
+<!--
+EOT;
+?>
+-->

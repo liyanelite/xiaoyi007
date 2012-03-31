@@ -1,0 +1,311 @@
+.MainContainer .side{
+	width:250px;
+	padding-left:10px;
+}
+/*
+*栏目显示
+*/
+.sortcont{
+	border:#00B2EE solid 1px;
+}
+.sortcont .sorttd{
+	border:#7FD8F6 solid 1px;
+	padding:10px;
+	word-spacing:10px;
+	line-height:20px;
+}
+.sortcont .sorttd a{
+	color:#2F73C0;
+}
+/*
+*街道选择 
+*/
+#zone_street_menua{
+	margin-top:10px;
+}
+#zone_street_menua .zone{
+	height:25px;
+	line-height:25px;
+	background:url(fenlie_stree.gif) left bottom repeat-x;
+	padding-left:10px;fenlie_stree
+}
+#zone_street_menua .zone span{
+	display:block;
+	float:left;
+	padding-left:5px;
+}
+#zone_street_menua .zone span a{
+	display:block;
+	width:25px;
+	height:25px;
+	overflow:hidden;
+	padding-right:5px;
+}
+#zone_street_menua .zone span.choose{
+	background:url(choose.gif) left bottom no-repeat;
+}
+#zone_street_menua .zone span.choose a{
+	background:url(choose.gif) right bottom no-repeat;
+}
+#zone_street_menua .street{
+	background:#FFF2E1;
+	padding:5px;
+	line-height:18px;
+}
+#zone_street_menua .street .choose{
+	color:red;
+}
+/*
+*排列搜索 
+*/
+.MainContainer .main .listsearch{
+	margin-top:10px;
+	border:#FFB04D solid 1px;
+	padding:5px;
+	line-height:22px;
+}
+.MainContainer .main .listsearch span.t{
+	padding-left:10px;
+	font-weight:bold;
+}
+/*
+*列表内容 
+*/
+.listcontbox{
+	margin-top:10px;
+}
+.listcontbox .head{
+	height:30px;
+	background:url(fhead.gif) right top no-repeat;
+	line-height:30px;
+}
+.listcontbox .head div{
+	float:left;
+}
+.listcontbox .head div.L{
+	background:url(ftag2.gif) left top no-repeat;
+	padding-left:20px;
+}
+.listcontbox .head div.L span{
+	display:block;
+	background:url(ftag2.gif) right top no-repeat;
+	padding-right:40px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.listcontbox .head div.R{
+	float:right;
+	width:130px;
+	text-align:center;
+	background:url(fpost1.gif) center 5px no-repeat;
+}
+.listcontbox .cont{
+	border:#9ECCFF solid 1px;
+	border-top:0;
+	padding:10px;
+	background:url(fcont.gif) left top repeat-x;
+}
+.listcontbox .cont .listtable{
+	border-bottom:1px dotted #ddd;
+}
+.listcontbox .cont .listtable .td1{
+	width:10%;
+}
+.listcontbox .cont .listtable .td1 a{
+	display:block;
+	width:80px;
+	height:60px;
+	border:#DDD solid 1px;
+	padding:1px;
+	margin:3px 10px 3px 0;
+}
+.listcontbox .cont .listtable .td2{
+	width:48%;
+	color:#666;
+	line-height:20px;
+	padding-top:2px;
+}
+.listcontbox .cont .listtable .td2 a{
+	font-size:13px;
+	font-weight:bold;
+	color:#2754BB;
+	
+}
+.listcontbox .cont .listtable .td3{
+	width:15%;
+	vertical-align:;
+}
+.listcontbox .cont .listtable .td3 span{
+	display:block;
+	text-align:center;
+	line-height:20px;
+}
+.listcontbox .cont .listtable .td3 span.field{
+	color:#999;
+}
+.listcontbox .cont .listtable .td4{
+	width:25%;
+	vertical-align:middle;
+}
+.listcontbox .cont .listtable .td4 span{
+	display:block;
+	text-align:right;
+	line-height:18px;
+	padding-right:8px;
+}
+.listcontbox .cont .listtable .td4 span.name,.listcontbox .cont .listtable .td4 span.p{
+	color:#999;
+}
+.listcontbox .cont .listtable .td4 em{
+	color:red;
+	font-style:normal;
+}
+/*
+*分页样式 
+*/
+.listpage{
+	text-align:center;
+	padding:10px;
+}
+.listpage a{
+	border:#DDD solid 1px;
+	padding:3px 5px 2px 5px;
+}
+/*
+*用户登录样式 
+*/
+.UserCont{
+	border:#FDD79D solid 1px;
+	height:170px;
+}
+.UserCont .butter{
+	height:75px;
+	padding-top:10px;
+	background:url(fuserbg.gif) left top repeat-x;
+}
+.UserCont .butter a{
+	display:block;
+	width:49%;
+	overflow:hidden;
+	height:35px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	background:url(fenlie_butter.gif) center top no-repeat;
+	color:#7F2703;
+	font-size:14px;
+}
+.UserCont .butter a.post{
+	background:url(fenlie_butter1.gif) center top no-repeat;
+	font-weight:bold;
+}
+.UserCont .butter a.tg{
+	background:url(fenlie_butter2.gif) center top no-repeat;
+	font-weight:bold;
+	color:#FFF;
+}
+
+.UserCont .login{
+	border-top:#FDD79D solid 1px;
+	background:url(fuserbg.gif) left top repeat-x;
+	padding-top:10px;
+}
+.UserCont table td{
+	height:30px;
+	vertical-align:middle;
+}
+.UserCont table td.radio{
+	padding-left:10px;
+}
+.UserCont .input{
+	width:50%;
+	text-align:center;
+	
+}
+.UserCont .input input{
+	width:100px;
+}
+.UserCont .radio input{
+	border:0;
+}
+.UserCont .sub input{
+	border:0;
+}
+.UserCont .img{
+	width:15%;
+	height:70px;
+	vertical-align:middle;
+	padding:0 20px 0 20px;
+}
+.UserCont .word .name{
+	line-height:20px;
+	color:blue;
+	font-weight:bold;
+}
+.UserCont .word .day{
+	padding-top:5px;
+	color:green;
+}
+/*
+*公告 
+*/
+.NoticeTable{
+	background:url(fenlie_notice.gif) left top no-repeat;
+	height:50px;
+}
+.NoticeTable td{
+	vertical-align:middle;
+}
+.NoticeTable td.head{
+	width:30px;
+}
+.NoticeTable td.head span{
+	display:none;
+}
+.NoticeTable td.cont{
+	padding-right:10px;
+}
+.NoticeTable td.cont .list{
+	line-height:25px;
+	height:25px;
+	overflow:hidden;
+	padding-left:20px;
+	background:url(index_icon1.gif) 10px 12px no-repeat;
+}
+/*
+*活动专区 
+*/
+.sidecontainer{
+	padding-bottom:5px;
+	background:url(fenlie_rboxbg.gif) center bottom no-repeat;
+}
+.sidecontainer .head{
+	height:32px;
+	background:url(fenlie_rboxbg.gif) center top no-repeat;
+}
+.sidecontainer .head span{
+	float:left;
+	padding:10px 0 0 15px;
+	font-size:14px;
+	font-weight:bold;
+}
+.sidecontainer .cont{
+	border-left:#C6E1FF solid 1px;
+	border-right:#C6E1FF solid 1px;
+	background:#FFF;
+	padding:5px;
+}
+.sidecontainer .cont #side_adinfo div{
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+	margin-left:5px;
+}
+.sidecontainer .cont #side_adinfo div a{
+	color:#1D50A1;
+}
+.sidecontainer .cont .list_rad{
+	text-align:center;
+	padding-top:10px;
+}
