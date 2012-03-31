@@ -1,0 +1,217 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/f/index.css">
+<div class="fenliead1">$label[blue_fenliead1]</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>
+    <td class="Main">
+    	<div class="todaytz">
+        	<div class="tag">{$label[blue_fenlieh1]}</div>
+            <div class="cont">
+            	{$label[blue_fenliet1]}            	
+            </div>
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Fenlietg">
+          <tr>
+            <td class="tgin">            
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="adinfo">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="job.php?job=adinfo&fid=-1&rows=15&leng=32&iframeID=adinfo" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+                
+          </tr>
+        </table>
+    </td>
+    <td class="Side">
+    	<div class="UserCont">          
+            <div class="butter"> <a href="post.php" class="post" target="_blank">免费发布信息</a> 
+              <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/homepage_ctrl.php?atn=info" class="tg" target="_blank">管理店铺</a> 
+              <a href="$webdb[www_url]/member/?main=$Murl/member/list.php" target="_blank">修改删除信息</a> 
+              <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/renzheng.php" target="_blank">认证企业</a> 
+            </div> 
+            <div class="login">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="fenlie_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=fenlie_loginer&styletype=fenlieindex" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>  
+			</div>
+        </div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>
+    <td class="Main">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="fenlienewest">
+          <tr>
+            <td class="head">
+            	<div class="tag">{$label[blue_fenlieh2]}</div>
+                <div class="more">
+                	{$label[blue_fenliem2]}                	
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<div class="piccont">{$label[blue_fenliet2]}</div>
+                <div class="wordcont">{$label[blue_fenliet3]}</div>
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="Side">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="fenliehot">
+          <tr>
+            <td class="head">
+            	<div class="tag">{$label[blue_fenlieh3]}</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	{$label[blue_fenliet4]}
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer mt10">
+  <tr>
+    <td class="Main">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="fenliesort">
+          <tr>
+            <td class="head">
+            	<div class="tag">{$label[blue_fenlieh4]}</div>
+                <div class="more">
+                	{$label[blue_fenliem4]}                	
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<div id="FenlieShowSort">
+<!--
+EOT;
+$array=array_flip($Fid_db[0]);
+foreach($array AS $key=>$rs){
+$url=get_info_url('',$rs,$city_id);
+print <<<EOT
+-->
+        			<div class="listsort">
+            			<div class="bigsort"><a href="$url">{$Fid_db[name][$rs]}</a></div>
+                		<div class="moresort">
+<!--
+EOT;
+$i=0;
+foreach($Fid_db[$rs] AS $key_3=>$rss){
+$i++;
+if($webdb[Info_showsortnum]>0&&$i>$webdb[Info_showsortnum]){break;}
+$InfoNum[$key_3]=intval($InfoNum[$key_3]);
+$url=get_info_url('',$key_3,$city_id);
+$color=$Fid_db[ifcolor][$key_3]?"color:red;":'';
+print <<<EOT
+-->
+                    		<div><a href="$url" style="$color">{$Fid_db[name][$key_3]}</a>({$InfoNum[$key_3]})</div> 
+<!--
+EOT;
+}print <<<EOT
+-->
+                		</div>
+            		</div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+        		</div>
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="Side">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="fenlietop">
+          <tr>
+            <td class="head">
+            	<div class="tag">{$label[blue_fenlieh5]}</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	{$label[blue_fenliet5]}
+            </td>
+          </tr>
+        </table>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="fenliehot mt10">
+          <tr>
+            <td class="head">
+            	<div class="tag">{$label[blue_fenlieh6]}</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<div class="listad">{$label[blue_fenliead2]}</div>
+                <div class="listad">{$label[blue_fenliead3]}</div>
+                <div class="listad">{$label[blue_fenliead4]}</div>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<div class="farrowad mt10">{$label[blue_fenliead5]}</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="FenliePhoto">
+  <tr>
+  	<td class="head"><div class="tag">$label[fenlei_b3]</div></td>
+  </tr>
+  <tr>
+  	<td class="cont">    	
+  		$label[fenlei_b4]
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainContainer mt10">
+  <tr>
+  	<td class="MiddleCont">
+<!--
+EOT;
+foreach($listdb_moresort AS $key1=>$rss){
+$url=get_info_url('',$rss[fid],$city_id);
+print <<<EOT
+-->
+		<div class="moresort">        	
+        	<div class="TAG"><a href="$url" target="_blank">$rss[name]</a></div>
+            <div class="title">
+<!--
+EOT;
+foreach($rss[article] AS $key2=>$rs){
+$url=get_info_url($rs[id],$rs[fid],$city_id);
+print <<<EOT
+-->
+                  <div>·<a href="$url" title="$rs[full_title]" target="_blank">$rs[title]</a></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+        </div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+    </td>
+  </tr>
+  <tr>
+  	<td class="BottomFoot"><table><tr><td></td></tr></table></td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

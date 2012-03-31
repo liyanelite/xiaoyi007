@@ -1,0 +1,9 @@
+<?php
+
+return array(
+	'name'=>'ÓÅ»ÝÈ¯Ä£¿é',
+	'pre'=>'coupon_',
+	'setup'=>1,
+);
+
+?>

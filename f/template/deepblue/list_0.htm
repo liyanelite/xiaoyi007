@@ -1,0 +1,190 @@
+<!--
+<?php
+$priceColordb["c$price1$price2"]='red';
+$orderColordb["$ordertype"]='red';
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/$STYLE/f/list.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="MainContainer">
+  <tr>
+    <td class="main">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="sortcont">
+          <tr> 
+            <td class="sorttd"> 
+<!--
+EOT;
+foreach($Fid_db[$fidDB[fup]] AS $key=>$value){
+$url=get_info_url('',$key,$city_id);
+print <<<EOT
+-->
+              <span><a href="$url" target="_blank">{$Fid_db[name][$key]}</a></span> 
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" id="zone_street_menua">
+<!--
+EOT;
+if($city_id){
+$url=get_info_url('',$fid,$city_id,'','',$TempSearch_array);
+print <<<EOT
+-->
+        <tr> 
+          <td class="zone" id="zone_td"> <span id="zone_span_0"><A HREF="$url">{$city_DB[name][$city_id]}</A></span> 
+<!--
+EOT;
+foreach($zone_DB[name] AS $key=>$value){
+$url=get_info_url('',$fid,$city_id,$key,'',$TempSearch_array);
+print <<<EOT
+-->
+            <span class="choose" id="zone_span_$key"><A HREF="$url">$value</A></span> 
+<!--
+EOT;
+}
+print <<<EOT
+-->
+          </td>
+        </tr>
+<!--
+EOT;
+if($street_DB[$zone_id]){
+print <<<EOT
+-->
+        <tr> 
+          <td class="street" id="street_td"> 
+<!--
+EOT;
+foreach($street_DB[$zone_id] AS $key=>$value){
+$url=get_info_url('',$fid,$city_id,$zone_id,$key,$TempSearch_array);
+print <<<EOT
+-->
+            <A id="street_a_$key" HREF="$url">$value</A> 
+<!--
+EOT;
+}
+print <<<EOT
+-->
+          </td>
+        </tr>
+<!--
+EOT;
+}}
+print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function zone_menu(zone_id){
+	obj=document.getElementById("zone_td").getElementsByTagName("span");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	document.getElementById("zone_span_"+zone_id).className='choose';
+}
+zone_menu("$zone_id");
+function street_menu(street_id){
+	obj=document.getElementById("street_td").getElementsByTagName("a");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	if(document.getElementById("street_a_"+street_id)!=null){
+		document.getElementById("street_a_"+street_id).className='choose';
+	}
+}
+street_menu("$street_id");
+//-->
+</SCRIPT>
+      </table>
+      <div class="listsearch">	  
+	  <!--{filter}--><div><span class='t'>{title}：</span><span class='f'>{value}</span></div><!--{/filter}-->
+	  </div>
+      <div class="listcontbox">
+      	<div class="head"> 
+          <div class="L"><span>{$city_DB[name][$city_id]}$fidDB[name]</span></div>
+          <div class="R"><a target="_blank" href="$city_url/post.php?fid=$fid&city_id=$city_id&zone_id=$zone_id&street_id=$street_id">免费发布此类信息</a></div>
+        </div>
+        <div class="cont"> 
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$rs[ip]=preg_replace("/\.([0-9]+)\.([0-9]+)$/is",".*.*",$rs[ip]);
+print <<<EOT
+-->
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="listtable">
+            <tr> 
+              <td class="td1"><a href="$rs[url]" title='$rs[full_title]' target="_blank"><img src="$rs[picurl]" onload="makesmallpic(this,80,60);" width="80" height="60" onerror="this.src='$webdb[www_url]/images/default/nopic.jpg'"/></a></td>
+              <td class="td2"> <a href="$rs[url]" target="_blank" title='$rs[full_title]' style="color:$rs[titlecolor];">$rs[title]</a> 
+               <br><!--{template}--> {title}:{value} <!--{/template}-->
+  </td>
+              <td class="td3"> <span class='time '>时间:{$rs[times]} </span> <span class='field '>$rs[fname] 
+                </span> </td>
+              <td class="td4"> <span class='name'>发布者:{$rs[username]} </span> 
+                <span class='ip'>IP:{$rs[ip]} </span> <span class='p'>关注度:<em>{$rs[hits]}</em>次 
+                </span> </td>
+            </tr>
+          </table>
+<!--
+EOT;
+}if($showpage){print <<<EOT
+-->
+          <div class="listpage">$showpage</div>	
+<!--
+EOT;
+}print <<<EOT
+-->	
+      </div>
+    </td>
+    <td class="side">
+    	<div class="UserCont">          
+            <div class="butter"> <a href="post.php" class="post" target="_blank">免费发布信息</a> 
+              <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/homepage_ctrl.php?atn=info" class="tg" target="_blank">管理店铺</a> 
+              <a href="$webdb[www_url]/member/?main=$Murl/member/list.php" target="_blank">修改删除信息</a> 
+              <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/renzheng.php" target="_blank">认证企业</a> 
+            </div> 
+            <div class="login">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="fenlie_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=fenlie_loginer&styletype=fenlieindex" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>  
+			</div>
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="NoticeTable mt10">
+          <tr> 
+            <td class="head"><span>公告</span></td>
+            <td class="cont"> 
+              <div class="list">子栏目推广显示要花费<font color="#FF0000">{$webdb[AdInfoSortShow]}</font>{$webdb[MoneyDW]}{$webdb[MoneyName]}</div>
+              <div class="list">大分类推广显示要花费<font color="#FF0000">{$webdb[AdInfoBigsortShow]}</font>{$webdb[MoneyDW]}{$webdb[MoneyName]}</div>
+            </td>
+          </tr>
+        </table>
+        <div class="sidecontainer mt10"> 
+        <div class="head"><span>付费推广</span></div>
+        <div class="cont"> 
+         <SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="side_adinfo">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$city_url/job.php?job=adinfo&fid=$fid&rows=$webdb[AdInfoListRow]&leng=$webdb[InfoListLeng]&iframeID=side_adinfo" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+        </div>
+      </div>
+      <div class="sidecontainer mt10"> 
+        <div class="head"><span>赞助商</span></div>
+        <div class="cont"> 
+          <div class="list_rad">{$label[blue_fenlielistad1]}</div>
+          <div class="list_rad">{$label[blue_fenlielistad2]}</div>
+          <div class="list_rad">{$label[blue_fenlielistad3]}</div>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->
