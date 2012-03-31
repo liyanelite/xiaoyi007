@@ -1,0 +1,216 @@
+<!--
+<?php
+$IF_Private_tpl[intval($webdb[IF_Private_tpl])]=' checked ';
+print <<<EOT
+--> 
+<table width='100%' cellspacing='1' cellpadding='3' class="tablewidth">
+  <form name="form1" method="post" action="$admin_path&action=$job">
+    <tr class="head"> 
+      <td colspan='2'> 
+        <div align='center'><b><font color='#FFFFFF'>核心设置</font></b></div>
+      </td>
+    </tr>
+ 
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'> 
+        <div align="left">站点名称:</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input    type='text' name='webdbs[Info_webname]' size='50' value='$webdb[Info_webname]'>
+      </td>
+    </tr><!--
+EOT;
+if( count($city_DB[name])>1 ){print <<<EOT
+ 
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>地区统称:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input    type='text' name='webdbs[Info_areaname]' size='10' value='$webdb[Info_areaname]'>
+      </td>
+    </tr>  
+EOT;
+}print <<<EOT
+-->
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>站点开放与否:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="radio" name="webdbs[module_close]" value="1" $module_close[1]>
+         关闭
+        <input type="radio" name="webdbs[module_close]" value="0" $module_close[0]> 开放
+        </td>
+    </tr>
+
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'> 
+        <div align="left">网站热点关键词:</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input    type='text' name='webdbs[Info_metakeywords]' size='50' value='$webdb[Info_metakeywords]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='22%' bgcolor='#FFFFFF'> 
+        <div align="left">网站描述:</div>
+      </td>
+      <td bgcolor='#FFFFFF' width="78%"> 
+        <input    type='text' name='webdbs[Info_description]' size='50' value='$webdb[Info_description]'>
+      </td>
+    </tr>
+    <tr> 
+      <td width='22%' bgcolor='#FFFFFF'>当前使用的数据表前缀:</td>
+      <td bgcolor='#FFFFFF' width="78%"> 
+        <input type="text" name="webdbs[module_pre]" value="$webdb[module_pre]" readonly size="8">
+        (不可修改,仅供查看) </td>
+    </tr><!--
+    <tr bgcolor="#FFFFFF"> 
+      <td width='26%'> 
+        <div align="left">是否允许游客使用搜索功能:</div>
+      </td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_allowGuesSearch]" value="1" $Info_allowGuesSearch[1]>
+        允许 
+        <input type="radio" name="webdbs[Info_allowGuesSearch]" value="0" $Info_allowGuesSearch[0]>
+        禁止</td>
+    </tr>
+   -->
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>发表一条信息奖励{$webdb[MoneyName]}:<br>
+        (只有通过审核的,才有奖励) </td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[PostInfoMoney]" size="7" value="$webdb[PostInfoMoney]">
+        $webdb[MoneyDW]</td>
+    </tr>
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>会员收藏夹最多只能收藏几条信息:<br>
+        留空则为50条</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[CollectArticleNum]" size="4" value="$webdb[CollectArticleNum]">
+        条</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td width='26%'>是否强制设置信息有效日期:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_UseEndTime]" value="1" $Info_UseEndTime[1]>
+        强制设置有效日期 
+        <input type="radio" name="webdbs[Info_UseEndTime]" value="0" $Info_UseEndTime[0]>
+        可不选择有效日期 </td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td width='26%'>是否自动删除过期信息:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_DelEndtime]" value="1" $Info_DelEndtime[1]>
+        自动删除(推荐) 
+        <input type="radio" name="webdbs[Info_DelEndtime]" value="0" $Info_DelEndtime[0]>
+        不删除</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td width='26%'>是否显示所有信息:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[Info_ShowNoYz]" value="1" $Info_ShowNoYz[1]>
+        显示所有信息 
+        <input type="radio" name="webdbs[Info_ShowNoYz]" value="0" $Info_ShowNoYz[0]>
+        只显示已审核信息</td>
+    </tr>
+	
+	
+	
+<tr bgcolor="#FFFFFF"> 
+      <td width='26%'>是否使用谷歌地图:</td>
+      <td width="74%"> 
+        <input type="radio" name="webdbs[if_GGmap]" value="1" $if_GGmap[1]>
+        使用 
+        <input type="radio" name="webdbs[if_GGmap]" value="0" $if_GGmap[0]>
+        不使用</td>
+    </tr>
+	
+	
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>发布信息,有效天数:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[Info_showday]" size="50" value="$webdb[Info_showday]">
+        每个参数用斜线/隔开,如:90/60/30</td>
+    </tr>
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>刷新信息的时间间隔:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[UpdatePostTime]" size="4" value="$webdb[UpdatePostTime]">
+        小时(留空,则默认为1小时)</td>
+    </tr>
+    
+     
+   
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>联系方式:(仅供某些风格使用)</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <textarea name="webdbs[Info_contact]" cols="50" rows="6">$webdb[Info_contact]</textarea>
+      </td>
+    </tr>
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>举报信息的性质类型</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <textarea name="webdbs[Info_ReportDB]" cols="50" rows="6">$webdb[Info_ReportDB]</textarea>
+        每个换一行</td>
+    </tr>
+    
+ 
+ 
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>允许发布组图的用户组,如外部图片:(管理员默认有权限,游客强制没权限,不选择则都有权限)</td>
+      <td bgcolor='#FFFFFF' width="74%">$group_UpPhoto</td>
+    </tr>
+    <tr>
+      <td width='26%' bgcolor='#FFFFFF'>允许上传本地图片的用户组:(管理员默认有权限,不选择则都有权限)</td>
+      <td bgcolor='#FFFFFF' width="74%">$Post_group_UpPhoto</td>
+    </tr>
+	
+	
+ 
+	<tr> 
+      <td width='26%' bgcolor='#FFFFFF'>防信息群发机<br>
+        随机字符串生成时间间隔:</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input type="text" name="webdbs[rand_num_mktime]" size="8" value="$webdb[rand_num_mktime]">
+        小时 （留空或为0时，将不启用。原理是：每隔一段时间生成一个随机字符串，发布信息时，表单页将得到随机生成的字符串，而注册机将无法同步获取对应的字符串）</td>
+    </tr>
+ <tr> 
+      <td bgcolor='#FFFFFF' height="8">本频道是否独立头部与尾部模板:<br>
+        <font color="#0000FF">注意：</font>头部与尾部模板，请放在本频道的template目录下，右边的输入框输入类似如下路径<br>
+        /template/***/head.htm 星号换成你实际的目录名,如果留空，就使用统一的风格</td>
+      <td bgcolor='#FFFFFF' height="8"> 
+        <input type="radio" name="webdbs[IF_Private_tpl]" value="1" $IF_Private_tpl[1]>
+        首页独立 
+        <input type="radio" name="webdbs[IF_Private_tpl]" value="2" $IF_Private_tpl[2]>
+        首页、列表页独立 
+        <input type="radio" name="webdbs[IF_Private_tpl]" value="3" $IF_Private_tpl[3]>
+        首页、列表页、内容独立 
+        <input type="radio" name="webdbs[IF_Private_tpl]" value="0" $IF_Private_tpl[0]>
+        不独立头部与尾部模板 <br>
+        头部模板路径: 
+        <input type="text" size="50" name="webdbs[Private_tpl_head]" value="$webdb[Private_tpl_head]">
+        <br>
+        底部模板路径: 
+        <input type="text" size="50" name="webdbs[Private_tpl_foot]" value="$webdb[Private_tpl_foot]">
+      </td>
+    </tr>
+	
+    <tr> 
+      <td width='26%' bgcolor='#FFFFFF'>&nbsp;</td>
+      <td bgcolor='#FFFFFF' width="74%"> 
+        <input    type='submit' name='w' value='保存设置'>
+      </td>
+    </tr>
+  </form>
+</table>
+<!--
+EOT;
+?>
+--><table border="0" cellspacing="1" cellpadding="3" width="100%" class="tablewidth">
+     <tr > 
+      
+    <td class="head">说明:</td>
+    </tr>
+  <tr>
+    <td>1.建议不要允许游客上传图片,容易出问题!<br>
+      2.防信息群发机(<font color="#0000FF">免费版无此功能</font>), 随机字符串生成时间间隔，最好是5个小时以上，否则容易出错，比如系统生成随机字符串那一刻有两个人同时发信息将会导致其中一人发布失败。</td>
+  </tr>
+</table>

@@ -1,0 +1,178 @@
+<!--
+<?php
+@include(dirname(__FILE__)."/bigsort.php");
+$priceColordb["c$price1$price2"]='red';
+$orderColordb["$ordertype"]='red';
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/fashion/dianping/list.css"> 
+<div class="MainCont">
+	<div class="Mainl">
+    	<div class="ShowThisSort">
+<!--
+EOT;
+foreach($Fid_db[$fidDB[fid]] AS $key=>$value){
+$url=get_info_url('',$key,$city_id);
+print <<<EOT
+-->
+              <a href="$url">{$Fid_db[name][$key]}</a> 
+<!--
+EOT;
+}
+print <<<EOT
+-->
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" id="zone_street_menu">
+        <!--
+EOT;
+if($city_id){
+$url=get_info_url('',$fid,$city_id,'','',$TempSearch_array);
+print <<<EOT
+-->
+        <tr> 
+          <td class="zone" id="zone_td"> <span id="zone_span_0"><A HREF="$url">{$city_DB[name][$city_id]}</A></span> 
+            <!--
+EOT;
+foreach($zone_DB[name] AS $key=>$value){
+$url=get_info_url('',$fid,$city_id,$key,'',$TempSearch_array);
+print <<<EOT
+-->
+            <span class="choose" id="zone_span_$key"><A HREF="$url">$value</A></span> 
+            <!--
+EOT;
+}
+print <<<EOT
+-->
+          </td>
+        </tr>
+        <!--
+EOT;
+if($street_DB[$zone_id]){
+print <<<EOT
+-->
+        <tr> 
+          <td class="street" id="street_td"> 
+            <!--
+EOT;
+foreach($street_DB[$zone_id] AS $key=>$value){
+$url=get_info_url('',$fid,$city_id,$zone_id,$key,$TempSearch_array);
+print <<<EOT
+-->
+            <A id="street_a_$key" HREF="$url">$value</A> 
+            <!--
+EOT;
+}
+print <<<EOT
+-->
+          </td>
+        </tr>
+        <!--
+EOT;
+}}
+print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function zone_menu(zone_id){
+	obj=document.getElementById("zone_td").getElementsByTagName("span");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	document.getElementById("zone_span_"+zone_id).className='choose';
+}
+zone_menu("$zone_id");
+function street_menu(street_id){
+	obj=document.getElementById("street_td").getElementsByTagName("a");
+	for(var i=0;i< obj.length;i++ ){
+		obj[i].className='';
+	}
+	if(document.getElementById("street_a_"+street_id)!=null){
+		document.getElementById("street_a_"+street_id).className='choose';
+	}
+}
+street_menu("$street_id");
+//-->
+</SCRIPT>
+      </table>
+        <div class="ShowListCont">
+        	<div class="head">
+            	<div class="tag"><span>{$city_DB[name][$city_id]}$fidDB[name]</span></div>
+                <div class="more"><a href="$city_url/post.php" target="_blank"><img src="$webdb[www_url]/images/fashion/dianping/post.gif"/></a></div>
+            </div>
+            <div class="cont">
+<!--
+EOT;
+$i=0;
+foreach($listdb AS $key=>$rs){
+$i++;
+$rs[ip]=preg_replace("/\.([0-9]+)\.([0-9]+)$/is",".*.*",$rs[ip]);
+$rs[picurl]=$rs[picurl]?$rs[picurl]:"$webdb[www_url]/images/default/nopic.jpg";
+@extract($db->get_one("SELECT content FROM {$_pre}content_$rs[mid] WHERE id=$rs[id]"));
+$content=preg_replace('/<([^<]*)>/is',"",$content);	//把HTML代码过滤掉
+$content=preg_replace('/ |　|&nbsp;/is',"",$content);	//把多余的空格去除掉
+$content= get_word($content,180);
+print <<<EOT
+-->				
+				<div class="listdianping">
+					<div class="img"><a href="$rs[url]" target="_blank"><img src="$rs[picurl]" alt="$rs[full_title]" height="100"/></a></div>
+                    <div class="word">
+                    	<div class="t"><span>{$i}</span><a href="$rs[url]" target="_blank" title='$rs[full_title]' style="color:$rs[titlecolor];">$rs[title]</a></div>
+                        <div class="c">{$content}</div>
+                    </div>
+                    <div class="info">
+                    	<div>所属分类:<span>$rs[fname]</span></div>
+                        <div>发布时间:<span>{$rs[posttime]}</span></div> 
+                        <div>IP:<span>{$rs[ip]}</span> </div>
+                        <div>浏览量:<em>{$rs[hits]}</em>次 </div>                        
+                    </div>
+				</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+				<div class="page">$showpage</div>	
+            </div>
+        </div>
+    </div>
+    <div class="Sider">
+    	<div class="UserInfo"> 
+            <div class="butter"> 
+            <div>
+              <a href="$city_url/post.php?fid=$fid" target="_blank"><img src="$webdb[www_url]/images/fashion/dianping/but1.gif"/></a> 
+              <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/homepage_ctrl.php?atn=info" target="_blank"><img src="$webdb[www_url]/images/fashion/dianping/but2.gif"/></a>
+            </div> 
+            <div>
+              <a href="$webdb[www_url]/member/?main=$Murl/member/list.php" target="_blank"><img src="$webdb[www_url]/images/fashion/dianping/but3.gif"/></a> 
+              <a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/renzheng.php" target="_blank"><img src="$webdb[www_url]/images/fashion/dianping/but4.gif"/></a>
+            </div> 
+          </div>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="fenlie_loginer">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&iframeID=fenlie_loginer&styletype=fenlieindex" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+      	</div>
+      	<div class="NoteCont">
+        	<div class="list">子栏目推广显示要花费<span>{$webdb[AdInfoSortShow]}</span>{$webdb[MoneyDW]}{$webdb[MoneyName]}</div>
+            <div class="list">大分类推广显示要花费<span>{$webdb[AdInfoBigsortShow]}</span>{$webdb[MoneyDW]}{$webdb[MoneyName]}</div>
+        </div>
+        <div class="sidecont1">
+        	<div class="head"><div class="tag">热门点评</div></div>
+            <div class="cont">
+            	$label[fashion_dianpingbigsortt1]
+            </div>
+        </div>
+        <div class="sidecont1">
+        	<div class="head"><div class="tag">赞助商</div></div>
+            <div class="cont">
+            	$label[fashion_dianpingbigsortt2]
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<!--
+EOT;
+?>
+-->

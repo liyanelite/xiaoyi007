@@ -1,0 +1,191 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/fashion/dianping/index.css"> 
+<div class="MainCont1">
+	<div class="ServerInlink">
+    	<div class="head"><div class="tag">$label[fashion_dianpingindexh1]</div></div>
+        <div class="cont">
+        	$label[fashion_dianpingindext0]
+        </div>
+    </div>	
+    <div class="SlideCont">
+    	$label[fashion_dianpingindext1]
+    </div>
+    <div class="Sider">
+    	<div class="ActionCont">
+        	<div class="but1"><a href="post.php" class="post" target="_blank">发布点评</a></div>
+            <div class="but2"><a href="$webdb[www_url]/member/?main=$webdb[www_url]/hy/member/homepage_ctrl.php?atn=info" class="tg" target="_blank">管理店铺</a></div>
+        </div>
+        <div class="NewDianping">
+        	<div class="head"><div class="tag">$label[fashion_dianpingindexh2]</div></div>
+            <div class="cont">
+            	$label[fashion_dianpingindext2]
+            </div>
+        </div>
+    </div>
+</div>
+<div class="MainCont2">
+	<div class="maincont1 floatl">
+    	<div class="head"><div class="tag">$label[fashion_dianpingindexh3]</div></div>
+        <div class="cont1">
+            $label[fashion_dianpingindext3]
+        </div>
+    </div>
+    <div class="maincont1 floatr">
+    	<div class="head"><div class="tag">$label[fashion_dianpingindexh4]</div></div>
+        <div class="cont2">
+            <div id="showup"><a href="javascript:;" onclick="showup()" class="hidefocus"><br/></a></div>
+            <ul id="ShowList">
+                $label[fashion_dianpingindext4]
+            </ul>
+            <div id="showdown"><a href="javascript:;" onclick="showdown()" class="hidefocus"><br/></a></div>
+<script type="text/javascript" src="$webdb[www_url]/images/fashion/dianping/showmore.js"></script> 
+        </div>
+    </div>
+</div>
+<div class="MainBanner">$label[fashion_dianpingindext5]</div>
+<div class="MainCont3">
+	<div class="Mainl">
+    	<div class="maincont2">
+        	<div class="head"><div class="tag">$label[fashion_dianpingindexh5]</div></div>
+            <div class="cont">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" id="ShowSortTable" onmouseout="HiddenTdBg()">
+<!--
+EOT;
+$trnum=0;
+$j=0;
+$i=0;
+foreach($Fid_db[0] as $key=>$value){
+$i++;
+$trbg = $j%2 == 0 ? "class = 'havebg'" : "";
+$url=get_info_url('',$key,$city_id);
+if($trnum==0){
+print <<<EOT
+-->
+                  <tr $trbg>
+<!--
+EOT;
+}$trnum++;print <<<EOT
+-->
+                    <td onmouseover="ShowTdBg(this)">
+                    	<dl class="dl$i">
+                        	<dt><a href="$url">{$value}</a></dt>
+                            <dd>
+<!--
+EOT;
+$y=0;
+foreach($Fid_db[$key] as $keys=>$rs){
+$y++;
+$url=get_info_url('',$keys,$city_id);
+$spacings = $y==1 ? "" : "| ";
+print <<<EOT
+-->
+								{$spacings}<a href="$url">{$rs}</a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+                            </dd>
+                        </dl>
+                    </td>
+<!--
+EOT;
+if($trnum==2){
+$j++;
+$trnum=0;print <<<EOT
+-->
+                  </tr>
+<!--
+EOT;
+}}if($trnum && $trnum<2){
+for($i=$trnum;$i<2;$i++){print <<<EOT
+-->
+			<td onmouseover="ShowTdBg(this)">&nbsp;</td>
+<!--
+EOT;
+}print <<<EOT
+-->
+		</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+                </table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var objtd=document.getElementById("ShowSortTable").getElementsByTagName("td");
+function ShowTdBg(TheTd){
+	for(var i=0;i< objtd.length;i++ ){
+		objtd[i].className='';
+	}
+	TheTd.className='choose';
+}
+function HiddenTdBg(){
+	for(var i=0;i< objtd.length;i++ ){
+		objtd[i].className='';
+	}
+}
+//-->
+</SCRIPT>
+            </div>
+        </div>
+        <div class="maincont3">
+        	<div class="head">$label[fashion_dianpingindexh6]</div>
+            <div class="cont">
+            	$label[fashion_dianpingindext7]
+            </div>
+        </div>
+        <div class="maincont2">
+        	<div class="head"><div class="tag">$label[fashion_dianpingindexh7]</div></div>
+            <div class="cont" style="padding-bottom:15px;">
+<!--
+EOT;
+$array = get_dianping(3,70);
+foreach($array AS $rs){
+$url=get_info_url($rs[id],$rs[fid],$city_id);
+$rs[icon]=$rs[icon]?$rs[icon]:"$webdb[www_url]/images/default/nobody.gif";
+print <<<EOT
+-->			
+					<div class="listdianping">
+                    	<div class="img"><a href="$webdb[www_url]/member/homepage.php?uid=$rs[uid]" target="_blank"><img src="$rs[icon]" height="45"/></a></div>
+                    	<div class="t"><a href="$webdb[www_url]/member/homepage.php?uid=$rs[uid]" target="_blank" class="m">$rs[username]</a>在{$rs[posttime]}点评了<a href="$url" target="_blank" class="b">$rs[title]</a></div>
+                        <div class="dp">$rs[fen]</div>                        
+                        <div class="c">$rs[content]</div>
+                    </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+        </div>
+    </div>
+    <div class="Sider">
+    	<div class="sidecont1">
+        	<div class="head"><div class="tag">$label[fashion_dianpingindexh8]</div></div>
+            <div class="cont">
+            	$label[fashion_dianpingindext6]
+            </div>
+        </div>
+        <div class="sideradcont">$label[fashion_dianpingindext8]</div>
+        <div class="sidecont1">
+        	<div class="head"><div class="tag">$label[fashion_dianpingindexh9]</div></div>
+            <div class="cont" style="padding-bottom:0;">
+            	$label[fashion_dianpingindext9]
+            </div>
+        </div>
+        <div class="sidecont1">
+        	<div class="head"><div class="tag">$label[fashion_dianpingindexh10]</div></div>
+            <div class="cont">
+            	$label[fashion_dianpingindext10]
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<!--
+EOT;
+?>
+-->
