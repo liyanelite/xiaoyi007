@@ -92,11 +92,11 @@ function get_post_url($type,$fid,$id='',$cityid='',$zoneid='',$streetid=''){
 function get_info_url($id,$fid,$cityid='',$zoneid='',$streetid='',$array=array()){
 	global $Mdomain,$webdb,$Fid_db,$zone_DB,$street_DB,$city_DB,$BIZ_MODULEDB;
 	$webdb[Info_htmlname] || $webdb[Info_htmlname]='html';
-	if( count($city_DB[name])>2 ){
-		if(!function_exists('MODULE_CK')||!in_array('fenlei',$BIZ_MODULEDB)){
-			die("Free!");
-		}		
-	}
+//	if( count($city_DB[name])>2 ){
+//		if(!function_exists('MODULE_CK')||!in_array('fenlei',$BIZ_MODULEDB)){
+//			die("Free!");
+//		}
+//	}
 	$url=$Mdomain.'/';
 	if($webdb[Info_htmlType]==2){
 		if($id){
