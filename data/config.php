@@ -1,5 +1,5 @@
 <?php
-	$webdb['yzImgComment']='0';
+$webdb['yzImgComment']='0';
 $webdb['flashtime']='0';
 $webdb['showComment']='1';
 $webdb['forbidComment']='0';
@@ -179,18 +179,6 @@ $webdb['Reg_Field']='a:1:{s:8:\\\"field_db\\\";a:0:{}}';
 $webdb['TheSameMakeIndexHtml']='0';
 $webdb['SPlist_filename2']='listsp.php?fid-{$fid}-page-{$page}.htm';
 $webdb['SPbencandy_filename2']='showsp.php?fid-{$fid}-id-{$id}-page-{$page}.htm';
-$webdb['hideFid']='';
-$webdb['jump_city']='0';
-$webdb['Info_allcityType']='0';
-$webdb['RewriteUrl']='0';
-$webdb['label_cache_time']='-1';
-$webdb['DownLoad_readfile']='1';
-$webdb['yzImgAdminLogin']='0';
-$webdb['AutoCutFace']='0';
-$webdb['memberNotice']='欢迎大家踊跃投稿,投稿可得积分奖励!!';
-$webdb['member_contact']=' <div class=t>020-88888888</div>
-            <div class=t>020-88888888</div>
-            <div class=q>qq:123456</div>';
 $webdb['sms_ccell_id']='82008';
 $webdb['sms_ccell_pwd']='celllxl';
 $webdb['alipay_partner']='';
@@ -200,6 +188,19 @@ $webdb['alipay_scale']='100';
 $webdb['QQ_login']='2';
 $webdb['QQ_QBappid']='1';
 $webdb['QQ_QBappkey']='d12100d9366fbd6d92c9';
+$webdb['label_cache_time']='-1';
+$webdb['RewriteUrl']='0';
+$webdb['Info_allcityType']='0';
+$webdb['DownLoad_readfile']='1';
+$webdb['yzImgAdminLogin']='0';
+$webdb['AutoCutFace']='0';
+$webdb['memberNotice']='欢迎大家踊跃投稿,投稿可得积分奖励!!';
+$webdb['member_contact']=' <div class=t>020-88888888</div>
+            <div class=t>020-88888888</div>
+            <div class=q>qq:123456</div>';
+$webdb['FtpHost']='127.0.0.1';
+$webdb['FtpName']='admin';
+$webdb['FtpPwd']='admin';
 $webdb['companyTrade']='机械及行业设备
 普通机械制造
 通用零部件
@@ -273,37 +274,18 @@ $webdb['companyTrade']='机械及行业设备
 实业公司、商业贸易
 高新技术开发区
 卡类市场';
-$webdb['FtpHost']='127.0.0.1';
-$webdb['FtpName']='admin';
-$webdb['FtpPwd']='admin';
 $webdb['mymd5']='39339895';
 $webdb['copyright']='';
 $webdb['miibeian_gov_cn']='京ICP备050453号';
 $webdb['bokecc_id']='';
+$webdb['cookieDomain']='';
 $webdb['cookiePre']='';
 $webdb['forbid_show_bug']='1';
-$webdb['cookieDomain']='';
+$webdb['updir']='upload_files';
 $webdb['mirror']='http://down.qibosoft.com/other/testv6/upload_files/';
 $webdb['upfileType']='.rar .txt .jpg .gif .bmp .png .zip .mp3 .wma .wmv .mpeg .mpg .rm .ram .htm .doc .swf .avi .flv .sql .doc .ppt .xls .chm .pdf';
-$webdb['updir']='upload_files';
-$webdb['upfileMaxSize']='';
-$webdb['totalSpace']='100';
 $webdb['time']='0';
-$webdb['admin_url']='admin';
-$webdb['www_url']='http://localhost/qibomenhu';
-$webdb['style_member']='';
-$webdb['style']='fashion_win';
-$webdb['close_why']='网站维护当中,
-暂停访问.';
-$webdb['web_open']='1';
-$webdb['MoneyDW']='个';
-$webdb['MoneyName']='积分';
-$webdb['UserEmailAutoPass']='1';
-$webdb['webname']='齐博地方生活门户系统';
-$webdb['metakeywords']='生活 黄页 美食';
-$webdb['description']='提供给大家消费交流的网站';
-$webdb['webmail']='admin@admin.com';
-$webdb['UseMoneyType']='cms';
+$webdb['totalSpace']='100';
 $webdb['guide_word']='网站首页|/|0||51|0
 资讯|/news/|0||52|20
 分类信息|/f/|0||59|36
@@ -316,4 +298,23 @@ $webdb['guide_word']='网站首页|/|0||51|0
 官方团|/shoptg/|0||62|37
 房产|/house/|0||63|38
 点评|/dianping/|0||64|39';
+$webdb['upfileMaxSize']='';
+$webdb['admin_url']='admin';
+$webdb['www_url']='http://192.168.98.28/qibomenhu';
+$webdb['style_member']='';
+$webdb['style']='fashion_win';
+$webdb['close_why']='网站维护当中,
+暂停访问.';
+$webdb['web_open']='1';
+$webdb['MoneyDW']='个';
+$webdb['MoneyName']='积分';
+$webdb['UserEmailAutoPass']='1';
+$webdb['UseMoneyType']='cms';
 $webdb['BuySpacesizeMoney']='50';
+$webdb['webmail']='admin@admin.com';
+$webdb['description']='提供给大家消费交流的网站';
+$webdb['metakeywords']='生活 黄页 美食';
+$webdb['webname']='孝义吃喝玩乐网';
+$webdb['jump_city']='0';
+$webdb['hideFid']='';
+$webdb['cnzz_pwd']='no';
